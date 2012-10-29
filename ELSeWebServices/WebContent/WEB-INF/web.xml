@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>ELSeWebServices</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+    <!-- Content Listener Loads the Context Params into the Visko Web App -->
+  <listener>
+        <listener-class>edu.utep.cybershare.elseweb.services.context.ContextListener</listener-class>
+  </listener>
+
+ <!-- SERVER BASE URL AND PATH -->
+  <context-param>
+    <param-name>server-url</param-name>
+    <param-value>http://localhost:8081/</param-value>
+  </context-param>
+  <context-param>
+    <param-name>server-base-path</param-name>
+    <param-value>C:/Users/Public/workspace/ELSeWebServices/</param-value>
+  </context-param>
+ 
+  <servlet>
+    <description></description>
+    <display-name>OGCWCSDataExtractor</display-name>
+    <servlet-name>OGCWCSDataExtractor</servlet-name>
+    <servlet-class>edu.utep.cybershare.elseweb.services.OGCWCSDataExtractor</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OGCWCSDataExtractor</servlet-name>
+    <url-pattern>/OGCWCSDataExtractor</url-pattern>
+  </servlet-mapping>
+</web-app>
