@@ -1,6 +1,6 @@
-prefix elseweb: <http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#>
+prefix elseweb: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#>
 select ?coverage ?wcsURL
-from <http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ALifemapperExperiment>
+from <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#ALifemapperExperiment>
 where
 {
 elseweb:ALifemapperExperiment elseweb:hasModelingAlgorithm ?algorithm .
@@ -23,9 +23,9 @@ elseweb:ALifemapperExperiment elseweb:hasExperimentalScenarioLayerSet ?layerset 
 }
 
 
-prefix elseweb: <http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#>
+prefix elseweb: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#>
 select ?coverage ?payloadURL
-from <http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ALifemapperExperiment>
+from <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#ALifemapperExperiment>
 where
 {
 elseweb:ALifemapperExperiment elseweb:hasModelingAlgorithm ?algorithm .
@@ -49,9 +49,9 @@ elseweb:ALifemapperExperiment elseweb:hasExperimentalScenarioLayerSet ?layerset 
 
 
 
-prefix elseweb: <http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#>
+prefix elseweb: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#>
 select ?experiment ?modelURL
-from <http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ALifemapperExperiment>
+from <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#ALifemapperExperiment>
 where
 {
 elseweb:ALifemapperExperiment elseweb:hasModelingAlgorithm ?algorithm .
