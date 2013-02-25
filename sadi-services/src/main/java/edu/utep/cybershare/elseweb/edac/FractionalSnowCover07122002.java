@@ -27,8 +27,8 @@ import edu.utep.cybershare.elseweb.util.XMLGregorianCalendarConverter;
 
 @Name("FractionalSnowCover07122002")
 @ContactEmail("nicholas.delrio@gmail.com")
-@InputClass("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ScenarioLayerSet")
-@OutputClass("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet_07122002")
+@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#ScenarioLayerSet")
+@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#PopulatedScenarioLayerSet_07122002")
 @Description("EDAC Fractional Snow Cover Data 07122002")
 public class FractionalSnowCover07122002 extends SimpleSynchronousServiceServlet
 {
@@ -76,13 +76,13 @@ public class FractionalSnowCover07122002 extends SimpleSynchronousServiceServlet
 	{
 		private static Model m_model = ModelFactory.createDefaultModel();
 		
-		public static final Property hasFormat = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasFormat");
-		public static final Property hasFractionalSnowCover_07122002 = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasFractionalSnowCover_07122002");
-		public static final Property hasWCSCoverage = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoverage");		
-		public static final Property hasWCSGetCoverageURL = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSGetCoverageURL");
-		public static final Property hasRequestDateTime = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasRequestDateTime");
+		public static final Property hasFormat = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasFormat");
+		public static final Property hasFractionalSnowCover_07122002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasFractionalSnowCover_07122002");
+		public static final Property hasWCSCoverage = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasWCSCoverage");		
+		public static final Property hasWCSGetCoverageURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasWCSGetCoverageURL");
+		public static final Property hasRequestDateTime = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasRequestDateTime");
 		
-		public static final Resource FractionalSnowCover_07122002 = m_model.createResource("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_07122002");
+		public static final Resource FractionalSnowCover_07122002 = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#FractionalSnowCover_07122002");
 		public static final Resource Mixed = m_model.createResource("http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED");
 	}
 }

@@ -22,8 +22,8 @@ import edu.utep.cybershare.elseweb.delrio.multipartMIME.PayloadExtractor;
 
 @Name("WCSPayloadExtractor")
 @ContactEmail("nicholas.delrio@gmail.com")
-@InputClass("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#WCSCoverage")
-@OutputClass("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#WCSCoveragePayload")
+@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#WCSCoverage")
+@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#WCSCoveragePayload")
 @Description("WCS Multipart MIME Payload Extractor")
 
 public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
@@ -57,11 +57,11 @@ public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
 	{
 		private static Model m_model = ModelFactory.createDefaultModel();
 		
-		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoveragePayloadURL");
-		public static final Property hasFormat = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasFormat");
-		public static final Property hasWCSGetCoverageURL = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSGetCoverageURL");
-		public static final Resource WCSCoverage = m_model.createResource("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#WCSCoverage");
+		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasWCSCoveragePayloadURL");
+		public static final Property hasFormat = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasFormat");
+		public static final Property hasWCSGetCoverageURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasWCSGetCoverageURL");
+		public static final Resource WCSCoverage = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#WCSCoverage");
 		public static final Resource Literal = m_model.createResource("http://www.w3.org/2000/01/rdf-schema#Literal");
-		public static final Resource WCSCoveragePayload = m_model.createResource("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#WCSCoveragePayload");
+		public static final Resource WCSCoveragePayload = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#WCSCoveragePayload");
 	}
 }

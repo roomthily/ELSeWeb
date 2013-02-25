@@ -25,8 +25,8 @@ import edu.utep.cybershare.elseweb.lifemapper.client.LifemapperExperiment;
 
 @Name("Lifemapper")
 @ContactEmail("nicholas.delrio@gmail.com")
-@InputClass("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FullySpecifiedLifemapperExperiment")
-@OutputClass("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#CompletedLifemapperExperiment")
+@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#FullySpecifiedLifemapperExperiment")
+@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#CompletedLifemapperExperiment")
 @Description("Lifemapper Species Modeling")
 
 public class Lifemapper extends SimpleSynchronousServiceServlet
@@ -96,18 +96,18 @@ public class Lifemapper extends SimpleSynchronousServiceServlet
 	{
 		private static Model m_model = ModelFactory.createDefaultModel();
 		
-		public static final Property hasFormat = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasFormat");
-		public static final Property hasScenarioLayerUnits = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasScenarioLayerUnits");
-		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoveragePayloadURL");
-		public static final Property hasWCSCoverage = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoverage");
-		public static final Property hasExperimentalScenarioLayerSet = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasExperimentalScenarioLayerSet");
-		public static final Property hasLifemapperModelURL = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasLifemapperModelURL");
-		public static final Property hasModelingAlgorithm = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasModelingAlgorithm");
-		public static final Property hasWCSGetCoverageURL = m_model.createProperty("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSGetCoverageURL");
-		public static final Resource CompletedLifemapperExperiment = m_model.createResource("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#CompletedLifemapperExperiment");
-		public static final Resource WCSCoverage = m_model.createResource("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#WCSCoverage");
+		public static final Property hasFormat = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasFormat");
+		public static final Property hasScenarioLayerUnits = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasScenarioLayerUnits");
+		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasWCSCoveragePayloadURL");
+		public static final Property hasWCSCoverage = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasWCSCoverage");
+		public static final Property hasExperimentalScenarioLayerSet = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasExperimentalScenarioLayerSet");
+		public static final Property hasLifemapperModelURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasLifemapperModelURL");
+		public static final Property hasModelingAlgorithm = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasModelingAlgorithm");
+		public static final Property hasWCSGetCoverageURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasWCSGetCoverageURL");
+		public static final Resource CompletedLifemapperExperiment = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#CompletedLifemapperExperiment");
+		public static final Resource WCSCoverage = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#WCSCoverage");
 		public static final Resource Literal = m_model.createResource("http://www.w3.org/2000/01/rdf-schema#Literal");
-		public static final Resource ExperimentalScenarioLayerSet = m_model.createResource("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ExperimentalScenarioLayerSet");
-		public static final Resource FullySpecifiedLifemapperExperiment = m_model.createResource("http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FullySpecifiedLifemapperExperiment");
+		public static final Resource ExperimentalScenarioLayerSet = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#ExperimentalScenarioLayerSet");
+		public static final Resource FullySpecifiedLifemapperExperiment = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#FullySpecifiedLifemapperExperiment");
 	}
 }
