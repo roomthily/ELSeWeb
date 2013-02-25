@@ -1,0 +1,77 @@
+prefix elseweb: <http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#>
+select ?coverage ?wcsURL
+from <http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ALifemapperExperiment>
+where
+{
+elseweb:ALifemapperExperiment elseweb:hasModelingAlgorithm ?algorithm .
+elseweb:ALifemapperExperiment elseweb:hasScenarioLayerUnits ?units .
+elseweb:ALifemapperExperiment elseweb:hasExperimentalScenarioLayerSet ?layerset .
+
+?layerset elseweb:hasWCSCoverage ?wcsData1 .
+?wcsData1 a elseweb:FractionalSnowCover_06182002 .
+
+?layerset elseweb:hasWCSCoverage ?wcsData2 .
+?wcsData2 a elseweb:FractionalSnowCover_07122002 .
+
+?layerset elseweb:hasWCSCoverage ?wcsData3 .
+?wcsData3 a elseweb:FractionalSnowCover_07132002 .
+
+?layerset elseweb:hasWCSCoverage ?wcsData4 .
+?wcsData4 a elseweb:FractionalSnowCover_07292002 .
+
+?coverage elseweb:hasWCSGetCoverageURL ?wcsURL .
+}
+
+
+prefix elseweb: <http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#>
+select ?coverage ?payloadURL
+from <http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ALifemapperExperiment>
+where
+{
+elseweb:ALifemapperExperiment elseweb:hasModelingAlgorithm ?algorithm .
+elseweb:ALifemapperExperiment elseweb:hasScenarioLayerUnits ?units .
+elseweb:ALifemapperExperiment elseweb:hasExperimentalScenarioLayerSet ?layerset .
+
+?layerset elseweb:hasWCSCoverage ?wcsData1 .
+?wcsData1 a elseweb:FractionalSnowCover_06182002 .
+
+?layerset elseweb:hasWCSCoverage ?wcsData2 .
+?wcsData2 a elseweb:FractionalSnowCover_07122002 .
+
+?layerset elseweb:hasWCSCoverage ?wcsData3 .
+?wcsData3 a elseweb:FractionalSnowCover_07132002 .
+
+?layerset elseweb:hasWCSCoverage ?wcsData4 .
+?wcsData4 a elseweb:FractionalSnowCover_07292002 .
+
+?coverage elseweb:hasWCSCoveragePayloadURL ?payloadURL .
+}
+
+
+
+prefix elseweb: <http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#>
+select ?experiment ?modelURL
+from <http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ALifemapperExperiment>
+where
+{
+elseweb:ALifemapperExperiment elseweb:hasModelingAlgorithm ?algorithm .
+elseweb:ALifemapperExperiment elseweb:hasScenarioLayerUnits ?units .
+elseweb:ALifemapperExperiment elseweb:hasExperimentalScenarioLayerSet ?layerset .
+
+?layerset elseweb:hasWCSCoverage ?wcsData1 .
+?wcsData1 a elseweb:FractionalSnowCover_06182002 .
+
+?layerset elseweb:hasWCSCoverage ?wcsData2 .
+?wcsData2 a elseweb:FractionalSnowCover_07122002 .
+
+?layerset elseweb:hasWCSCoverage ?wcsData3 .
+?wcsData3 a elseweb:FractionalSnowCover_07132002 .
+
+?layerset elseweb:hasWCSCoverage ?wcsData4 .
+?wcsData4 a elseweb:FractionalSnowCover_07292002 .
+
+?coverage elseweb:hasWCSCoveragePayloadURL ?payloadURL .
+
+elseweb:ALifemapperExperiment elseweb:hasLifemapperModelURL ?modelURL .
+?experiment a elseweb:CompletedLifemapperExperiment .
+}

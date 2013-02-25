@@ -1,0 +1,464 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY pml-provenance "http://inference-web.org/2.0/pml-provenance.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#"
+     xml:base="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl"
+     xmlns:pml-provenance="http://inference-web.org/2.0/pml-provenance.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasEDACData -->
+
+    <owl:ObjectProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasEDACData">
+        <rdfs:subPropertyOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoverage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasExperimentalScenarioLayerSet -->
+
+    <owl:ObjectProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasExperimentalScenarioLayerSet"/>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasFormat -->
+
+    <owl:ObjectProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasFormat"/>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasFractionalSnowCover_06182002 -->
+
+    <owl:ObjectProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasFractionalSnowCover_06182002">
+        <rdfs:range rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_06182002"/>
+        <rdfs:domain rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet_06182002"/>
+        <rdfs:subPropertyOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasSnowCoverData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasFractionalSnowCover_07122002 -->
+
+    <owl:ObjectProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasFractionalSnowCover_07122002">
+        <rdfs:range rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_07122002"/>
+        <rdfs:domain rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet_07122002"/>
+        <rdfs:subPropertyOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasSnowCoverData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasFractionalSnowCover_07132002 -->
+
+    <owl:ObjectProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasFractionalSnowCover_07132002">
+        <rdfs:range rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_07132002"/>
+        <rdfs:domain rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet_07132002"/>
+        <rdfs:subPropertyOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasSnowCoverData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasFractionalSnowCover_07292002 -->
+
+    <owl:ObjectProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasFractionalSnowCover_07292002">
+        <rdfs:range rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_07292002"/>
+        <rdfs:domain rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet_07292002"/>
+        <rdfs:subPropertyOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasSnowCoverData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasSnowCoverData -->
+
+    <owl:ObjectProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasSnowCoverData">
+        <rdfs:subPropertyOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasEDACData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasTemperatureData -->
+
+    <owl:ObjectProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasTemperatureData">
+        <rdfs:subPropertyOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasEDACData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoverage -->
+
+    <owl:ObjectProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoverage"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasLifemapperModelURL -->
+
+    <owl:DatatypeProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasLifemapperModelURL"/>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasModelingAlgorithm -->
+
+    <owl:DatatypeProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasModelingAlgorithm"/>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasRequestDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasRequestDateTime"/>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasScenarioLayerUnits -->
+
+    <owl:DatatypeProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasScenarioLayerUnits"/>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoveragePayloadURL -->
+
+    <owl:DatatypeProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoveragePayloadURL"/>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSGetCoverageURL -->
+
+    <owl:DatatypeProperty rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSGetCoverageURL"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://inference-web.org/2.0/pml-provenance.owl#Format -->
+
+    <owl:Class rdf:about="&pml-provenance;Format"/>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#CompletedLifemapperExperiment -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#CompletedLifemapperExperiment">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasLifemapperModelURL"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FullySpecifiedLifemapperExperiment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#EDACData -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#EDACData">
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#WCSCoverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ExperimentalScenarioLayerSet -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ExperimentalScenarioLayerSet">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoverage"/>
+                <owl:someValuesFrom rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#WCSCoveragePayload"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_06182002 -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_06182002">
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#SnowCoverData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_07122002 -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_07122002">
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#SnowCoverData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_07132002 -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_07132002">
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#SnowCoverData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_07292002 -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_07292002">
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#SnowCoverData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FullySpecifiedLifemapperExperiment -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FullySpecifiedLifemapperExperiment">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasExperimentalScenarioLayerSet"/>
+                <owl:someValuesFrom rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ExperimentalScenarioLayerSet"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#LifemapperExperiment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#LifemapperExperiment -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#LifemapperExperiment">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasModelingAlgorithm"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasExperimentalScenarioLayerSet"/>
+                <owl:someValuesFrom rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ScenarioLayerSet"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasScenarioLayerUnits"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoverage"/>
+                <owl:someValuesFrom rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#WCSCoverage"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ScenarioLayerSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet_06182002 -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet_06182002">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoverage"/>
+                <owl:someValuesFrom rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_06182002"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet_07122002 -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet_07122002">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoverage"/>
+                <owl:someValuesFrom rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_07122002"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet_07132002 -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet_07132002">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoverage"/>
+                <owl:someValuesFrom rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_07132002"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet_07292002 -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet_07292002">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoverage"/>
+                <owl:someValuesFrom rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FractionalSnowCover_07292002"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#PopulatedScenarioLayerSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ScenarioLayerSet -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ScenarioLayerSet"/>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#SnowCoverData -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#SnowCoverData">
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#EDACData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#TemperatureData -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#TemperatureData">
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#EDACData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#WCSCoverage -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#WCSCoverage">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasFormat"/>
+                <owl:hasValue rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSGetCoverageURL"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#WCSCoveragePayload -->
+
+    <owl:Class rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#WCSCoveragePayload">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#hasWCSCoveragePayloadURL"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#WCSCoverage"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ALifemapperExperiment -->
+
+    <owl:NamedIndividual rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ALifemapperExperiment">
+        <rdf:type rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#LifemapperExperiment"/>
+        <hasScenarioLayerUnits>dd</hasScenarioLayerUnits>
+        <hasModelingAlgorithm>BIOCLIM</hasModelingAlgorithm>
+        <hasExperimentalScenarioLayerSet rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#AnEmptyScenarioLayerSet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#AnEmptyScenarioLayerSet -->
+
+    <owl:NamedIndividual rdf:about="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#AnEmptyScenarioLayerSet">
+        <rdf:type rdf:resource="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#ScenarioLayerSet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED -->
+
+    <owl:NamedIndividual rdf:about="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED">
+        <rdf:type rdf:resource="&pml-provenance;Format"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.5.1928) http://owlapi.sourceforge.net -->
+
