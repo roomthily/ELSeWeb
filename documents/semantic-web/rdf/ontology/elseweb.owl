@@ -45,14 +45,6 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasEDACData -->
-
-    <owl:ObjectProperty rdf:about="&elseweb;hasEDACData">
-        <rdfs:subPropertyOf rdf:resource="&elseweb;hasWCSCoverage"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasExperimentalScenarioLayerSet -->
 
     <owl:ObjectProperty rdf:about="&elseweb;hasExperimentalScenarioLayerSet"/>
@@ -62,62 +54,6 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasFormat -->
 
     <owl:ObjectProperty rdf:about="&elseweb;hasFormat"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasFractionalSnowCover_06182002 -->
-
-    <owl:ObjectProperty rdf:about="&elseweb;hasFractionalSnowCover_06182002">
-        <rdfs:range rdf:resource="&elseweb;FractionalSnowCover_06182002"/>
-        <rdfs:domain rdf:resource="&elseweb;PopulatedScenarioLayerSet_06182002"/>
-        <rdfs:subPropertyOf rdf:resource="&elseweb;hasSnowCoverData"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasFractionalSnowCover_07122002 -->
-
-    <owl:ObjectProperty rdf:about="&elseweb;hasFractionalSnowCover_07122002">
-        <rdfs:range rdf:resource="&elseweb;FractionalSnowCover_07122002"/>
-        <rdfs:domain rdf:resource="&elseweb;PopulatedScenarioLayerSet_07122002"/>
-        <rdfs:subPropertyOf rdf:resource="&elseweb;hasSnowCoverData"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasFractionalSnowCover_07132002 -->
-
-    <owl:ObjectProperty rdf:about="&elseweb;hasFractionalSnowCover_07132002">
-        <rdfs:range rdf:resource="&elseweb;FractionalSnowCover_07132002"/>
-        <rdfs:domain rdf:resource="&elseweb;PopulatedScenarioLayerSet_07132002"/>
-        <rdfs:subPropertyOf rdf:resource="&elseweb;hasSnowCoverData"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasFractionalSnowCover_07292002 -->
-
-    <owl:ObjectProperty rdf:about="&elseweb;hasFractionalSnowCover_07292002">
-        <rdfs:range rdf:resource="&elseweb;FractionalSnowCover_07292002"/>
-        <rdfs:domain rdf:resource="&elseweb;PopulatedScenarioLayerSet_07292002"/>
-        <rdfs:subPropertyOf rdf:resource="&elseweb;hasSnowCoverData"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasSnowCoverData -->
-
-    <owl:ObjectProperty rdf:about="&elseweb;hasSnowCoverData">
-        <rdfs:subPropertyOf rdf:resource="&elseweb;hasEDACData"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasTemperatureData -->
-
-    <owl:ObjectProperty rdf:about="&elseweb;hasTemperatureData">
-        <rdfs:subPropertyOf rdf:resource="&elseweb;hasEDACData"/>
-    </owl:ObjectProperty>
     
 
 
@@ -284,14 +220,14 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&elseweb;hasExperimentalScenarioLayerSet"/>
-                <owl:someValuesFrom rdf:resource="&elseweb;ScenarioLayerSet"/>
+                <owl:onProperty rdf:resource="&elseweb;hasModelingAlgorithm"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&elseweb;hasModelingAlgorithm"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                <owl:onProperty rdf:resource="&elseweb;hasExperimentalScenarioLayerSet"/>
+                <owl:someValuesFrom rdf:resource="&elseweb;ScenarioLayerSet"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
@@ -395,14 +331,14 @@
     <owl:Class rdf:about="&elseweb;WCSCoverage">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&elseweb;hasWCSGetCoverageURL"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                <owl:onProperty rdf:resource="&elseweb;hasFormat"/>
+                <owl:hasValue rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&elseweb;hasFormat"/>
-                <owl:hasValue rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
+                <owl:onProperty rdf:resource="&elseweb;hasWCSGetCoverageURL"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
