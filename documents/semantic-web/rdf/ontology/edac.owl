@@ -189,20 +189,6 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#CompletedLifemapperExperiment -->
-
-    <owl:Class rdf:about="&edac;CompletedLifemapperExperiment">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasLifemapperModelURL"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&edac;FullySpecifiedLifemapperExperiment"/>
-    </owl:Class>
-    
-
-
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#Data -->
 
     <owl:Class rdf:about="&edac;Data"/>
@@ -228,63 +214,10 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#ExperimentalScenarioLayerSet -->
-
-    <owl:Class rdf:about="&edac;ExperimentalScenarioLayerSet">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasWCSCoverage"/>
-                <owl:someValuesFrom rdf:resource="&edac;WCSCoveragePayload"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&edac;PopulatedScenarioLayerSet"/>
-    </owl:Class>
-    
-
-
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#FractionalSnowCover -->
 
     <owl:Class rdf:about="&edac;FractionalSnowCover">
         <rdfs:subClassOf rdf:resource="&edac;Measured"/>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#FullySpecifiedLifemapperExperiment -->
-
-    <owl:Class rdf:about="&edac;FullySpecifiedLifemapperExperiment">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasExperimentalScenarioLayerSet"/>
-                <owl:someValuesFrom rdf:resource="&edac;ExperimentalScenarioLayerSet"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&edac;LifemapperExperiment"/>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#LifemapperExperiment -->
-
-    <owl:Class rdf:about="&edac;LifemapperExperiment">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasScenarioLayerUnits"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasModelingAlgorithm"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasExperimentalScenarioLayerSet"/>
-                <owl:someValuesFrom rdf:resource="&edac;ScenarioLayerSet"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -310,9 +243,9 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#Minimum_Temperature_Normals -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#MinimumTemperatureNormals -->
 
-    <owl:Class rdf:about="&edac;Minimum_Temperature_Normals">
+    <owl:Class rdf:about="&edac;MinimumTemperatureNormals">
         <rdfs:subClassOf rdf:resource="&edac;Modeled"/>
     </owl:Class>
     
@@ -333,70 +266,12 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#ModelingAlgorithm -->
-
-    <owl:Class rdf:about="&edac;ModelingAlgorithm"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#PopulatedScenarioLayerSet -->
-
-    <owl:Class rdf:about="&edac;PopulatedScenarioLayerSet">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasWCSCoverage"/>
-                <owl:someValuesFrom rdf:resource="&edac;WCSCoverage"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&edac;ScenarioLayerSet"/>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#PopulatedScenarioLayerSet_06182002 -->
-
-    <owl:Class rdf:about="&edac;PopulatedScenarioLayerSet_06182002">
-        <rdfs:subClassOf rdf:resource="&edac;PopulatedScenarioLayerSet"/>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#PopulatedScenarioLayerSet_07122002 -->
-
-    <owl:Class rdf:about="&edac;PopulatedScenarioLayerSet_07122002">
-        <rdfs:subClassOf rdf:resource="&edac;PopulatedScenarioLayerSet"/>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#PopulatedScenarioLayerSet_07132002 -->
-
-    <owl:Class rdf:about="&edac;PopulatedScenarioLayerSet_07132002">
-        <rdfs:subClassOf rdf:resource="&edac;PopulatedScenarioLayerSet"/>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#PopulatedScenarioLayerSet_07292002 -->
-
-    <owl:Class rdf:about="&edac;PopulatedScenarioLayerSet_07292002">
-        <rdfs:subClassOf rdf:resource="&edac;PopulatedScenarioLayerSet"/>
-    </owl:Class>
-    
-
-
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#Region -->
 
     <owl:Class rdf:about="&edac;Region">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasRightLongitude"/>
-                <owl:someValuesFrom rdf:resource="&xsd;double"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasUpperLatitude"/>
+                <owl:onProperty rdf:resource="&edac;hasLowerLatitude"/>
                 <owl:someValuesFrom rdf:resource="&xsd;double"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -408,17 +283,17 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasLowerLatitude"/>
+                <owl:onProperty rdf:resource="&edac;hasUpperLatitude"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&edac;hasRightLongitude"/>
                 <owl:someValuesFrom rdf:resource="&xsd;double"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#ScenarioLayerSet -->
-
-    <owl:Class rdf:about="&edac;ScenarioLayerSet"/>
     
 
 
@@ -431,6 +306,12 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#WCSCoverage -->
 
     <owl:Class rdf:about="&edac;WCSCoverage">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&edac;hasWCSGetCoverageURL"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&edac;hasFormat"/>
@@ -447,12 +328,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&edac;hasDuration"/>
                 <owl:someValuesFrom rdf:resource="&edac;Duration"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasWCSGetCoverageURL"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
@@ -495,7 +370,6 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#ALifemapperExperiment -->
 
     <owl:NamedIndividual rdf:about="&edac;ALifemapperExperiment">
-        <rdf:type rdf:resource="&edac;LifemapperExperiment"/>
         <edac:hasModelingAlgorithm>BIOCLIM</edac:hasModelingAlgorithm>
         <edac:hasScenarioLayerUnits>dd</edac:hasScenarioLayerUnits>
         <edac:hasExperimentalScenarioLayerSet rdf:resource="&edac;AnEmptyScenarioLayerSet"/>
@@ -505,9 +379,7 @@
 
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#AnEmptyScenarioLayerSet -->
 
-    <owl:NamedIndividual rdf:about="&edac;AnEmptyScenarioLayerSet">
-        <rdf:type rdf:resource="&edac;ScenarioLayerSet"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="&edac;AnEmptyScenarioLayerSet"/>
     
 
 
