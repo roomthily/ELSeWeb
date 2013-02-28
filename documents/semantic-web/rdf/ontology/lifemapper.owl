@@ -55,9 +55,9 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#outputFromMethod -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasModelingAlgorithm -->
 
-    <owl:ObjectProperty rdf:about="&lifemaper;outputFromMethod"/>
+    <owl:ObjectProperty rdf:about="&lifemaper;hasModelingAlgorithm"/>
     
 
 
@@ -72,75 +72,15 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasEndDate -->
-
-    <owl:DatatypeProperty rdf:about="&lifemaper;hasEndDate"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasLeftLongitude -->
-
-    <owl:DatatypeProperty rdf:about="&lifemaper;hasLeftLongitude"/>
-    
-
-
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasLifemapperModelURL -->
 
     <owl:DatatypeProperty rdf:about="&lifemaper;hasLifemapperModelURL"/>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasLowerLatitude -->
-
-    <owl:DatatypeProperty rdf:about="&lifemaper;hasLowerLatitude"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasModelingAlgorithm -->
-
-    <owl:DatatypeProperty rdf:about="&lifemaper;hasModelingAlgorithm"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasRequestDateTime -->
-
-    <owl:DatatypeProperty rdf:about="&lifemaper;hasRequestDateTime"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasRightLongitude -->
-
-    <owl:DatatypeProperty rdf:about="&lifemaper;hasRightLongitude"/>
-    
-
-
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasScenarioLayerUnits -->
 
     <owl:DatatypeProperty rdf:about="&lifemaper;hasScenarioLayerUnits"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasStartDate -->
-
-    <owl:DatatypeProperty rdf:about="&lifemaper;hasStartDate"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasUpperLatitude -->
-
-    <owl:DatatypeProperty rdf:about="&lifemaper;hasUpperLatitude"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasWCSCoveragePayloadURL -->
-
-    <owl:DatatypeProperty rdf:about="&lifemaper;hasWCSCoveragePayloadURL"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasWCSGetCoverageURL -->
-
-    <owl:DatatypeProperty rdf:about="&lifemaper;hasWCSGetCoverageURL"/>
     
 
 
@@ -197,7 +137,7 @@
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&lifemaper;hasModelingAlgorithm"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                <owl:someValuesFrom rdf:resource="&lifemaper;ModelingAlgorithm"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
@@ -258,8 +198,8 @@
     <owl:NamedIndividual rdf:about="&lifemaper;ALifemapperExperiment">
         <rdf:type rdf:resource="&lifemaper;LifemapperExperiment"/>
         <lifemaper:hasScenarioLayerUnits>dd</lifemaper:hasScenarioLayerUnits>
-        <lifemaper:hasModelingAlgorithm>BIOCLIM</lifemaper:hasModelingAlgorithm>
         <lifemaper:hasExperimentalScenarioLayerSet rdf:resource="&lifemaper;AnEmptyScenarioLayerSet"/>
+        <lifemaper:hasModelingAlgorithm rdf:resource="&lifemaper;BIOCLIM"/>
     </owl:NamedIndividual>
     
 
@@ -268,6 +208,14 @@
 
     <owl:NamedIndividual rdf:about="&lifemaper;AnEmptyScenarioLayerSet">
         <rdf:type rdf:resource="&lifemaper;ScenarioLayerSet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#BIOCLIM -->
+
+    <owl:NamedIndividual rdf:about="&lifemaper;BIOCLIM">
+        <rdf:type rdf:resource="&lifemaper;ModelingAlgorithm"/>
     </owl:NamedIndividual>
     
 
