@@ -53,12 +53,6 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasExperimentalScenarioLayerSet -->
-
-    <owl:ObjectProperty rdf:about="&edac;hasExperimentalScenarioLayerSet"/>
-    
-
-
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasFormat -->
 
     <owl:ObjectProperty rdf:about="&edac;hasFormat"/>
@@ -112,21 +106,9 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasLifemapperModelURL -->
-
-    <owl:DatatypeProperty rdf:about="&edac;hasLifemapperModelURL"/>
-    
-
-
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasLowerLatitude -->
 
     <owl:DatatypeProperty rdf:about="&edac;hasLowerLatitude"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasModelingAlgorithm -->
-
-    <owl:DatatypeProperty rdf:about="&edac;hasModelingAlgorithm"/>
     
 
 
@@ -139,12 +121,6 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasRightLongitude -->
 
     <owl:DatatypeProperty rdf:about="&edac;hasRightLongitude"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasScenarioLayerUnits -->
-
-    <owl:DatatypeProperty rdf:about="&edac;hasScenarioLayerUnits"/>
     
 
 
@@ -214,14 +190,6 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#FractionalSnowCover -->
-
-    <owl:Class rdf:about="&edac;FractionalSnowCover">
-        <rdfs:subClassOf rdf:resource="&edac;Measured"/>
-    </owl:Class>
-    
-
-
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#Measured -->
 
     <owl:Class rdf:about="&edac;Measured">
@@ -240,14 +208,6 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#Method -->
 
     <owl:Class rdf:about="&edac;Method"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#MinimumTemperatureNormals -->
-
-    <owl:Class rdf:about="&edac;MinimumTemperatureNormals">
-        <rdfs:subClassOf rdf:resource="&edac;Modeled"/>
-    </owl:Class>
     
 
 
@@ -271,13 +231,13 @@
     <owl:Class rdf:about="&edac;Region">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasLowerLatitude"/>
+                <owl:onProperty rdf:resource="&edac;hasLeftLongitude"/>
                 <owl:someValuesFrom rdf:resource="&xsd;double"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasLeftLongitude"/>
+                <owl:onProperty rdf:resource="&edac;hasRightLongitude"/>
                 <owl:someValuesFrom rdf:resource="&xsd;double"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -289,7 +249,7 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasRightLongitude"/>
+                <owl:onProperty rdf:resource="&edac;hasLowerLatitude"/>
                 <owl:someValuesFrom rdf:resource="&xsd;double"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -308,18 +268,6 @@
     <owl:Class rdf:about="&edac;WCSCoverage">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasWCSGetCoverageURL"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasFormat"/>
-                <owl:hasValue rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&edac;hasRegion"/>
                 <owl:someValuesFrom rdf:resource="&edac;Region"/>
             </owl:Restriction>
@@ -328,6 +276,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&edac;hasDuration"/>
                 <owl:someValuesFrom rdf:resource="&edac;Duration"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&edac;hasWCSGetCoverageURL"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&edac;hasFormat"/>
+                <owl:hasValue rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
@@ -369,11 +329,7 @@
 
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#ALifemapperExperiment -->
 
-    <owl:NamedIndividual rdf:about="&edac;ALifemapperExperiment">
-        <edac:hasModelingAlgorithm>BIOCLIM</edac:hasModelingAlgorithm>
-        <edac:hasScenarioLayerUnits>dd</edac:hasScenarioLayerUnits>
-        <edac:hasExperimentalScenarioLayerSet rdf:resource="&edac;AnEmptyScenarioLayerSet"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="&edac;ALifemapperExperiment"/>
     
 
 
@@ -383,10 +339,28 @@
     
 
 
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#FractionalSnowCover -->
+
+    <owl:NamedIndividual rdf:about="&edac;FractionalSnowCover">
+        <rdf:type rdf:resource="&edac;Measured"/>
+        <edac:measuredBySensor rdf:resource="&edac;MODIS"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#MODIS -->
 
     <owl:NamedIndividual rdf:about="&edac;MODIS">
         <rdf:type rdf:resource="&edac;Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#MinimumTemperatureNormals -->
+
+    <owl:NamedIndividual rdf:about="&edac;MinimumTemperatureNormals">
+        <rdf:type rdf:resource="&edac;Modeled"/>
+        <edac:outputFromMethod rdf:resource="&edac;PRISM"/>
     </owl:NamedIndividual>
     
 
