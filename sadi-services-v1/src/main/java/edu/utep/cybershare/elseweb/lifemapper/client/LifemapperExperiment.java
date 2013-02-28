@@ -1,0 +1,70 @@
+package edu.utep.cybershare.elseweb.lifemapper.client;
+
+import java.io.File;
+import java.net.URL;
+import java.util.ArrayList;
+
+import edu.utep.cybershare.elseweb.util.CommandRunner;
+import edu.utep.cybershare.elseweb.util.FileUtils;
+
+public class LifemapperExperiment {
+	
+	private static final String pythonEXE = "python";
+	private static final String lifeMapperScript = "\"" + FileUtils.getScriptsDir().getAbsolutePath() + "/" + "client.py\"";
+	private static String resultBaseURL = "http://lifemapper.org/services/sdm/experiments/";
+
+	private ArrayList<URL> scenarioLayers;
+	private String algorithm;
+	
+	private String uname;
+	private String pword;
+	private String units;
+	
+	private File outputFilePath;
+	
+	public LifemapperExperiment(String username, String password){
+		scenarioLayers = new ArrayList<URL>();
+		uname = username;
+		pword = password;
+		outputFilePath = FileUtils.getOutputFilePath("lifemapperResults.txt");
+	}
+
+	public void setScenarioLayerUnits(String scenarioLayerUnits){
+		units = scenarioLayerUnits;
+	}
+	
+	public boolean addScenarioLayer(URL layerURL){
+		boolean added = false;
+		if(scenarioLayers.size() < 10)
+			added = scenarioLayers.add(layerURL);
+		return added;
+	}
+	
+	public void setAlgorithm(String algorithmName){
+		algorithm = algorithmName;
+	}
+		
+	public URL submitExperiment(){
+		String command =	pythonEXE + " " +
+							lifeMapperScript + " " +
+							uname + " " +
+							pword + " " +
+							units + " " +
+							algorithm + " " +
+							"\"" + outputFilePath.getAbsolutePath() + "\" ";
+
+		for(URL scenarioLayerURL : scenarioLayers)
+			command += scenarioLayerURL + " ";
+		
+		System.out.println("going to dump file at: " + outputFilePath);
+		
+		CommandRunner.run(command);
+		String experimentID = FileUtils.readTextFile(outputFilePath).trim();
+		
+		URL resultURL = null;
+		try{resultURL = new URL(resultBaseURL + experimentID);}
+		catch(Exception e){e.printStackTrace();}
+		
+		return resultURL;
+	}
+}
