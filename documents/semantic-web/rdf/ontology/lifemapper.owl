@@ -49,6 +49,18 @@
     
 
 
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasCoverage -->
+
+    <owl:ObjectProperty rdf:about="&lifemaper;hasCoverage"/>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasCoveragePayload -->
+
+    <owl:ObjectProperty rdf:about="&lifemaper;hasCoveragePayload"/>
+    
+
+
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasExperimentalScenarioLayerSet -->
 
     <owl:ObjectProperty rdf:about="&lifemaper;hasExperimentalScenarioLayerSet"/>
@@ -112,6 +124,12 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#ExperimentalScenarioLayerSet -->
 
     <owl:Class rdf:about="&lifemaper;ExperimentalScenarioLayerSet">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemaper;hasCoverage"/>
+                <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoveragePayload"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&lifemaper;PopulatedScenarioLayerSet"/>
     </owl:Class>
     
@@ -165,6 +183,12 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#PopulatedScenarioLayerSet -->
 
     <owl:Class rdf:about="&lifemaper;PopulatedScenarioLayerSet">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemaper;hasCoverage"/>
+                <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&lifemaper;ScenarioLayerSet"/>
     </owl:Class>
     
