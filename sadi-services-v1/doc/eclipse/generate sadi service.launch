@@ -6,10 +6,10 @@
 <booleanAttribute key="M2_OFFLINE" value="false"/>
 <stringAttribute key="M2_PROFILES" value=""/>
 <listAttribute key="M2_PROPERTIES">
-<listEntry value="serviceName=Lifemapper"/>
-<listEntry value="serviceClass=edu.utep.cybershare.elseweb.lifemapper.Lifemapper"/>
-<listEntry value="inputClass=http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#FullySpecifiedLifemapperExperiment"/>
-<listEntry value="outputClass=http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#CompletedLifemapperExperiment"/>
+<listEntry value="serviceName=FractionalSnowCover06182002"/>
+<listEntry value="serviceClass=edu.utep.cybershare.elseweb.edac.FractionalSnowCover06182002"/>
+<listEntry value="inputClass=https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#ScenarioLayerSet"/>
+<listEntry value="outputClass=https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#PopulatedScenarioLayerSet"/>
 <listEntry value="contactEmail=nicholas.delrio@gmail.com"/>
 </listAttribute>
 <stringAttribute key="M2_RUNTIME" value="EMBEDDED"/>

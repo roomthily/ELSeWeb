@@ -9,6 +9,7 @@
     <!ENTITY pml-provenance "http://inference-web.org/2.0/pml-provenance.owl#" >
     <!ENTITY elseweb "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#" >
     <!ENTITY lifemaper "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#" >
+    <!ENTITY lifemapper "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#" >
 ]>
 
 
@@ -17,11 +18,12 @@
      xmlns:lifemaper="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#"
      xmlns:pml-provenance="http://inference-web.org/2.0/pml-provenance.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:lifemapper="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#"
      xmlns:elseweb="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl">
+    <owl:Ontology rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl">
         <owl:imports rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl"/>
     </owl:Ontology>
     
@@ -49,27 +51,27 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasCoverage -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoverage -->
 
-    <owl:ObjectProperty rdf:about="&lifemaper;hasCoverage"/>
+    <owl:ObjectProperty rdf:about="&lifemapper;hasCoverage"/>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasCoveragePayload -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoveragePayload -->
 
-    <owl:ObjectProperty rdf:about="&lifemaper;hasCoveragePayload"/>
+    <owl:ObjectProperty rdf:about="&lifemapper;hasCoveragePayload"/>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasExperimentalScenarioLayerSet -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasExperimentalScenarioLayerSet -->
 
-    <owl:ObjectProperty rdf:about="&lifemaper;hasExperimentalScenarioLayerSet"/>
+    <owl:ObjectProperty rdf:about="&lifemapper;hasExperimentalScenarioLayerSet"/>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasModelingAlgorithm -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasModelingAlgorithm -->
 
-    <owl:ObjectProperty rdf:about="&lifemaper;hasModelingAlgorithm"/>
+    <owl:ObjectProperty rdf:about="&lifemapper;hasModelingAlgorithm"/>
     
 
 
@@ -84,15 +86,15 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasLifemapperModelURL -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasLifemapperModelURL -->
 
-    <owl:DatatypeProperty rdf:about="&lifemaper;hasLifemapperModelURL"/>
+    <owl:DatatypeProperty rdf:about="&lifemapper;hasLifemapperModelURL"/>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#hasScenarioLayerUnits -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasScenarioLayerUnits -->
 
-    <owl:DatatypeProperty rdf:about="&lifemaper;hasScenarioLayerUnits"/>
+    <owl:DatatypeProperty rdf:about="&lifemapper;hasScenarioLayerUnits"/>
     
 
 
@@ -107,96 +109,96 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#CompletedLifemapperExperiment -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#CompletedLifemapperExperiment -->
 
-    <owl:Class rdf:about="&lifemaper;CompletedLifemapperExperiment">
+    <owl:Class rdf:about="&lifemapper;CompletedLifemapperExperiment">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemaper;hasLifemapperModelURL"/>
+                <owl:onProperty rdf:resource="&lifemapper;hasLifemapperModelURL"/>
                 <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&lifemaper;FullySpecifiedLifemapperExperiment"/>
+        <rdfs:subClassOf rdf:resource="&lifemapper;FullySpecifiedLifemapperExperiment"/>
     </owl:Class>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#ExperimentalScenarioLayerSet -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#ExperimentalScenarioLayerSet -->
 
-    <owl:Class rdf:about="&lifemaper;ExperimentalScenarioLayerSet">
+    <owl:Class rdf:about="&lifemapper;ExperimentalScenarioLayerSet">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemaper;hasCoverage"/>
+                <owl:onProperty rdf:resource="&lifemapper;hasCoverage"/>
                 <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoveragePayload"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&lifemaper;PopulatedScenarioLayerSet"/>
+        <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet"/>
     </owl:Class>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#FullySpecifiedLifemapperExperiment -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#FullySpecifiedLifemapperExperiment -->
 
-    <owl:Class rdf:about="&lifemaper;FullySpecifiedLifemapperExperiment">
+    <owl:Class rdf:about="&lifemapper;FullySpecifiedLifemapperExperiment">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemaper;hasExperimentalScenarioLayerSet"/>
-                <owl:someValuesFrom rdf:resource="&lifemaper;ExperimentalScenarioLayerSet"/>
+                <owl:onProperty rdf:resource="&lifemapper;hasExperimentalScenarioLayerSet"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper;ExperimentalScenarioLayerSet"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&lifemaper;LifemapperExperiment"/>
+        <rdfs:subClassOf rdf:resource="&lifemapper;LifemapperExperiment"/>
     </owl:Class>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#LifemapperExperiment -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#LifemapperExperiment -->
 
-    <owl:Class rdf:about="&lifemaper;LifemapperExperiment">
+    <owl:Class rdf:about="&lifemapper;LifemapperExperiment">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemaper;hasModelingAlgorithm"/>
-                <owl:someValuesFrom rdf:resource="&lifemaper;ModelingAlgorithm"/>
+                <owl:onProperty rdf:resource="&lifemapper;hasModelingAlgorithm"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper;ModelingAlgorithm"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemaper;hasScenarioLayerUnits"/>
+                <owl:onProperty rdf:resource="&lifemapper;hasScenarioLayerUnits"/>
                 <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemaper;hasExperimentalScenarioLayerSet"/>
-                <owl:someValuesFrom rdf:resource="&lifemaper;ScenarioLayerSet"/>
+                <owl:onProperty rdf:resource="&lifemapper;hasExperimentalScenarioLayerSet"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper;ScenarioLayerSet"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#ModelingAlgorithm -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#ModelingAlgorithm -->
 
-    <owl:Class rdf:about="&lifemaper;ModelingAlgorithm"/>
+    <owl:Class rdf:about="&lifemapper;ModelingAlgorithm"/>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#PopulatedScenarioLayerSet -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PopulatedScenarioLayerSet -->
 
-    <owl:Class rdf:about="&lifemaper;PopulatedScenarioLayerSet">
+    <owl:Class rdf:about="&lifemapper;PopulatedScenarioLayerSet">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemaper;hasCoverage"/>
+                <owl:onProperty rdf:resource="&lifemapper;hasCoverage"/>
                 <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&lifemaper;ScenarioLayerSet"/>
+        <rdfs:subClassOf rdf:resource="&lifemapper;ScenarioLayerSet"/>
     </owl:Class>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#ScenarioLayerSet -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#ScenarioLayerSet -->
 
-    <owl:Class rdf:about="&lifemaper;ScenarioLayerSet"/>
+    <owl:Class rdf:about="&lifemapper;ScenarioLayerSet"/>
     
 
 
@@ -217,42 +219,42 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#ALifemapperExperiment -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#ALifemapperExperiment -->
 
-    <owl:NamedIndividual rdf:about="&lifemaper;ALifemapperExperiment">
-        <rdf:type rdf:resource="&lifemaper;LifemapperExperiment"/>
-        <lifemaper:hasScenarioLayerUnits>dd</lifemaper:hasScenarioLayerUnits>
-        <lifemaper:hasExperimentalScenarioLayerSet rdf:resource="&lifemaper;AnEmptyScenarioLayerSet"/>
-        <lifemaper:hasModelingAlgorithm rdf:resource="&lifemaper;BIOCLIM"/>
+    <owl:NamedIndividual rdf:about="&lifemapper;ALifemapperExperiment">
+        <rdf:type rdf:resource="&lifemapper;LifemapperExperiment"/>
+        <lifemapper:hasScenarioLayerUnits>dd</lifemapper:hasScenarioLayerUnits>
+        <lifemapper:hasExperimentalScenarioLayerSet rdf:resource="&lifemapper;AnEmptyScenarioLayerSet"/>
+        <lifemapper:hasModelingAlgorithm rdf:resource="&lifemapper;BIOCLIM"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#AnEmptyScenarioLayerSet -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#AnEmptyScenarioLayerSet -->
 
-    <owl:NamedIndividual rdf:about="&lifemaper;AnEmptyScenarioLayerSet">
-        <rdf:type rdf:resource="&lifemaper;ScenarioLayerSet"/>
+    <owl:NamedIndividual rdf:about="&lifemapper;AnEmptyScenarioLayerSet">
+        <rdf:type rdf:resource="&lifemapper;ScenarioLayerSet"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#BIOCLIM -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#BIOCLIM -->
 
-    <owl:NamedIndividual rdf:about="&lifemaper;BIOCLIM">
-        <rdf:type rdf:resource="&lifemaper;ModelingAlgorithm"/>
+    <owl:NamedIndividual rdf:about="&lifemapper;BIOCLIM">
+        <rdf:type rdf:resource="&lifemapper;ModelingAlgorithm"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#MODIS -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#MODIS -->
 
-    <owl:NamedIndividual rdf:about="&lifemaper;MODIS"/>
+    <owl:NamedIndividual rdf:about="&lifemapper;MODIS"/>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#PRISM -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PRISM -->
 
-    <owl:NamedIndividual rdf:about="&lifemaper;PRISM"/>
+    <owl:NamedIndividual rdf:about="&lifemapper;PRISM"/>
 </rdf:RDF>
 
 
