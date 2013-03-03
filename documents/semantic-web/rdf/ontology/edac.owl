@@ -170,14 +170,14 @@
     <owl:Class rdf:about="&edac;Data">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasDuration"/>
-                <owl:someValuesFrom rdf:resource="&edac;Duration"/>
+                <owl:onProperty rdf:resource="&edac;hasRegion"/>
+                <owl:someValuesFrom rdf:resource="&edac;Region"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasRegion"/>
-                <owl:someValuesFrom rdf:resource="&edac;Region"/>
+                <owl:onProperty rdf:resource="&edac;hasDuration"/>
+                <owl:someValuesFrom rdf:resource="&edac;Duration"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
@@ -259,14 +259,20 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasWCSGetCoverageURL"/>
+                <owl:onProperty rdf:resource="&edac;containsData"/>
+                <owl:someValuesFrom rdf:resource="&edac;Data"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&edac;hasRequestDateTime"/>
                 <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;containsData"/>
-                <owl:someValuesFrom rdf:resource="&edac;Data"/>
+                <owl:onProperty rdf:resource="&edac;hasWCSGetCoverageURL"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
@@ -298,7 +304,7 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasLowerLatitude"/>
+                <owl:onProperty rdf:resource="&edac;hasRightLongitude"/>
                 <owl:someValuesFrom rdf:resource="&xsd;double"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -310,7 +316,7 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasRightLongitude"/>
+                <owl:onProperty rdf:resource="&edac;hasLowerLatitude"/>
                 <owl:someValuesFrom rdf:resource="&xsd;double"/>
             </owl:Restriction>
         </owl:equivalentClass>
