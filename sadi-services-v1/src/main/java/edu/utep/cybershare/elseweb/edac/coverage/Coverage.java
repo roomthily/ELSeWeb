@@ -19,7 +19,7 @@ public class Coverage {
 	private Resource coverageResource;
 	
 	public Coverage(String coverageURI, Model coverageModel){
-		coverageModel = model;
+		model = coverageModel;
 		coverageResource = model.createResource("http://edac.elseweb.cybershare.utep.edu#FractionalSnowCoverData_06182002_Coverage", Vocab.OGCCoverage);	
 	}
 

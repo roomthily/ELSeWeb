@@ -13,8 +13,8 @@ public abstract class Data {
 	private Resource sourceResource;
 	
 	public Data(String dataURI, Model dataModel, Resource dataTypeResource, Resource dataSourceResource){
-		dataResource = model.createResource(dataURI, dataTypeResource);
 		model = dataModel;
+		dataResource = model.createResource(dataURI, dataTypeResource);
 		sourceResource = dataSourceResource;
 		
 		dataResource = model.createResource(dataURI, dataTypeResource);
