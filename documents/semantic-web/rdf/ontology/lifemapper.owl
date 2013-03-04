@@ -92,6 +92,12 @@
     
 
 
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="&lifemapper;hasName"/>
+    
+
+
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasScenarioLayerUnits -->
 
     <owl:DatatypeProperty rdf:about="&lifemapper;hasScenarioLayerUnits"/>
@@ -106,6 +112,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage -->
+
+    <owl:Class rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage"/>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoveragePayload -->
+
+    <owl:Class rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoveragePayload"/>
     
 
 
@@ -156,14 +174,14 @@
     <owl:Class rdf:about="&lifemapper;LifemapperExperiment">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper;hasModelingAlgorithm"/>
-                <owl:someValuesFrom rdf:resource="&lifemapper;ModelingAlgorithm"/>
+                <owl:onProperty rdf:resource="&lifemapper;hasScenarioLayerUnits"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper;hasScenarioLayerUnits"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                <owl:onProperty rdf:resource="&lifemapper;hasModelingAlgorithm"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper;ModelingAlgorithm"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
@@ -178,7 +196,14 @@
 
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#ModelingAlgorithm -->
 
-    <owl:Class rdf:about="&lifemapper;ModelingAlgorithm"/>
+    <owl:Class rdf:about="&lifemapper;ModelingAlgorithm">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemapper;hasName"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -225,7 +250,7 @@
         <rdf:type rdf:resource="&lifemapper;LifemapperExperiment"/>
         <lifemapper:hasScenarioLayerUnits>dd</lifemapper:hasScenarioLayerUnits>
         <lifemapper:hasExperimentalScenarioLayerSet rdf:resource="&lifemapper;AnEmptyScenarioLayerSet"/>
-        <lifemapper:hasModelingAlgorithm rdf:resource="&lifemapper;BIOCLIM"/>
+        <lifemapper:hasModelingAlgorithm rdf:resource="&lifemapper;BIOCLIM_Algorithm"/>
     </owl:NamedIndividual>
     
 
@@ -241,6 +266,14 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#BIOCLIM -->
 
     <owl:NamedIndividual rdf:about="&lifemapper;BIOCLIM">
+        <lifemapper:hasName>BIOCLIM</lifemapper:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#BIOCLIM_Algorithm -->
+
+    <owl:NamedIndividual rdf:about="&lifemapper;BIOCLIM_Algorithm">
         <rdf:type rdf:resource="&lifemapper;ModelingAlgorithm"/>
     </owl:NamedIndividual>
     
