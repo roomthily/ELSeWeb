@@ -170,14 +170,14 @@
     <owl:Class rdf:about="&edac;Data">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasRegion"/>
-                <owl:someValuesFrom rdf:resource="&edac;Region"/>
+                <owl:onProperty rdf:resource="&edac;hasDuration"/>
+                <owl:someValuesFrom rdf:resource="&edac;Duration"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasDuration"/>
-                <owl:someValuesFrom rdf:resource="&edac;Duration"/>
+                <owl:onProperty rdf:resource="&edac;hasRegion"/>
+                <owl:someValuesFrom rdf:resource="&edac;Region"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
@@ -203,13 +203,13 @@
     <owl:Class rdf:about="&edac;Duration">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasEndDate"/>
+                <owl:onProperty rdf:resource="&edac;hasStartDate"/>
                 <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasStartDate"/>
+                <owl:onProperty rdf:resource="&edac;hasEndDate"/>
                 <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -253,14 +253,14 @@
     <owl:Class rdf:about="&edac;OGCCoverage">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasFormat"/>
-                <owl:hasValue rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
+                <owl:onProperty rdf:resource="&edac;containsData"/>
+                <owl:someValuesFrom rdf:resource="&edac;Data"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;containsData"/>
-                <owl:someValuesFrom rdf:resource="&edac;Data"/>
+                <owl:onProperty rdf:resource="&edac;hasFormat"/>
+                <owl:hasValue rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
@@ -298,13 +298,13 @@
     <owl:Class rdf:about="&edac;Region">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasLeftLongitude"/>
+                <owl:onProperty rdf:resource="&edac;hasLowerLatitude"/>
                 <owl:someValuesFrom rdf:resource="&xsd;double"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasRightLongitude"/>
+                <owl:onProperty rdf:resource="&edac;hasLeftLongitude"/>
                 <owl:someValuesFrom rdf:resource="&xsd;double"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -316,7 +316,7 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&edac;hasLowerLatitude"/>
+                <owl:onProperty rdf:resource="&edac;hasRightLongitude"/>
                 <owl:someValuesFrom rdf:resource="&xsd;double"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -358,35 +358,11 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#ALifemapperExperiment -->
-
-    <owl:NamedIndividual rdf:about="&edac;ALifemapperExperiment"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#AnEmptyScenarioLayerSet -->
-
-    <owl:NamedIndividual rdf:about="&edac;AnEmptyScenarioLayerSet"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#FractionalSnowCover -->
-
-    <owl:NamedIndividual rdf:about="&edac;FractionalSnowCover"/>
-    
-
-
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#MODIS -->
 
     <owl:NamedIndividual rdf:about="&edac;MODIS">
         <rdf:type rdf:resource="&edac;Sensor"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#MinimumTemperatureNormals -->
-
-    <owl:NamedIndividual rdf:about="&edac;MinimumTemperatureNormals"/>
     
 
 
