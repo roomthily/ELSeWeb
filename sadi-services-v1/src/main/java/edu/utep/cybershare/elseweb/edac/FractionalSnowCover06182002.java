@@ -10,6 +10,9 @@ import ca.wilkinsonlab.sadi.service.annotations.InputClass;
 import ca.wilkinsonlab.sadi.service.annotations.OutputClass;
 import ca.wilkinsonlab.sadi.service.simple.SimpleSynchronousServiceServlet;
 
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 //import com.hp.hpl.jena.rdf.model.Statement;
 //import com.hp.hpl.jena.rdf.model.StmtIterator;
@@ -92,5 +95,7 @@ public class FractionalSnowCover06182002 extends SimpleSynchronousServiceServlet
 		ogcCoverage.addGetCoverageRequestURL(getCoverageURL);
 		ogcCoverage.addMIMEFormat();
 		ogcCoverage.addData(data.getDataResource());
+		
+		ogcCoverage.addHasCoverageToScenarioLayers(output);
 	}
 }

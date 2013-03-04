@@ -94,5 +94,8 @@ public class FractionalSnowCover07132002 extends SimpleSynchronousServiceServlet
 		ogcCoverage.addGetCoverageRequestURL(getCoverageURL);
 		ogcCoverage.addMIMEFormat();
 		ogcCoverage.addData(data.getDataResource());
+		
+		ogcCoverage.addHasCoverageToScenarioLayers(output);
+
 	}
 }

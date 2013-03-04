@@ -1,5 +1,6 @@
 package edu.utep.cybershare.elseweb.delrio;
 
+import java.io.StringWriter;
 import java.net.URL;
 
 import org.apache.log4j.Logger;
@@ -22,8 +23,8 @@ import edu.utep.cybershare.elseweb.delrio.multipartMIME.PayloadExtractor;
 
 @Name("WCSPayloadExtractor")
 @ContactEmail("nicholas.delrio@gmail.com")
-@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PopulatedScenarioLayerSet")
-@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#ExperimentalScenarioLayerSet")
+@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage")
+@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoveragePayload")
 @Description("WCS Multipart MIME Payload Extractor")
 
 public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
@@ -34,6 +35,10 @@ public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
 	@Override
 	public void processInput(Resource input, Resource output)
 	{
+		StringWriter wtr = new StringWriter();
+		input.getModel().write(wtr, "RDF/XML-ABBREV");
+		System.out.println(wtr.toString());
+		
 		String wcsGetCoverageURLString = input.getProperty(Vocab.hasWCSGetCoverageURL).getLiteral().getString();
 		
 		URL wcsGetCoverageURL = null;
