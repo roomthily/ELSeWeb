@@ -26,8 +26,39 @@
           Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 
           02110-1301, USA.
 """
+from collections import namedtuple
+
 from constants import WEBSITE_ROOT
 
+class AlgorithmParameter(object):
+   def __init__(self, name, type, default=None, min=None, max=None, value=None):
+      self.name = name
+      self.type = type
+      self.default = default
+      self.min = min
+      self.max = max
+      self.value = value if value is not None else self.default
+      
+class Algorithm(object):
+   def __init__(self, clAlg):
+      self.code = clAlg.code
+      self.name = clAlg.name
+      self.parameters = []
+      for param in clAlg.parameters:
+         try:
+            min = param.min
+         except:
+            min = None
+            
+         try:
+            max = param.max
+         except:
+            max = None
+             
+         p = AlgorithmParameter(param.name, param.type, default=param.default,
+                                min=min, max=max)
+         self.parameters.append(p)
+         
 # .............................................................................
 class SDMClient(object):
    """
@@ -39,7 +70,32 @@ class SDMClient(object):
       @summary: Constructor
       """
       self.cl = cl
+      self.algos = self._getAlgorithms()
 
+   # .........................................
+   def _getAlgorithms(self):
+      """
+      @summary: Gets available Lifemapper SDM algorithms
+      @return: Lifemapper algorithms
+      """
+      url = "http://lifemapper.org/clients/algorithms.xml"
+      obj = self.cl.makeRequest(url, method="GET", objectify=True)
+      return obj
+   
+   # .........................................
+   def getAlgorithmFromCode(self, code):
+      """
+      @summary: Deep copies an algorithm object and adds a value attribute to 
+                   each parameter that is populated with the default value for
+                   that parameter
+      """
+      for algo in self.algos:
+         if algo.code.lower() == code.lower():
+            alg = algo
+            break
+      a = Algorithm(alg)
+      return a
+   
    # --------------------------------------------------------------------------
    # ===============
    # = Experiments =
@@ -138,11 +194,12 @@ class SDMClient(object):
       return items
    
    # .........................................
-   def postExperiment(self, algorithmCode, mdlScn, occSetId, prjScns=[], 
-                            mdlMask=None, prjMask=None, email=None):
+   def postExperiment(self, algorithm, mdlScn, occSetId, prjScns=[], 
+                            mdlMask=None, prjMask=None, 
+                            email=None):
       """
       @summary: Post a new Lifemapper experiment
-      @param algorithm: An Lifemapper SDM algorithm object [SDMAlgorithm]
+      @param algorithm: An Lifemapper SDM algorithm object 
       @param mdlScn: The id of the model scenario to use for the experiment
                         [integer]
       @param occSetId: The id of the occurrence set to be used for the 
@@ -151,6 +208,25 @@ class SDMClient(object):
                          experiment [list of integers]
       @return: Experiment
       """
+      try:
+         algorithmParameters = algorithm.parameters
+         algoCode = algorithm.code
+      except:
+         algoCode = algorithm
+         algorithmParameters = []
+      algoParams = """\
+                  <lm:parameters>
+                     {params}
+                  </lm:parameters>
+""".format(params='\n                     '.join(
+                     ["<{name}>{value}</{name}>".format(
+                                        name=param.name, value=param.value) \
+                                     for param in algorithmParameters])) \
+                                        if len(algorithmParameters) > 0 else ""
+      
+      emailSection = "            <lm:email>%s</lm:email>" % email if email is not None else ""
+      prjSection = '\n'.join(([
+          "            <lm:projectionScenario>{scnId}</lm:projectionScenario>".format(scnId=scnId) for scnId in prjScns]))
       postXml = """\
       <lm:request xmlns:lm="http://lifemapper.org"
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -158,18 +234,18 @@ class SDMClient(object):
                                                /schemas/serviceRequest.xsd">
             <lm:experiment>
                <lm:algorithm>
-                  <lm:algorithmCode>%s</lm:algorithmCode>
+                  <lm:algorithmCode>{algorithmCode}</lm:algorithmCode>
+{algoParams}
                </lm:algorithm>
-               <lm:occurrenceSetId>%s</lm:occurrenceSetId>
-               <lm:modelScenario>%s</lm:modelScenario>
-%s
-%s
+               <lm:occurrenceSetId>{occSetId}</lm:occurrenceSetId>
+               <lm:modelScenario>{mdlScn}</lm:modelScenario>
+{email}
+{projections}
             </lm:experiment>
-         </lm:request>""" % (algorithmCode, occSetId, mdlScn, 
-                             "            <lm:email>%s</lm:email>" % email if email is not None else "",
-                                '\n'.join(([
-          "            <lm:projectionScenario>%s</lm:projectionScenario>" % \
-                                            scnId for scnId in prjScns])))
+         </lm:request>""".format(algorithmCode=algoCode, 
+                                 algoParams=algoParams, occSetId=occSetId, 
+                                 mdlScn=mdlScn, email=emailSection, 
+                                 projections=prjSection)
       url = "%s/services/sdm/experiments/" % WEBSITE_ROOT
       obj = self.cl.makeRequest(url, 
                                 method="POST", 
@@ -241,7 +317,7 @@ class SDMClient(object):
       @return: A OGC URL endpoint for the layer
       """
       lyr = self.getLayer(lyrId)
-      return lyr.guid
+      return lyr.mapPrefix
    
    # .........................................
    def listLayers(self, afterTime=None, beforeTime=None, 
@@ -276,15 +352,18 @@ class SDMClient(object):
       return items
    
    # .........................................
-   def postLayer(self, name, epsgCode, envLayerType, fileName=None, 
-                       layerUrl=None, title=None, valUnits=None, 
-                       startDate=None, endDate=None, units=None, 
-                       resolution=None, keywords=[], description=None):
+   def postLayer(self, name, epsgCode, envLayerType, units, dataFormat,
+                       fileName=None, layerUrl=None, title=None, valUnits=None, 
+                       startDate=None, endDate=None, resolution=None, 
+                       keywords=[], description=None, isCategorical=False):
       """
       @summary: Posts an environmental layer
       @param name: The name of the layer
       @param epsgCode: The EPSG code for the layer
       @param envLayerType: Identifier of the layer type
+      @param dataFormat: Indicates what format the data is in.  Must be one of 
+                            the formats at: 
+                            http://www.gdal.org/formats_list.html
       @param fileName: (optional) The full path to the local file to be 
                           uploaded.  If a file name is not specified then 
                           layerUrl must be used.
@@ -297,10 +376,12 @@ class SDMClient(object):
                            formats in module documentation
       @param endDate: (optional) The end date for the layer.  See time formats
                          in module documentation
-      @param units: (optional) The cell size units
+      @param units: The cell size units
       @param resolution: (optional) The resolution of the cells
       @param keywords: (optional) A list of keywords to associate with the layer
       @param description: (optional) A longer description of what this layer is
+      @param isCategorical: (optional) Indicates if the layer contains 
+                               categorical data
       @raise Exception: Raised if neither layerUrl or filename is provided
       """
       params = [
@@ -313,7 +394,9 @@ class SDMClient(object):
                 ("resolution", resolution),
                 ("epsgcode", epsgCode),
                 ("envLayerType", envLayerType),
-                ("description", description)
+                ("description", description),
+                ("dataFormat", dataFormat),
+                ("isCategorical", isCategorical)
                ]
       for kw in keywords:
          params.append(("keyword", kw))
@@ -387,6 +470,16 @@ class SDMClient(object):
       return obj
    
    # .........................................
+   def getOccurrenceSetOgcEndpoint(self, occId):
+      """
+      @summary: Gets the OGC endpoint for an occurrence set
+      @param prjId: The id of the occurrence set to get the endpoint for
+      @return: A OGC URL endpoint for the occurrence set
+      """
+      occ = self.getOccurrenceSet(occId)
+      return occ.mapPrefix
+
+   # .........................................
    def getOccurrenceSetShapefile(self, occId, filename):
       """
       @summary: Gets a Lifemapper occurrence set as a shapefile
@@ -449,19 +542,22 @@ class SDMClient(object):
                     ("displayName", displayName),
                     ("epsgCode", epsgCode)]
 
-      contentType = "application/xml"
       if fileType.lower() == "csv":
          contentType = "text/csv"
       elif fileType.lower() == "shapefile":
          contentType = "application/x-gzip"
-      elif fileType.lower() == "xml":
-         contentType = "application/xml"
       else:
          raise Exception, "Unknown file type"
       
-      f = open(fileName)
-      postBody = ''.join(f.readlines())
-      f.close()
+      if fileType.lower() == "shapefile":
+         if fileName.endswith('.zip'):
+            postBody = open(fileName).read()
+         else:
+            postBody = self.cl.getAutozipShapefileStream(fileName)
+      else:
+         f = open(fileName)
+         postBody = ''.join(f.readlines())
+         f.close()
       
       url = "%s/services/sdm/occurrences" % WEBSITE_ROOT
       obj = self.cl.makeRequest(url, 
@@ -566,7 +662,7 @@ class SDMClient(object):
       @return: A OGC URL endpoint for the projection
       """
       prj = self.getProjection(prjId)
-      return prj.guid
+      return prj.mapPrefix
    
    # .........................................
    def listProjections(self, afterTime=None, beforeTime=None, displayName=None,
@@ -706,15 +802,17 @@ class SDMClient(object):
       return items
    
    # .........................................
-   def postScenario(self, layers=[], code=None, title=None, 
+   def postScenario(self, layers, code, epsgCode, units, title=None, 
                           author=None, description=None, startDate=None, 
-                          endDate=None, units=None, resolution=None, 
-                          keywords=[], epsgCode=None):
+                          endDate=None, resolution=None, keywords=[]):
       """
       @summary: Posts a climate scenario to the Lifemapper web services
       @param layers: A list of layer ids that should be included in this 
                         scenario
-      @param code: (optional) The code to associate with this layer
+      @param code: The code to associate with this layer
+      @param epsgCode: The EPSG code representing the coordinate system 
+                          projection of the scenario
+      @param units: The units for the cell sizes of the scenario
       @param title: (optional) A title for this scenario
       @param author: (optional) The author of this scenario
       @param description: (optional) A longer description of what this climate 
@@ -724,12 +822,9 @@ class SDMClient(object):
                            documentation.
       @param endDate: (optional) The end date for this scenario.  See more 
                          information about time formats in module documentation
-      @param units: (optional) The units for the cell sizes of the scenario
       @param resolution: (optional) The resolution of the cells
       @param keywords: (optional) A list of keywords to associate with the 
                           scenario
-      @param epsgCode: (optional) The EPSG code representing the coordinate 
-                          system projection of the scenario
       """
       params = [
                 ("code", code),
@@ -755,3 +850,31 @@ class SDMClient(object):
                                 objectify=True).scenario
       return obj
    
+   # .........................................
+   def hint(self, query, maxReturned=20):
+      """
+      @summary: Queries for occurrence sets that match the partial query string
+      @param query: The partial string to match (genus species).  Must be at 
+                       least 3 characters.
+      @param maxReturned: (optional) The maximum number of results to return
+      """
+      SearchHit = namedtuple('SearchHit', ['name', 'id', 'numPoints'])
+      if len(query) < 3:
+         raise Exception, "Please provide at least 3 characters to hint service"
+      
+      params = [
+                ("maxReturned", maxReturned)
+               ]
+      url = "%s/hint/species/%s" % (WEBSITE_ROOT, query)
+      
+      res = self.cl.makeRequest(url, method="get", parameters=params)
+      
+      items = []
+      for item in res.split('\n'):
+         comps = item.split("\t")
+         if len(comps) >= 3:
+            items.append(SearchHit(name=comps[0], 
+                                id=comps[1], 
+                                numPoints=comps[2]))
+      return items
+      

@@ -535,7 +535,7 @@ class RADClient(object):
    
    # .........................................
    def listPamSums(self, expId, bucketId, afterTime=None, beforeTime=None, 
-                                            page=0, perPage=100, randomized=1):
+                         page=0, perPage=100, randomized=1, randomMethod=None):
       """
       @summary: Lists pamsums for a user
       @param expId: The id of the experiment
@@ -547,6 +547,8 @@ class RADClient(object):
       @param page: The page of results
       @param perPage: The number of results per page
       @param randomized: 1 for random pamsums, 0 for original
+      @param randomMethod: Return pamsums that were randomized with this method.
+                              0-not random, 1-swap, 2-splotch
       """
       url = "%s/services/rad/experiments/%s/buckets/%s/pamsums/" % \
                (WEBSITE_ROOT, expId, bucketId)
@@ -554,7 +556,8 @@ class RADClient(object):
                                               ("beforeTime", beforeTime),
                                               ("page", page),
                                               ("perPage", perPage),
-                                              ("randomized", randomized)])
+                                              ("randomized", randomized),
+                                              ("randomMethod", randomMethod)])
 
    # .........................................
    def listShapegrids(self, afterTime=None, beforeTime=None, epsgCode=None, 
@@ -674,7 +677,7 @@ class RADClient(object):
    # .........................................
    def postRaster(self, name, filename=None, layerUrl=None, epsgCode=4326, 
                   title=None, bbox=None, startDate=None, endDate=None, 
-                  mapUnits=None, resolution=None, valUnits=None, 
+                  mapUnits="dd", resolution=None, valUnits=None, 
                   dataFormat="GTiff", valAttribute=None, description=None, 
                   keywords=[]):
       """
@@ -782,7 +785,7 @@ class RADClient(object):
    # .........................................
    def postVector(self, name, filename=None, layerUrl=None, epsgCode=4326, 
                   title=None, bbox=None, startDate=None, endDate=None, 
-                  mapUnits=None, resolution=None, valUnits=None, 
+                  mapUnits="dd", resolution=None, valUnits=None, 
                   dataFormat="ESRI Shapefile", valAttribute=None, 
                   description=None, keywords=[]):
       """
@@ -868,7 +871,6 @@ class RADClient(object):
       try:
          open(filePath, 'w').write(sf)
       except Exception, e:
-         print str(e)
          return False
       return True
    
@@ -910,7 +912,6 @@ class RADClient(object):
       try:
          open(filePath, 'w').write(sf)
       except Exception, e:
-         print str(e)
          return False
       return True
    

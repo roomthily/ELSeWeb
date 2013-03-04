@@ -250,6 +250,8 @@ class LmAttObj(object):
       @summary: Called if the default getattribute method fails.  This will 
                    attempt to return the value from the attribute dictionary
       @param name: The name of the attribute to return
+      @note: A deepcopy or similar call to a built-in method will probably 
+                cause problems
       @return: The value of the attribute
       """
       return self._attribs[name]
