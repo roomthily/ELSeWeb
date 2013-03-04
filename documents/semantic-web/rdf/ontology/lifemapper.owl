@@ -180,8 +180,8 @@
     <owl:Class rdf:about="&lifemapper;LifemapperExperiment">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper;hasScenarioLayerUnits"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                <owl:onProperty rdf:resource="&lifemapper;hasExperimentalScenarioLayerSet"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper;ScenarioLayerSet"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
@@ -198,8 +198,8 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper;hasExperimentalScenarioLayerSet"/>
-                <owl:someValuesFrom rdf:resource="&lifemapper;ScenarioLayerSet"/>
+                <owl:onProperty rdf:resource="&lifemapper;hasScenarioLayerUnits"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
@@ -276,31 +276,12 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#BIOCLIM -->
-
-    <owl:NamedIndividual rdf:about="&lifemapper;BIOCLIM">
-        <lifemapper:hasName>BIOCLIM</lifemapper:hasName>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#BIOCLIM_Algorithm -->
 
     <owl:NamedIndividual rdf:about="&lifemapper;BIOCLIM_Algorithm">
         <rdf:type rdf:resource="&lifemapper;ModelingAlgorithm"/>
+        <lifemapper:hasName>BIOCLIM</lifemapper:hasName>
     </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#MODIS -->
-
-    <owl:NamedIndividual rdf:about="&lifemapper;MODIS"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PRISM -->
-
-    <owl:NamedIndividual rdf:about="&lifemapper;PRISM"/>
 </rdf:RDF>
 
 
