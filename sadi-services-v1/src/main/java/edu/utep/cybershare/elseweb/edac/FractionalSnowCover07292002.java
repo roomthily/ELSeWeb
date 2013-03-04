@@ -1,9 +1,6 @@
 package edu.utep.cybershare.elseweb.edac;
 
 import java.net.URL;
-import java.util.Date;
-
-import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.apache.log4j.Logger;
 
@@ -14,16 +11,14 @@ import ca.wilkinsonlab.sadi.service.annotations.InputClass;
 import ca.wilkinsonlab.sadi.service.annotations.OutputClass;
 import ca.wilkinsonlab.sadi.service.simple.SimpleSynchronousServiceServlet;
 
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 //import com.hp.hpl.jena.rdf.model.Statement;
 //import com.hp.hpl.jena.rdf.model.StmtIterator;
 
+import edu.utep.cybershare.elseweb.edac.coverage.Coverage;
+import edu.utep.cybershare.elseweb.edac.data.FractionalSnowCover;
 import edu.utep.cybershare.elseweb.edac.wcs.WCSGetCoverageParameters;
 import edu.utep.cybershare.elseweb.edac.wcs.WCSGetCoverageURL;
-import edu.utep.cybershare.elseweb.util.XMLGregorianCalendarConverter;
 
 @Name("FractionalSnowCover07292002")
 @ContactEmail("nicholas.delrio@gmail.com")
@@ -57,34 +52,46 @@ public class FractionalSnowCover07292002 extends SimpleSynchronousServiceServlet
 
 		String coverage = "mod10a1_a2002210.fractional_snow_cover";
 		params.setCoverage(coverage);
+		
+		String startDate = "07/29/2002";
+		String endDate = "07/29/2002";
 				
 		//construct the parameterized URL from the wcs endpoint and the parameters
 		String endpoint = "http://gstore.unm.edu/apps/rgis/datasets/a427563f-3c7e-44a2-8b35-68ce2a78001a/services/ogc/wcs";
 		WCSGetCoverageURL getCoverage = new WCSGetCoverageURL(endpoint, params);
 		URL getCoverageURL = getCoverage.getURL();
+	
+		/* Generate Data
+		 * requires:
+		 *	-	Region via hasRegion
+		 *	-	Duration via hasDuration
+		 *	-	Sensor or Method via hasSourceSensor or hasSourceMethod 
+		 */
 		
-		//generate output RDF
-		Resource wcsResponse = output.getModel().createResource("http://edac.elseweb.cybershare.utep.edu#FractionalSnowCoverData_07292002", Vocab.FractionalSnowCover_07292002);
-		XMLGregorianCalendar xmlDateTime = XMLGregorianCalendarConverter.asXMLGregorianCalendar(new Date());
+		String baseURI = "http://edac.elseweb.cybershare.utep.edu#FractionalSnowCoverDataService_07132002";
+		String dataURI = baseURI + "_Data";
+		String regionURI = baseURI + "_Region";
+		String durationURI = baseURI + "_Duration";
 		
-		output.getModel().add(wcsResponse, Vocab.hasRequestDateTime, xmlDateTime.toXMLFormat());
-		output.getModel().add(wcsResponse, Vocab.hasWCSGetCoverageURL, getCoverageURL.toString());
-		output.getModel().add(wcsResponse, Vocab.hasFormat, Vocab.Mixed);		
-		output.addProperty(Vocab.hasWCSCoverage, wcsResponse);
-	}
+		FractionalSnowCover data = new FractionalSnowCover(dataURI, output.getModel());
+		data.addRegion(llon, rlon, llat, ulat, regionURI);
+		data.addDuration(startDate, endDate, durationURI);
+		data.addSource(true);
+		
+	
+		/* Generate Coverage.
+		 * requires:
+		 *	-	DateTime via hasRequestDateTime
+		 *	-	WCSGetCoverageURL via hasWCSGetCoverageURL
+		 *	-	MIXED MIME Format via hasFormat
+		 *	-	Data via containsData
+		 */
 
-	@SuppressWarnings("unused")
-	private static final class Vocab
-	{
-		private static Model m_model = ModelFactory.createDefaultModel();
-
-		public static final Property hasFormat = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasFormat");
-		public static final Property hasFractionalSnowCover_07292002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasFractionalSnowCover_07292002");
-		public static final Property hasWCSCoverage = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasWCSCoverage");		
-		public static final Property hasWCSGetCoverageURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasWCSGetCoverageURL");
-		public static final Property hasRequestDateTime = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasRequestDateTime");
-		
-		public static final Resource FractionalSnowCover_07292002 = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#FractionalSnowCover_07292002");
-		public static final Resource Mixed = m_model.createResource("http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED");	
+		String coverageURI = baseURI + "_Coverage";
+		Coverage ogcCoverage = new Coverage(coverageURI, output.getModel());
+		ogcCoverage.addRequestDateTime();
+		ogcCoverage.addGetCoverageRequestURL(getCoverageURL);
+		ogcCoverage.addMIMEFormat();
+		ogcCoverage.addData(data.getDataResource());
 	}
 }

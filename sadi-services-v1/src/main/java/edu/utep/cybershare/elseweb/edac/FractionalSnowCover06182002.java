@@ -3,6 +3,7 @@ package edu.utep.cybershare.elseweb.edac;
 import java.net.URL;
 import org.apache.log4j.Logger;
 
+import ca.wilkinsonlab.sadi.service.annotations.Description;
 import ca.wilkinsonlab.sadi.service.annotations.Name;
 import ca.wilkinsonlab.sadi.service.annotations.ContactEmail;
 import ca.wilkinsonlab.sadi.service.annotations.InputClass;
@@ -22,6 +23,8 @@ import edu.utep.cybershare.elseweb.edac.wcs.WCSGetCoverageURL;
 @ContactEmail("nicholas.delrio@gmail.com")
 @InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#ScenarioLayerSet")
 @OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PopulatedScenarioLayerSet")
+@Description("EDAC Fractional Snow Cover Data 06182002")
+
 public class FractionalSnowCover06182002 extends SimpleSynchronousServiceServlet
 {
 	private static final Logger log = Logger.getLogger(FractionalSnowCover06182002.class);
