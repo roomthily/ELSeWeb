@@ -267,6 +267,20 @@
     
 
 
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PopulatedScenarioLayerSet -->
+
+    <owl:Class rdf:about="&lifemapper;PopulatedScenarioLayerSet">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemapper;hasCoverage"/>
+                <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&lifemapper;ScenarioLayerSet"/>
+    </owl:Class>
+    
+
+
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PopulatedScenarioLayerSet_FractionalSnowCover_06182002 -->
 
     <owl:Class rdf:about="&lifemapper;PopulatedScenarioLayerSet_FractionalSnowCover_06182002">
@@ -276,7 +290,7 @@
                 <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&lifemapper;ScenarioLayerSet"/>
+        <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet"/>
     </owl:Class>
     
 
@@ -290,7 +304,7 @@
                 <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&lifemapper;ScenarioLayerSet"/>
+        <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet"/>
     </owl:Class>
     
 
@@ -304,7 +318,7 @@
                 <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&lifemapper;ScenarioLayerSet"/>
+        <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet"/>
     </owl:Class>
     
 
@@ -318,7 +332,7 @@
                 <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&lifemapper;ScenarioLayerSet"/>
+        <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet"/>
     </owl:Class>
     
 
