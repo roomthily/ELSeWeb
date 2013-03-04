@@ -8,20 +8,18 @@ import com.hp.hpl.jena.rdf.model.Resource;
 
 public abstract class Data {
 	
-	private String uri;
 	private Model model;
 	private Resource dataResource;
 	private Resource sourceResource;
 	
 	public Data(String dataURI, Model dataModel, Resource dataTypeResource, Resource dataSourceResource){
-		uri = dataURI;
+		dataResource = model.createResource(dataURI, dataTypeResource);
 		model = dataModel;
 		sourceResource = dataSourceResource;
 		createDataTypeResource(dataTypeResource);
 	}
 	
 	private void createDataTypeResource(Resource dataTypeResource){
-		dataResource = model.createResource(uri, dataTypeResource);
 	}
 	
 	public void addRegion(double llon, double rlon, double llat, double ulat, String regionURI){
@@ -56,7 +54,7 @@ public abstract class Data {
 	
 	public static final class Vocab {
 
-		private static Model m_model = ModelFactory.createDefaultModel();
+		protected static Model m_model = ModelFactory.createDefaultModel();
 
 		// Data Properties
 		public static final Property hasSourceSensor = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasSourceSensor");
