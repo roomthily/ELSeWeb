@@ -6,10 +6,10 @@
 <booleanAttribute key="M2_OFFLINE" value="false"/>
 <stringAttribute key="M2_PROFILES" value=""/>
 <listAttribute key="M2_PROPERTIES">
-<listEntry value="serviceName=FractionalSnowCover06182002"/>
-<listEntry value="serviceClass=edu.utep.cybershare.elseweb.edac.FractionalSnowCover06182002"/>
-<listEntry value="inputClass=https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#ScenarioLayerSet"/>
-<listEntry value="outputClass=https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PopulatedScenarioLayerSet"/>
+<listEntry value="serviceName=Lifemapper"/>
+<listEntry value="serviceClass=edu.utep.cybershare.elseweb.lifemapper.Lifemapper"/>
+<listEntry value="inputClass=https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#FullySpecifiedLifemapperExperiment"/>
+<listEntry value="outputClass=https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#CompletedLifemapperExperiment"/>
 <listEntry value="contactEmail=nicholas.delrio@gmail.com"/>
 </listAttribute>
 <stringAttribute key="M2_RUNTIME" value="EMBEDDED"/>
