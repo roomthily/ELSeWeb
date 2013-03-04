@@ -76,6 +76,12 @@ public class Lifemapper extends SimpleSynchronousServiceServlet
 		String algorithmName = algorithmResource.getProperty(Vocab.hasName).getLiteral().getString();
 		log.debug("Setting algorithm: " + algorithmName);
 		experiment.setAlgorithm(algorithmName);
+
+		//extract occurrenceSetID
+		String occurrenceSetIDString = input.getProperty(Vocab.hasOccurrenceSetID).getLiteral().getString();
+		int occurrenceSetID = Integer.parseInt(occurrenceSetIDString);
+		experiment.setOccurrenceSetID(occurrenceSetID);
+		log.debug("Setting occurrenceSetID: " + occurrenceSetID);		
 		
 		//extract units
 		String scenarioLayerUnits = input.getProperty(Vocab.hasScenarioLayerUnits).getLiteral().getString();
@@ -95,6 +101,7 @@ public class Lifemapper extends SimpleSynchronousServiceServlet
 	{
 		private static Model m_model = ModelFactory.createDefaultModel();
 		
+		public static final Property hasOccurrenceSetID = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasOccurrenceSetID");
 		public static final Property hasName = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasName");
 		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasWCSCoveragePayloadURL");
 		public static final Property hasExperimentalScenarioLayerSet = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasExperimentalScenarioLayerSet");

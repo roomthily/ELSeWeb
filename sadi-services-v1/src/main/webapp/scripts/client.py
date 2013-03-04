@@ -1,6 +1,6 @@
 """
-@summary: Example script for using Lifemapper web services and python client
-@author: CJ Grady
+@summary: Client script for using Lifemapper python service client
+@author: Nicholas Del Rio and CJ Grady
 """
 
 from lmClientLib import LMClient
@@ -9,10 +9,11 @@ import random
 
 # command line arguments
 parser = argparse.ArgumentParser('Invoke Lifemapper.')
-parser.add_argument('username', type=str, nargs=1, help='LifeMapper user name')
-parser.add_argument('password', type=str, nargs=1, help='LifeMapper password')
+parser.add_argument('username', type=str, nargs=1, help='Lifemapper user name')
+parser.add_argument('password', type=str, nargs=1, help='Lifemapper password')
+parser.add_argument('occurrenceSetID', type=int, nargs=1, help='Lifemapper Occurrence Set')
 parser.add_argument('units', type=str, nargs=1, help='Units')
-parser.add_argument('algorithm', type=str, nargs=1, help='LifeMapper Algorithm')
+parser.add_argument('algorithm', type=str, nargs=1, help='Lifemapper Algorithm')
 parser.add_argument('dumpfile', type=str, nargs=1, help='Location to dump experiment ID')
 parser.add_argument('layers', type=str, nargs='+', help='TIF Layers')
 
@@ -48,12 +49,13 @@ for layer in layers:
    # Attempt to post
    try:
       lyr = cl.sdm.postLayer(
-					layer["name"], 
+					layer["name"],
 					layer["epsgCode"],
 					layer["envLyrType"],
-					layerUrl=layer["url"], 
-					title=layer["title"],
-					units=args.units[0])
+					args.units[0],
+					"GTiff",
+					layerUrl=layer["url"],
+					title=layer["title"])
 
       print "Posted layer %s" % lyr.id
    except Exception, e:
@@ -89,7 +91,10 @@ mdlScn = scn.id
 prjScns = [scn.id]
 
 # Pick an occurrence set
-occSetId = cl.sdm.listOccurrenceSets(perPage=1, minimumNumberOfPoints=100, public=True)[0].id
+#occSetId = cl.sdm.listOccurrenceSets(perPage=1, minimumNumberOfPoints=100, public=True)[0].id
+occSetId = args.occurrenceSetID[0]
+
+print "Choosen occurance set ID %s" % occSetId
 
 exp = cl.sdm.postExperiment(algorithm, mdlScn, occSetId, prjScns=prjScns)
 

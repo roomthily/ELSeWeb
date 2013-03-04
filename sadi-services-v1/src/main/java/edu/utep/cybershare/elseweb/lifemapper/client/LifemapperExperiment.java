@@ -19,7 +19,7 @@ public class LifemapperExperiment {
 	private String uname;
 	private String pword;
 	private String units;
-	
+	private int occurrenceSetID;
 	private File outputFilePath;
 	
 	public LifemapperExperiment(String username, String password){
@@ -31,6 +31,10 @@ public class LifemapperExperiment {
 
 	public void setScenarioLayerUnits(String scenarioLayerUnits){
 		units = scenarioLayerUnits;
+	}
+	
+	public void setOccurrenceSetID(int id){
+		occurrenceSetID = id;
 	}
 	
 	public boolean addScenarioLayer(URL layerURL){
@@ -49,6 +53,7 @@ public class LifemapperExperiment {
 							lifeMapperScript + " " +
 							uname + " " +
 							pword + " " +
+							occurrenceSetID + " " +
 							units + " " +
 							algorithm + " " +
 							"\"" + outputFilePath.getAbsolutePath() + "\" ";
