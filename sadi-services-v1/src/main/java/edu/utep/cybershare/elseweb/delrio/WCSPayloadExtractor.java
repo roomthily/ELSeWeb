@@ -4,7 +4,6 @@ import java.net.URL;
 
 import org.apache.log4j.Logger;
 
-import ca.wilkinsonlab.sadi.service.annotations.Description;
 import ca.wilkinsonlab.sadi.service.annotations.Name;
 import ca.wilkinsonlab.sadi.service.annotations.ContactEmail;
 import ca.wilkinsonlab.sadi.service.annotations.InputClass;
@@ -15,17 +14,15 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
-
-import edu.utep.cybershare.elseweb.delrio.multipartMIME.PayloadExtractor;
 //import com.hp.hpl.jena.rdf.model.Statement;
 //import com.hp.hpl.jena.rdf.model.StmtIterator;
 
+import edu.utep.cybershare.elseweb.delrio.multipartMIME.PayloadExtractor;
+
 @Name("WCSPayloadExtractor")
 @ContactEmail("nicholas.delrio@gmail.com")
-@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#WCSCoverage")
-@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#WCSCoveragePayload")
-@Description("WCS Multipart MIME Payload Extractor")
-
+@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PopulatedScenarioLayerSet")
+@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#ExperimentalScenarioLayerSet")
 public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
 {
 	private static final Logger log = Logger.getLogger(WCSPayloadExtractor.class);
@@ -50,18 +47,14 @@ public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
 			log.debug("Extracted payload located at: " + coveragePayloadURL);
 			output.addProperty(Vocab.hasWCSCoveragePayloadURL, coveragePayloadURL.toString());
 		}
+
 	}
 
-	@SuppressWarnings("unused")
 	private static final class Vocab
 	{
 		private static Model m_model = ModelFactory.createDefaultModel();
 		
-		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasWCSCoveragePayloadURL");
-		public static final Property hasFormat = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasFormat");
-		public static final Property hasWCSGetCoverageURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasWCSGetCoverageURL");
-		public static final Resource WCSCoverage = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#WCSCoverage");
-		public static final Resource Literal = m_model.createResource("http://www.w3.org/2000/01/rdf-schema#Literal");
-		public static final Resource WCSCoveragePayload = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#WCSCoveragePayload");
+		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasWCSCoveragePayloadURL");
+		public static final Property hasWCSGetCoverageURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasWCSGetCoverageURL");
 	}
 }
