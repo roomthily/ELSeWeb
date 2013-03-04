@@ -8,7 +8,7 @@ import argparse
 import random
 
 # command line arguments
-parser = argparse.ArgumentParser('Invoke LifeMapper.')
+parser = argparse.ArgumentParser('Invoke Lifemapper.')
 parser.add_argument('username', type=str, nargs=1, help='LifeMapper user name')
 parser.add_argument('password', type=str, nargs=1, help='LifeMapper password')
 parser.add_argument('units', type=str, nargs=1, help='Units')
