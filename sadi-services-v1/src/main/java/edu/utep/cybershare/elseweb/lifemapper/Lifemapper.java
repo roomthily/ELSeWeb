@@ -25,8 +25,8 @@ import edu.utep.cybershare.elseweb.lifemapper.client.LifemapperExperiment;
 
 @Name("Lifemapper")
 @ContactEmail("nicholas.delrio@gmail.com")
-@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#FullySpecifiedLifemapperExperiment")
-@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#CompletedLifemapperExperiment")
+@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#FullySpecifiedLifemapperExperiment")
+@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#CompletedLifemapperExperiment")
 @Description("Lifemapper Species Modeling")
 
 public class Lifemapper extends SimpleSynchronousServiceServlet
@@ -37,7 +37,6 @@ public class Lifemapper extends SimpleSynchronousServiceServlet
 	@Override
 	public void processInput(Resource input, Resource output)
 	{
-		
 		StringWriter wtr = new StringWriter();
 		input.getModel().write(wtr, "RDF/XML-ABBREV");
 		System.out.println(wtr.toString());
@@ -49,7 +48,7 @@ public class Lifemapper extends SimpleSynchronousServiceServlet
 		
 		//extract layers from experiment
 		Resource scenarioLayerSet = input.getProperty(Vocab.hasExperimentalScenarioLayerSet).getResource();
-		StmtIterator coverageStatements = scenarioLayerSet.listProperties(Vocab.hasWCSCoverage);
+		StmtIterator coverageStatements = scenarioLayerSet.listProperties(Vocab.hasCoverage);
 		Statement coverageStatement;
 		Resource coverageResource;
 		String coveragePayloadURLString;
@@ -73,7 +72,8 @@ public class Lifemapper extends SimpleSynchronousServiceServlet
 		}
 		
 		//extract algorithm
-		String algorithmName = input.getProperty(Vocab.hasModelingAlgorithm).getLiteral().getString();
+		Resource algorithmResource = input.getProperty(Vocab.hasModelingAlgorithm).getResource();
+		String algorithmName = algorithmResource.getProperty(Vocab.hasName).getLiteral().getString();
 		log.debug("Setting algorithm: " + algorithmName);
 		experiment.setAlgorithm(algorithmName);
 		
@@ -91,23 +91,16 @@ public class Lifemapper extends SimpleSynchronousServiceServlet
 		catch(Exception e){log.error(e.getMessage());}
 	}
 
-	@SuppressWarnings("unused")
 	private static final class Vocab
 	{
 		private static Model m_model = ModelFactory.createDefaultModel();
 		
-		public static final Property hasFormat = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasFormat");
-		public static final Property hasScenarioLayerUnits = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasScenarioLayerUnits");
-		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasWCSCoveragePayloadURL");
-		public static final Property hasWCSCoverage = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasWCSCoverage");
-		public static final Property hasExperimentalScenarioLayerSet = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasExperimentalScenarioLayerSet");
-		public static final Property hasLifemapperModelURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasLifemapperModelURL");
-		public static final Property hasModelingAlgorithm = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasModelingAlgorithm");
-		public static final Property hasWCSGetCoverageURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#hasWCSGetCoverageURL");
-		public static final Resource CompletedLifemapperExperiment = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#CompletedLifemapperExperiment");
-		public static final Resource WCSCoverage = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#WCSCoverage");
-		public static final Resource Literal = m_model.createResource("http://www.w3.org/2000/01/rdf-schema#Literal");
-		public static final Resource ExperimentalScenarioLayerSet = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#ExperimentalScenarioLayerSet");
-		public static final Resource FullySpecifiedLifemapperExperiment = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#FullySpecifiedLifemapperExperiment");
+		public static final Property hasName = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasName");
+		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasWCSCoveragePayloadURL");
+		public static final Property hasExperimentalScenarioLayerSet = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasExperimentalScenarioLayerSet");
+		public static final Property hasModelingAlgorithm = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasModelingAlgorithm");
+		public static final Property hasLifemapperModelURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasLifemapperModelURL");
+		public static final Property hasCoverage = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoverage");
+		public static final Property hasScenarioLayerUnits = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasScenarioLayerUnits");
 	}
 }
