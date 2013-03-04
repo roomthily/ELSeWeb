@@ -4,6 +4,7 @@ import java.net.URL;
 
 import org.apache.log4j.Logger;
 
+import ca.wilkinsonlab.sadi.service.annotations.Description;
 import ca.wilkinsonlab.sadi.service.annotations.Name;
 import ca.wilkinsonlab.sadi.service.annotations.ContactEmail;
 import ca.wilkinsonlab.sadi.service.annotations.InputClass;
@@ -23,6 +24,8 @@ import edu.utep.cybershare.elseweb.delrio.multipartMIME.PayloadExtractor;
 @ContactEmail("nicholas.delrio@gmail.com")
 @InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PopulatedScenarioLayerSet")
 @OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#ExperimentalScenarioLayerSet")
+@Description("WCS Multipart MIME Payload Extractor")
+
 public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
 {
 	private static final Logger log = Logger.getLogger(WCSPayloadExtractor.class);
