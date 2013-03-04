@@ -51,7 +51,7 @@ lifemapper:ALifemapperExperiment lifemapper:hasOccurrenceSetID ?occurrenceSetID 
 ?data2 edac:hasDuration ?duration2 .
 ?duration2 edac:hasStartDate "07/12/2002" .
 
-?layerset lifemapper:hasCoverage ?coverage3 .
+?layerset lifemapper:hasCoverage_MinTemperatureNormals_121981_122010 ?coverage3 .
 ?coverage3 edac:containsData ?data3 .
 ?data3 a edac:MinTemperatureNormals .
 
