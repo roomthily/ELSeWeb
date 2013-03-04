@@ -1,20 +1,6 @@
 prefix edac: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#>
 prefix lifemapper: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#>
-select ?algorithm ?units ?layerset ?occurrenceSetID
-from <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl>
-where
-{
-lifemapper:ALifemapperExperiment lifemapper:hasModelingAlgorithm ?x .
-?x lifemapper:hasName ?algorithm .
-lifemapper:ALifemapperExperiment lifemapper:hasScenarioLayerUnits ?units .
-lifemapper:ALifemapperExperiment lifemapper:hasExperimentalScenarioLayerSet ?layerset .
-lifemapper:ALifemapperExperiment lifemapper:hasOccurrenceSetID ?occurrenceSetID .
-}
-
-
-prefix edac: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#>
-prefix lifemapper: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#>
-select ?coverage1 ?coverage2
+select ?modelURL
 from <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl>
 where
 {
@@ -24,68 +10,51 @@ lifemapper:ALifemapperExperiment lifemapper:hasScenarioLayerUnits ?units .
 lifemapper:ALifemapperExperiment lifemapper:hasExperimentalScenarioLayerSet ?layerset .
 lifemapper:ALifemapperExperiment lifemapper:hasOccurrenceSetID ?occurrenceSetID .
 
-?layerset lifemapper:hasCoverage ?coverage1 .
+?layerset lifemapper:hasCoverage_FractionalSnowCover_06182002 ?coverage1 .
 ?coverage1 edac:containsData ?data1 .
 ?data1 a edac:FractionalSnowCover .
 ?data1 edac:hasDuration ?duration1 .
 ?duration1 edac:hasStartDate "06/18/2002" .
 
-?layerset lifemapper:hasCoverage ?coverage2 .
+?layerset lifemapper:hasCoverage_FractionalSnowCover_07122002 ?coverage2 .
 ?coverage2 edac:containsData ?data2 .
 ?data2 a edac:FractionalSnowCover .
 ?data2 edac:hasDuration ?duration2 .
 ?duration2 edac:hasStartDate "07/12/2002" .
-}
 
-prefix elseweb: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#>
-select ?coverage ?payloadURL
-from <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#ALifemapperExperiment>
-where
-{
-elseweb:ALifemapperExperiment elseweb:hasModelingAlgorithm ?algorithm .
-elseweb:ALifemapperExperiment elseweb:hasScenarioLayerUnits ?units .
-elseweb:ALifemapperExperiment elseweb:hasExperimentalScenarioLayerSet ?layerset .
-
-?layerset elseweb:hasWCSCoverage ?wcsData1 .
-?wcsData1 a elseweb:FractionalSnowCover_06182002 .
-
-?layerset elseweb:hasWCSCoverage ?wcsData2 .
-?wcsData2 a elseweb:FractionalSnowCover_07122002 .
-
-?layerset elseweb:hasWCSCoverage ?wcsData3 .
-?wcsData3 a elseweb:FractionalSnowCover_07132002 .
-
-?layerset elseweb:hasWCSCoverage ?wcsData4 .
-?wcsData4 a elseweb:FractionalSnowCover_07292002 .
-
-?coverage elseweb:hasWCSCoveragePayloadURL ?payloadURL .
+lifemapper:ALifemapperExperiment lifemapper:hasLifemapperModelURL ?modelURL .
+lifemapper:ALifemapperExperiment a lifemapper:CompletedLifemapperExperiment .
 }
 
 
-
-prefix elseweb: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#>
-select ?experiment ?modelURL
-from <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#ALifemapperExperiment>
+prefix edac: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#>
+prefix lifemapper: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#>
+select ?modelURL
+from <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl>
 where
 {
-elseweb:ALifemapperExperiment elseweb:hasModelingAlgorithm ?algorithm .
-elseweb:ALifemapperExperiment elseweb:hasScenarioLayerUnits ?units .
-elseweb:ALifemapperExperiment elseweb:hasExperimentalScenarioLayerSet ?layerset .
+lifemapper:ALifemapperExperiment lifemapper:hasModelingAlgorithm ?x .
+?x lifemapper:hasName ?algorithm .
+lifemapper:ALifemapperExperiment lifemapper:hasScenarioLayerUnits ?units .
+lifemapper:ALifemapperExperiment lifemapper:hasExperimentalScenarioLayerSet ?layerset .
+lifemapper:ALifemapperExperiment lifemapper:hasOccurrenceSetID ?occurrenceSetID .
 
-?layerset elseweb:hasWCSCoverage ?wcsData1 .
-?wcsData1 a elseweb:FractionalSnowCover_06182002 .
+?layerset lifemapper:hasCoverage_FractionalSnowCover_06182002 ?coverage1 .
+?coverage1 edac:containsData ?data1 .
+?data1 a edac:FractionalSnowCover .
+?data1 edac:hasDuration ?duration1 .
+?duration1 edac:hasStartDate "06/18/2002" .
 
-?layerset elseweb:hasWCSCoverage ?wcsData2 .
-?wcsData2 a elseweb:FractionalSnowCover_07122002 .
+?layerset lifemapper:hasCoverage_FractionalSnowCover_07122002 ?coverage2 .
+?coverage2 edac:containsData ?data2 .
+?data2 a edac:FractionalSnowCover .
+?data2 edac:hasDuration ?duration2 .
+?duration2 edac:hasStartDate "07/12/2002" .
 
-?layerset elseweb:hasWCSCoverage ?wcsData3 .
-?wcsData3 a elseweb:FractionalSnowCover_07132002 .
+?layerset lifemapper:hasCoverage ?coverage3 .
+?coverage3 edac:containsData ?data3 .
+?data3 a edac:MinTemperatureNormals .
 
-?layerset elseweb:hasWCSCoverage ?wcsData4 .
-?wcsData4 a elseweb:FractionalSnowCover_07292002 .
-
-?coverage elseweb:hasWCSCoveragePayloadURL ?payloadURL .
-
-elseweb:ALifemapperExperiment elseweb:hasLifemapperModelURL ?modelURL .
-?experiment a elseweb:CompletedLifemapperExperiment .
+lifemapper:ALifemapperExperiment lifemapper:hasLifemapperModelURL ?modelURL .
+lifemapper:ALifemapperExperiment a lifemapper:CompletedLifemapperExperiment .
 }

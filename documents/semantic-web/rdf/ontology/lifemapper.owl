@@ -111,6 +111,14 @@
     
 
 
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoverage_MinTemperatureNormals_121981_122010 -->
+
+    <owl:ObjectProperty rdf:about="&lifemapper;hasCoverage_MinTemperatureNormals_121981_122010">
+        <rdfs:subPropertyOf rdf:resource="&lifemapper;hasCoverage_MinTemperatureNormals"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasExperimentalScenarioLayerSet -->
 
     <owl:ObjectProperty rdf:about="&lifemapper;hasExperimentalScenarioLayerSet"/>
@@ -234,12 +242,6 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper;hasExperimentalScenarioLayerSet"/>
-                <owl:someValuesFrom rdf:resource="&lifemapper;ScenarioLayerSet"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&lifemapper;hasScenarioLayerUnits"/>
                 <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
@@ -248,6 +250,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&lifemapper;hasModelingAlgorithm"/>
                 <owl:someValuesFrom rdf:resource="&lifemapper;ModelingAlgorithm"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemapper;hasExperimentalScenarioLayerSet"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper;ScenarioLayerSet"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
@@ -281,6 +289,14 @@
     
 
 
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PopulatedScenarioLayerSet_FractionalSnowCover -->
+
+    <owl:Class rdf:about="&lifemapper;PopulatedScenarioLayerSet_FractionalSnowCover">
+        <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet"/>
+    </owl:Class>
+    
+
+
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PopulatedScenarioLayerSet_FractionalSnowCover_06182002 -->
 
     <owl:Class rdf:about="&lifemapper;PopulatedScenarioLayerSet_FractionalSnowCover_06182002">
@@ -290,7 +306,7 @@
                 <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet"/>
+        <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet_FractionalSnowCover"/>
     </owl:Class>
     
 
@@ -304,7 +320,7 @@
                 <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet"/>
+        <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet_FractionalSnowCover"/>
     </owl:Class>
     
 
@@ -318,7 +334,7 @@
                 <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet"/>
+        <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet_FractionalSnowCover"/>
     </owl:Class>
     
 
@@ -332,7 +348,29 @@
                 <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet_FractionalSnowCover"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PopulatedScenarioLayerSet_MinTemperatureNormals -->
+
+    <owl:Class rdf:about="&lifemapper;PopulatedScenarioLayerSet_MinTemperatureNormals">
         <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PopulatedScenarioLayerSet_MinTemperatureNormals_121981_122010 -->
+
+    <owl:Class rdf:about="&lifemapper;PopulatedScenarioLayerSet_MinTemperatureNormals_121981_122010">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemapper;hasCoverage_MinTemperatureNormals_121981_122010"/>
+                <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet_MinTemperatureNormals"/>
     </owl:Class>
     
 
