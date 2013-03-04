@@ -9,16 +9,16 @@
     <servlet-class>edu.utep.cybershare.elseweb.edac.FractionalSnowCover06182002</servlet-class>
   </servlet>
   <servlet>
-    <servlet-name>WCSPayloadExtractor</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.delrio.WCSPayloadExtractor</servlet-class>
+    <servlet-name>Lifemapper</servlet-name>
+    <servlet-class>edu.utep.cybershare.elseweb.lifemapper.Lifemapper</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>FractionalSnowCover07292002</servlet-name>
     <servlet-class>edu.utep.cybershare.elseweb.edac.FractionalSnowCover07292002</servlet-class>
   </servlet>
   <servlet>
-    <servlet-name>Lifemapper</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.lifemapper.Lifemapper</servlet-class>
+    <servlet-name>WCSPayloadExtractor</servlet-name>
+    <servlet-class>edu.utep.cybershare.elseweb.delrio.WCSPayloadExtractor</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>FractionalSnowCover07122002</servlet-name>
@@ -34,16 +34,16 @@
     <url-pattern>/FractionalSnowCover06182002</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>WCSPayloadExtractor</servlet-name>
-    <url-pattern>/WCSPayloadExtractor</url-pattern>
+    <servlet-name>Lifemapper</servlet-name>
+    <url-pattern>/Lifemapper</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>FractionalSnowCover07292002</servlet-name>
     <url-pattern>/FractionalSnowCover07292002</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>Lifemapper</servlet-name>
-    <url-pattern>/Lifemapper</url-pattern>
+    <servlet-name>WCSPayloadExtractor</servlet-name>
+    <url-pattern>/WCSPayloadExtractor</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>FractionalSnowCover07122002</servlet-name>

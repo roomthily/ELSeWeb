@@ -25,9 +25,9 @@
           <h2>SADI Services</h2>
 	      <ul>
             <li><a href="./FractionalSnowCover06182002">FractionalSnowCover06182002</a></li>
-            <li><a href="./WCSPayloadExtractor">WCSPayloadExtractor</a></li>
-            <li><a href="./FractionalSnowCover07292002">FractionalSnowCover07292002</a></li>
             <li><a href="./Lifemapper">Lifemapper</a></li>
+            <li><a href="./FractionalSnowCover07292002">FractionalSnowCover07292002</a></li>
+            <li><a href="./WCSPayloadExtractor">WCSPayloadExtractor</a></li>
             <li><a href="./FractionalSnowCover07122002">FractionalSnowCover07122002</a></li>
             <li><a href="./FractionalSnowCover07132002">FractionalSnowCover07132002</a></li>
 	      </ul>

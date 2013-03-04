@@ -16,10 +16,13 @@ public abstract class Data {
 		dataResource = model.createResource(dataURI, dataTypeResource);
 		model = dataModel;
 		sourceResource = dataSourceResource;
-		createDataTypeResource(dataTypeResource);
+		
+		dataResource = model.createResource(dataURI, dataTypeResource);
 	}
 	
-	private void createDataTypeResource(Resource dataTypeResource){
+
+	public Resource getDataResource(){
+		return dataResource;
 	}
 	
 	public void addRegion(double llon, double rlon, double llat, double ulat, String regionURI){
