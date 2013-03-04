@@ -23,7 +23,7 @@ import edu.utep.cybershare.elseweb.edac.wcs.WCSGetCoverageURL;
 @Name("MinimumTemperatureNormals_December_1981_2010")
 @ContactEmail("nicholas.delrio@gmail.com")
 @InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#ScenarioLayerSet")
-@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PopulatedScenarioLayerSet")
+@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PopulatedScenarioLayerSet_MinTemperatureNormals_121981_122010")
 @Description("EDAC Minimum Temperature Normals December 1981 - 2010")
 
 public class MinimumTemperatureNormals_December_1981_2010 extends SimpleSynchronousServiceServlet
@@ -56,6 +56,7 @@ public class MinimumTemperatureNormals_December_1981_2010 extends SimpleSynchron
 		
 		String startDate = "12/01/1981";
 		String endDate = "12/01/2010";
+		String dateRange = startDate + "-" + endDate;
 		
 		//construct the parameterized URL from the wcs endpoint and the parameters
 		String endpoint = "http://gstore.unm.edu/apps/elseweb/datasets/1dd490e4-9a5e-48a6-a593-b2bd11f63cad/services/ogc/wcs";
@@ -94,6 +95,6 @@ public class MinimumTemperatureNormals_December_1981_2010 extends SimpleSynchron
 		ogcCoverage.addMIMEFormat();
 		ogcCoverage.addData(data.getDataResource());
 		
-		ogcCoverage.addHasCoverageToScenarioLayers(output, startDate);
+		ogcCoverage.addHasCoverageToScenarioLayers(output, dateRange);
 	}
 }
