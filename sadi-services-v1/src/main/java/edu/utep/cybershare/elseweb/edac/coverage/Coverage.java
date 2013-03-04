@@ -20,7 +20,7 @@ public class Coverage {
 	
 	public Coverage(String coverageURI, Model coverageModel){
 		model = coverageModel;
-		coverageResource = model.createResource("http://edac.elseweb.cybershare.utep.edu#FractionalSnowCoverData_06182002_Coverage", Vocab.OGCCoverage);	
+		coverageResource = model.createResource(coverageURI, Vocab.OGCCoverage);	
 	}
 
 	public void addRequestDateTime(){
@@ -42,8 +42,17 @@ public class Coverage {
 		model.add(coverageResource, Vocab.containsData, dataResource);
 	}
 	
-	public void addHasCoverageToScenarioLayers(Resource scenarioLayersResource){
-		scenarioLayersResource.addProperty(Vocab.hasCoverage, coverageResource);
+	public void addHasCoverageToScenarioLayers(Resource scenarioLayersResource, String date){
+		if(date.equals("06/18/2002"))
+			scenarioLayersResource.addProperty(Vocab.hasCoverage_FractionalSnowCover_06182002, coverageResource);
+		else if(date.equals("07/12/2002"))
+			scenarioLayersResource.addProperty(Vocab.hasCoverage_FractionalSnowCover_07122002, coverageResource);
+		else if(date.equals("07/13/2002"))
+			scenarioLayersResource.addProperty(Vocab.hasCoverage_FractionalSnowCover_07132002, coverageResource);
+		else if(date.equals("07/29/2002"))
+			scenarioLayersResource.addProperty(Vocab.hasCoverage_FractionalSnowCover_07292002, coverageResource);
+		else
+			scenarioLayersResource.addProperty(Vocab.hasCoverage, coverageResource);
 	}
 	
 	private static final class Vocab
@@ -51,6 +60,11 @@ public class Coverage {
 		private static Model m_model = ModelFactory.createDefaultModel();
 		
 		public static final Property hasCoverage = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoverage");
+		public static final Property hasCoverage_FractionalSnowCover_06182002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoverage_FractionalSnowCover_06182002");
+		public static final Property hasCoverage_FractionalSnowCover_07122002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoverage_FractionalSnowCover_07122002");
+		public static final Property hasCoverage_FractionalSnowCover_07132002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoverage_FractionalSnowCover_07132002");
+		public static final Property hasCoverage_FractionalSnowCover_07292002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoverage_FractionalSnowCover_07292002");
+		
 		public static final Property containsData = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#containsData");
 		public static final Property hasFormat = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasFormat");
 		public static final Property hasWCSGetCoverageURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasWCSGetCoverageURL");
