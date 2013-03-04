@@ -68,7 +68,7 @@ public class FractionalSnowCover07292002 extends SimpleSynchronousServiceServlet
 		 *	-	Sensor or Method via hasSourceSensor or hasSourceMethod 
 		 */
 		
-		String baseURI = "http://edac.elseweb.cybershare.utep.edu#FractionalSnowCoverDataService_07132002";
+		String baseURI = "http://edac.elseweb.cybershare.utep.edu#FractionalSnowCoverDataService_07292002";
 		String dataURI = baseURI + "_Data";
 		String regionURI = baseURI + "_Region";
 		String durationURI = baseURI + "_Duration";
