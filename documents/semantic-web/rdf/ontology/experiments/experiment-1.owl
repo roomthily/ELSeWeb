@@ -51,7 +51,21 @@
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#hasSource"/>
-                <owl:hasValue rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#PRISM"/>
+                <owl:hasValue rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#MODIS"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v2.owl#ExperimentalScenarioLayerSet -->
+
+    <rdf:Description rdf:about="&lifemapper-v2;ExperimentalScenarioLayerSet">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#hasCoverage"/>
+                <owl:onClass rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#OGCCoveragePayload"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">4</owl:qualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
     </rdf:Description>
