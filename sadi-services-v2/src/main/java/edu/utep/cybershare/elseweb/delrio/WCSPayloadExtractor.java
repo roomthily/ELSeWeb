@@ -23,8 +23,8 @@ import edu.utep.cybershare.elseweb.delrio.multipartMIME.PayloadExtractor;
 
 @Name("WCSPayloadExtractor")
 @ContactEmail("nicholas.delrio@gmail.com")
-@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage")
-@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoveragePayload")
+@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#OGCCoverage")
+@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#OGCCoveragePayload")
 @Description("WCS Multipart MIME Payload Extractor")
 
 public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
@@ -62,7 +62,7 @@ public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
 	{
 		private static Model m_model = ModelFactory.createDefaultModel();
 		
-		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasWCSCoveragePayloadURL");
-		public static final Property hasWCSGetCoverageURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasWCSGetCoverageURL");
+		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#hasWCSCoveragePayloadURL");
+		public static final Property hasWCSGetCoverageURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#hasWCSGetCoverageURL");
 	}
 }

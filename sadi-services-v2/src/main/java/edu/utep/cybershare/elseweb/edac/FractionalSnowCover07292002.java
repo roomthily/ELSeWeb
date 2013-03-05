@@ -22,8 +22,8 @@ import edu.utep.cybershare.elseweb.edac.wcs.WCSGetCoverageURL;
 
 @Name("FractionalSnowCover07292002")
 @ContactEmail("nicholas.delrio@gmail.com")
-@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#ScenarioLayerSet")
-@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#PopulatedScenarioLayerSet_FractionalSnowCover_07292002")
+@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v2.owl#ScenarioLayerSet")
+@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v2.owl#PopulatedScenarioLayerSet_FractionalSnowCover_07292002")
 @Description("EDAC Fractional Snow Cover Data 07292002")
 
 public class FractionalSnowCover07292002 extends SimpleSynchronousServiceServlet
