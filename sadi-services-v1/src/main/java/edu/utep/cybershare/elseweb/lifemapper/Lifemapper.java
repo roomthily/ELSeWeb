@@ -107,7 +107,7 @@ public class Lifemapper extends SimpleSynchronousServiceServlet
 		public static final Property hasExperimentalScenarioLayerSet = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasExperimentalScenarioLayerSet");
 		public static final Property hasModelingAlgorithm = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasModelingAlgorithm");
 		public static final Property hasLifemapperModelURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasLifemapperModelURL");
-		public static final Property hasCoverage = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoverage");
+		public static final Property hasCoverage = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasCoverage");
 		public static final Property hasScenarioLayerUnits = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasScenarioLayerUnits");
 	}
 }
