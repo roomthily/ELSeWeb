@@ -20,7 +20,7 @@ public class Coverage {
 	
 	public Coverage(String coverageURI, Model coverageModel){
 		model = coverageModel;
-		coverageResource = model.createResource(coverageURI, Vocab.OGCCoverage);	
+		coverageResource = model.createResource(coverageURI);	
 	}
 
 	public void addRequestDateTime(){
