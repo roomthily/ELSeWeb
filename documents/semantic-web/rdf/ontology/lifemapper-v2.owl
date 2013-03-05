@@ -176,8 +176,8 @@
     <owl:Class rdf:about="&lifemapper-v2;LifemapperExperiment">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper-v2;hasOccurrenceSetID"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                <owl:onProperty rdf:resource="&lifemapper-v2;hasExperimentalScenarioLayerSet"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper-v2;ScenarioLayerSet"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
@@ -188,14 +188,14 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper-v2;hasExperimentalScenarioLayerSet"/>
-                <owl:someValuesFrom rdf:resource="&lifemapper-v2;ScenarioLayerSet"/>
+                <owl:onProperty rdf:resource="&lifemapper-v2;hasModelingAlgorithm"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper-v2;ModelingAlgorithm"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper-v2;hasModelingAlgorithm"/>
-                <owl:someValuesFrom rdf:resource="&lifemapper-v2;ModelingAlgorithm"/>
+                <owl:onProperty rdf:resource="&lifemapper-v2;hasOccurrenceSetID"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
