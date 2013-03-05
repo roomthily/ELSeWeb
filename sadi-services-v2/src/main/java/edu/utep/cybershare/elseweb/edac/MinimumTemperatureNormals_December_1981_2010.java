@@ -78,7 +78,7 @@ public class MinimumTemperatureNormals_December_1981_2010 extends SimpleSynchron
 		MinimumTemperatureNormals data = new MinimumTemperatureNormals(dataURI, output.getModel());
 		data.addRegion(llon, rlon, llat, ulat, regionURI);
 		data.addDuration(startDate, endDate, durationURI);
-		data.addSource(false);
+		data.addSource();
 		
 		/* Generate Coverage.
 		 * requires:

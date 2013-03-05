@@ -78,7 +78,7 @@ public class FractionalSnowCover06182002 extends SimpleSynchronousServiceServlet
 		FractionalSnowCover data = new FractionalSnowCover(dataURI, output.getModel());
 		data.addRegion(llon, rlon, llat, ulat, regionURI);
 		data.addDuration(startDate, endDate, durationURI);
-		data.addSource(true);
+		data.addSource();
 		
 	
 		/* Generate Coverage.
