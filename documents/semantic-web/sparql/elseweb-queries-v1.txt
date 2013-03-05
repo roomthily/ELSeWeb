@@ -10,13 +10,13 @@ lifemapper:ALifemapperExperiment lifemapper:hasScenarioLayerUnits ?units .
 lifemapper:ALifemapperExperiment lifemapper:hasExperimentalScenarioLayerSet ?layerset .
 lifemapper:ALifemapperExperiment lifemapper:hasOccurrenceSetID ?occurrenceSetID .
 
-?layerset lifemapper:hasCoverage_FractionalSnowCover_06182002 ?coverage1 .
+?layerset edac:hasCoverage_FractionalSnowCover_06182002 ?coverage1 .
 ?coverage1 edac:containsData ?data1 .
 ?data1 a edac:FractionalSnowCover .
 ?data1 edac:hasDuration ?duration1 .
 ?duration1 edac:hasStartDate "06/18/2002" .
 
-?layerset lifemapper:hasCoverage_FractionalSnowCover_07122002 ?coverage2 .
+?layerset edac:hasCoverage_FractionalSnowCover_07122002 ?coverage2 .
 ?coverage2 edac:containsData ?data2 .
 ?data2 a edac:FractionalSnowCover .
 ?data2 edac:hasDuration ?duration2 .
@@ -39,13 +39,13 @@ lifemapper:ALifemapperExperiment lifemapper:hasScenarioLayerUnits ?units .
 lifemapper:ALifemapperExperiment lifemapper:hasExperimentalScenarioLayerSet ?layerset .
 lifemapper:ALifemapperExperiment lifemapper:hasOccurrenceSetID ?occurrenceSetID .
 
-?layerset lifemapper:hasCoverage_FractionalSnowCover_06182002 ?coverage1 .
+?layerset edac:hasCoverage_FractionalSnowCover_06182002 ?coverage1 .
 ?coverage1 edac:containsData ?data1 .
 ?data1 a edac:FractionalSnowCover .
 ?data1 edac:hasDuration ?duration1 .
 ?duration1 edac:hasStartDate "06/18/2002" .
 
-?layerset lifemapper:hasCoverage_FractionalSnowCover_07122002 ?coverage2 .
+?layerset edac:hasCoverage_FractionalSnowCover_07122002 ?coverage2 .
 ?coverage2 edac:containsData ?data2 .
 ?data2 a edac:FractionalSnowCover .
 ?data2 edac:hasDuration ?duration2 .
