@@ -57,10 +57,9 @@ public class Lifemapper extends SimpleSynchronousServiceServlet
 		while(coverageStatements.hasNext()){
 			coverageStatement = coverageStatements.next();
 			coverageResource = coverageStatement.getResource();
-			coveragePayloadURLString = coverageResource.getProperty(Vocab.hasWCSCoveragePayloadURL).getLiteral().getString();
-
 			
 			try{
+				coveragePayloadURLString = coverageResource.getProperty(Vocab.hasWCSCoveragePayloadURL).getLiteral().getString();
 				coveragePayloadURL = new URL(coveragePayloadURLString);
 				log.debug("Adding scenario layer: " + coveragePayloadURL);
 				System.out.println("Adding scenario layer: " + coveragePayloadURL);
