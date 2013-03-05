@@ -30,7 +30,7 @@ public abstract class Data {
 		Literal lit_llon = model.createTypedLiteral(llon);
 		Literal lit_rlon = model.createTypedLiteral(rlon);
 		Literal lit_llat = model.createTypedLiteral(llat);
-		Literal lit_ulat = model.createTypedLiteral(llat);
+		Literal lit_ulat = model.createTypedLiteral(ulat);
 		
 		model.add(regionResource, Vocab.hasLeftLongitude, lit_llon);
 		model.add(regionResource, Vocab.hasRightLongitude, lit_rlon);
