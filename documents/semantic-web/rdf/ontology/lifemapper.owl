@@ -230,6 +230,12 @@
                 <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoverage"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemapper;hasName"/>
+                <owl:hasValue>Service1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&lifemapper;PopulatedScenarioLayerSet_FractionalSnowCover"/>
     </owl:Class>
     
