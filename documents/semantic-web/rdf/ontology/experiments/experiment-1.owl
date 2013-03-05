@@ -65,7 +65,7 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#hasCoverage"/>
                 <owl:onClass rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#OGCCoveragePayload"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">4</owl:maxQualifiedCardinality>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">4</owl:minQualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
     </rdf:Description>
