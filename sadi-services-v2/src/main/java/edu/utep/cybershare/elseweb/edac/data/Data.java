@@ -15,9 +15,7 @@ public abstract class Data {
 	public Data(String dataURI, Model dataModel, Resource dataTypeResource, Resource dataSourceResource){
 		model = dataModel;
 		dataResource = model.createResource(dataURI, dataTypeResource);
-		sourceResource = dataSourceResource;
-		
-		dataResource = model.createResource(dataURI, dataTypeResource);
+		sourceResource = dataSourceResource;		
 	}
 	
 
@@ -26,7 +24,7 @@ public abstract class Data {
 	}
 	
 	public void addRegion(double llon, double rlon, double llat, double ulat, String regionURI){
-		Resource regionResource = model.createResource(regionURI, Vocab.Region);
+		Resource regionResource = model.createResource(regionURI);
 		Literal lit_llon = model.createTypedLiteral(llon);
 		Literal lit_rlon = model.createTypedLiteral(rlon);
 		Literal lit_llat = model.createTypedLiteral(llat);
@@ -40,7 +38,7 @@ public abstract class Data {
 	}
 	
 	public void addDuration(String startDate, String endDate, String durationURI){
-		Resource durationResource = model.createResource(durationURI, Vocab.Duration);
+		Resource durationResource = model.createResource(durationURI);
 		Literal lit_startDate = model.createTypedLiteral(startDate);
 		Literal lit_endDate = model.createTypedLiteral(endDate);
 		model.add(durationResource, Vocab.hasStartDate, lit_startDate);
@@ -52,7 +50,7 @@ public abstract class Data {
 		model.add(dataResource, Vocab.hasSource, sourceResource);
 	}
 	
-	public static final class Vocab {
+	protected static final class Vocab {
 
 		protected static Model m_model = ModelFactory.createDefaultModel();
 
