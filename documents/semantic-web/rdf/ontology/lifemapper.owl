@@ -146,6 +146,12 @@
     <owl:Class rdf:about="&lifemapper;ExperimentalScenarioLayerSet">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemapper;hasName"/>
+                <owl:hasValue>Service1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasCoverage"/>
                 <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#OGCCoveragePayload"/>
             </owl:Restriction>
