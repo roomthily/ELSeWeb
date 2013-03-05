@@ -224,14 +224,14 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper-v2;hasExperimentalScenarioLayerSet"/>
-                <owl:someValuesFrom rdf:resource="&lifemapper-v2;ScenarioLayerSet"/>
+                <owl:onProperty rdf:resource="&lifemapper-v2;hasScenarioLayerUnits"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper-v2;hasScenarioLayerUnits"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                <owl:onProperty rdf:resource="&lifemapper-v2;hasExperimentalScenarioLayerSet"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper-v2;ScenarioLayerSet"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
@@ -357,26 +357,6 @@
     <!-- http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED -->
 
     <owl:NamedIndividual rdf:about="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v2.owl#ALifemapperExperiment -->
-
-    <owl:NamedIndividual rdf:about="&lifemapper-v2;ALifemapperExperiment">
-        <rdf:type rdf:resource="&lifemapper-v2;LifemapperExperiment"/>
-        <lifemapper-v2:hasScenarioLayerUnits>dd</lifemapper-v2:hasScenarioLayerUnits>
-        <lifemapper-v2:hasOccurrenceSetID>4024107</lifemapper-v2:hasOccurrenceSetID>
-        <lifemapper-v2:hasExperimentalScenarioLayerSet rdf:resource="&lifemapper-v2;AnEmptyScenarioLayerSet"/>
-        <lifemapper-v2:hasModelingAlgorithm rdf:resource="&lifemapper-v2;BIOCLIM_Algorithm"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v2.owl#AnEmptyScenarioLayerSet -->
-
-    <owl:NamedIndividual rdf:about="&lifemapper-v2;AnEmptyScenarioLayerSet">
-        <rdf:type rdf:resource="&lifemapper-v2;ScenarioLayerSet"/>
-    </owl:NamedIndividual>
     
 
 
