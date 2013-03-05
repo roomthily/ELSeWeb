@@ -25,6 +25,6 @@ experiment:ALifemapperExperiment lifemapper:hasScenarioLayerUnits ?units .
 experiment:ALifemapperExperiment lifemapper:hasExperimentalScenarioLayerSet ?layerset .
 experiment:ALifemapperExperiment lifemapper:hasOccurrenceSetID ?occurrenceSetID .
 
-lifemapper:ALifemapperExperiment lifemapper:hasLifemapperModelURL ?modelURL .
-lifemapper:ALifemapperExperiment a lifemapper:CompletedLifemapperExperiment .
+experiment:ALifemapperExperiment lifemapper:hasLifemapperModelURL ?modelURL .
+experiment:ALifemapperExperiment a lifemapper:CompletedLifemapperExperiment .
 }
