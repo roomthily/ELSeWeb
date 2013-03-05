@@ -1,20 +1,6 @@
 prefix edac: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#>
 prefix lifemapper: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v2.owl#>
 prefix experiment: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1.owl#>
-select ?algorithm ?units ?layerset ?occurrenceSetID
-from <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1.owl>
-where
-{
-experiment:ALifemapperExperiment lifemapper:hasModelingAlgorithm ?x .
-?x lifemapper:hasName ?algorithm .
-experiment:ALifemapperExperiment lifemapper:hasScenarioLayerUnits ?units .
-experiment:ALifemapperExperiment lifemapper:hasExperimentalScenarioLayerSet ?layerset .
-experiment:ALifemapperExperiment lifemapper:hasOccurrenceSetID ?occurrenceSetID .
-}
-
-prefix edac: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#>
-prefix lifemapper: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v2.owl#>
-prefix experiment: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1.owl#>
 select ?algorithm ?units ?layerset ?occurrenceSetID ?modelURL
 from <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1.owl>
 where
