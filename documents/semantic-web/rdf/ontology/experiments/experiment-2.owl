@@ -71,7 +71,7 @@
                                 <owl:onDatatype rdf:resource="&xsd;int"/>
                                 <owl:withRestrictions rdf:parseType="Collection">
                                     <rdf:Description>
-                                        <xsd:minInclusive rdf:datatype="&xsd;integer">-108</xsd:minInclusive>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">-106</xsd:minInclusive>
                                     </rdf:Description>
                                 </owl:withRestrictions>
                             </rdfs:Datatype>
