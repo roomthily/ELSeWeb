@@ -62,11 +62,11 @@ public class Coverage {
 		private static Model m_model = ModelFactory.createDefaultModel();
 		
 		public static final Property hasCoverage = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoverage");
-		public static final Property hasCoverage_FractionalSnowCover_06182002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoverage_FractionalSnowCover_06182002");
-		public static final Property hasCoverage_FractionalSnowCover_07122002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoverage_FractionalSnowCover_07122002");
-		public static final Property hasCoverage_FractionalSnowCover_07132002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoverage_FractionalSnowCover_07132002");
-		public static final Property hasCoverage_FractionalSnowCover_07292002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoverage_FractionalSnowCover_07292002");
-		public static final Property hasCoverage_MinTemperatureNormals_121981_122010 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#hasCoverage_MinTemperatureNormals_121981_122010");
+		public static final Property hasCoverage_FractionalSnowCover_06182002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasCoverage_FractionalSnowCover_06182002");
+		public static final Property hasCoverage_FractionalSnowCover_07122002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasCoverage_FractionalSnowCover_07122002");
+		public static final Property hasCoverage_FractionalSnowCover_07132002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasCoverage_FractionalSnowCover_07132002");
+		public static final Property hasCoverage_FractionalSnowCover_07292002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasCoverage_FractionalSnowCover_07292002");
+		public static final Property hasCoverage_MinTemperatureNormals_121981_122010 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasCoverage_MinTemperatureNormals_121981_122010");
 		
 		public static final Property containsData = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#containsData");
 		public static final Property hasFormat = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#hasFormat");
