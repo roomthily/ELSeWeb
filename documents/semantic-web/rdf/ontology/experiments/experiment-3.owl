@@ -89,7 +89,7 @@
                                 <owl:onDatatype rdf:resource="&xsd;double"/>
                                 <owl:withRestrictions rdf:parseType="Collection">
                                     <rdf:Description>
-                                        <xsd:minInclusive rdf:datatype="&xsd;integer">-108</xsd:minInclusive>
+                                        <xsd:minInclusive rdf:datatype="&xsd;double">-108.0</xsd:minInclusive>
                                     </rdf:Description>
                                 </owl:withRestrictions>
                             </rdfs:Datatype>
@@ -102,7 +102,7 @@
                                 <owl:onDatatype rdf:resource="&xsd;double"/>
                                 <owl:withRestrictions rdf:parseType="Collection">
                                     <rdf:Description>
-                                        <xsd:minInclusive rdf:datatype="&xsd;integer">34</xsd:minInclusive>
+                                        <xsd:minInclusive rdf:datatype="&xsd;double">34.0</xsd:minInclusive>
                                     </rdf:Description>
                                 </owl:withRestrictions>
                             </rdfs:Datatype>
@@ -115,7 +115,7 @@
                                 <owl:onDatatype rdf:resource="&xsd;double"/>
                                 <owl:withRestrictions rdf:parseType="Collection">
                                     <rdf:Description>
-                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">-104</xsd:maxInclusive>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;double">-104.0</xsd:maxInclusive>
                                     </rdf:Description>
                                 </owl:withRestrictions>
                             </rdfs:Datatype>
@@ -128,7 +128,7 @@
                                 <owl:onDatatype rdf:resource="&xsd;double"/>
                                 <owl:withRestrictions rdf:parseType="Collection">
                                     <rdf:Description>
-                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">39</xsd:maxInclusive>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;double">39.0</xsd:maxInclusive>
                                     </rdf:Description>
                                 </owl:withRestrictions>
                             </rdfs:Datatype>
