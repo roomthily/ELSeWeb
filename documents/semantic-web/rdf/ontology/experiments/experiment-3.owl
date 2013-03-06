@@ -86,7 +86,7 @@
                         <owl:onProperty rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#hasLeftLongitude"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
-                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:onDatatype rdf:resource="&xsd;double"/>
                                 <owl:withRestrictions rdf:parseType="Collection">
                                     <rdf:Description>
                                         <xsd:minInclusive rdf:datatype="&xsd;integer">-108</xsd:minInclusive>
@@ -99,7 +99,7 @@
                         <owl:onProperty rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#hasLowerLatitude"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
-                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:onDatatype rdf:resource="&xsd;double"/>
                                 <owl:withRestrictions rdf:parseType="Collection">
                                     <rdf:Description>
                                         <xsd:minInclusive rdf:datatype="&xsd;integer">34</xsd:minInclusive>
@@ -112,7 +112,7 @@
                         <owl:onProperty rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#hasRightLongitude"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
-                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:onDatatype rdf:resource="&xsd;double"/>
                                 <owl:withRestrictions rdf:parseType="Collection">
                                     <rdf:Description>
                                         <xsd:maxInclusive rdf:datatype="&xsd;integer">-104</xsd:maxInclusive>
@@ -125,7 +125,7 @@
                         <owl:onProperty rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#hasUpperLatitude"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
-                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:onDatatype rdf:resource="&xsd;double"/>
                                 <owl:withRestrictions rdf:parseType="Collection">
                                     <rdf:Description>
                                         <xsd:maxInclusive rdf:datatype="&xsd;integer">39</xsd:maxInclusive>
