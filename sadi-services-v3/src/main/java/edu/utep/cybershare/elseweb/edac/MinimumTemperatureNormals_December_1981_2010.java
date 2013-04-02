@@ -22,8 +22,8 @@ import edu.utep.cybershare.elseweb.edac.wcs.WCSGetCoverageURL;
 
 @Name("MinimumTemperatureNormals_December_1981_2010")
 @ContactEmail("nicholas.delrio@gmail.com")
-@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v2.owl#ScenarioLayerSet")
-@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v2.owl#PopulatedScenarioLayerSet_MinTemperatureNormals_121981_122010")
+@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ScenarioLayerSet")
+@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#PopulatedScenarioLayerSet_MinTemperatureNormals_121981_122010")
 @Description("EDAC Minimum Temperature Normals December 1981 - 2010")
 
 public class MinimumTemperatureNormals_December_1981_2010 extends SimpleSynchronousServiceServlet
