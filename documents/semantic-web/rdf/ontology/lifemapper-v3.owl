@@ -7,11 +7,7 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY pml-provenance "http://inference-web.org/2.0/pml-provenance.owl#" >
-    <!ENTITY elseweb "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#" >
-    <!ENTITY lifemaper "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#" >
-    <!ENTITY lifemapper "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#" >
     <!ENTITY lifemapper-v3 "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#" >
-    <!ENTITY lifemapper-v2 "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v2.owl#" >
 ]>
 
 
@@ -20,10 +16,7 @@
      xmlns:lifemaper="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#"
      xmlns:pml-provenance="http://inference-web.org/2.0/pml-provenance.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:lifemapper-v2="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v2.owl#"
-     xmlns:lifemapper="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper.owl#"
      xmlns:lifemapper-v3="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#"
-     xmlns:elseweb="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">

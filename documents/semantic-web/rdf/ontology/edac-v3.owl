@@ -7,8 +7,6 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY pml-provenance "http://inference-web.org/2.0/pml-provenance.owl#" >
-    <!ENTITY edac "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#" >
-    <!ENTITY elseweb "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#" >
 ]>
 
 
@@ -16,8 +14,6 @@
      xml:base="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl"
      xmlns:pml-provenance="http://inference-web.org/2.0/pml-provenance.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:edac="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac.owl#"
-     xmlns:elseweb="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/elseweb.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
