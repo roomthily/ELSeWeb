@@ -7,6 +7,7 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY pml-provenance "http://inference-web.org/2.0/pml-provenance.owl#" >
+    <!ENTITY lifemaper "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#" >
     <!ENTITY lifemapper-v3 "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#" >
 ]>
 
@@ -135,7 +136,7 @@
                 <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoveragePayload"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&lifemapper-v3;ScenarioLayerSet"/>
+        <rdfs:subClassOf rdf:resource="&lifemapper-v3;PopulatedScenarioLayerSet"/>
     </owl:Class>
     
 
@@ -159,8 +160,8 @@
     <owl:Class rdf:about="&lifemapper-v3;LifemapperExperiment">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper-v3;hasOccurrenceSetID"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                <owl:onProperty rdf:resource="&lifemapper-v3;hasExperimentalScenarioLayerSet"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayerSet"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
@@ -171,14 +172,14 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper-v3;hasExperimentalScenarioLayerSet"/>
-                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayerSet"/>
+                <owl:onProperty rdf:resource="&lifemapper-v3;hasModelingAlgorithm"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ModelingAlgorithm"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper-v3;hasModelingAlgorithm"/>
-                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ModelingAlgorithm"/>
+                <owl:onProperty rdf:resource="&lifemapper-v3;hasOccurrenceSetID"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
