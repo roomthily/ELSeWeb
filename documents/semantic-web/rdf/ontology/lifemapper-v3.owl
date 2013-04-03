@@ -7,14 +7,12 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY pml-provenance "http://inference-web.org/2.0/pml-provenance.owl#" >
-    <!ENTITY lifemaper "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#" >
     <!ENTITY lifemapper-v3 "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl#"
      xml:base="http://openvisko.org/rdf/ontology-elseweb/elseweb.owl"
-     xmlns:lifemaper="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemaper.owl#"
      xmlns:pml-provenance="http://inference-web.org/2.0/pml-provenance.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:lifemapper-v3="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#"
