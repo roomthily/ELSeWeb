@@ -16,14 +16,13 @@ import com.hp.hpl.jena.rdf.model.Resource;
 //import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 import edu.utep.cybershare.elseweb.edac.coverage.Coverage;
-import edu.utep.cybershare.elseweb.edac.data.MinimumTemperatureNormals;
 import edu.utep.cybershare.elseweb.edac.wcs.WCSGetCoverageParameters;
 import edu.utep.cybershare.elseweb.edac.wcs.WCSGetCoverageURL;
 
 @Name("MinimumTemperatureNormals_December_1981_2010")
 @ContactEmail("nicholas.delrio@gmail.com")
-@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ScenarioLayerSet")
-@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#PopulatedScenarioLayerSet_MinTemperatureNormals_121981_122010")
+@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#OGCCoverageSet")
+@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#PopulatedOGCCoverageSet")
 @Description("EDAC Minimum Temperature Normals December 1981 - 2010")
 
 public class MinimumTemperatureNormals_December_1981_2010 extends SimpleSynchronousServiceServlet
@@ -62,39 +61,16 @@ public class MinimumTemperatureNormals_December_1981_2010 extends SimpleSynchron
 		String endpoint = "http://gstore.unm.edu/apps/elseweb/datasets/1dd490e4-9a5e-48a6-a593-b2bd11f63cad/services/ogc/wcs";
 		WCSGetCoverageURL getCoverage = new WCSGetCoverageURL(endpoint, params);
 		URL getCoverageURL = getCoverage.getURL();
-			
-		/* Generate Data
-		 * requires:
-		 *	-	Region via hasRegion
-		 *	-	Duration via hasDuration
-		 *	-	Sensor or Method via hasSourceSensor or hasSourceMethod 
-		 */
-		
+					
 		String baseURI = "http://edac.elseweb.cybershare.utep.edu#MTN_Service_Dec_1981_2010";
-		String dataURI = baseURI + "_Data";
-		String regionURI = baseURI + "_Region";
-		String durationURI = baseURI + "_Duration";
-		
-		MinimumTemperatureNormals data = new MinimumTemperatureNormals(dataURI, output.getModel());
-		data.addRegion(llon, rlon, llat, ulat, regionURI);
-		data.addDuration(startDate, endDate, durationURI);
-		data.addSource();
-		
-		/* Generate Coverage.
-		 * requires:
-		 *	-	DateTime via hasRequestDateTime
-		 *	-	WCSGetCoverageURL via hasWCSGetCoverageURL
-		 *	-	MIXED MIME Format via hasFormat
-		 *	-	Data via containsData
-		 */
-
-		String coverageURI = baseURI + "_Coverage";
-		Coverage ogcCoverage = new Coverage(coverageURI, output.getModel());
+		Coverage ogcCoverage = new Coverage(baseURI, output.getModel());
+		ogcCoverage.addSource(Coverage.Source.MODIS);
+		ogcCoverage.addMeasurement(Coverage.Measurement.FractionalSnowData);
 		ogcCoverage.addRequestDateTime();
 		ogcCoverage.addGetCoverageRequestURL(getCoverageURL);
 		ogcCoverage.addMIMEFormat();
-		ogcCoverage.addData(data.getDataResource());
-		
-		ogcCoverage.addHasCoverageToScenarioLayers(output, dateRange);
+		ogcCoverage.addDuration(startDate, endDate);
+		ogcCoverage.addRegion(llon, rlon, llat, ulat);
+		ogcCoverage.addHasCoverageToOGCCoverageSet(output);
 	}
 }
