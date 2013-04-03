@@ -75,16 +75,24 @@
         <rdf:type rdf:resource="&lifemapper-v3;LifemapperExperiment"/>
         <lifemapper-v3:hasOccurrenceSetID rdf:datatype="&rdfs;Literal">4024107</lifemapper-v3:hasOccurrenceSetID>
         <lifemapper-v3:hasScenarioLayerUnits rdf:datatype="&rdfs;Literal">dd</lifemapper-v3:hasScenarioLayerUnits>
-        <lifemapper-v3:hasExperimentalScenarioLayerSet rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1-v3.owl#AnEmptyScenarioLayerSet"/>
+        <lifemapper-v3:hasExperimentalScenarioLayerSet rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1-v3.owl#AScenarioLayerSet"/>
         <lifemapper-v3:hasModelingAlgorithm rdf:resource="&lifemapper-v3;BIOCLIM_Algorithm"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1-v3.owl#AnEmptyScenarioLayerSet -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1-v3.owl#AScenarioLayerSet -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1-v3.owl#AnEmptyScenarioLayerSet">
+    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1-v3.owl#AScenarioLayerSet">
         <rdf:type rdf:resource="&lifemapper-v3;ScenarioLayerSet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1-v3.owl#AnOGCCoverageSet -->
+
+    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1-v3.owl#AnOGCCoverageSet">
+        <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoverageSet"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
