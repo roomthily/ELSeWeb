@@ -67,6 +67,14 @@
     
 
 
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasPotentialCoverage -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasPotentialCoverage">
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasCoverage"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasRegion -->
 
     <owl:ObjectProperty rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasRegion"/>
