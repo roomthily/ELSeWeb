@@ -17,10 +17,48 @@ public class Coverage {
 	
 	private Model model;
 	private Resource coverageResource;
+
+	private String coverageURI;
+	private String regionURI;
+	private String durationURI;
 	
-	public Coverage(String coverageURI, Model coverageModel){
-		model = coverageModel;
-		coverageResource = model.createResource(coverageURI);	
+	public enum Source {MODIS, PRISM};
+	public enum Measurement {FractionalSnowData, MinTemperatureNormals};
+	
+	public Coverage(String baseURI, Model coverageModel){
+		model = coverageModel;		
+
+		coverageURI = baseURI + "_Coverage";
+		regionURI = baseURI + "_Region";
+		durationURI = baseURI + "_Duration";
+		
+		coverageResource = model.createResource(coverageURI, Vocab.OGCCoverage);			
+	}
+	
+	public void addMeasurement(Measurement measurement){
+		switch(measurement){
+			case FractionalSnowData:
+				model.add(coverageResource, Vocab.hasMeasurement, Vocab.FractionalSnowData);
+				break;
+			case MinTemperatureNormals:
+				model.add(coverageResource, Vocab.hasMeasurement, Vocab.MinTemperatureNormals);
+				break;
+			default:
+				model.add(coverageResource, Vocab.hasMeasurement, Vocab.MinTemperatureNormals);
+		}
+	}
+	
+	public void addSource(Source source){
+		switch(source){
+			case MODIS:
+				model.add(coverageResource, Vocab.hasSource, Vocab.MODIS);
+				break;
+			case PRISM:
+				model.add(coverageResource, Vocab.hasSource, Vocab.PRISM);
+				break;
+			default:
+				model.add(coverageResource, Vocab.hasSource, Vocab.PRISM);
+		}
 	}
 
 	public void addRequestDateTime(){
@@ -37,24 +75,33 @@ public class Coverage {
 	public void addMIMEFormat(){
 		model.add(coverageResource, Vocab.hasFormat, Vocab.MIXED);
 	}
-	
-	public void addData(Resource dataResource){
-		model.add(coverageResource, Vocab.containsData, dataResource);
+			
+	public void addRegion(double llon, double rlon, double llat, double ulat){
+		Resource regionResource = model.createResource(regionURI, Vocab.Region);
+		Literal lit_llon = model.createTypedLiteral(llon);
+		Literal lit_rlon = model.createTypedLiteral(rlon);
+		Literal lit_llat = model.createTypedLiteral(llat);
+		Literal lit_ulat = model.createTypedLiteral(ulat);
+		
+		model.add(regionResource, Vocab.hasLeftLongitude, lit_llon);
+		model.add(regionResource, Vocab.hasRightLongitude, lit_rlon);
+		model.add(regionResource, Vocab.hasLowerLatitude, lit_llat);
+		model.add(regionResource, Vocab.hasUpperLatitude, lit_ulat);
+		model.add(coverageResource, Vocab.hasRegion, regionResource);
 	}
 	
-	public void addHasCoverageToScenarioLayers(Resource scenarioLayersResource, String date){
-		if(date.equals("06/18/2002"))
-			scenarioLayersResource.addProperty(Vocab.hasCoverage_FractionalSnowCover_06182002, coverageResource);
-		else if(date.equals("07/12/2002"))
-			scenarioLayersResource.addProperty(Vocab.hasCoverage_FractionalSnowCover_07122002, coverageResource);
-		else if(date.equals("07/13/2002"))
-			scenarioLayersResource.addProperty(Vocab.hasCoverage_FractionalSnowCover_07132002, coverageResource);
-		else if(date.equals("07/29/2002"))
-			scenarioLayersResource.addProperty(Vocab.hasCoverage_FractionalSnowCover_07292002, coverageResource);
-		else if(date.equals("12/01/1981-12/01/2010"))
-			scenarioLayersResource.addProperty(Vocab.hasCoverage_MinTemperatureNormals_121981_122010, coverageResource);
-		else
-			scenarioLayersResource.addProperty(Vocab.hasCoverage, coverageResource);
+	public void addDuration(String startDate, String endDate){
+		Resource durationResource = model.createResource(durationURI, Vocab.Duration);
+		Literal lit_startDate = model.createTypedLiteral(startDate);
+		Literal lit_endDate = model.createTypedLiteral(endDate);
+		
+		model.add(durationResource, Vocab.hasStartDate, lit_startDate);
+		model.add(durationResource, Vocab.hasEndDate, lit_endDate);
+		model.add(coverageResource, Vocab.hasDuration, durationResource);
+	}
+	
+	public void addHasCoverageToOGCCoverageSet(Resource coverageSetResource){
+		coverageSetResource.addProperty(Vocab.hasCoverage, coverageResource);
 	}
 	
 	private static final class Vocab
@@ -62,18 +109,38 @@ public class Coverage {
 		private static Model m_model = ModelFactory.createDefaultModel();
 		
 		public static final Property hasCoverage = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasCoverage");
-		public static final Property hasCoverage_FractionalSnowCover_06182002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasCoverage_FractionalSnowCover_06182002");
-		public static final Property hasCoverage_FractionalSnowCover_07122002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasCoverage_FractionalSnowCover_07122002");
-		public static final Property hasCoverage_FractionalSnowCover_07132002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasCoverage_FractionalSnowCover_07132002");
-		public static final Property hasCoverage_FractionalSnowCover_07292002 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasCoverage_FractionalSnowCover_07292002");
-		public static final Property hasCoverage_MinTemperatureNormals_121981_122010 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasCoverage_MinTemperatureNormals_121981_122010");
-		
-		public static final Property containsData = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#containsData");
+
+		// OGCCoverage and associated properties
+		public static final Resource OGCCoverage = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoverage");
+		public static final Property hasRegion = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasRegion");
+		public static final Property hasDuration = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasDuration");
+		public static final Property hasSource = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasSource");
 		public static final Property hasFormat = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasFormat");
 		public static final Property hasWCSGetCoverageURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSGetCoverageURL");
 		public static final Property hasRequestDateTime = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasRequestDateTime");
+		public static final Property hasMeasurement = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasMeasurement");
+		
+		// Region and associated properties
+		public static final Resource Region = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#Region");
+		public static final Property hasUpperLatitude = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasUpperLatitude");
+		public static final Property hasLeftLongitude = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasLeftLongitude");
+		public static final Property hasLowerLatitude = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasLowerLatitude");
+		public static final Property hasRightLongitude = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasRightLongitude");
 
+		// Duration and associated properties
+		public static final Resource Duration = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#Duration");
+		public static final Property hasEndDate = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasEndDate");
+		public static final Property hasStartDate = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasStartDate");
+
+		// Measurement Individuals
+		public static final Resource FractionalSnowData = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#FractionalSnowCover");
+		public static final Resource MinTemperatureNormals = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#MinTemperatureNormals");
+		
+		// Measurement Source Individuals
+		public static final Resource MODIS = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#MODIS");
+		public static final Resource PRISM = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#PRISM");
+				
+		// Mixed Multi-part MIME Format Individual
 		public static final Resource MIXED = m_model.createResource("http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED");
-		public static final Resource OGCCoverage = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoverage");
 	}	
 }
