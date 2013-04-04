@@ -64,8 +64,8 @@ public class MinimumTemperatureNormals_December_1981_2010 extends SimpleSynchron
 					
 		String baseURI = "http://edac.elseweb.cybershare.utep.edu#MTN_Service_Dec_1981_2010";
 		Coverage ogcCoverage = new Coverage(baseURI, output.getModel());
-		ogcCoverage.addSource(Coverage.Source.MODIS);
-		ogcCoverage.addMeasurement(Coverage.Measurement.FractionalSnowData);
+		ogcCoverage.addSource(Coverage.Source.PRISM);
+		ogcCoverage.addMeasurement(Coverage.Measurement.MinTemperatureNormals);
 		ogcCoverage.addRequestDateTime();
 		ogcCoverage.addGetCoverageRequestURL(getCoverageURL);
 		ogcCoverage.addMIMEFormat();
