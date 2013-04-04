@@ -47,9 +47,9 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasCoveragePayload -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasPotentialCoverage -->
 
-    <owl:ObjectProperty rdf:about="&lifemapper-v3;hasCoveragePayload"/>
+    <owl:ObjectProperty rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasPotentialCoverage"/>
     
 
 
@@ -62,6 +62,12 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasModelingAlgorithm -->
 
     <owl:ObjectProperty rdf:about="&lifemapper-v3;hasModelingAlgorithm"/>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#suppliesScenarioLayerSet -->
+
+    <owl:ObjectProperty rdf:about="&lifemapper-v3;suppliesScenarioLayerSet"/>
     
 
 
@@ -158,14 +164,14 @@
     <owl:Class rdf:about="&lifemapper-v3;LifemapperExperiment">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper-v3;hasExperimentalScenarioLayerSet"/>
-                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayerSet"/>
+                <owl:onProperty rdf:resource="&lifemapper-v3;hasScenarioLayerUnits"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper-v3;hasScenarioLayerUnits"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                <owl:onProperty rdf:resource="&lifemapper-v3;hasExperimentalScenarioLayerSet"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayerSet"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
@@ -208,6 +214,12 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&lifemapper-v3;ScenarioLayerSet"/>
     </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ScenarioLayerSequence -->
+
+    <owl:Class rdf:about="&lifemapper-v3;ScenarioLayerSequence"/>
     
 
 
