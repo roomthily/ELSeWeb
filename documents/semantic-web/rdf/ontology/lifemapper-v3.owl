@@ -47,27 +47,91 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasPotentialCoverage -->
-
-    <owl:ObjectProperty rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasPotentialCoverage"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasExperimentalScenarioLayerSet -->
-
-    <owl:ObjectProperty rdf:about="&lifemapper-v3;hasExperimentalScenarioLayerSet"/>
-    
-
-
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasModelingAlgorithm -->
 
     <owl:ObjectProperty rdf:about="&lifemapper-v3;hasModelingAlgorithm"/>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#suppliesScenarioLayerSet -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasPopulatedScenarioLayerSequence -->
 
-    <owl:ObjectProperty rdf:about="&lifemapper-v3;suppliesScenarioLayerSet"/>
+    <owl:ObjectProperty rdf:about="&lifemapper-v3;hasPopulatedScenarioLayerSequence"/>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasScenarioLayer1 -->
+
+    <owl:ObjectProperty rdf:about="&lifemapper-v3;hasScenarioLayer1"/>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasScenarioLayer2 -->
+
+    <owl:ObjectProperty rdf:about="&lifemapper-v3;hasScenarioLayer2"/>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasScenarioLayer3 -->
+
+    <owl:ObjectProperty rdf:about="&lifemapper-v3;hasScenarioLayer3"/>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasScenarioLayer4 -->
+
+    <owl:ObjectProperty rdf:about="&lifemapper-v3;hasScenarioLayer4"/>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasScenarioLayer5 -->
+
+    <owl:ObjectProperty rdf:about="&lifemapper-v3;hasScenarioLayer5"/>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#isScenarioLayer1InSequence -->
+
+    <owl:ObjectProperty rdf:about="&lifemapper-v3;isScenarioLayer1InSequence">
+        <owl:inverseOf rdf:resource="&lifemapper-v3;hasScenarioLayer1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#isScenarioLayer2InSequence -->
+
+    <owl:ObjectProperty rdf:about="&lifemapper-v3;isScenarioLayer2InSequence">
+        <owl:inverseOf rdf:resource="&lifemapper-v3;hasScenarioLayer2"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#isScenarioLayer3InSequence -->
+
+    <owl:ObjectProperty rdf:about="&lifemapper-v3;isScenarioLayer3InSequence">
+        <owl:inverseOf rdf:resource="&lifemapper-v3;hasScenarioLayer3"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#isScenarioLayer4InSequence -->
+
+    <owl:ObjectProperty rdf:about="&lifemapper-v3;isScenarioLayer4InSequence">
+        <owl:inverseOf rdf:resource="&lifemapper-v3;hasScenarioLayer4"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#isScenarioLayer5InSequence -->
+
+    <owl:ObjectProperty rdf:about="&lifemapper-v3;isScenarioLayer5InSequence">
+        <owl:inverseOf rdf:resource="&lifemapper-v3;hasScenarioLayer5"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#suppliesScenarioLayerSequence -->
+
+    <owl:ObjectProperty rdf:about="&lifemapper-v3;suppliesScenarioLayerSequence"/>
     
 
 
@@ -117,6 +181,19 @@
     
 
 
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoverageSet -->
+
+    <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoverageSet">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemapper-v3;suppliesScenarioLayerSequence"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayerSequence"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#CompletedLifemapperExperiment -->
 
     <owl:Class rdf:about="&lifemapper-v3;CompletedLifemapperExperiment">
@@ -131,27 +208,13 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ExperimentalScenarioLayerSet -->
-
-    <owl:Class rdf:about="&lifemapper-v3;ExperimentalScenarioLayerSet">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasCoverage"/>
-                <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoveragePayload"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&lifemapper-v3;PopulatedScenarioLayerSet"/>
-    </owl:Class>
-    
-
-
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#FullySpecifiedLifemapperExperiment -->
 
     <owl:Class rdf:about="&lifemapper-v3;FullySpecifiedLifemapperExperiment">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper-v3;hasExperimentalScenarioLayerSet"/>
-                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ExperimentalScenarioLayerSet"/>
+                <owl:onProperty rdf:resource="&lifemapper-v3;hasPopulatedScenarioLayerSequence"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper-v3;PopulatedScenarioLayerSequence"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&lifemapper-v3;LifemapperExperiment"/>
@@ -164,19 +227,13 @@
     <owl:Class rdf:about="&lifemapper-v3;LifemapperExperiment">
         <owl:equivalentClass>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemapper-v3;hasPopulatedScenarioLayerSequence"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayerSequence"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&lifemapper-v3;hasScenarioLayerUnits"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper-v3;hasExperimentalScenarioLayerSet"/>
-                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayerSet"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper-v3;hasOccurrenceSetID"/>
                 <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -184,6 +241,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&lifemapper-v3;hasModelingAlgorithm"/>
                 <owl:someValuesFrom rdf:resource="&lifemapper-v3;ModelingAlgorithm"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemapper-v3;hasOccurrenceSetID"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
@@ -203,29 +266,84 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#PopulatedScenarioLayerSet -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#PopulatedScenarioLayerSequence -->
 
-    <owl:Class rdf:about="&lifemapper-v3;PopulatedScenarioLayerSet">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasPotentialCoverage"/>
-                <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoverage"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&lifemapper-v3;ScenarioLayerSet"/>
+    <owl:Class rdf:about="&lifemapper-v3;PopulatedScenarioLayerSequence">
+        <rdfs:subClassOf rdf:resource="&lifemapper-v3;ScenarioLayerSequence"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ScenarioLayer1 -->
+
+    <owl:Class rdf:about="&lifemapper-v3;ScenarioLayer1">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoveragePayload1"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ScenarioLayer2 -->
+
+    <owl:Class rdf:about="&lifemapper-v3;ScenarioLayer2">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoveragePayload2"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ScenarioLayer3 -->
+
+    <owl:Class rdf:about="&lifemapper-v3;ScenarioLayer3">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoveragePayload3"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ScenarioLayer4 -->
+
+    <owl:Class rdf:about="&lifemapper-v3;ScenarioLayer4">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoveragePayload4"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ScenarioLayer5 -->
+
+    <owl:Class rdf:about="&lifemapper-v3;ScenarioLayer5">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoveragePayload5"/>
     </owl:Class>
     
 
 
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ScenarioLayerSequence -->
 
-    <owl:Class rdf:about="&lifemapper-v3;ScenarioLayerSequence"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ScenarioLayerSet -->
-
-    <owl:Class rdf:about="&lifemapper-v3;ScenarioLayerSet"/>
+    <owl:Class rdf:about="&lifemapper-v3;ScenarioLayerSequence">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&lifemapper-v3;hasScenarioLayer1"/>
+                        <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayer1"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&lifemapper-v3;hasScenarioLayer2"/>
+                        <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayer2"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&lifemapper-v3;hasScenarioLayer3"/>
+                        <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayer3"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&lifemapper-v3;hasScenarioLayer4"/>
+                        <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayer4"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&lifemapper-v3;hasScenarioLayer5"/>
+                        <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayer5"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
     
 
 
