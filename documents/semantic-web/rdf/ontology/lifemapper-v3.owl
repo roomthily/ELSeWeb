@@ -227,14 +227,14 @@
     <owl:Class rdf:about="&lifemapper-v3;LifemapperExperiment">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper-v3;hasPopulatedScenarioLayerSequence"/>
-                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayerSequence"/>
+                <owl:onProperty rdf:resource="&lifemapper-v3;hasScenarioLayerUnits"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&lifemapper-v3;hasScenarioLayerUnits"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                <owl:onProperty rdf:resource="&lifemapper-v3;hasPopulatedScenarioLayerSequence"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayerSequence"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
@@ -277,6 +277,12 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ScenarioLayer1 -->
 
     <owl:Class rdf:about="&lifemapper-v3;ScenarioLayer1">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemapper-v3;isScenarioLayer1InSequence"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayerSequence"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoveragePayload1"/>
     </owl:Class>
     
@@ -285,6 +291,12 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ScenarioLayer2 -->
 
     <owl:Class rdf:about="&lifemapper-v3;ScenarioLayer2">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemapper-v3;isScenarioLayer2InSequence"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayerSequence"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoveragePayload2"/>
     </owl:Class>
     
@@ -293,6 +305,12 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ScenarioLayer3 -->
 
     <owl:Class rdf:about="&lifemapper-v3;ScenarioLayer3">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemapper-v3;isScenarioLayer3InSequence"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayerSequence"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoveragePayload3"/>
     </owl:Class>
     
@@ -301,6 +319,12 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ScenarioLayer4 -->
 
     <owl:Class rdf:about="&lifemapper-v3;ScenarioLayer4">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemapper-v3;isScenarioLayer4InSequence"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayerSequence"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoveragePayload4"/>
     </owl:Class>
     
@@ -309,6 +333,12 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#ScenarioLayer5 -->
 
     <owl:Class rdf:about="&lifemapper-v3;ScenarioLayer5">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemapper-v3;isScenarioLayer5InSequence"/>
+                <owl:someValuesFrom rdf:resource="&lifemapper-v3;ScenarioLayerSequence"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoveragePayload5"/>
     </owl:Class>
     
