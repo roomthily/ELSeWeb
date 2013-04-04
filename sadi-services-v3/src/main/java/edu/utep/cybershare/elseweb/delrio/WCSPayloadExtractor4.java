@@ -23,13 +23,13 @@ import edu.utep.cybershare.elseweb.delrio.multipartMIME.PayloadExtractor;
 
 @Name("WCSPayloadExtractor")
 @ContactEmail("nicholas.delrio@gmail.com")
-@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#EligibleOGCCoverage")
-@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoveragePayload")
+@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoverage4")
+@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoveragePayload4")
 @Description("WCS Multipart MIME Payload Extractor")
 
-public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
+public class WCSPayloadExtractor4 extends SimpleSynchronousServiceServlet
 {
-	private static final Logger log = Logger.getLogger(WCSPayloadExtractor.class);
+	private static final Logger log = Logger.getLogger(WCSPayloadExtractor1.class);
 	private static final long serialVersionUID = 1L;
 
 	@Override
