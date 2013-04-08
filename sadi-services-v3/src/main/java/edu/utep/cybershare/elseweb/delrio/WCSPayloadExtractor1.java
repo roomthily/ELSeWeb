@@ -21,7 +21,7 @@ import com.hp.hpl.jena.rdf.model.Resource;
 
 import edu.utep.cybershare.elseweb.delrio.multipartMIME.PayloadExtractor;
 
-@Name("WCSPayloadExtractor")
+@Name("WCSPayloadExtractor1")
 @ContactEmail("nicholas.delrio@gmail.com")
 @InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoverage1")
 @OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoveragePayload1")
@@ -53,7 +53,7 @@ public class WCSPayloadExtractor1 extends SimpleSynchronousServiceServlet
 			log.debug("Extracting payload from: " + wcsGetCoverageURL);
 			URL coveragePayloadURL = extractor.getPayload(wcsGetCoverageURL);
 			log.debug("Extracted payload located at: " + coveragePayloadURL);
-			output.addProperty(Vocab.hasWCSCoveragePayloadURL, coveragePayloadURL.toString());
+			output.addProperty(Vocab.hasWCSCoveragePayloadURL1, coveragePayloadURL.toString());
 		}
 
 	}
@@ -62,7 +62,7 @@ public class WCSPayloadExtractor1 extends SimpleSynchronousServiceServlet
 	{
 		private static Model m_model = ModelFactory.createDefaultModel();
 		
-		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL");
+		public static final Property hasWCSCoveragePayloadURL1 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL1");
 		public static final Property hasWCSGetCoverageURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSGetCoverageURL");
 	}
 }
