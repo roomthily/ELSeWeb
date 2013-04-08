@@ -161,7 +161,7 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL1 -->
 
     <owl:DatatypeProperty rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL1">
-        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -169,7 +169,7 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL2 -->
 
     <owl:DatatypeProperty rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL2">
-        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -177,7 +177,7 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL3 -->
 
     <owl:DatatypeProperty rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL3">
-        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -185,7 +185,7 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL4 -->
 
     <owl:DatatypeProperty rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL4">
-        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -193,7 +193,7 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL5 -->
 
     <owl:DatatypeProperty rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL5">
-        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
 
