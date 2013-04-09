@@ -294,7 +294,6 @@
         <rdf:type rdf:resource="&lifemapper-v3;Experiment_Stage1"/>
         <lifemapper-v3:hasOccurrenceSetID rdf:datatype="&rdfs;Literal">4024107</lifemapper-v3:hasOccurrenceSetID>
         <lifemapper-v3:hasScenarioLayerUnits rdf:datatype="&rdfs;Literal">dd</lifemapper-v3:hasScenarioLayerUnits>
-        <lifemapper-v3:hasExperimentalScenarioLayerSet rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1-v3.owl#AScenarioLayerSet"/>
         <edac-v3:hasWCSCoverageSet rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1-v3.owl#AWCSCoverageSet"/>
         <lifemapper-v3:hasModelingAlgorithm rdf:resource="&lifemapper-v3;BIOCLIM_Algorithm"/>
     </owl:NamedIndividual>
