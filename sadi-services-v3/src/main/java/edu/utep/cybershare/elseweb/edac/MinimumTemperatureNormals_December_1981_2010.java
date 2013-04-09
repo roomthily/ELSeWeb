@@ -21,8 +21,8 @@ import edu.utep.cybershare.elseweb.edac.wcs.WCSGetCoverageURL;
 
 @Name("MinimumTemperatureNormals_December_1981_2010")
 @ContactEmail("nicholas.delrio@gmail.com")
-@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoverageSet")
-@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#PopulatedOGCCoverageSet")
+@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverageSet")
+@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverageSet_Populated")
 @Description("EDAC Minimum Temperature Normals December 1981 - 2010")
 
 public class MinimumTemperatureNormals_December_1981_2010 extends SimpleSynchronousServiceServlet
@@ -71,6 +71,6 @@ public class MinimumTemperatureNormals_December_1981_2010 extends SimpleSynchron
 		ogcCoverage.addMIMEFormat();
 		ogcCoverage.addDuration(startDate, endDate);
 		ogcCoverage.addRegion(llon, rlon, llat, ulat);
-		ogcCoverage.addHasCoverageToOGCCoverageSet(output);
+		ogcCoverage.addHasWCSCoverage(output);
 	}
 }

@@ -32,7 +32,7 @@ public class Coverage {
 		regionURI = baseURI + "_Region";
 		durationURI = baseURI + "_Duration";
 		
-		coverageResource = model.createResource(coverageURI, Vocab.OGCCoverage);			
+		coverageResource = model.createResource(coverageURI, Vocab.WCSCoverage);			
 	}
 	
 	public void addMeasurement(Measurement measurement){
@@ -100,19 +100,18 @@ public class Coverage {
 		model.add(coverageResource, Vocab.hasDuration, durationResource);
 	}
 	
-	public void addHasCoverageToOGCCoverageSet(Resource coverageSetResource){
-		model.add(coverageSetResource, Vocab.hasCoverage, coverageResource);
-		model.add(coverageResource, Vocab.hasCoverageSet, coverageSetResource);
+	public void addHasWCSCoverage(Resource coverageSetResource){
+		model.add(coverageSetResource, Vocab.hasWCSCoverage, coverageResource);
 	}
 	
 	private static final class Vocab
 	{
 		private static Model m_model = ModelFactory.createDefaultModel();
 		
-		public static final Property hasCoverage = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasCoverage");
+		public static final Property hasWCSCoverage = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoverage");
 		
 		// OGCCoverage and associated properties
-		public static final Resource OGCCoverage = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#OGCCoverage");
+		public static final Resource WCSCoverage = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverage");
 		public static final Property hasRegion = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasRegion");
 		public static final Property hasDuration = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasDuration");
 		public static final Property hasSource = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasSource");
@@ -120,7 +119,6 @@ public class Coverage {
 		public static final Property hasWCSGetCoverageURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSGetCoverageURL");
 		public static final Property hasRequestDateTime = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasRequestDateTime");
 		public static final Property hasMeasurement = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasMeasurement");
-		public static final Property hasCoverageSet = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasCoverageSet");
 		
 		// Region and associated properties
 		public static final Resource Region = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#Region");
