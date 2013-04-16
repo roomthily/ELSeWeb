@@ -1,6 +1,6 @@
 package edu.utep.cybershare.elseweb.ogc.wcs.url;
 
-class WCSGetCoverageParameters {
+public class WCSGetCoverageParameters {
 	
 	private static final String EQUALS = "=";
 

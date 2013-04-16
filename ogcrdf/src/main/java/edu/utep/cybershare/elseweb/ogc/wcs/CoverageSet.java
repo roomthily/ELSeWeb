@@ -13,6 +13,12 @@ public class CoverageSet {
 	public CoverageSet(String coverageSetURI, Model coverageSetModel){
 		model = coverageSetModel;
 		coverageSetResource = model.createResource(coverageSetURI, Vocab.WCSCoverageSet_Populated);
+		
+		setNamespacePrefixe();
+	}
+	
+	private void setNamespacePrefixe(){
+		model.setNsPrefix("edac-v3", Vocab.PREFIX);
 	}
 	
 	public void addCoverage(Resource coverageResource){
@@ -23,7 +29,8 @@ public class CoverageSet {
 	{
 		private static Model m_model = ModelFactory.createDefaultModel();		
 	
-		public static final Resource WCSCoverageSet_Populated = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverageSet_Populated");
-		public static final Property hasWCSCoverage = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoverage");						
+		public static final String PREFIX = "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#";
+		public static final Resource WCSCoverageSet_Populated = m_model.createResource(PREFIX + "WCSCoverageSet_Populated");
+		public static final Property hasWCSCoverage = m_model.createProperty(PREFIX + "hasWCSCoverage");						
 	}	
 }
