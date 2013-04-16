@@ -165,6 +165,12 @@
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#Experiment_Stage4 -->
 
     <owl:Class rdf:about="&lifemapper-v3;Experiment_Stage4">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lifemapper-v3;hasWCSCoverageSequence"/>
+                <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverageSequence"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&lifemapper-v3;Experiment_Stage3"/>
     </owl:Class>
     
