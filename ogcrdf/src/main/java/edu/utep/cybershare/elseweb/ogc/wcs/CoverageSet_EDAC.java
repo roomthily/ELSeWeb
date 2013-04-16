@@ -1,7 +1,6 @@
 package edu.utep.cybershare.elseweb.ogc.wcs;
 
-import java.io.StringWriter;
-import java.net.URL;
+import java.io.File;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -13,7 +12,10 @@ import edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageURL;
 
 public class CoverageSet_EDAC {
 	
-	private static final String DOCUMENT_URL = "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl";
+	private static final String BASE_URL = "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/";
+	private static final String DOCUMENT_NAME = "edac-data.owl";
+	private static final String DOCUMENT_URL = BASE_URL + DOCUMENT_NAME;
+	
 	
 	public static void main(String[] args){
 		
@@ -25,10 +27,10 @@ public class CoverageSet_EDAC {
 		coverageSet.addCoverage(getFractionalSnowCover07132002(model));
 		coverageSet.addCoverage(getFractionalSnowCover07292002(model));
 		coverageSet.addCoverage(getMinimumTemperatureNormals_December_1981_2010(model));
+	
+		File dumpFile = new File("C:/Users/Public/git-repos/ELSeWeb/documents/semantic-web/rdf/ontology/" + DOCUMENT_NAME);
+		coverageSet.dumpRDF(dumpFile);
 		
-		StringWriter wtr = new StringWriter();
-		model.write(wtr);
-		System.out.println(wtr.toString());
 	}
 	
 	public static Resource getMinimumTemperatureNormals_December_1981_2010(Model model){
@@ -54,7 +56,6 @@ public class CoverageSet_EDAC {
 		
 		String startDate = "12/01/1981";
 		String endDate = "12/01/2010";
-		String dateRange = startDate + "-" + endDate;
 		
 		//construct the parameterized URL from the wcs endpoint and the parameters
 		String endpoint = "http://gstore.unm.edu/apps/elseweb/datasets/1dd490e4-9a5e-48a6-a593-b2bd11f63cad/services/ogc/wcs";

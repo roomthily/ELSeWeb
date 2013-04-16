@@ -1,5 +1,8 @@
 package edu.utep.cybershare.elseweb.ogc.wcs;
 
+import java.io.File;
+import java.io.FileWriter;
+
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
@@ -23,6 +26,14 @@ public class CoverageSet {
 	
 	public void addCoverage(Resource coverageResource){
 		model.add(coverageSetResource, Vocab.hasWCSCoverage, coverageResource);
+	}
+	
+	public void dumpRDF(File file){
+		try{
+			FileWriter writer = new FileWriter(file);
+			model.write(writer);
+			writer.close();
+		}catch(Exception e){e.printStackTrace();}
 	}
 	
 	private static final class Vocab
