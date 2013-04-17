@@ -25,7 +25,7 @@ import edu.utep.cybershare.elseweb.edac.wcs.WCSGetCoverageURL;
 @OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverageSet_Populated")
 @Description("EDAC Minimum Temperature Normals December 1981 - 2010")
 
-public class MinimumTemperatureNormals_December_1981_2010 extends SimpleSynchronousServiceServlet
+public class MinimumTemperatureNormals_September_1981_2010 extends SimpleSynchronousServiceServlet
 {
 	private static final Logger log = Logger.getLogger(MinimumTemperatureNormals_December_1981_2010.class);
 	private static final long serialVersionUID = 1L;
@@ -35,7 +35,7 @@ public class MinimumTemperatureNormals_December_1981_2010 extends SimpleSynchron
 	{
 		// set wcs getCoverage parameters
 		WCSGetCoverageParameters params = new WCSGetCoverageParameters();
-				
+		
 		double llon = -125.020833333333;
 		double llat = 24.0625;
 		double rlon = -66.47916757;
@@ -50,18 +50,19 @@ public class MinimumTemperatureNormals_December_1981_2010 extends SimpleSynchron
 		String format = "image/tiff";
 		params.setFormat(format);
 		
-		String coverage = "us_tmin_1981_2010_12";
+		String coverage = "us_tmin_1981_2010_05";
 		params.setCoverage(coverage);
 		
-		String startDate = "12/01/1981";
-		String endDate = "12/01/2010";
+		String startDate = "09/01/1981";
+		String endDate = "09/01/2010";
 		
 		//construct the parameterized URL from the wcs endpoint and the parameters
-		String endpoint = "http://gstore.unm.edu/apps/elseweb/datasets/1dd490e4-9a5e-48a6-a593-b2bd11f63cad/services/ogc/wcs";
+		String endpoint = "http://gstore.unm.edu/apps/elseweb/datasets/a45326da-063c-4baf-98e4-d0eb8ec92b3c/services/ogc/wcs?SERVICE=wcs&REQUEST=GetCapabilities&VERSION=1.1.2";
+
 		WCSGetCoverageURL getCoverage = new WCSGetCoverageURL(endpoint, params);
 		URL getCoverageURL = getCoverage.getURL();
 					
-		String baseURI = "http://edac.elseweb.cybershare.utep.edu#MTN_Service_Dec_1981_2010";
+		String baseURI = "http://edac.elseweb.cybershare.utep.edu#MTN_Service_September_1981_2010";
 		Coverage ogcCoverage = new Coverage(baseURI, output.getModel());
 		ogcCoverage.addSource(Coverage.Source.PRISM);
 		ogcCoverage.addMeasurement(Coverage.Measurement.MinTemperatureNormals);
