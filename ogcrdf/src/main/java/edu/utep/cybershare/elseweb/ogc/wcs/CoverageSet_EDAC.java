@@ -27,10 +27,94 @@ public class CoverageSet_EDAC {
 		coverageSet.addCoverage(getFractionalSnowCover07132002(model));
 		coverageSet.addCoverage(getFractionalSnowCover07292002(model));
 		coverageSet.addCoverage(getMinimumTemperatureNormals_December_1981_2010(model));
-	
+		coverageSet.addCoverage(getMinimumTemperatureNormals_May_1981_2010(model));
+		coverageSet.addCoverage(getMinimumTemperatureNormals_September_1981_2010(model));
+		
 		File dumpFile = new File("C:/Users/Public/git-repos/ELSeWeb/documents/semantic-web/rdf/ontology/" + DOCUMENT_NAME);
 		coverageSet.dumpRDF(dumpFile);
 		
+	}
+	
+	public static Resource getMinimumTemperatureNormals_September_1981_2010(Model model){
+		// set wcs getCoverage parameters
+		WCSGetCoverageParameters params = new WCSGetCoverageParameters();
+		
+		double llon = -125.020833333333;
+		double llat = 24.0625;
+		double rlon = -66.47916757;
+		double ulat = 49.9375;
+		params.setBBox(llon, llat, rlon, ulat);
+		
+		double width = 600;
+		double height = 600;
+		params.setWidth(width);
+		params.setHeight(height);
+		
+		String format = "image/tiff";
+		params.setFormat(format);
+		
+		String coverage = "us_tmin_1981_2010_05";
+		params.setCoverage(coverage);
+		
+		String startDate = "09/01/1981";
+		String endDate = "09/01/2010";
+		
+		//construct the parameterized URL from the wcs endpoint and the parameters
+		String endpoint = "http://gstore.unm.edu/apps/elseweb/datasets/a45326da-063c-4baf-98e4-d0eb8ec92b3c/services/ogc/wcs?SERVICE=wcs&REQUEST=GetCapabilities&VERSION=1.1.2";
+
+		WCSGetCoverageURL getCoverage = new WCSGetCoverageURL(endpoint, params);
+					
+		String baseURI = DOCUMENT_URL + "#MTNData_September_1981_2010";
+		
+		Coverage ogcCoverage = new Coverage(baseURI, model);
+		ogcCoverage.addSource(Coverage.Source.PRISM);
+		ogcCoverage.addMeasurement(Coverage.Measurement.MinTemperatureNormals);
+		ogcCoverage.addGetCoverageRequestURL(getCoverage);
+		ogcCoverage.addMIMEFormat();
+		ogcCoverage.addDuration(startDate, endDate);
+		ogcCoverage.addRegion(llon, rlon, llat, ulat);
+		return ogcCoverage.getWCSCoverage();
+	}
+	
+	public static Resource getMinimumTemperatureNormals_May_1981_2010(Model model){
+		// set wcs getCoverage parameters
+		WCSGetCoverageParameters params = new WCSGetCoverageParameters();
+		
+		double llon = -125.020833333333;
+		double llat = 24.0625;
+		double rlon = -66.47916757;
+		double ulat = 49.9375;
+		params.setBBox(llon, llat, rlon, ulat);
+		
+		double width = 600;
+		double height = 600;
+		params.setWidth(width);
+		params.setHeight(height);
+		
+		String format = "image/tiff";
+		params.setFormat(format);
+		
+		String coverage = "us_tmin_1981_2010_05";
+		params.setCoverage(coverage);
+		
+		String startDate = "05/01/1981";
+		String endDate = "05/01/2010";
+		
+		//construct the parameterized URL from the wcs endpoint and the parameters
+		String endpoint = "http://gstore.unm.edu/apps/elseweb/datasets/7a16679d-2e40-4905-b016-61a5dfda655e/services/ogc/wcs";
+
+		WCSGetCoverageURL getCoverage = new WCSGetCoverageURL(endpoint, params);
+					
+		String baseURI = DOCUMENT_URL + "#MTNData_May_1981_2010";
+		Coverage ogcCoverage = new Coverage(baseURI, model);
+		ogcCoverage.addSource(Coverage.Source.PRISM);
+		ogcCoverage.addMeasurement(Coverage.Measurement.MinTemperatureNormals);
+		ogcCoverage.addGetCoverageRequestURL(getCoverage);
+		ogcCoverage.addMIMEFormat();
+		ogcCoverage.addDuration(startDate, endDate);
+		ogcCoverage.addRegion(llon, rlon, llat, ulat);
+		
+		return ogcCoverage.getWCSCoverage();
 	}
 	
 	public static Resource getMinimumTemperatureNormals_December_1981_2010(Model model){

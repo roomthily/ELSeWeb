@@ -6,7 +6,7 @@
     <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07132002_Region"/>
     <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07132002_Duration"/>
     <edac-v3:hasFormat rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
-    <edac-v3:hasWCSGetCoverageURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageURL@3479e304</edac-v3:hasWCSGetCoverageURL>
+    <edac-v3:hasWCSGetCoverageURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://gstore.unm.edu/apps/rgis/datasets/a427563f-3c7e-44a2-8b35-68ce2a78001a/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=mod10a1_a2002210.fractional_snow_cover&amp;CRS=EPSG:4326&amp;BBOX=-107.0,35.0,-105.0,38.0&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</edac-v3:hasWCSGetCoverageURL>
     <edac-v3:hasMeasurement rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#FractionalSnowCover"/>
     <edac-v3:hasSource rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#MODIS"/>
     <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverage"/>
@@ -18,24 +18,24 @@
     <edac-v3:hasLeftLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-107.0</edac-v3:hasLeftLongitude>
     <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#Region"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Duration">
-    <edac-v3:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07/29/2002</edac-v3:hasEndDate>
-    <edac-v3:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07/29/2002</edac-v3:hasStartDate>
-    <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#Duration"/>
+  <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Coverage">
+    <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Region"/>
+    <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Duration"/>
+    <edac-v3:hasFormat rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
+    <edac-v3:hasWCSGetCoverageURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://gstore.unm.edu/apps/rgis/datasets/a427563f-3c7e-44a2-8b35-68ce2a78001a/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=mod10a1_a2002210.fractional_snow_cover&amp;CRS=EPSG:4326&amp;BBOX=-107.0,35.0,-105.0,38.0&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</edac-v3:hasWCSGetCoverageURL>
+    <edac-v3:hasMeasurement rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#FractionalSnowCover"/>
+    <edac-v3:hasSource rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#MODIS"/>
+    <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverage"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_Dec_1981_2010_Duration">
     <edac-v3:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12/01/2010</edac-v3:hasEndDate>
     <edac-v3:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12/01/1981</edac-v3:hasStartDate>
     <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#Duration"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Coverage">
-    <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Region"/>
-    <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Duration"/>
-    <edac-v3:hasFormat rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
-    <edac-v3:hasWCSGetCoverageURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageURL@5488e2dd</edac-v3:hasWCSGetCoverageURL>
-    <edac-v3:hasMeasurement rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#FractionalSnowCover"/>
-    <edac-v3:hasSource rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#MODIS"/>
-    <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverage"/>
+  <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Duration">
+    <edac-v3:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07/29/2002</edac-v3:hasEndDate>
+    <edac-v3:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07/29/2002</edac-v3:hasStartDate>
+    <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#Duration"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_06182002_Region">
     <edac-v3:hasUpperLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">38.0</edac-v3:hasUpperLatitude>
@@ -56,6 +56,13 @@
     <edac-v3:hasLeftLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-107.0</edac-v3:hasLeftLongitude>
     <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#Region"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_September_1981_2010_Region">
+    <edac-v3:hasUpperLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">49.9375</edac-v3:hasUpperLatitude>
+    <edac-v3:hasLowerLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">24.0625</edac-v3:hasLowerLatitude>
+    <edac-v3:hasRightLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-66.47916757</edac-v3:hasRightLongitude>
+    <edac-v3:hasLeftLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-125.020833333333</edac-v3:hasLeftLongitude>
+    <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#Region"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverDataS_07122002_Duration">
     <edac-v3:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07/12/2002</edac-v3:hasEndDate>
     <edac-v3:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07/12/2002</edac-v3:hasStartDate>
@@ -65,19 +72,54 @@
     <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_Dec_1981_2010_Region"/>
     <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_Dec_1981_2010_Duration"/>
     <edac-v3:hasFormat rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
-    <edac-v3:hasWCSGetCoverageURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageURL@66e64686</edac-v3:hasWCSGetCoverageURL>
+    <edac-v3:hasWCSGetCoverageURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://gstore.unm.edu/apps/elseweb/datasets/1dd490e4-9a5e-48a6-a593-b2bd11f63cad/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1981_2010_12&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,24.0625,-66.47916757,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</edac-v3:hasWCSGetCoverageURL>
     <edac-v3:hasMeasurement rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#MinTemperatureNormals"/>
     <edac-v3:hasSource rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#PRISM"/>
     <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_May_1981_2010_Region">
+    <edac-v3:hasUpperLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">49.9375</edac-v3:hasUpperLatitude>
+    <edac-v3:hasLowerLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">24.0625</edac-v3:hasLowerLatitude>
+    <edac-v3:hasRightLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-66.47916757</edac-v3:hasRightLongitude>
+    <edac-v3:hasLeftLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-125.020833333333</edac-v3:hasLeftLongitude>
+    <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#Region"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_September_1981_2010_Coverage">
+    <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_September_1981_2010_Region"/>
+    <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_September_1981_2010_Duration"/>
+    <edac-v3:hasFormat rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
+    <edac-v3:hasWCSGetCoverageURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://gstore.unm.edu/apps/elseweb/datasets/a45326da-063c-4baf-98e4-d0eb8ec92b3c/services/ogc/wcs?SERVICE=wcs&amp;REQUEST=GetCapabilities&amp;VERSION=1.1.2?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1981_2010_05&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,24.0625,-66.47916757,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</edac-v3:hasWCSGetCoverageURL>
+    <edac-v3:hasMeasurement rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#MinTemperatureNormals"/>
+    <edac-v3:hasSource rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#PRISM"/>
+    <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_May_1981_2010_Coverage">
+    <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_May_1981_2010_Region"/>
+    <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_May_1981_2010_Duration"/>
+    <edac-v3:hasFormat rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
+    <edac-v3:hasWCSGetCoverageURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://gstore.unm.edu/apps/elseweb/datasets/7a16679d-2e40-4905-b016-61a5dfda655e/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1981_2010_05&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,24.0625,-66.47916757,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</edac-v3:hasWCSGetCoverageURL>
+    <edac-v3:hasMeasurement rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#MinTemperatureNormals"/>
+    <edac-v3:hasSource rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#PRISM"/>
+    <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_September_1981_2010_Duration">
+    <edac-v3:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">09/01/2010</edac-v3:hasEndDate>
+    <edac-v3:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">09/01/1981</edac-v3:hasStartDate>
+    <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#Duration"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_06182002_Coverage">
     <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_06182002_Region"/>
     <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_06182002_Duration"/>
     <edac-v3:hasFormat rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
-    <edac-v3:hasWCSGetCoverageURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageURL@68da4b71</edac-v3:hasWCSGetCoverageURL>
+    <edac-v3:hasWCSGetCoverageURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://gstore.unm.edu/apps/rgis/datasets/8c53a01e-c8bf-40de-a9b9-3c2e3f037ebb/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=mod10a1_a2002169.fractional_snow_cover&amp;CRS=EPSG:4326&amp;BBOX=-107.0,35.0,-105.0,38.0&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</edac-v3:hasWCSGetCoverageURL>
     <edac-v3:hasMeasurement rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#FractionalSnowCover"/>
     <edac-v3:hasSource rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#MODIS"/>
     <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_May_1981_2010_Duration">
+    <edac-v3:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05/01/2010</edac-v3:hasEndDate>
+    <edac-v3:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05/01/1981</edac-v3:hasStartDate>
+    <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#Duration"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverDataS_07122002_Region">
     <edac-v3:hasUpperLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">38.0</edac-v3:hasUpperLatitude>
@@ -90,7 +132,7 @@
     <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverDataS_07122002_Region"/>
     <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverDataS_07122002_Duration"/>
     <edac-v3:hasFormat rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
-    <edac-v3:hasWCSGetCoverageURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageURL@353c375</edac-v3:hasWCSGetCoverageURL>
+    <edac-v3:hasWCSGetCoverageURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://gstore.unm.edu/apps/rgis/datasets/0f3ca80c-2d50-4a33-8df8-c80ff9e94588/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=mod10a1_a2002193.fractional_snow_cover&amp;CRS=EPSG:4326&amp;BBOX=-107.0,35.0,-105.0,38.0&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</edac-v3:hasWCSGetCoverageURL>
     <edac-v3:hasMeasurement rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#FractionalSnowCover"/>
     <edac-v3:hasSource rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#MODIS"/>
     <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverage"/>
@@ -103,6 +145,8 @@
     <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#Region"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#ACoverageSet_Populated">
+    <edac-v3:hasWCSCoverage rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_September_1981_2010_Coverage"/>
+    <edac-v3:hasWCSCoverage rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_May_1981_2010_Coverage"/>
     <edac-v3:hasWCSCoverage rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_Dec_1981_2010_Coverage"/>
     <edac-v3:hasWCSCoverage rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Coverage"/>
     <edac-v3:hasWCSCoverage rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07132002_Coverage"/>
