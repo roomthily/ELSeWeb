@@ -21,7 +21,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl"/>
+    <owl:Ontology rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl">
+        <owl:imports rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl"/>
+    </owl:Ontology>
     
 
 
