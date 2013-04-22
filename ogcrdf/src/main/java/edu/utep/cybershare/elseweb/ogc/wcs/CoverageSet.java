@@ -3,6 +3,7 @@ package edu.utep.cybershare.elseweb.ogc.wcs;
 import java.io.File;
 import java.io.FileWriter;
 
+import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
@@ -10,17 +11,22 @@ import com.hp.hpl.jena.rdf.model.Resource;
 
 public class CoverageSet {
 	
-	private Model model;
+	private OntModel model;
 	private Resource coverageSetResource;
-	
-	public CoverageSet(String coverageSetURI, Model coverageSetModel){
+		
+	public CoverageSet(String coverageSetURI, String ontologyURI, OntModel coverageSetModel){
 		model = coverageSetModel;
 		coverageSetResource = model.createResource(coverageSetURI, Vocab.WCSCoverageSet_Populated);
 		
-		setNamespacePrefixe();
+		setNamespacePrefix();
+		addOntologyURI(ontologyURI);
 	}
 	
-	private void setNamespacePrefixe(){
+	private void addOntologyURI(String ontologyURI){
+		model.createOntology(ontologyURI);
+	}
+		
+	private void setNamespacePrefix(){
 		model.setNsPrefix("edac-v3", Vocab.PREFIX);
 	}
 	

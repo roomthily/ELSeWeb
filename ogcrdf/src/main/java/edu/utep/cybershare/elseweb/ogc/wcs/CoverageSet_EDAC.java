@@ -2,6 +2,7 @@ package edu.utep.cybershare.elseweb.ogc.wcs;
 
 import java.io.File;
 
+import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
@@ -19,8 +20,8 @@ public class CoverageSet_EDAC {
 	
 	public static void main(String[] args){
 		
-		Model model = ModelFactory.createDefaultModel();
-		CoverageSet coverageSet = new CoverageSet(DOCUMENT_URL + "#ACoverageSet_Populated", model);
+		OntModel model = ModelFactory.createOntologyModel();
+		CoverageSet coverageSet = new CoverageSet(DOCUMENT_URL + "#ACoverageSet_Populated", DOCUMENT_URL, model);
 		
 		coverageSet.addCoverage(getFractionalSnowCover06182002(model));
 		coverageSet.addCoverage(getFractionalSnowCover07122002(model));
