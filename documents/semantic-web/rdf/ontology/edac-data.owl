@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="windows-1252"?>
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:edac-v3="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#" > 
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:edac-v3="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
   <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07132002_Coverage">
     <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07132002_Region"/>
     <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07132002_Duration"/>
@@ -17,6 +20,9 @@
     <edac-v3:hasRightLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-105.0</edac-v3:hasRightLongitude>
     <edac-v3:hasLeftLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-107.0</edac-v3:hasLeftLongitude>
     <rdf:type rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#Region"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Coverage">
     <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Region"/>

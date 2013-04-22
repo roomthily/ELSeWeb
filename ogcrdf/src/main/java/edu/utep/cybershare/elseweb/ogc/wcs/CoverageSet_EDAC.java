@@ -17,7 +17,7 @@ public class CoverageSet_EDAC {
 	private static final String DOCUMENT_NAME = "edac-data.owl";
 	private static final String DOCUMENT_URL = BASE_URL + DOCUMENT_NAME;
 	
-	
+	private static final String DUMP_DIR = "C:/Users/Public/git-repos/ELSeWeb/documents/semantic-web/rdf/ontology/";
 	public static void main(String[] args){
 		
 		OntModel model = ModelFactory.createOntologyModel();
@@ -31,9 +31,10 @@ public class CoverageSet_EDAC {
 		coverageSet.addCoverage(getMinimumTemperatureNormals_May_1981_2010(model));
 		coverageSet.addCoverage(getMinimumTemperatureNormals_September_1981_2010(model));
 		
-		File dumpFile = new File("C:/Users/Public/git-repos/ELSeWeb/documents/semantic-web/rdf/ontology/" + DOCUMENT_NAME);
+		File dumpFile = new File(DUMP_DIR + DOCUMENT_NAME);
 		coverageSet.dumpRDF(dumpFile);
 		
+		System.out.println("dumped coverage set data at: " + DUMP_DIR + DOCUMENT_NAME);
 	}
 	
 	public static Resource getMinimumTemperatureNormals_September_1981_2010(Model model){
