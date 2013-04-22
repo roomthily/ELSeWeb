@@ -9,24 +9,8 @@
     <servlet-class>edu.utep.cybershare.elseweb.edac.FractionalSnowCover06182002</servlet-class>
   </servlet>
   <servlet>
-    <servlet-name>WCSPayloadExtractor1</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.delrio.WCSPayloadExtractor1</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>WCSPayloadExtractor2</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.delrio.WCSPayloadExtractor2</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>WCSPayloadExtractor3</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.delrio.WCSPayloadExtractor3</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>WCSPayloadExtractor4</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.delrio.WCSPayloadExtractor4</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>WCSPayloadExtractor5</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.delrio.WCSPayloadExtractor5</servlet-class>
+    <servlet-name>WCSPayloadExtractor</servlet-name>
+    <servlet-class>edu.utep.cybershare.elseweb.delrio.WCSPayloadExtractor</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>FractionalSnowCover07292002</servlet-name>
@@ -54,24 +38,8 @@
     <url-pattern>/FractionalSnowCover06182002</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>WCSPayloadExtractor1</servlet-name>
-    <url-pattern>/WCSPayloadExtractor1</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>WCSPayloadExtractor2</servlet-name>
-    <url-pattern>/WCSPayloadExtractor2</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>WCSPayloadExtractor3</servlet-name>
-    <url-pattern>/WCSPayloadExtractor3</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>WCSPayloadExtractor4</servlet-name>
-    <url-pattern>/WCSPayloadExtractor4</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>WCSPayloadExtractor5</servlet-name>
-    <url-pattern>/WCSPayloadExtractor5</url-pattern>
+    <servlet-name>WCSPayloadExtractor</servlet-name>
+    <url-pattern>/WCSPayloadExtractor</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>FractionalSnowCover07292002</servlet-name>
