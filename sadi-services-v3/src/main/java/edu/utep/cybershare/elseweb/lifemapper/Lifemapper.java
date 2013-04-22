@@ -25,8 +25,8 @@ import edu.utep.cybershare.elseweb.lifemapper.client.LifemapperExperiment;
 
 @Name("Lifemapper")
 @ContactEmail("nicholas.delrio@gmail.com")
-@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#FullySpecifiedLifemapperExperiment")
-@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#CompletedLifemapperExperiment")
+@InputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#Experiment_Stage2")
+@OutputClass("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#Experiment_Stage3")
 @Description("Lifemapper Species Modeling")
 
 public class Lifemapper extends SimpleSynchronousServiceServlet
@@ -47,50 +47,51 @@ public class Lifemapper extends SimpleSynchronousServiceServlet
 		LifemapperExperiment experiment = new LifemapperExperiment(uname, pword);
 		
 		//extract layers from experiment
-		Resource scenarioLayerSet = input.getProperty(Vocab.hasExperimentalScenarioLayerSet).getResource();
-		StmtIterator coverageStatements = scenarioLayerSet.listProperties(Vocab.hasCoverage);
-		Statement coverageStatement;
-		Resource coverageResource;
-		String coveragePayloadURLString;
-		URL coveragePayloadURL;
-
-		while(coverageStatements.hasNext()){
-			coverageStatement = coverageStatements.next();
-			coverageResource = coverageStatement.getResource();
+		Resource scenarioLayerSet = input.getProperty(Vocab.hasWCSCoverageSet).getResource();
+		String layerURL1String = scenarioLayerSet.getProperty(Vocab.hasWCSCoveragePayloadURL1).getString();
+		String layerURL2String = scenarioLayerSet.getProperty(Vocab.hasWCSCoveragePayloadURL2).getString();
+		String layerURL3String = scenarioLayerSet.getProperty(Vocab.hasWCSCoveragePayloadURL3).getString();
+		String layerURL4String = scenarioLayerSet.getProperty(Vocab.hasWCSCoveragePayloadURL4).getString();
+		String layerURL5String = scenarioLayerSet.getProperty(Vocab.hasWCSCoveragePayloadURL5).getString();
+		
+		URL layerURL1;
+		URL layerURL2;
+		URL layerURL3;
+		URL layerURL4;
+		URL layerURL5;
+		
+		try{
+			layerURL1 = new URL(layerURL1String);
+			layerURL2 = new URL(layerURL2String);
+			layerURL3 = new URL(layerURL3String);
+			layerURL4 = new URL(layerURL4String);
+			layerURL5 = new URL(layerURL5String);
 			
-			try{
-				coveragePayloadURLString = coverageResource.getProperty(Vocab.hasWCSCoveragePayloadURL).getLiteral().getString();
-				coveragePayloadURL = new URL(coveragePayloadURLString);
-				log.debug("Adding scenario layer: " + coveragePayloadURL);
-				System.out.println("Adding scenario layer: " + coveragePayloadURL);
-				experiment.addScenarioLayer(coveragePayloadURL);
-			}
-			catch(Exception e){
-				log.error(e.getMessage());
-			}
+			experiment.addScenarioLayer(layerURL1);
+			experiment.addScenarioLayer(layerURL2);
+			experiment.addScenarioLayer(layerURL3);
+			experiment.addScenarioLayer(layerURL4);
+			experiment.addScenarioLayer(layerURL5);
 		}
+		catch(Exception e){e.printStackTrace();}
 		
 		//extract algorithm
 		Resource algorithmResource = input.getProperty(Vocab.hasModelingAlgorithm).getResource();
 		String algorithmName = algorithmResource.getProperty(Vocab.hasName).getLiteral().getString();
-		log.debug("Setting algorithm: " + algorithmName);
 		experiment.setAlgorithm(algorithmName);
 
 		//extract occurrenceSetID
 		String occurrenceSetIDString = input.getProperty(Vocab.hasOccurrenceSetID).getLiteral().getString();
 		int occurrenceSetID = Integer.parseInt(occurrenceSetIDString);
 		experiment.setOccurrenceSetID(occurrenceSetID);
-		log.debug("Setting occurrenceSetID: " + occurrenceSetID);		
 		
 		//extract units
 		String scenarioLayerUnits = input.getProperty(Vocab.hasScenarioLayerUnits).getLiteral().getString();
-		log.debug("Setting layer units: " + scenarioLayerUnits);
 		experiment.setScenarioLayerUnits(scenarioLayerUnits);
 		
-		//submitt experiment
+		//submit experiment
 		URL experimentResultURL = experiment.submitExperiment();
 
-		log.debug("Experiment result can be found at: " + experimentResultURL);
 		//create output
 		try{output.addProperty(Vocab.hasLifemapperModelURL, experimentResultURL.toString());}
 		catch(Exception e){log.error(e.getMessage());}
@@ -102,11 +103,15 @@ public class Lifemapper extends SimpleSynchronousServiceServlet
 		
 		public static final Property hasOccurrenceSetID = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasOccurrenceSetID");
 		public static final Property hasName = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasName");
-		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL");
-		public static final Property hasExperimentalScenarioLayerSet = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasExperimentalScenarioLayerSet");
+		public static final Property hasWCSCoverageSet = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasWCSCoverageSet");
 		public static final Property hasModelingAlgorithm = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasModelingAlgorithm");
 		public static final Property hasLifemapperModelURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasLifemapperModelURL");
-		public static final Property hasCoverage = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasCoverage");
 		public static final Property hasScenarioLayerUnits = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasScenarioLayerUnits");
+		
+		public static final Property hasWCSCoveragePayloadURL1 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL1");
+		public static final Property hasWCSCoveragePayloadURL2 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL2");
+		public static final Property hasWCSCoveragePayloadURL3 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL3");
+		public static final Property hasWCSCoveragePayloadURL4 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL4");
+		public static final Property hasWCSCoveragePayloadURL5 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL5");		
 	}
 }

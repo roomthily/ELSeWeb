@@ -53,12 +53,6 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasWCSCoverageSequence -->
-
-    <owl:ObjectProperty rdf:about="&lifemapper-v3;hasWCSCoverageSequence"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
