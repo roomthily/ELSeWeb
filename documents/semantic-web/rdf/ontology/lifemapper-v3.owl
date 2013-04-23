@@ -148,7 +148,7 @@
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&lifemapper-v3;hasLifemapperModelURL"/>
-                <owl:someValuesFrom rdf:resource="&xsd;anyURI"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&lifemapper-v3;Experiment_Stage2"/>
