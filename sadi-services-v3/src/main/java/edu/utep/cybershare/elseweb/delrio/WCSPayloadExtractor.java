@@ -69,7 +69,7 @@ public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
 		PayloadExtractor extractor = new PayloadExtractor();
 		URL coveragePayloadURL = extractor.getPayload(wcsGetCoverageURL);
 		
-		return Vocab.m_model.createTypedLiteral(coveragePayloadURL);		
+		return Vocab.m_model.createTypedLiteral(coveragePayloadURL.toString());		
 	}
 
 	private static final class Vocab
