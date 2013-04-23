@@ -103,11 +103,11 @@ public class Lifemapper extends SimpleSynchronousServiceServlet
 		
 		public static final Property hasOccurrenceSetID = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasOccurrenceSetID");
 		public static final Property hasName = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasName");
-		public static final Property hasWCSCoverageSet = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasWCSCoverageSet");
 		public static final Property hasModelingAlgorithm = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasModelingAlgorithm");
 		public static final Property hasLifemapperModelURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasLifemapperModelURL");
 		public static final Property hasScenarioLayerUnits = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasScenarioLayerUnits");
-		
+
+		public static final Property hasWCSCoverageSet = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoverageSet");
 		public static final Property hasWCSCoveragePayloadURL1 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL1");
 		public static final Property hasWCSCoveragePayloadURL2 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL2");
 		public static final Property hasWCSCoveragePayloadURL3 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL3");
