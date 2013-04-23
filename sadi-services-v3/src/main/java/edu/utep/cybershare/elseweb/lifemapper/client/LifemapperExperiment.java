@@ -10,7 +10,11 @@ import edu.utep.cybershare.elseweb.util.FileUtils;
 public class LifemapperExperiment {
 	
 	private static final String pythonEXE = "python";
+	private static final String pythonEXE_IW = " /opt/local/bin/python2.7";
+	
 	private static final String lifeMapperScript = "\"" + FileUtils.getScriptsDir().getAbsolutePath() + "/" + "client.py\"";
+	private static final String lifeMapperScript_IW = FileUtils.getScriptsDir().getAbsolutePath() + "/" + "client.py";
+	
 	private static String resultBaseURL = "http://lifemapper.org/services/sdm/experiments/";
 
 	private ArrayList<URL> scenarioLayers;
@@ -49,14 +53,18 @@ public class LifemapperExperiment {
 	}
 		
 	public URL submitExperiment(){
-		String command =	pythonEXE + " " +
-							lifeMapperScript + " " +
+		
+		String outputPath = "\"" + outputFilePath.getAbsolutePath() + "\" ";
+		String outputPath_iw = outputFilePath.getAbsolutePath() + " ";
+		
+		String command =	pythonEXE_IW + " " +
+							lifeMapperScript_IW + " " +
 							uname + " " +
 							pword + " " +
 							occurrenceSetID + " " +
 							units + " " +
 							algorithm + " " +
-							"\"" + outputFilePath.getAbsolutePath() + "\" ";
+							outputPath_iw;
 
 		for(URL scenarioLayerURL : scenarioLayers)
 			command += scenarioLayerURL + " ";
