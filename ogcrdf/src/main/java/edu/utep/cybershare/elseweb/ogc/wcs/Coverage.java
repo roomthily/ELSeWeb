@@ -58,7 +58,7 @@ public class Coverage {
 	}
 	
 	public void addGetCoverageRequestURL(WCSGetCoverageURL getCoverageURL){
-		Literal lit_getCoverageURL = model.createTypedLiteral(getCoverageURL.getURL().toString());
+		Literal lit_getCoverageURL = model.createLiteral(getCoverageURL.getURL().toString());
 		model.add(coverageResource, Vocab.hasWCSGetCoverageURL, lit_getCoverageURL);
 	}
 	
