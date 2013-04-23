@@ -281,11 +281,101 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1-v3.owl#AWCSCoverageSet -->
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#ACoverageSet_Populated -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1-v3.owl#AWCSCoverageSet">
-        <rdf:type rdf:resource="&edac-v3;WCSCoverageSet"/>
-    </owl:NamedIndividual>
+    <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#ACoverageSet_Populated">
+        <edac-v3:hasWCSCoverage rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverDataS_07122002_Coverage"/>
+        <edac-v3:hasWCSCoverage rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_06182002_Coverage"/>
+        <edac-v3:hasWCSCoverage rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07132002_Coverage"/>
+        <edac-v3:hasWCSCoverage rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Coverage"/>
+        <edac-v3:hasWCSCoverage rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_Dec_1981_2010_Coverage"/>
+        <edac-v3:hasWCSCoverage rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_May_1981_2010_Coverage"/>
+        <edac-v3:hasWCSCoverage rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_September_1981_2010_Coverage"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverDataS_07122002_Coverage -->
+
+    <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverDataS_07122002_Coverage">
+        <edac-v3:hasFormat rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
+        <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverDataS_07122002_Duration"/>
+        <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverDataS_07122002_Region"/>
+        <edac-v3:hasMeasurement rdf:resource="&edac-v3;FractionalSnowCover"/>
+        <edac-v3:hasSource rdf:resource="&edac-v3;MODIS"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_06182002_Coverage -->
+
+    <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_06182002_Coverage">
+        <edac-v3:hasFormat rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
+        <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_06182002_Duration"/>
+        <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_06182002_Region"/>
+        <edac-v3:hasMeasurement rdf:resource="&edac-v3;FractionalSnowCover"/>
+        <edac-v3:hasSource rdf:resource="&edac-v3;MODIS"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07132002_Coverage -->
+
+    <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07132002_Coverage">
+        <edac-v3:hasFormat rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
+        <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07132002_Duration"/>
+        <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07132002_Region"/>
+        <edac-v3:hasMeasurement rdf:resource="&edac-v3;FractionalSnowCover"/>
+        <edac-v3:hasSource rdf:resource="&edac-v3;MODIS"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Coverage -->
+
+    <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Coverage">
+        <edac-v3:hasFormat rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
+        <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Duration"/>
+        <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#FractionalSnowCoverData_07292002_Region"/>
+        <edac-v3:hasMeasurement rdf:resource="&edac-v3;FractionalSnowCover"/>
+        <edac-v3:hasSource rdf:resource="&edac-v3;MODIS"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_Dec_1981_2010_Coverage -->
+
+    <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_Dec_1981_2010_Coverage">
+        <edac-v3:hasFormat rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
+        <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_Dec_1981_2010_Duration"/>
+        <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_Dec_1981_2010_Region"/>
+        <edac-v3:hasMeasurement rdf:resource="&edac-v3;MinTemperatureNormals"/>
+        <edac-v3:hasSource rdf:resource="&edac-v3;PRISM"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_May_1981_2010_Coverage -->
+
+    <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_May_1981_2010_Coverage">
+        <edac-v3:hasFormat rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
+        <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_May_1981_2010_Duration"/>
+        <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_May_1981_2010_Region"/>
+        <edac-v3:hasMeasurement rdf:resource="&edac-v3;MinTemperatureNormals"/>
+        <edac-v3:hasSource rdf:resource="&edac-v3;PRISM"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_September_1981_2010_Coverage -->
+
+    <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_September_1981_2010_Coverage">
+        <edac-v3:hasFormat rdf:resource="http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED"/>
+        <edac-v3:hasDuration rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_September_1981_2010_Duration"/>
+        <edac-v3:hasRegion rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#MTNData_September_1981_2010_Region"/>
+        <edac-v3:hasMeasurement rdf:resource="&edac-v3;MinTemperatureNormals"/>
+        <edac-v3:hasSource rdf:resource="&edac-v3;PRISM"/>
+    </rdf:Description>
     
 
 
@@ -295,7 +385,7 @@
         <rdf:type rdf:resource="&lifemapper-v3;Experiment_Stage1"/>
         <lifemapper-v3:hasOccurrenceSetID rdf:datatype="&rdfs;Literal">4024107</lifemapper-v3:hasOccurrenceSetID>
         <lifemapper-v3:hasScenarioLayerUnits rdf:datatype="&rdfs;Literal">dd</lifemapper-v3:hasScenarioLayerUnits>
-        <edac-v3:hasWCSCoverageSet rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1-v3.owl#AWCSCoverageSet"/>
+        <edac-v3:hasWCSCoverageSet rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl#ACoverageSet_Populated"/>
         <lifemapper-v3:hasModelingAlgorithm rdf:resource="&lifemapper-v3;BIOCLIM_Algorithm"/>
     </owl:NamedIndividual>
 </rdf:RDF>
