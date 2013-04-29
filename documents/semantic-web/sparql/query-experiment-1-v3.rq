@@ -4,6 +4,7 @@ prefix experiment: <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documen
 prefix owl: <http://www.w3.org/2002/07/owl#>
 select ?algorithmName ?units ?occurrenceSetID ?modelURL
 FROM <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1-v3.owl>
+FROM <https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-data.owl>
 where
 {
 ?experiment lifemapper:hasModelingAlgorithm ?algorithm .
