@@ -25,6 +25,7 @@ public class FileUtils{
 	private static File SCRIPTS_DIR_PATH;
 	private static URL OUTPUT_URL;
 	private static URL ONTOLOGY_URL;
+	private static String SERVER;
 	
 	private static final String ONTOLOGY_NAME = "elseweb.owl";
 	private static final String SCRIPTS_DIR_NAME = "scripts";
@@ -41,6 +42,7 @@ public class FileUtils{
 			setScriptsPath();
 			setOutputURL();
 			setOntologyURL(properties);
+			setServer(properties);
 			
 			System.out.println("server url: " + SERVER_URL);
 			System.out.println("webapp name: " + WEBAPP_NAME);
@@ -78,8 +80,11 @@ public class FileUtils{
 	private static void setOntologyURL(Properties properties) throws MalformedURLException{
 		String ontologyPrefixURL = properties.getProperty("service.ontology.prefix");
 		ontologyPrefixURL = ensureTrailingForwardSlash(ontologyPrefixURL);
-		ONTOLOGY_URL = new URL(ontologyPrefixURL + ONTOLOGY_NAME);
-		
+		ONTOLOGY_URL = new URL(ontologyPrefixURL + ONTOLOGY_NAME);		
+	}
+	
+	private static void setServer(Properties properties) {
+		SERVER = properties.getProperty("service.server");
 	}
 	
 	private static void setWebappName(Properties properties){
@@ -97,6 +102,10 @@ public class FileUtils{
 			formattedPath += "/";
 		
 		return formattedPath;
+	}
+	
+	public static String getServer(){
+		return SERVER;
 	}
 
 	public static URL getOntologyURL(){

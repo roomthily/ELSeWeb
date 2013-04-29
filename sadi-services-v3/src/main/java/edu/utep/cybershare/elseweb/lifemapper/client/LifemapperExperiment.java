@@ -12,8 +12,8 @@ public class LifemapperExperiment {
 	private static final String pythonEXE = "python";
 	private static final String pythonEXE_IW = " /opt/local/bin/python2.7";
 	
-	private static final String lifeMapperScript = "\"" + FileUtils.getScriptsDir().getAbsolutePath() + "/" + "client.py\"";
-	private static final String lifeMapperScript_IW = FileUtils.getScriptsDir().getAbsolutePath() + "/" + "client.py";
+	private static final String lifemapperScript = "\"" + FileUtils.getScriptsDir().getAbsolutePath() + "/" + "client.py\"";
+	private static final String lifemapperScript_IW = FileUtils.getScriptsDir().getAbsolutePath() + "/" + "client.py";
 	
 	private static String resultBaseURL = "http://lifemapper.org/services/sdm/experiments/";
 
@@ -51,20 +51,47 @@ public class LifemapperExperiment {
 	public void setAlgorithm(String algorithmName){
 		algorithm = algorithmName;
 	}
+	
+	private String getPython(){
+		String server = FileUtils.getServer();	
+		if(server.equals("local"))
+			return pythonEXE;
+		else if(server.equals("iw"))
+			return pythonEXE_IW;
+		else
+			return pythonEXE;
+	}
+
+	private String getLifemapperScript(){
+		String server = FileUtils.getServer();	
+		if(server.equals("local"))
+			return lifemapperScript;
+		else if(server.equals("iw"))
+			return lifemapperScript_IW;
+		else
+			return lifemapperScript;
+	}
+	
+	private String getOutputPath(){
+		String server = FileUtils.getServer();	
+		if(server.equals("local"))
+			return "\"" + outputFilePath.getAbsolutePath() + "\" ";
+		else if(server.equals("iw"))
+			return outputFilePath.getAbsolutePath() + " ";
+		else
+			return "\"" + outputFilePath.getAbsolutePath() + "\" ";
+	}
 		
 	public URL submitExperiment(){
-		
-		String outputPath = "\"" + outputFilePath.getAbsolutePath() + "\" ";
-		String outputPath_iw = outputFilePath.getAbsolutePath() + " ";
-		
-		String command =	pythonEXE_IW + " " +
-							lifeMapperScript_IW + " " +
+				
+		String command =	getPython() + " " +
+							getLifemapperScript() + " " +
 							uname + " " +
 							pword + " " +
 							occurrenceSetID + " " +
 							units + " " +
 							algorithm + " " +
-							outputPath_iw;
+							getOutputPath();
 
 		for(URL scenarioLayerURL : scenarioLayers)
 			command += scenarioLayerURL + " ";
