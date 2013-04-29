@@ -16,7 +16,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://ontology.cybershare.utep.edu/SADI-PROV/">
-        <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o"/>
     </owl:Ontology>
     
 
