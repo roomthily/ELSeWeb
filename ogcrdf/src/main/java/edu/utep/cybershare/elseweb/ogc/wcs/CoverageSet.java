@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 
 import com.hp.hpl.jena.ontology.OntModel;
+import com.hp.hpl.jena.ontology.Ontology;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
@@ -19,15 +20,20 @@ public class CoverageSet {
 		coverageSetResource = model.createResource(coverageSetURI, Vocab.WCSCoverageSet_Populated);
 		
 		setNamespacePrefix();
-		addOntologyURI(ontologyURI);
+		Ontology dataOntology = addOntologyURI(ontologyURI);
+		addImport(dataOntology);
 	}
 	
-	private void addOntologyURI(String ontologyURI){
-		model.createOntology(ontologyURI);
+	private Ontology addOntologyURI(String ontologyURI){
+		return model.createOntology(ontologyURI);
+	}
+	
+	private void addImport(Ontology dataOntology){
+		dataOntology.addImport(Vocab.EDAC_ONTOLOGY_Resource);
 	}
 		
 	private void setNamespacePrefix(){
-		model.setNsPrefix("edac-v3", Vocab.PREFIX);
+		model.setNsPrefix("edac-v3", Vocab.EDAC_ONTOLOGY_URL);
 	}
 	
 	public void addCoverage(Resource coverageResource){
@@ -44,10 +50,11 @@ public class CoverageSet {
 	
 	private static final class Vocab
 	{
-		private static Model m_model = ModelFactory.createDefaultModel();		
-	
-		public static final String PREFIX = "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#";
-		public static final Resource WCSCoverageSet_Populated = m_model.createResource(PREFIX + "WCSCoverageSet_Populated");
-		public static final Property hasWCSCoverage = m_model.createProperty(PREFIX + "hasWCSCoverage");						
+		private static Model m_model = ModelFactory.createDefaultModel();
+		public static final String EDAC_ONTOLOGY_URL = "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl";
+		public static final String EDAC_ONTOLOGY_PREFIX = EDAC_ONTOLOGY_URL + "#";
+		public static final Resource EDAC_ONTOLOGY_Resource = m_model.createResource(EDAC_ONTOLOGY_URL);
+		public static final Resource WCSCoverageSet_Populated = m_model.createResource(EDAC_ONTOLOGY_PREFIX + "WCSCoverageSet_Populated");
+		public static final Property hasWCSCoverage = m_model.createProperty(EDAC_ONTOLOGY_PREFIX + "hasWCSCoverage");						
 	}	
 }
