@@ -51,10 +51,10 @@ public class CoverageSet {
 	private static final class Vocab
 	{
 		private static Model m_model = ModelFactory.createDefaultModel();
-		public static final String EDAC_ONTOLOGY_URL = "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl";
+		public static final String EDAC_ONTOLOGY_URL = "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v4.owl";
 		public static final String EDAC_ONTOLOGY_PREFIX = EDAC_ONTOLOGY_URL + "#";
 		public static final Resource EDAC_ONTOLOGY_Resource = m_model.createResource(EDAC_ONTOLOGY_URL);
-		public static final Resource WCSCoverageSet_Populated = m_model.createResource(EDAC_ONTOLOGY_PREFIX + "WCSCoverageSet_Populated");
+		public static final Resource WCSCoverageSet_Populated = m_model.createResource(EDAC_ONTOLOGY_PREFIX + "WCSCoverageSet");
 		public static final Property hasWCSCoverage = m_model.createProperty(EDAC_ONTOLOGY_PREFIX + "hasWCSCoverage");						
 	}	
 }

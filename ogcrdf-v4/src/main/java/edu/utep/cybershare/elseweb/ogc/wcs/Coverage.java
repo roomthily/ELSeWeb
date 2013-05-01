@@ -62,10 +62,14 @@ public class Coverage {
 		model.add(coverageResource, Vocab.hasWCSGetCoverageURL, lit_getCoverageURL);
 	}
 	
-	public void addMIMEFormat(){
-		model.add(coverageResource, Vocab.hasFormat, Vocab.MIXED);
+	public void addFormat(){
+		model.add(coverageResource, Vocab.hasFormat, Vocab.MIXED_MULTIPART);
 	}
-			
+
+	public void addPayloadFormat(){
+		model.add(coverageResource, Vocab.hasPayloadFormat, Vocab.TIFF);
+	}
+	
 	public void addRegion(double llon, double rlon, double llat, double ulat){
 		Resource regionResource = model.createResource(regionURI, Vocab.Region);
 		Literal lit_llon = model.createTypedLiteral(llon);
@@ -105,12 +109,13 @@ public class Coverage {
 		public static final Property hasWCSCoverage = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoverage");
 		
 		// OGCCoverage and associated properties
-		public static final Resource WCSCoverage = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverage");
+		public static final Resource WCSCoverage = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoverage_TIFF");
 		public static final Property hasRegion = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasRegion");
 		public static final Property hasDuration = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasDuration");
 		public static final Property hasSource = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasSource");
 		public static final Property hasFormat = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasFormat");
 		public static final Property hasWCSGetCoverageURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSGetCoverageURL");
+		public static final Property hasPayloadFormat = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasPayloadFormat");
 		public static final Property hasMeasurement = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasMeasurement");
 		
 		// Region and associated properties
@@ -133,7 +138,8 @@ public class Coverage {
 		public static final Resource MODIS = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#MODIS");
 		public static final Resource PRISM = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#PRISM");
 				
-		// Mixed Multi-part MIME Format Individual
-		public static final Resource MIXED = m_model.createResource("http://openvisko.org/rdf/pml2/formats/MIXED.owl#MIXED");
+		// Formats
+		public static final Resource MIXED_MULTIPART = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v4.owl#MIXED_MULTIPART");
+		public static final Resource TIFF = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v4.owl#TIFF");
 	}	
 }

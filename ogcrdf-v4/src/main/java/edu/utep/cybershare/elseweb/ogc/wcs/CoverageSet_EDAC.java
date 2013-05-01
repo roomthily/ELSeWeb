@@ -14,7 +14,7 @@ import edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageURL;
 public class CoverageSet_EDAC {
 	
 	private static final String BASE_URL = "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/";
-	private static final String DOCUMENT_NAME = "edac-data.owl";
+	private static final String DOCUMENT_NAME = "edac-data-v4.owl";
 	private static final String DOCUMENT_URL = BASE_URL + DOCUMENT_NAME;
 	
 	private static final String DUMP_DIR = "C:/Users/Public/git-repos/ELSeWeb/documents/semantic-web/rdf/ontology/";
@@ -72,7 +72,7 @@ public class CoverageSet_EDAC {
 		ogcCoverage.addSource(Coverage.Source.PRISM);
 		ogcCoverage.addMeasurement(Coverage.Measurement.MinTemperatureNormals);
 		ogcCoverage.addGetCoverageRequestURL(getCoverage);
-		ogcCoverage.addMIMEFormat();
+		ogcCoverage.addFormat();
 		ogcCoverage.addDuration(startDate, endDate);
 		ogcCoverage.addRegion(llon, rlon, llat, ulat);
 		return ogcCoverage.getWCSCoverage();
@@ -112,7 +112,7 @@ public class CoverageSet_EDAC {
 		ogcCoverage.addSource(Coverage.Source.PRISM);
 		ogcCoverage.addMeasurement(Coverage.Measurement.MinTemperatureNormals);
 		ogcCoverage.addGetCoverageRequestURL(getCoverage);
-		ogcCoverage.addMIMEFormat();
+		ogcCoverage.addFormat();
 		ogcCoverage.addDuration(startDate, endDate);
 		ogcCoverage.addRegion(llon, rlon, llat, ulat);
 		
@@ -152,7 +152,7 @@ public class CoverageSet_EDAC {
 		ogcCoverage.addSource(Coverage.Source.PRISM);
 		ogcCoverage.addMeasurement(Coverage.Measurement.MinTemperatureNormals);
 		ogcCoverage.addGetCoverageRequestURL(getCoverage);
-		ogcCoverage.addMIMEFormat();
+		ogcCoverage.addFormat();
 		ogcCoverage.addDuration(startDate, endDate);
 		ogcCoverage.addRegion(llon, rlon, llat, ulat);
 		return ogcCoverage.getWCSCoverage();
@@ -192,7 +192,7 @@ public class CoverageSet_EDAC {
 		ogcCoverage.addSource(Coverage.Source.MODIS);
 		ogcCoverage.addMeasurement(Coverage.Measurement.FractionalSnowData);
 		ogcCoverage.addGetCoverageRequestURL(getCoverage);
-		ogcCoverage.addMIMEFormat();
+		ogcCoverage.addFormat();
 		ogcCoverage.addDuration(startDate, endDate);
 		ogcCoverage.addRegion(llon, rlon, llat, ulat);
 		return ogcCoverage.getWCSCoverage();
@@ -230,7 +230,7 @@ public class CoverageSet_EDAC {
 		ogcCoverage.addSource(Coverage.Source.MODIS);
 		ogcCoverage.addMeasurement(Coverage.Measurement.FractionalSnowData);
 		ogcCoverage.addGetCoverageRequestURL(getCoverage);
-		ogcCoverage.addMIMEFormat();
+		ogcCoverage.addFormat();
 		ogcCoverage.addDuration(startDate, endDate);
 		ogcCoverage.addRegion(llon, rlon, llat, ulat);
 
@@ -270,7 +270,7 @@ public class CoverageSet_EDAC {
 		ogcCoverage.addSource(Coverage.Source.MODIS);
 		ogcCoverage.addMeasurement(Coverage.Measurement.FractionalSnowData);
 		ogcCoverage.addGetCoverageRequestURL(getCoverage);
-		ogcCoverage.addMIMEFormat();
+		ogcCoverage.addFormat();
 		ogcCoverage.addDuration(startDate, endDate);
 		ogcCoverage.addRegion(llon, rlon, llat, ulat);
 		
@@ -311,7 +311,7 @@ public class CoverageSet_EDAC {
 		ogcCoverage.addSource(Coverage.Source.MODIS);
 		ogcCoverage.addMeasurement(Coverage.Measurement.FractionalSnowData);
 		ogcCoverage.addGetCoverageRequestURL(getCoverage);
-		ogcCoverage.addMIMEFormat();
+		ogcCoverage.addFormat();
 		ogcCoverage.addDuration(startDate, endDate);
 		ogcCoverage.addRegion(llon, rlon, llat, ulat);
 		
