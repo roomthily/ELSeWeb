@@ -51,12 +51,28 @@ public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
 		Literal wcsCoveragePayloadURLLiteral3 = getCoveragePayloadURLLiteral(coverage3Resource);
 		Literal wcsCoveragePayloadURLLiteral4 = getCoveragePayloadURLLiteral(coverage4Resource);
 		Literal wcsCoveragePayloadURLLiteral5 = getCoveragePayloadURLLiteral(coverage5Resource);
+		
+		String baseURI = "http://edac.elseweb.cybershare.utep.edu#WCSPayloadExtractor_WCSCoveragePayload_";
+		Resource wcsCoveragePayload1 = output.getModel().createResource(baseURI + "1", Vocab.WCSCoveragePayload);
+		output.getModel().addLiteral(wcsCoveragePayload1, Vocab.hasWCSCoveragePayloadURL, wcsCoveragePayloadURLLiteral1);
+		
+		Resource wcsCoveragePayload2 = output.getModel().createResource(baseURI + "2", Vocab.WCSCoveragePayload);
+		output.getModel().addLiteral(wcsCoveragePayload2, Vocab.hasWCSCoveragePayloadURL, wcsCoveragePayloadURLLiteral2);
 
-		output.addLiteral(Vocab.hasWCSCoveragePayloadURL1, wcsCoveragePayloadURLLiteral1);
-		output.addLiteral(Vocab.hasWCSCoveragePayloadURL2, wcsCoveragePayloadURLLiteral2);
-		output.addLiteral(Vocab.hasWCSCoveragePayloadURL3, wcsCoveragePayloadURLLiteral3);
-		output.addLiteral(Vocab.hasWCSCoveragePayloadURL4, wcsCoveragePayloadURLLiteral4);
-		output.addLiteral(Vocab.hasWCSCoveragePayloadURL5, wcsCoveragePayloadURLLiteral5);
+		Resource wcsCoveragePayload3 = output.getModel().createResource(baseURI + "3", Vocab.WCSCoveragePayload);
+		output.getModel().addLiteral(wcsCoveragePayload3, Vocab.hasWCSCoveragePayloadURL, wcsCoveragePayloadURLLiteral3);
+
+		Resource wcsCoveragePayload4 = output.getModel().createResource(baseURI + "4", Vocab.WCSCoveragePayload);
+		output.getModel().addLiteral(wcsCoveragePayload4, Vocab.hasWCSCoveragePayloadURL, wcsCoveragePayloadURLLiteral4);
+
+		Resource wcsCoveragePayload5 = output.getModel().createResource(baseURI + "5", Vocab.WCSCoveragePayload);
+		output.getModel().addLiteral(wcsCoveragePayload5, Vocab.hasWCSCoveragePayloadURL, wcsCoveragePayloadURLLiteral5);
+
+		output.addProperty(Vocab.hasWCSCoveragePayload1, wcsCoveragePayload1);
+		output.addProperty(Vocab.hasWCSCoveragePayload2, wcsCoveragePayload2);
+		output.addProperty(Vocab.hasWCSCoveragePayload3, wcsCoveragePayload3);
+		output.addProperty(Vocab.hasWCSCoveragePayload4, wcsCoveragePayload4);
+		output.addProperty(Vocab.hasWCSCoveragePayload5, wcsCoveragePayload5);
 	}
 	
 	private Literal getCoveragePayloadURLLiteral(Resource wcsCoverageResource){
@@ -75,12 +91,16 @@ public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
 	private static final class Vocab
 	{
 		public static Model m_model = ModelFactory.createDefaultModel();
+
+		public static final Resource WCSCoveragePayload = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#WCSCoveragePayload");
 		
-		public static final Property hasWCSCoveragePayloadURL1 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL1");
-		public static final Property hasWCSCoveragePayloadURL2 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL2");
-		public static final Property hasWCSCoveragePayloadURL3 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL3");
-		public static final Property hasWCSCoveragePayloadURL4 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL4");
-		public static final Property hasWCSCoveragePayloadURL5 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL5");		
+		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayloadURL");		
+		
+		public static final Property hasWCSCoveragePayload1 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayload1");
+		public static final Property hasWCSCoveragePayload2 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayload2");
+		public static final Property hasWCSCoveragePayload3 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayload3");
+		public static final Property hasWCSCoveragePayload4 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayload4");
+		public static final Property hasWCSCoveragePayload5 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoveragePayload5");		
 		
 		public static final Property hasWCSCoverage1 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoverage1");
 		public static final Property hasWCSCoverage2 = m_model.createProperty("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v3.owl#hasWCSCoverage2");
