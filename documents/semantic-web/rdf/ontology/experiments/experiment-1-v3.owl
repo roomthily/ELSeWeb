@@ -228,6 +228,10 @@
                         <owl:someValuesFrom rdf:resource="&edac-v3;Duration1"/>
                     </owl:Restriction>
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="&edac-v3;hasRegion"/>
+                        <owl:someValuesFrom rdf:resource="&edac-v3;WesternUnitedStates"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="&edac-v3;hasSource"/>
                         <owl:hasValue rdf:resource="&edac-v3;MODIS"/>
                     </owl:Restriction>
