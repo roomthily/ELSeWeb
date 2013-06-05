@@ -249,6 +249,10 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="&edac-v3;hasDuration"/>
+                        <owl:someValuesFrom rdf:resource="&edac-v3;Duration2"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="&edac-v3;hasRegion"/>
                         <owl:someValuesFrom rdf:resource="&edac-v3;Region2"/>
                     </owl:Restriction>
