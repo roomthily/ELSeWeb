@@ -11,6 +11,8 @@ where
 ?algorithm lifemapper:hasName ?algorithmName .
 ?experiment lifemapper:hasScenarioLayerUnits ?units .
 ?experiment lifemapper:hasOccurrenceSetID ?occurrenceSetID .
-?experiment lifemapper:hasLifemapperModelURL ?modelURL .
+?experiment lifemapper:hasModel ?model .
+?model a lifemapper:Model .
+?model lifemapper:hasModelURL ?modelURL .
 ?experiment a lifemapper:Experiment_Stage4 .
 }
