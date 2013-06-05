@@ -2,7 +2,9 @@ package edu.utep.cybershare.elseweb.prov;
 
 public class SADIProvLogger {
 	
-	public SADIProvLogger(){
+	private Model model;
+	
+	public SADIProvLogger(String serviceName, Model model){
 		
 		
 	}

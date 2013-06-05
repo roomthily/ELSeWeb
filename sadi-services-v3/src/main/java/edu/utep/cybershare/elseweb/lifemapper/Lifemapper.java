@@ -56,10 +56,10 @@ public class Lifemapper extends SimpleSynchronousServiceServlet
 		Resource layer5 = scenarioLayerSet.getProperty(Vocab.hasWCSCoveragePayload5).getResource();
 		
 		String layer1URLString = layer1.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
-		String layer2URLString = layer1.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
-		String layer3URLString = layer1.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
-		String layer4URLString = layer1.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
-		String layer5URLString = layer1.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
+		String layer2URLString = layer2.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
+		String layer3URLString = layer3.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
+		String layer4URLString = layer4.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
+		String layer5URLString = layer5.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
 		
 		URL layerURL1;
 		URL layerURL2;
