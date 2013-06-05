@@ -22,6 +22,7 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 //import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 import edu.utep.cybershare.elseweb.lifemapper.client.LifemapperExperiment;
+import edu.utep.cybershare.elseweb.prov.SADIServiceProv;
 
 @Name("Lifemapper")
 @ContactEmail("nicholas.delrio@gmail.com")
@@ -37,6 +38,10 @@ public class Lifemapper extends SimpleSynchronousServiceServlet
 	@Override
 	public void processInput(Resource input, Resource output)
 	{
+		String baseURI = "http://edac.elseweb.cybershare.utep.edu#Lifemapper_";
+		SADIServiceProv prov = new SADIServiceProv(baseURI, "Lifemapper", output.getModel());
+		prov.used(input);
+		
 		StringWriter wtr = new StringWriter();
 		input.getModel().write(wtr, "RDF/XML-ABBREV");
 		System.out.println(wtr.toString());
@@ -100,12 +105,13 @@ public class Lifemapper extends SimpleSynchronousServiceServlet
 		URL experimentResultURL = experiment.submitExperiment();
 
 		//create output
-		String modelURI = "http://edac.elseweb.cybershare.utep.edu#Lifemapper_Model";
-		Resource lifemapperModel = output.getModel().createResource(modelURI, Vocab.Model);		
+		Resource lifemapperModel = output.getModel().createResource(baseURI + "Model", Vocab.Model);		
 
 		try{
 			lifemapperModel.addProperty(Vocab.hasModelURL, experimentResultURL.toString());
 			output.addProperty(Vocab.hasModel, lifemapperModel);
+			
+			prov.generates(lifemapperModel);
 		}
 		catch(Exception e){log.error(e.getMessage());}
 	}

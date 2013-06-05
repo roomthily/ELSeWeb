@@ -21,6 +21,7 @@ import com.hp.hpl.jena.rdf.model.Resource;
 //import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 import edu.utep.cybershare.elseweb.delrio.multipartMIME.PayloadExtractor;
+import edu.utep.cybershare.elseweb.prov.SADIServiceProv;
 
 @Name("WCSPayloadExtractor")
 @ContactEmail("nicholas.delrio@gmail.com")
@@ -36,6 +37,10 @@ public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
 	@Override
 	public void processInput(Resource input, Resource output)
 	{
+		String baseURI = "http://edac.elseweb.cybershare.utep.edu#WCSPayloadExtractor_WCSCoveragePayload_";
+		SADIServiceProv prov = new SADIServiceProv(baseURI, "WCSPayloadExtractor", output.getModel());
+		prov.used(input);
+		
 		StringWriter wtr = new StringWriter();
 		input.getModel().write(wtr, "RDF/XML-ABBREV");
 		System.out.println(wtr.toString());
@@ -52,7 +57,6 @@ public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
 		Literal wcsCoveragePayloadURLLiteral4 = getCoveragePayloadURLLiteral(coverage4Resource);
 		Literal wcsCoveragePayloadURLLiteral5 = getCoveragePayloadURLLiteral(coverage5Resource);
 		
-		String baseURI = "http://edac.elseweb.cybershare.utep.edu#WCSPayloadExtractor_WCSCoveragePayload_";
 		Resource wcsCoveragePayload1 = output.getModel().createResource(baseURI + "1", Vocab.WCSCoveragePayload);
 		output.getModel().addLiteral(wcsCoveragePayload1, Vocab.hasWCSCoveragePayloadURL, wcsCoveragePayloadURLLiteral1);
 		
@@ -68,6 +72,12 @@ public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
 		Resource wcsCoveragePayload5 = output.getModel().createResource(baseURI + "5", Vocab.WCSCoveragePayload);
 		output.getModel().addLiteral(wcsCoveragePayload5, Vocab.hasWCSCoveragePayloadURL, wcsCoveragePayloadURLLiteral5);
 
+		prov.generates(wcsCoveragePayload1);
+		prov.generates(wcsCoveragePayload2);
+		prov.generates(wcsCoveragePayload3);
+		prov.generates(wcsCoveragePayload4);
+		prov.generates(wcsCoveragePayload5);
+		
 		output.addProperty(Vocab.hasWCSCoveragePayload1, wcsCoveragePayload1);
 		output.addProperty(Vocab.hasWCSCoveragePayload2, wcsCoveragePayload2);
 		output.addProperty(Vocab.hasWCSCoveragePayload3, wcsCoveragePayload3);
