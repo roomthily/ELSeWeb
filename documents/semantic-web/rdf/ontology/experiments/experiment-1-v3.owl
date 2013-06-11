@@ -21,6 +21,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1-v3.owl">
         <owl:imports rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl"/>
+        <owl:imports rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/region-v1.owl"/>
     </owl:Ontology>
     
 
@@ -229,7 +230,7 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&edac-v3;hasRegion"/>
-                        <owl:someValuesFrom rdf:resource="&edac-v3;WesternUnitedStates"/>
+                        <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/region-v1.owl#WesternUnitedStates"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&edac-v3;hasSource"/>
