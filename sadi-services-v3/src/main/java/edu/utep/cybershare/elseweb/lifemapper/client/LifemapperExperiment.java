@@ -56,7 +56,7 @@ public class LifemapperExperiment {
 		String server = FileUtils.getServer();	
 		if(server.equals("local"))
 			return pythonEXE;
-		else if(server.equals("iw"))
+		else if(server.equals("IW"))
 			return pythonEXE_IW;
 		else
 			return pythonEXE;
@@ -66,7 +66,7 @@ public class LifemapperExperiment {
 		String server = FileUtils.getServer();	
 		if(server.equals("local"))
 			return lifemapperScript;
-		else if(server.equals("iw"))
+		else if(server.equals("IW"))
 			return lifemapperScript_IW;
 		else
 			return lifemapperScript;
@@ -76,7 +76,7 @@ public class LifemapperExperiment {
 		String server = FileUtils.getServer();	
 		if(server.equals("local"))
 			return "\"" + outputFilePath.getAbsolutePath() + "\" ";
-		else if(server.equals("iw"))
+		else if(server.equals("IW"))
 			return outputFilePath.getAbsolutePath() + " ";
 		else
 			return "\"" + outputFilePath.getAbsolutePath() + "\" ";
