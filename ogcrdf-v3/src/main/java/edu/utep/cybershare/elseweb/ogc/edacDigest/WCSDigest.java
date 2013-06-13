@@ -2,6 +2,8 @@ package edu.utep.cybershare.elseweb.ogc.edacDigest;
 
 import java.net.URL;
 
+import org.json.JSONObject;
+
 public class WCSDigest {
 	
 	private int lastUpdate;
@@ -23,7 +25,12 @@ public class WCSDigest {
 	private String subtheme;
 	private String theme;
 	private String groupName;
-	protected int getLastUpdate() {
+	
+	public WCSDigest(JSONObject wcsJSONDigest){
+		
+	}
+	
+	public int getLastUpdate() {
 		return lastUpdate;
 	}
 	protected void setLastUpdate(int lastUpdate) {

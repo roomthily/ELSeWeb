@@ -8,12 +8,12 @@ import org.apache.commons.io.IOUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class WCSDigestFactory {
+public class WCSDigests {
 	
 	private static final String JSON_URL = "http://gstore.unm.edu/apps/elseweb/search/datasets.json?version=3";	
 	
 	
-	public WCSDigestFactory(){
+	public WCSDigests(){
 		JSONArray array = getJSONDigestsArray();
 		
 		
@@ -55,6 +55,6 @@ public class WCSDigestFactory {
 	}
 	
 	public static void main(String[] args){
-		WCSDigestFactory factory = new WCSDigestFactory();
+		WCSDigests factory = new WCSDigests();
 	}
 }
