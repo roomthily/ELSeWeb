@@ -1,5 +1,6 @@
 package edu.utep.cybershare.elseweb.ogc.wcs;
 
+import java.util.Calendar;
 import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -81,6 +82,10 @@ public class Coverage {
 	}
 	
 	public void addDuration(String startDate, String endDate){
+		
+	}
+	
+	public void addDuration(Calendar startDate, Calendar endDate){
 		Resource durationResource = model.createResource(durationURI, Vocab.Duration);
 		Literal lit_startDate = model.createTypedLiteral(startDate);
 		Literal lit_endDate = model.createTypedLiteral(endDate);

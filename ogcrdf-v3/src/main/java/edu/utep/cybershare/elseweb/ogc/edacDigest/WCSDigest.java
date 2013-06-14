@@ -1,6 +1,7 @@
 package edu.utep.cybershare.elseweb.ogc.edacDigest;
 
 import java.net.URL;
+import java.util.Calendar;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -26,6 +27,8 @@ public class WCSDigest {
 	private String subtheme;
 	private String theme;
 	private String groupname;
+	private Calendar startDate;
+	private Calendar endDate;
 	
 	private JSONObject jsonDigest;
 	
