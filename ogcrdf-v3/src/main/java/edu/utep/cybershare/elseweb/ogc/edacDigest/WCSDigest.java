@@ -45,6 +45,7 @@ public class WCSDigest {
 		this.setTaxonomy();
 		this.setDownloads();
 		this.setUuid();
+		this.setDuration();
 	}
 	
 	public int getLastUpdate() {
@@ -205,6 +206,34 @@ public class WCSDigest {
 	}
 	public String getGroupName() {
 		return groupname;
+	}
+	
+	private String getFGDCXMLURL(){
+		String fgdcXMLURL = null;
+		try{
+			JSONArray metadataArray = jsonDigest.getJSONArray("metadata");
+			JSONObject metadata0 = metadataArray.getJSONObject(0);
+			JSONObject fgdcObject = metadata0.getJSONObject("fgdc");
+			fgdcXMLURL = fgdcObject.getString("xml");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return fgdcXMLURL;
+	}
+	
+	private void setDuration(){
+		String fgdcXMLURL = getFGDCXMLURL();
+		FGDCData fgdcData = new FGDCData(fgdcXMLURL);
+		startDate = fgdcData.getStartDate();
+		endDate = fgdcData.getEndDate();
+	}
+	
+	public Calendar getStartDate(){
+		return startDate;
+	}
+	
+	public Calendar getEndDate(){
+		return endDate;
 	}
 	
 	public String toString(){
