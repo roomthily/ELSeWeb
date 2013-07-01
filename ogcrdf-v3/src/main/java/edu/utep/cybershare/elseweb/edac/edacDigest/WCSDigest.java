@@ -8,6 +8,7 @@ import org.json.JSONObject;
 
 public class WCSDigest {
 	
+	private String name;
 	private int lastUpdate;
 	private String uuid;
 	private String taxonomy;
@@ -21,6 +22,7 @@ public class WCSDigest {
 	private double lowerLatitude;
 	private double upperLatitude;
 	private URL wmsService;
+	private URL wcsServiceEndpoint;
 	private URL wcsService;
 	private URL preview;
 	private int gr;
@@ -35,6 +37,7 @@ public class WCSDigest {
 	public WCSDigest(JSONObject wcsJSONDigest){
 		jsonDigest = wcsJSONDigest;
 		
+		this.setName();
 		this.setCategories();
 		this.setDescription();
 		this.setLastUpdate();
@@ -46,6 +49,15 @@ public class WCSDigest {
 		this.setDownloads();
 		this.setUuid();
 		this.setDuration();
+	}
+	
+	public String getName(){
+		return name;
+	}
+	
+	private void setName(){
+		try{this.name =  jsonDigest.getString("name");}
+		catch(Exception e){e.printStackTrace();}		
 	}
 	
 	public int getLastUpdate() {
@@ -153,8 +165,11 @@ public class WCSDigest {
 			JSONObject services0 = services.getJSONObject(0);
 			JSONObject services1 = services.getJSONObject(1);
 			
+			String wcsServiceString = services1.getString("wcs");
+			
 			wmsService = new URL(services0.getString("wms"));
-			wcsService = new URL(services1.getString("wcs"));
+			wcsService = new URL(wcsServiceString);
+			wcsServiceEndpoint = new URL(wcsServiceString.split("wcs?")[0]);
 			
 		}catch(Exception e){
 			e.printStackTrace();
@@ -168,6 +183,10 @@ public class WCSDigest {
 		return wmsService;
 	}
 
+	public URL getWcsServiceEndpoint(){
+		return wcsServiceEndpoint;
+	}
+	
 	public URL getPreview() {
 		return preview;
 	}

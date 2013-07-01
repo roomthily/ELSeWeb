@@ -7,10 +7,10 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
 
+import edu.utep.cybershare.elseweb.edac.edacDigest.WCSDigest;
+import edu.utep.cybershare.elseweb.edac.edacDigest.WCSDigests;
 import edu.utep.cybershare.elseweb.ogc.wcs.Coverage;
 import edu.utep.cybershare.elseweb.ogc.wcs.CoverageSet;
-import edu.utep.cybershare.elseweb.ogc.wcs.Coverage.Measurement;
-import edu.utep.cybershare.elseweb.ogc.wcs.Coverage.Source;
 import edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageParameters;
 import edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageURL;
 
@@ -34,6 +34,10 @@ public class CoverageSet_EDAC {
 		coverageSet.addCoverage(getMinimumTemperatureNormals_May_1981_2010(model));
 		coverageSet.addCoverage(getMinimumTemperatureNormals_September_1981_2010(model));
 		
+		WCSDigests digests = new WCSDigests();
+		for(WCSDigest aDigest : digests)
+			coverageSet.addCoverage(getCoverageFromDigest(aDigest, model));
+			
 		File dumpFile = new File(DUMP_DIR + DOCUMENT_NAME);
 		coverageSet.dumpRDF(dumpFile);
 		
@@ -262,6 +266,46 @@ public class CoverageSet_EDAC {
 		
 		return ogcCoverage.getWCSCoverage();
 
+	}
+	
+	public static Resource getCoverageFromDigest(WCSDigest wcsDigest, Model model){	
+		// set wcs getCoverage parameters
+		WCSGetCoverageParameters params = new WCSGetCoverageParameters();
+		params.setBBox(
+				wcsDigest.getLeftLongitude(),
+				wcsDigest.getUpperLatitude(),
+				wcsDigest.getRightLongitude(),
+				wcsDigest.getUpperLatitude());
+		
+		double width = 600;
+		double height = 600;
+		params.setWidth(width);
+		params.setHeight(height);
+		
+		String format = "image/tiff";
+		params.setFormat(format);
+		
+		String coverage = wcsDigest.getName();
+		params.setCoverage(coverage);
+		
+		//construct the parameterized URL from the wcs endpoint and the parameters
+		WCSGetCoverageURL getCoverage = new WCSGetCoverageURL(wcsDigest.getWcsServiceEndpoint().toString(), params);
+					
+		String baseURI = DOCUMENT_URL + wcsDigest.getName();
+		
+		Coverage ogcCoverage = new Coverage(baseURI, model);
+		ogcCoverage.addSource(Coverage.Source.PRISM);
+		ogcCoverage.addMeasurement(Coverage.Measurement.MinTemperatureNormals);
+		ogcCoverage.addGetCoverageRequestURL(getCoverage);
+		ogcCoverage.addMIMEFormat();
+		ogcCoverage.addDuration(wcsDigest.getStartDate(), wcsDigest.getEndDate());
+		ogcCoverage.addRegion(
+				wcsDigest.getLeftLongitude(),
+				wcsDigest.getRightLongitude(),
+				wcsDigest.getLowerLatitude(),
+				wcsDigest.getUpperLatitude());
+		
+		return ogcCoverage.getWCSCoverage();
 	}
 	
 	public static Resource getFractionalSnowCover06182002(Model model){		
