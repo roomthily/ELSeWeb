@@ -58,9 +58,6 @@ public class CoverageSet_EDAC {
 		String coverage = "us_tmin_1981_2010_05";
 		params.setCoverage(coverage);
 		
-		String startDate = "09/01/1981";
-		String endDate = "09/01/2010";
-		
 		//construct the parameterized URL from the wcs endpoint and the parameters
 		String endpoint = "http://gstore.unm.edu/apps/elseweb/datasets/a45326da-063c-4baf-98e4-d0eb8ec92b3c/services/ogc/wcs?SERVICE=wcs&REQUEST=GetCapabilities&VERSION=1.1.2";
 
@@ -73,7 +70,7 @@ public class CoverageSet_EDAC {
 		ogcCoverage.addMeasurement(Coverage.Measurement.MinTemperatureNormals);
 		ogcCoverage.addGetCoverageRequestURL(getCoverage);
 		ogcCoverage.addMIMEFormat();
-		ogcCoverage.addDuration(startDate, endDate);
+		ogcCoverage.addDuration(1981, 9, 1, 2010, 9, 1);
 		ogcCoverage.addRegion(llon, rlon, llat, ulat);
 		return ogcCoverage.getWCSCoverage();
 	}
@@ -99,9 +96,6 @@ public class CoverageSet_EDAC {
 		String coverage = "us_tmin_1981_2010_05";
 		params.setCoverage(coverage);
 		
-		String startDate = "05/01/1981";
-		String endDate = "05/01/2010";
-		
 		//construct the parameterized URL from the wcs endpoint and the parameters
 		String endpoint = "http://gstore.unm.edu/apps/elseweb/datasets/7a16679d-2e40-4905-b016-61a5dfda655e/services/ogc/wcs";
 
@@ -113,7 +107,7 @@ public class CoverageSet_EDAC {
 		ogcCoverage.addMeasurement(Coverage.Measurement.MinTemperatureNormals);
 		ogcCoverage.addGetCoverageRequestURL(getCoverage);
 		ogcCoverage.addMIMEFormat();
-		ogcCoverage.addDuration(startDate, endDate);
+		ogcCoverage.addDuration(1981, 5, 1, 2010, 5, 1);
 		ogcCoverage.addRegion(llon, rlon, llat, ulat);
 		
 		return ogcCoverage.getWCSCoverage();
@@ -139,9 +133,7 @@ public class CoverageSet_EDAC {
 		
 		String coverage = "us_tmin_1981_2010_12";
 		params.setCoverage(coverage);
-		
-		String startDate = "12/01/1981";
-		String endDate = "12/01/2010";
+
 		
 		//construct the parameterized URL from the wcs endpoint and the parameters
 		String endpoint = "http://gstore.unm.edu/apps/elseweb/datasets/1dd490e4-9a5e-48a6-a593-b2bd11f63cad/services/ogc/wcs";
@@ -153,7 +145,7 @@ public class CoverageSet_EDAC {
 		ogcCoverage.addMeasurement(Coverage.Measurement.MinTemperatureNormals);
 		ogcCoverage.addGetCoverageRequestURL(getCoverage);
 		ogcCoverage.addMIMEFormat();
-		ogcCoverage.addDuration(startDate, endDate);
+		ogcCoverage.addDuration(1981, 12, 1, 2010, 12, 1);
 		ogcCoverage.addRegion(llon, rlon, llat, ulat);
 		return ogcCoverage.getWCSCoverage();
 
@@ -178,10 +170,7 @@ public class CoverageSet_EDAC {
 
 		String coverage = "mod10a1_a2002210.fractional_snow_cover";
 		params.setCoverage(coverage);
-		
-		String startDate = "07/29/2002";
-		String endDate = "07/29/2002";
-				
+
 		//construct the parameterized URL from the wcs endpoint and the parameters
 		String endpoint = "http://gstore.unm.edu/apps/rgis/datasets/a427563f-3c7e-44a2-8b35-68ce2a78001a/services/ogc/wcs";
 		WCSGetCoverageURL getCoverage = new WCSGetCoverageURL(endpoint, params);
@@ -193,7 +182,7 @@ public class CoverageSet_EDAC {
 		ogcCoverage.addMeasurement(Coverage.Measurement.FractionalSnowData);
 		ogcCoverage.addGetCoverageRequestURL(getCoverage);
 		ogcCoverage.addMIMEFormat();
-		ogcCoverage.addDuration(startDate, endDate);
+		ogcCoverage.addDuration(2002, 7, 29, 2002, 7, 29);
 		ogcCoverage.addRegion(llon, rlon, llat, ulat);
 		return ogcCoverage.getWCSCoverage();
 	}
@@ -218,9 +207,6 @@ public class CoverageSet_EDAC {
 		String coverage = "mod10a1_a2002210.fractional_snow_cover";
 		params.setCoverage(coverage);
 
-		String startDate = "07/13/2002";
-		String endDate = "07/13/2002";
-		
 		//construct the parameterized URL from the wcs endpoint and the parameters
 		String endpoint = "http://gstore.unm.edu/apps/rgis/datasets/a427563f-3c7e-44a2-8b35-68ce2a78001a/services/ogc/wcs";
 		WCSGetCoverageURL getCoverage = new WCSGetCoverageURL(endpoint, params);
@@ -231,7 +217,7 @@ public class CoverageSet_EDAC {
 		ogcCoverage.addMeasurement(Coverage.Measurement.FractionalSnowData);
 		ogcCoverage.addGetCoverageRequestURL(getCoverage);
 		ogcCoverage.addMIMEFormat();
-		ogcCoverage.addDuration(startDate, endDate);
+		ogcCoverage.addDuration(2002, 7, 13, 2002, 7, 13);
 		ogcCoverage.addRegion(llon, rlon, llat, ulat);
 
 		return ogcCoverage.getWCSCoverage();
@@ -257,9 +243,6 @@ public class CoverageSet_EDAC {
 		String coverage = "mod10a1_a2002193.fractional_snow_cover";
 		params.setCoverage(coverage);
 
-		String startDate = "07/12/2002";
-		String endDate = "07/12/2002";
-		
 		//construct the parameterized URL from the wcs endpoint and the parameters
 		String endpoint = "http://gstore.unm.edu/apps/rgis/datasets/0f3ca80c-2d50-4a33-8df8-c80ff9e94588/services/ogc/wcs";
 		WCSGetCoverageURL getCoverage = new WCSGetCoverageURL(endpoint, params);
@@ -271,7 +254,7 @@ public class CoverageSet_EDAC {
 		ogcCoverage.addMeasurement(Coverage.Measurement.FractionalSnowData);
 		ogcCoverage.addGetCoverageRequestURL(getCoverage);
 		ogcCoverage.addMIMEFormat();
-		ogcCoverage.addDuration(startDate, endDate);
+		ogcCoverage.addDuration(2002, 7, 12, 2002, 7, 12);
 		ogcCoverage.addRegion(llon, rlon, llat, ulat);
 		
 		return ogcCoverage.getWCSCoverage();
@@ -298,9 +281,6 @@ public class CoverageSet_EDAC {
 		String coverage = "mod10a1_a2002169.fractional_snow_cover";
 		params.setCoverage(coverage);
 		
-		String startDate = "06/18/2002";
-		String endDate = "06/18/2002";
-		
 		//construct the parameterized URL from the wcs endpoint and the parameters
 		String endpoint = "http://gstore.unm.edu/apps/rgis/datasets/8c53a01e-c8bf-40de-a9b9-3c2e3f037ebb/services/ogc/wcs";
 		WCSGetCoverageURL getCoverage = new WCSGetCoverageURL(endpoint, params);
@@ -312,7 +292,7 @@ public class CoverageSet_EDAC {
 		ogcCoverage.addMeasurement(Coverage.Measurement.FractionalSnowData);
 		ogcCoverage.addGetCoverageRequestURL(getCoverage);
 		ogcCoverage.addMIMEFormat();
-		ogcCoverage.addDuration(startDate, endDate);
+		ogcCoverage.addDuration(2002, 6, 18, 2002, 6, 18);
 		ogcCoverage.addRegion(llon, rlon, llat, ulat);
 		
 		return ogcCoverage.getWCSCoverage();

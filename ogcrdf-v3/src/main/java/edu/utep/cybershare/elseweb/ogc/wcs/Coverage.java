@@ -1,6 +1,8 @@
 package edu.utep.cybershare.elseweb.ogc.wcs;
 
 import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -81,7 +83,14 @@ public class Coverage {
 		model.add(coverageResource, Vocab.hasRegion, regionResource);
 	}
 	
-	public void addDuration(String startDate, String endDate){
+	public void addDuration(int startYear, int startMonth, int startDay, int endYear, int endMonth, int endDay){
+		GregorianCalendar startDate = new GregorianCalendar();
+		startDate.set(startMonth, startMonth, startDay);
+		
+		GregorianCalendar endDate = new GregorianCalendar();
+		endDate.set(endYear, endMonth, endDay);
+		
+		addDuration(startDate, endDate);
 		
 	}
 	
