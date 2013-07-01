@@ -1,4 +1,4 @@
-package edu.utep.cybershare.elseweb.ogc.edacDigest;
+package edu.utep.cybershare.elseweb.edac.edacDigest;
 import static org.apache.commons.io.FileUtils.copyURLToFile;
 import java.io.File;
 import java.io.FileInputStream;

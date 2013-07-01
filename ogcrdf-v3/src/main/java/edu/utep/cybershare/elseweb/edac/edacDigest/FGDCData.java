@@ -1,4 +1,4 @@
-package edu.utep.cybershare.elseweb.ogc.edacDigest;
+package edu.utep.cybershare.elseweb.edac.edacDigest;
 
 import java.util.Calendar;
 

@@ -1,4 +1,4 @@
-package edu.utep.cybershare.elseweb.ogc.wcs;
+package edu.utep.cybershare.elseweb.edac;
 
 import java.io.File;
 
@@ -8,6 +8,9 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
 
 import edu.utep.cybershare.elseweb.ogc.wcs.Coverage;
+import edu.utep.cybershare.elseweb.ogc.wcs.CoverageSet;
+import edu.utep.cybershare.elseweb.ogc.wcs.Coverage.Measurement;
+import edu.utep.cybershare.elseweb.ogc.wcs.Coverage.Source;
 import edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageParameters;
 import edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageURL;
 
