@@ -20,7 +20,7 @@ public class CoverageSet_EDAC {
 	private static final String DOCUMENT_NAME = "edac-data.owl";
 	private static final String DOCUMENT_URL = BASE_URL + DOCUMENT_NAME;
 	
-	private static final String DUMP_DIR = "C:/Users/Public/git-repos/ELSeWeb/documents/semantic-web/rdf/ontology/";
+	private static final String DUMP_DIR = "../documents/semantic-web/rdf/ontology/";
 	public static void main(String[] args){
 		
 		OntModel model = ModelFactory.createOntologyModel();
