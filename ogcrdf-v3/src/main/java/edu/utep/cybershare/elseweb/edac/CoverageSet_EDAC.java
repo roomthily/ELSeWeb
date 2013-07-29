@@ -42,7 +42,7 @@ public class CoverageSet_EDAC {
 		File dumpFile = new File(DUMP_DIR + DOCUMENT_NAME);
 		coverageSet.dumpRDF(dumpFile);
 		
-		System.out.println("dumped coverage set data at: " + DUMP_DIR + DOCUMENT_NAME);
+		System.out.println("dumped coverage set data at: " + dumpFile.getAbsolutePath());
 	}
 	
 	public static Resource getMinimumTemperatureNormals_September_1981_2010(Model model){
