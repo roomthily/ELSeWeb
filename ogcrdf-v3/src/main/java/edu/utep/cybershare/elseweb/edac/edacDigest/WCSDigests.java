@@ -11,7 +11,7 @@ import org.json.JSONObject;
 
 public class WCSDigests extends ArrayList<WCSDigest>{
 	
-	private static final String JSON_URL = "http://gstore.unm.edu/apps/elseweb/search/datasets.json?version=3";	
+	private static final String JSON_URL = "http://gstore.unm.edu/apps/elseweb/search/datasets.json?version=3&limit=1000&offset=200";	
 	
 	public WCSDigests(){
 		JSONArray array = getJSONDigestsArray();

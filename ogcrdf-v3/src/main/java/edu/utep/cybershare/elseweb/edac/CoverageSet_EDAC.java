@@ -35,6 +35,7 @@ public class CoverageSet_EDAC {
 		coverageSet.addCoverage(getMinimumTemperatureNormals_September_1981_2010(model));
 		
 		WCSDigests digests = new WCSDigests();
+		System.out.println("Number of WCS digests found: " + digests.size());
 		for(WCSDigest aDigest : digests)
 			coverageSet.addCoverage(getCoverageFromDigest(aDigest, model));
 			
