@@ -11,9 +11,11 @@ import org.json.JSONObject;
 
 public class WCSDigests extends ArrayList<WCSDigest>{
 	
-	private static final String JSON_URL = "http://gstore.unm.edu/apps/elseweb/search/datasets.json?version=3&limit=1000&offset=200";	
+	private String jsonURLString;	
 	
-	public WCSDigests(){
+	public WCSDigests(String jsonURL){
+		this.jsonURLString = jsonURL;
+		
 		JSONArray array = getJSONDigestsArray();
 		
 		try{
@@ -49,7 +51,7 @@ public class WCSDigests extends ArrayList<WCSDigest>{
         String jsonString = null;
         try {
             jsonFile = new File("./EDAC-JSON/services.json");
-            jsonURL = new URL(JSON_URL);
+            jsonURL = new URL(jsonURLString);
             copyURLToFile(jsonURL, jsonFile);
             
             FileInputStream fisTargetFile = new FileInputStream(jsonFile);
@@ -59,10 +61,5 @@ public class WCSDigests extends ArrayList<WCSDigest>{
             System.out.println(e);
         }
         return jsonString;
-	}
-	
-	public static void main(String[] args){
-		WCSDigests digestList = new WCSDigests();
-		System.out.println(digestList);
 	}
 }
