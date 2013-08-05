@@ -16,11 +16,11 @@ import edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageURL;
 
 public class CoverageSet_EDAC {
 	
-	private static final String BASE_URL = "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/";
+	private static final String BASE_URL = "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/";
 	private static final String DOCUMENT_NAME = "edac-data.owl";
 	private static final String DOCUMENT_URL = BASE_URL + DOCUMENT_NAME;
 	
-	private static final String DUMP_DIR = "../documents/semantic-web/rdf/ontology/";
+	private static final String DUMP_DIR = "../documents/semantic-web/rdf/data/";
 	public static void main(String[] args){
 		
 		OntModel model = ModelFactory.createOntologyModel();
@@ -34,7 +34,7 @@ public class CoverageSet_EDAC {
 		coverageSet.addCoverage(getMinimumTemperatureNormals_May_1981_2010(model));
 		coverageSet.addCoverage(getMinimumTemperatureNormals_September_1981_2010(model));
 		
-		String jsonMetadata = "http://gstore.unm.edu/apps/elseweb/search/datasets.json?version=3&limit=2000&offset=0";
+		String jsonMetadata = "http://gstore.unm.edu/apps/elseweb/search/datasets.json?version=3&limit=10000&offset=0";
 		WCSDigests digests = new WCSDigests(jsonMetadata);
 		System.out.println("Number of WCS digests found: " + digests.size());
 		for(WCSDigest aDigest : digests)
