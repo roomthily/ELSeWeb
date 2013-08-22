@@ -30,4 +30,14 @@ public class FGDCData {
 		String fgdcDate = fgdcDoc.getElementsByTagName("enddate").item(0).getTextContent();
 		return FGDCDataUtils.getDate(fgdcDate);
 	}
+	
+	public String getEntityMeasurementVocabularyName(){
+		String entityMeasurementVocabularyName = fgdcDoc.getElementsByTagName("themekt").item(0).getTextContent();
+		return entityMeasurementVocabularyName;
+	}
+	
+	public String getEntityMeasurementType(){
+		String entityMeasurementType = fgdcDoc.getElementsByTagName("themekey").item(0).getTextContent();
+		return entityMeasurementType;
+	}
 }

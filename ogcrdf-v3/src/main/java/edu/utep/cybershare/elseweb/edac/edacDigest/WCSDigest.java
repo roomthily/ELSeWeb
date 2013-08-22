@@ -15,7 +15,6 @@ public class WCSDigest {
 	private URL tiffDownload;
 	private String description;
 	private URL FGDC_metadataXML;
-	private URL FGDC_metadataHTML;
 	private int epsg;
 	private double leftLongitude;
 	private double rightLongitude;
@@ -31,24 +30,32 @@ public class WCSDigest {
 	private String groupname;
 	private Calendar startDate;
 	private Calendar endDate;
+	private String entityMeasurementVocabularyName;
+	private String entityMeasurementType;
 	
 	private JSONObject jsonDigest;
 	
 	public WCSDigest(JSONObject wcsJSONDigest){
 		jsonDigest = wcsJSONDigest;
+
+		// first find and set URL to FDGC meta data and the populate dependent fields
+		this.setMetadata();
+		FGDCData fgdcData = new FGDCData(getFGDCXMLURL());
+		this.setDuration(fgdcData);
+		this.setEntityMeasurementInformation(fgdcData);
 		
+		// the rest of the fields can be found directly in the JSON digest
 		this.setName();
 		this.setCategories();
 		this.setDescription();
 		this.setLastUpdate();
-		this.setMetadata();
+		
 		this.setPreview();
 		this.setServices();
 		this.setSpatial();
 		this.setTaxonomy();
 		this.setDownloads();
 		this.setUuid();
-		this.setDuration();
 	}
 	
 	public String getName(){
@@ -109,19 +116,14 @@ public class WCSDigest {
 		try {
 			JSONArray metadata = jsonDigest.getJSONArray("metadata");
 			JSONObject metadata0 = metadata.getJSONObject(0);
-			JSONObject fgdc = metadata0.getJSONObject("fgdc");
+			JSONObject fgdc = metadata0.getJSONObject("FGDC-STD-012-2002");
 			FGDC_metadataXML = new URL(fgdc.getString("xml"));
-			FGDC_metadataHTML = new URL(fgdc.getString("html"));
 		}
-		catch(Exception e){e.printStackTrace();}
+		catch(Exception e){e.printStackTrace();System.out.println(this.jsonDigest);}
 	}
 
 	public URL getFGDC_metadataXML() {
 		return FGDC_metadataXML;
-	}
-
-	public URL getFGDC_metadataHTML() {
-		return FGDC_metadataHTML;
 	}
 	
 	private void setSpatial() {
@@ -232,7 +234,7 @@ public class WCSDigest {
 		try{
 			JSONArray metadataArray = jsonDigest.getJSONArray("metadata");
 			JSONObject metadata0 = metadataArray.getJSONObject(0);
-			JSONObject fgdcObject = metadata0.getJSONObject("fgdc");
+			JSONObject fgdcObject = metadata0.getJSONObject("FGDC-STD-012-2002");
 			fgdcXMLURL = fgdcObject.getString("xml");
 		}catch(Exception e){
 			e.printStackTrace();
@@ -240,9 +242,7 @@ public class WCSDigest {
 		return fgdcXMLURL;
 	}
 	
-	private void setDuration(){
-		String fgdcXMLURL = getFGDCXMLURL();
-		FGDCData fgdcData = new FGDCData(fgdcXMLURL);
+	private void setDuration(FGDCData fgdcData){
 		startDate = fgdcData.getStartDate();
 		endDate = fgdcData.getEndDate();
 	}
@@ -257,5 +257,18 @@ public class WCSDigest {
 	
 	public String toString(){
 		return jsonDigest.toString();
+	}
+	
+	public String getEntityMeasurementVocabularyName(){
+		return this.entityMeasurementVocabularyName;
+	}
+	
+	public void setEntityMeasurementInformation(FGDCData fgdcData){
+		this.entityMeasurementType = fgdcData.getEntityMeasurementType();
+		this.entityMeasurementVocabularyName = fgdcData.getEntityMeasurementVocabularyName();
+	}
+	
+	public String getEntityMeasurementType(){
+		return this.entityMeasurementType;
 	}
 }

@@ -1,4 +1,4 @@
-package edu.utep.cybershare.elseweb.ogc.wcs;
+package edu.utep.cybershare.elseweb.ogc.wcs.rdf;
 
 import java.io.File;
 import java.io.FileWriter;

@@ -1,5 +1,6 @@
 package edu.utep.cybershare.elseweb.edac.edacDigest;
 import static org.apache.commons.io.FileUtils.copyURLToFile;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.net.URL;
@@ -11,10 +12,22 @@ import org.json.JSONObject;
 
 public class WCSDigests extends ArrayList<WCSDigest>{
 	
+	private static final String JSON_DIGEST_BASE_URL = "http://gstore.unm.edu/apps/elseweb/search/datasets.json";
 	private String jsonURLString;	
 	
-	public WCSDigests(String jsonURL){
-		this.jsonURLString = jsonURL;
+	public WCSDigests(int limit, int offset){
+		if(limit < 1)
+			limit = 1;
+		if(offset < 0)
+			offset = 0;
+		
+		String queryString = 
+				"?version=3" +
+				"&limit=" + limit +
+				"&offset=" + offset;
+
+		this.jsonURLString = JSON_DIGEST_BASE_URL + queryString;
+		System.out.println("Getting Digests from Service: " + jsonURLString);
 		
 		JSONArray array = getJSONDigestsArray();
 		
