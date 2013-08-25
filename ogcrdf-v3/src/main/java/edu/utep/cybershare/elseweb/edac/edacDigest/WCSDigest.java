@@ -2,9 +2,13 @@ package edu.utep.cybershare.elseweb.edac.edacDigest;
 
 import java.net.URL;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import edu.utep.cybershare.elseweb.edac.fgdc.FGDCDocument;
+import edu.utep.cybershare.elseweb.edac.fgdc.theme.Themes;
 
 public class WCSDigest {
 	
@@ -30,9 +34,9 @@ public class WCSDigest {
 	private String groupname;
 	private Calendar startDate;
 	private Calendar endDate;
-	private String entityMeasurementVocabularyName;
-	private String entityMeasurementType;
-	
+
+	private Themes fgdcThemes;
+
 	private JSONObject jsonDigest;
 	
 	public WCSDigest(JSONObject wcsJSONDigest){
@@ -40,9 +44,8 @@ public class WCSDigest {
 
 		// first find and set URL to FDGC meta data and the populate dependent fields
 		this.setMetadata();
-		FGDCData fgdcData = new FGDCData(getFGDCXMLURL());
-		this.setDuration(fgdcData);
-		this.setEntityMeasurementInformation(fgdcData);
+		FGDCDocument fgdcData = new FGDCDocument(getFGDCXMLURL());
+		fgdcThemes = fgdcData.getThemes();
 		
 		// the rest of the fields can be found directly in the JSON digest
 		this.setName();
@@ -56,6 +59,7 @@ public class WCSDigest {
 		this.setTaxonomy();
 		this.setDownloads();
 		this.setUuid();
+		this.setValid_Dates();
 	}
 	
 	public String getName(){
@@ -139,7 +143,7 @@ public class WCSDigest {
 		}
 		catch(Exception e){e.printStackTrace();}
 	}
-
+	
 	public int getEPSG() {
 		return epsg;
 	}
@@ -242,10 +246,15 @@ public class WCSDigest {
 		return fgdcXMLURL;
 	}
 	
-	private void setDuration(FGDCData fgdcData){
-		startDate = fgdcData.getStartDate();
-		endDate = fgdcData.getEndDate();
+	private void setValid_Dates() {
+		try {
+			JSONObject valid_dates = jsonDigest.getJSONObject("valid_dates");
+			startDate = WCSDigest.getDate(valid_dates.getString("start"));
+			endDate = WCSDigest.getDate(valid_dates.getString("end"));
+		}
+		catch(Exception e){e.printStackTrace();}
 	}
+
 	
 	public Calendar getStartDate(){
 		return startDate;
@@ -257,18 +266,20 @@ public class WCSDigest {
 	
 	public String toString(){
 		return jsonDigest.toString();
+	}	
+	
+	public Themes getFGDCThemes(){
+		return fgdcThemes;
 	}
 	
-	public String getEntityMeasurementVocabularyName(){
-		return this.entityMeasurementVocabularyName;
-	}
-	
-	public void setEntityMeasurementInformation(FGDCData fgdcData){
-		this.entityMeasurementType = fgdcData.getEntityMeasurementType();
-		this.entityMeasurementVocabularyName = fgdcData.getEntityMeasurementVocabularyName();
-	}
-	
-	public String getEntityMeasurementType(){
-		return this.entityMeasurementType;
+	private static Calendar getDate(String fgdcDate){
+		int year = Integer.parseInt(fgdcDate.substring(0, 3));
+		int day = Integer.parseInt(fgdcDate.substring(4, 5));
+		int month = Integer.parseInt(fgdcDate.substring(6, 7));
+		
+		GregorianCalendar date = new GregorianCalendar();
+		date.set(year, month, day);
+		
+		return date;
 	}
 }

@@ -4,6 +4,7 @@ import java.util.Hashtable;
 
 import edu.utep.cybershare.elseweb.edac.edacDigest.WCSDigest;
 import edu.utep.cybershare.elseweb.edac.edacDigest.WCSDigests;
+import edu.utep.cybershare.elseweb.edac.fgdc.theme.Themes;
 
 public class EntityMeasurementTypes {
 
@@ -16,21 +17,28 @@ public class EntityMeasurementTypes {
 	}
 
 	private void populateEntityMeasurementTypes(){
-		WCSDigests digests = new WCSDigests(500, 0);
+		WCSDigests digests = new WCSDigests(5000, 0);
 		System.out.println("Number of WCS digests found: " + digests.size());
 		
 		for(WCSDigest digest : digests){
-			addEntityMeasurementType(digest.getEntityMeasurementType());
+			addEntityMeasurementType(digest.getFGDCThemes());
 		}
 	}
 	
-	private void addEntityMeasurementType(String type){
+	private String getThemekey(Themes themes){
+		themes.get
+	}
+	
+	private void addEntityMeasurementType(Themes themes){
+		
 		Integer count = types.get(type);
-		if(count == null){
+		int counter;
+		if(count == null)
 			count = new Integer(0);
-			types.put(type, count);
-		}
-		count++;
+		
+		// need to use +1 rather than ++ since count is an Integer object
+		counter = count + 1;
+		types.put(type, new Integer(counter));
 	}
 	
 	public void printDistribution(){
