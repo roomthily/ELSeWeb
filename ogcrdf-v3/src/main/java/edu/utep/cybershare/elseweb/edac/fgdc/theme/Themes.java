@@ -28,15 +28,16 @@ public class Themes {
 		NodeList themeParts = aThemeNode.getChildNodes();
 		Node themePart;
 		String tagName;
+		String tagValue;
 		Theme aTheme = new Theme();
 		for(int i = 0; i < themeParts.getLength(); i ++){
 			themePart = themeParts.item(i);
 			tagName = themePart.getNodeName();
-
+			tagValue = themePart.getTextContent();
 			if(tagName.equals("themekt"))
-				aTheme.setThemekt(themePart.getNodeValue());
+				aTheme.setThemekt(tagValue);
 			else if(tagName.equals("themekey"))
-				aTheme.addThemekey(themePart.getNodeValue());
+				aTheme.addThemekey(tagValue);
 		}
 		return aTheme;
 	}

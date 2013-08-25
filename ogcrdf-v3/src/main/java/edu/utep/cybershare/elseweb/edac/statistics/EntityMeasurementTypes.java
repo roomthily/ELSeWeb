@@ -17,7 +17,7 @@ public class EntityMeasurementTypes {
 	}
 
 	private void populateEntityMeasurementTypes(){
-		WCSDigests digests = new WCSDigests(5000, 0);
+		WCSDigests digests = new WCSDigests(3000, 0);
 		System.out.println("Number of WCS digests found: " + digests.size());
 		
 		for(WCSDigest digest : digests){
@@ -25,26 +25,26 @@ public class EntityMeasurementTypes {
 		}
 	}
 	
-	private String getThemekey(Themes themes){
+	private String getkey(Themes themes){
 		if(themes.getTheme_CF() != null)
-			return themes.getTheme_CF().getThemekey();
+			return "CF: " + themes.getTheme_CF().getThemekey();
 		else if(themes.getTheme_GCMD_Science() != null)
-			return themes.getTheme_GCMD_Science().getThemekey();
+			return "GCMD_Science: " + themes.getTheme_GCMD_Science().getThemekey();
 		else //if(themes.getTheme_ISO_19115_Topic_Categories() != null)
-			return themes.getTheme_ISO_19115_Topic_Categories().getThemekey();
+			return "ISO: " + themes.getTheme_ISO_19115_Topic_Categories().getThemekey();
 	}
 	
 	private void addEntityMeasurementType(Themes themes){
-		String type = getThemekey(themes);
+		String key = getkey(themes);
 		
-		Integer count = types.get(type);
+		Integer count = types.get(key);
 		int counter;
 		if(count == null)
 			count = new Integer(0);
 		
 		// need to use +1 rather than ++ since count is an Integer object
 		counter = count + 1;
-		types.put(type, new Integer(counter));
+		types.put(key, new Integer(counter));
 	}
 	
 	public void printDistribution(){
