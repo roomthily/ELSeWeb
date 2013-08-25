@@ -26,10 +26,16 @@ public class EntityMeasurementTypes {
 	}
 	
 	private String getThemekey(Themes themes){
-		themes.get
+		if(themes.getTheme_CF() != null)
+			return themes.getTheme_CF().getThemekey();
+		else if(themes.getTheme_GCMD_Science() != null)
+			return themes.getTheme_GCMD_Science().getThemekey();
+		else //if(themes.getTheme_ISO_19115_Topic_Categories() != null)
+			return themes.getTheme_ISO_19115_Topic_Categories().getThemekey();
 	}
 	
 	private void addEntityMeasurementType(Themes themes){
+		String type = getThemekey(themes);
 		
 		Integer count = types.get(type);
 		int counter;
