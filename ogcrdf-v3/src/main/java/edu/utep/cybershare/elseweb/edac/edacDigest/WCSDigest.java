@@ -282,4 +282,13 @@ public class WCSDigest {
 		
 		return date;
 	}
+	
+	public String getThemekey(){
+		if(fgdcThemes.getTheme_CF() != null)
+			return fgdcThemes.getTheme_CF().getThemekey();
+		else if(fgdcThemes.getTheme_GCMD_Science() != null)
+			return fgdcThemes.getTheme_GCMD_Science().getThemekey();
+		else //if(themes.getTheme_ISO_19115_Topic_Categories() != null)
+			return fgdcThemes.getTheme_ISO_19115_Topic_Categories().getThemekey();
+	}
 }

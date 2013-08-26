@@ -20,12 +20,11 @@ public class EntityMeasurementTypes {
 		WCSDigests digests = new WCSDigests(3000, 0);
 		System.out.println("Number of WCS digests found: " + digests.size());
 		
-		for(WCSDigest digest : digests){
+		for(WCSDigest digest : digests)
 			addEntityMeasurementType(digest.getFGDCThemes());
-		}
 	}
 	
-	private String getkey(Themes themes){
+	private String getKey(Themes themes){
 		if(themes.getTheme_CF() != null)
 			return "CF: " + themes.getTheme_CF().getThemekey();
 		else if(themes.getTheme_GCMD_Science() != null)
@@ -35,7 +34,7 @@ public class EntityMeasurementTypes {
 	}
 	
 	private void addEntityMeasurementType(Themes themes){
-		String key = getkey(themes);
+		String key = getKey(themes);
 		
 		Integer count = types.get(key);
 		int counter;

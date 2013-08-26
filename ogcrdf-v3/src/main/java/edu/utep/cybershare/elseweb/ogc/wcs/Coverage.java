@@ -1,4 +1,4 @@
-package edu.utep.cybershare.elseweb.ogc.wcs.rdf;
+package edu.utep.cybershare.elseweb.ogc.wcs;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

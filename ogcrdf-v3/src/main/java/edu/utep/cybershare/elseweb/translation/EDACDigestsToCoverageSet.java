@@ -9,8 +9,8 @@ import com.hp.hpl.jena.rdf.model.Resource;
 
 import edu.utep.cybershare.elseweb.edac.edacDigest.WCSDigest;
 import edu.utep.cybershare.elseweb.edac.edacDigest.WCSDigests;
-import edu.utep.cybershare.elseweb.ogc.wcs.rdf.Coverage;
-import edu.utep.cybershare.elseweb.ogc.wcs.rdf.CoverageSet;
+import edu.utep.cybershare.elseweb.ogc.wcs.Coverage;
+import edu.utep.cybershare.elseweb.ogc.wcs.CoverageSet;
 import edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageParameters;
 import edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageURL;
 
