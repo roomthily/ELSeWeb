@@ -101,6 +101,16 @@
     
 
 
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-prov.owl#Precipitation-TIFF -->
+
+    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-prov.owl#Precipitation-TIFF">
+        <rdf:type rdf:resource="&prov;Entity"/>
+        <prov:wasRevisionOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-prov.owl#Precipitation-Related-Data"/>
+        <prov:wasGeneratedBy rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-prov.owl#Publish-as-WCS"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-prov.owl#Publish-as-WCS -->
 
     <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-prov.owl#Publish-as-WCS">
@@ -132,6 +142,16 @@
 
     <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-prov.owl#Vegetation-Related-Data">
         <rdf:type rdf:resource="&prov;Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-prov.owl#Vegetation-TIFF -->
+
+    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-prov.owl#Vegetation-TIFF">
+        <rdf:type rdf:resource="&prov;Entity"/>
+        <prov:wasRevisionOf rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-prov.owl#Masked-NDVI"/>
+        <prov:wasGeneratedBy rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-prov.owl#Publish-as-WCS"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
