@@ -1,5 +1,51 @@
 package edu.utep.cybershare.elseweb.build;
 
-public class Director {
+import edu.utep.cybershare.elseweb.build.source.edac.WCSDigest;
+import edu.utep.cybershare.elseweb.build.source.edac.WCSDigests;
 
+public class Director {
+	
+	private Builder builder;
+		
+	public Director(Builder builder){
+		this.builder = builder;
+	}
+
+	public void construct(WCSDigests digests){
+		for(WCSDigest digest : digests){
+		
+			//used to name the elements of the model
+			String baseID = digest.getUuid();
+			builder.setBaseID(baseID);
+			
+			//build entity
+			builder.buildEntity(digest.getThemekey());
+			
+			//build Observation
+			builder.buildObservation();
+			
+			//build Measurement
+			builder.buildMeasurement();
+			
+			//build Characteristic
+			builder.buildCharacteristic(digest.getThemekey());
+			
+			//build Region
+			builder.buildRegion(digest.getLeftLongitude(), digest.getRightLongitude(), digest.getLowerLatitude(), digest.getUpperLatitude());
+			
+			//build Duration
+			builder.buildDuration(digest.getStartDate(), digest.getEndDate());
+			
+			//build Distribution
+			builder.buildDistribution(digest.getName(), digest.getWcsServiceEndpoint().toString());
+			
+			//build Dataset
+			builder.buildDataset();
+			
+			//build Agent
+			builder.buildAgent(digest.getFGDCThemes().getTheme_EDAC_Prism());
+			
+			builder.assemble();
+		}
+	}
 }

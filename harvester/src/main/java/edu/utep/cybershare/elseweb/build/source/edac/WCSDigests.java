@@ -12,6 +12,10 @@ import org.json.JSONObject;
 
 public class WCSDigests extends ArrayList<WCSDigest>{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static final String JSON_DIGEST_BASE_URL = "http://gstore.unm.edu/apps/elseweb/search/datasets.json";
 	
 	public WCSDigests(int limit, int offset){

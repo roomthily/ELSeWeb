@@ -2,40 +2,36 @@ package edu.utep.cybershare.elseweb.build;
 
 import java.util.HashMap;
 
-import edu.utep.cybershare.elseweb.model.Agent;
+import edu.utep.cybershare.elseweb.model.Catalog;
 import edu.utep.cybershare.elseweb.model.Characteristic;
 import edu.utep.cybershare.elseweb.model.Dataset;
+import edu.utep.cybershare.elseweb.model.Distribution;
+import edu.utep.cybershare.elseweb.model.Duration;
 import edu.utep.cybershare.elseweb.model.Entity;
 import edu.utep.cybershare.elseweb.model.Measurement;
 import edu.utep.cybershare.elseweb.model.Observation;
+import edu.utep.cybershare.elseweb.model.Region;
 
 public class ModelProduct {
 	
-	private HashMap<String, Agent> agents;
 	private HashMap<String, Characteristic> characteristics;
 	private HashMap<String, Dataset> datasets;
 	private HashMap<String, Entity> entities;
 	private HashMap<String, Observation> observations;
 	private HashMap<String, Measurement> measurements;
+	private HashMap<String, Catalog> catalogs;
+	private HashMap<String, Distribution> distributions;
+	private HashMap<String, Duration> durations;
+	private HashMap<String, Region> regions;
 	
 	public ModelProduct(){
-		agents = new HashMap<String, Agent>();
 		characteristics = new HashMap<String, Characteristic>();
 		datasets = new HashMap<String, Dataset>();
 		entities = new HashMap<String, Entity>();
 		observations = new HashMap<String, Observation>();
 		measurements = new HashMap<String, Measurement>();
 	}
-	
-	public Agent getAgent(String key){
-		Agent agent = agents.get(key);
-		if(agent == null){
-			agent = new Agent(key);
-			agents.put(key, agent);
-		}
-		return agent;
-	}
-	
+		
 	public Characteristic getCharacteristic(String key){
 		Characteristic characteristic = characteristics.get(key);
 		if(characteristic == null){
@@ -72,6 +68,15 @@ public class ModelProduct {
 		return observation;
 	}
 	
+	public Catalog getCatalog(String key){
+		Catalog catalog = catalogs.get(key);
+		if(catalog == null){
+			catalog = new Catalog(key);
+			catalogs.put(key, catalog);
+		}
+		return catalog;
+	}
+	
 	public Measurement getMeasurement(String key){
 		Measurement measurement = measurements.get(key);
 		if(measurement == null){
@@ -79,5 +84,32 @@ public class ModelProduct {
 			measurements.put(key, measurement);
 		}
 		return measurement;
+	}
+	
+	public Duration getDuration(String key){
+		Duration value = durations.get(key);
+		if(value == null){
+			value = new Duration(key);
+			durations.put(key, value);
+		}
+		return value;
+	}
+	
+	public Region getRegion(String key){		
+		Region value = regions.get(key);
+		if(value == null){
+			value = new Region(key);
+			regions.put(key, value);
+		}
+		return value;
+	}
+	
+	public Distribution getDistribution(String key){
+		Distribution value = distributions.get(key);
+		if(value == null){
+			value = new Distribution(key);
+			distributions.put(key, value);
+		}
+		return value;
 	}
 }
