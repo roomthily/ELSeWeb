@@ -13,8 +13,6 @@ import edu.utep.cybershare.elseweb.model.Entity;
 import edu.utep.cybershare.elseweb.model.Measurement;
 import edu.utep.cybershare.elseweb.model.Observation;
 import edu.utep.cybershare.elseweb.model.Region;
-import edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageParameters;
-import edu.utep.cybershare.elseweb.ogc.wcs.url.WCSGetCoverageURL;
 
 public class Builder {
 	
@@ -45,6 +43,7 @@ public class Builder {
 	private static URI dataClearingHouseURI;
 	private static URI modisURI;
 	private static URI prismURI;
+	private static URI mixedMultipartFormatURI;
 	private static final String catalogName = "EDAC ELSEWeb Environment Datasets";
 	
 	public Builder(ModelProduct modelProduct){
@@ -54,6 +53,7 @@ public class Builder {
 			dataClearingHouseURI = new URI("http://rgis.unm.edu/browsedata");
 			modisURI = new URI("http://modis.gsfc.nasa.gov/");
 			prismURI = new URI("http://www.prism.oregonstate.edu/");
+			mixedMultipartFormatURI = new URI("http://provenanceweb.org/format/mime/multipart/mixed");
 		}
 		catch(Exception e){e.printStackTrace();}
 	}
@@ -134,13 +134,6 @@ public class Builder {
 		duration.setEndDate(endDate);
 	}
 	
-	private URI getMultipartFormatURI(){
-		URI formatURI = null;
-		try{formatURI = new URI("http://provenanceweb.org/format/mime/multipart/mixed");}
-		catch(Exception e){e.printStackTrace();}
-		return formatURI;
-	}
-	
 	private URI getWCSGetCoverageURI(){
 		URI getCoverageURI = null;
 		try{getCoverageURI = new URI(this.wcsCoverageURL.getURL().toString());}
@@ -153,7 +146,7 @@ public class Builder {
 		
 		distribution = product.getDistribution(buildName(distributionLabel));
 		distribution.setAccessURI(dataClearingHouseURI);
-		distribution.setFormat(getMultipartFormatURI());
+		distribution.setFormat(mixedMultipartFormatURI);
 		distribution.setDownloadURI(getWCSGetCoverageURI());
 		distribution.setMediaType("multipart/mixed");
 	}
@@ -184,10 +177,10 @@ public class Builder {
 		//connect up measurement to character and agent
 		measurement.setCharacteristic(characteristic);
 		measurement.setResponsibleAgent(agent);
+		measurement.setObservation(observation);
 		
 		//connect observation to entity and measurement
 		observation.setEntity(entity);
-		observation.setMeasurement(measurement);
 		
 		reset();
 	}
