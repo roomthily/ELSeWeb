@@ -13,6 +13,8 @@ public class Catalog extends Element{
 		// TODO Auto-generated constructor stub
 		datasets = new HashMap<String, Dataset>();
 	}
+	
+	public boolean isSet_datasets(){return this.getDatasets().size() > 0;}
 
 	@Override
 	public void accept(Visitor visitor) {
