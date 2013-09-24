@@ -13,6 +13,7 @@ import edu.utep.cybershare.elseweb.ontology.vocabulary.DCAT;
 import edu.utep.cybershare.elseweb.ontology.vocabulary.DCMI;
 import edu.utep.cybershare.elseweb.ontology.vocabulary.EDAC;
 import edu.utep.cybershare.elseweb.ontology.vocabulary.OBOE;
+import edu.utep.cybershare.elseweb.ontology.vocabulary.OBOEOntClassMapper;
 import edu.utep.cybershare.elseweb.ontology.vocabulary.PROVO;
 
 public abstract class Axioms extends ArrayList<StatementImpl> {
@@ -31,6 +32,8 @@ public abstract class Axioms extends ArrayList<StatementImpl> {
 	protected PROVO vocabulary_PROVO;
 	protected EDAC vocabulary_EDAC;
 	
+	protected OBOEOntClassMapper mapper;
+	
 	protected Axioms(Individual individual, OntologyToolset bundle){
 		this.individual = individual;
 		this.bundle = bundle;
@@ -44,6 +47,8 @@ public abstract class Axioms extends ArrayList<StatementImpl> {
 		vocabulary_DCAT = new DCAT(model);
 		vocabulary_OBOE = new OBOE(model);
 		vocabulary_EDAC = new EDAC(model);
+		
+		mapper = new OBOEOntClassMapper(vocabulary_OBOE);
 	}
 		
 	protected void setTypeAxiom(OntClass owlClass){
