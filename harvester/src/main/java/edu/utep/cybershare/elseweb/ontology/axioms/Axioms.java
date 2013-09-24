@@ -51,7 +51,7 @@ public abstract class Axioms extends ArrayList<StatementImpl> {
 		mapper = new OBOEOntClassMapper(vocabulary_OBOE);
 	}
 		
-	protected void setTypeAxiom(OntClass owlClass){
+	protected void addTypeAxiom(OntClass owlClass){
 		Property typeProperty = bundle.getOntModel().getProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
 		StatementImpl axiom = new StatementImpl(individual, typeProperty, owlClass);
 		add(axiom);

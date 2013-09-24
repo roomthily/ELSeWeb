@@ -25,7 +25,7 @@ public class CatalogAxioms extends Axioms {
 	@Override
 	public void setAxioms() {
 		// TODO Auto-generated method stub
-		this.setTypeAxiom(vocabulary_DCAT.getOntClass_Catalog());
+		this.addTypeAxiom(vocabulary_DCAT.getOntClass_Catalog());
 		addDatasets();
 	}
 	
