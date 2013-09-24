@@ -1,4 +1,4 @@
-package edu.utep.cybershare.elseweb;
+package edu.utep.cybershare.elseweb.util;
 
 import java.util.Hashtable;
 
