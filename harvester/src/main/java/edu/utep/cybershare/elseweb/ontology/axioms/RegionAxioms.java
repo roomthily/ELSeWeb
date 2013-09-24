@@ -15,7 +15,7 @@ public class RegionAxioms extends Axioms {
 	private static final long serialVersionUID = 1L;
 
 	private Region region;
-	protected RegionAxioms(Region region, Individual individual, OntologyToolset bundle) {
+	public RegionAxioms(Region region, Individual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
 		this.region = region;

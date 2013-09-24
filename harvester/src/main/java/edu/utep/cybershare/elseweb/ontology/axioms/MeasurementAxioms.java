@@ -15,7 +15,7 @@ public class MeasurementAxioms extends Axioms{
 	private static final long serialVersionUID = 1L;
 
 	private Measurement measurement;
-	protected MeasurementAxioms(Measurement measurement, Individual individual, OntologyToolset bundle) {
+	public MeasurementAxioms(Measurement measurement, Individual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
 		this.measurement = measurement;

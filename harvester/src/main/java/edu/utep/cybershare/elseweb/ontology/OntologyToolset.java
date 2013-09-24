@@ -1,6 +1,7 @@
 package edu.utep.cybershare.elseweb.ontology;
 
 import java.io.File;
+import java.io.FileWriter;
 
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -47,5 +48,10 @@ public class OntologyToolset {
 	}
 
 	public void dumpOntology(File aFile){
+		try{
+			FileWriter writer = new FileWriter(aFile);
+			model.write(writer);
+			writer.close();
+		}catch(Exception e){e.printStackTrace();}
 	}		
 }

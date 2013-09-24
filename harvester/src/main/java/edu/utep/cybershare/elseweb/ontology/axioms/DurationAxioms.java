@@ -11,7 +11,7 @@ import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
 public class DurationAxioms extends Axioms{
 
 	private Duration duration;
-	protected DurationAxioms(Duration duration, Individual individual, OntologyToolset bundle) {
+	public DurationAxioms(Duration duration, Individual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
 		this.duration = duration;

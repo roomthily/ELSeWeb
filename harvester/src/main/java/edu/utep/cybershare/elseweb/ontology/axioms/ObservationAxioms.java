@@ -15,7 +15,7 @@ public class ObservationAxioms extends Axioms {
 	private static final long serialVersionUID = 1L;
 
 	private Observation obs;
-	protected ObservationAxioms(Observation obs, Individual individual, OntologyToolset bundle) {
+	public ObservationAxioms(Observation obs, Individual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
 		this.obs = obs;

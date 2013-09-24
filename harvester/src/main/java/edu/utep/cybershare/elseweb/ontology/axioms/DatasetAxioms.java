@@ -14,7 +14,7 @@ public class DatasetAxioms extends Axioms{
 	 */
 	private static final long serialVersionUID = 1L;
 	private Dataset dataset;
-	protected DatasetAxioms(Dataset dataset, Individual individual, OntologyToolset bundle) {
+	public DatasetAxioms(Dataset dataset, Individual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
 		this.dataset = dataset;

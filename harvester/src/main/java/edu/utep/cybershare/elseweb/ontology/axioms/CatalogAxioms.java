@@ -16,7 +16,7 @@ public class CatalogAxioms extends Axioms {
 	private static final long serialVersionUID = 1L;
 	private Catalog catalog;
 	
-	protected CatalogAxioms(Catalog catalog, Individual individual, OntologyToolset bundle) {
+	public CatalogAxioms(Catalog catalog, Individual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
 		this.catalog = catalog;

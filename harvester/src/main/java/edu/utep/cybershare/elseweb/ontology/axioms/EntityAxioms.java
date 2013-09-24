@@ -12,7 +12,7 @@ public class EntityAxioms extends Axioms {
 	 */
 	private static final long serialVersionUID = 1L;
 	private Entity entity;
-	protected EntityAxioms(Entity entity, Individual individual, OntologyToolset bundle) {
+	public EntityAxioms(Entity entity, Individual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
 		this.entity = entity;
