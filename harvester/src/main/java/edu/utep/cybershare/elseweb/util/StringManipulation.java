@@ -27,9 +27,10 @@ public class StringManipulation {
 	}
 	
 	public static String makeURICompliantFragment(String candidateIRIFragment, String baseURI){		
-		String newIRIFragment = candidateIRIFragment
+		/*String newIRIFragment = candidateIRIFragment
 				.replaceAll("[^A-Za-z0-9\\s]", "")
-				.replaceAll("\\s", "-");
+				.replaceAll("\\s", "-");*/
+		String newIRIFragment = candidateIRIFragment;
 		
 		if(!baseURI.endsWith("/"))
 			baseURI += "/";

@@ -14,7 +14,7 @@ public class WCSDigest {
 	
 	private String name;
 	private int lastUpdate;
-	private String uuid;
+	private int id;
 	private String taxonomy;
 	private URL tiffDownload;
 	private String description;
@@ -58,7 +58,7 @@ public class WCSDigest {
 		this.setSpatial();
 		this.setTaxonomy();
 		this.setDownloads();
-		this.setUuid();
+		this.setID();
 		this.setValid_Dates();
 	}
 	
@@ -78,11 +78,11 @@ public class WCSDigest {
 		try{this.lastUpdate =  Integer.valueOf(jsonDigest.getString("lastupdate"));}
 		catch(Exception e){e.printStackTrace();}
 	}
-	public String getUuid() {
-		return uuid;
+	public int getID() {
+		return id;
 	}
-	private void setUuid() {
-		try{this.uuid =  jsonDigest.getString("lastupdate");}
+	private void setID() {
+		try{this.id =  jsonDigest.getInt("id");}
 		catch(Exception e){e.printStackTrace();}
 	}
 

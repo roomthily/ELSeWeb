@@ -22,6 +22,7 @@ public class Builder {
 	private static final String observationLabel = "observation";
 	private static final String measurementLabel = "measurement";
 	private static final String durationLabel = "duration";
+	private static final String regionLabel = "region";
 	private static final String distributionLabel = "distribution";
 	private static final String separator = "_";
 	
@@ -44,7 +45,7 @@ public class Builder {
 	private static URI modisURI;
 	private static URI prismURI;
 	private static URI mixedMultipartFormatURI;
-	private static final String catalogName = "EDAC ELSEWeb Environment Datasets";
+	private static final String catalogName = "EDAC-ELSEWeb-Environment-Datasets";
 	
 	public Builder(ModelProduct modelProduct){
 		product = modelProduct;
@@ -99,7 +100,8 @@ public class Builder {
 		observation = product.getObservation(buildName(observationLabel));
 	}
 	public void buildRegion(double llon, double rlon, double llat, double ulat){
-		String name = String.valueOf(llon) + String.valueOf(rlon) + String.valueOf(llat) + String.valueOf(ulat);
+		String regionString = String.valueOf(llon) + String.valueOf(rlon) + String.valueOf(llat) + String.valueOf(ulat);
+		String name = regionLabel + separator + regionString;
 		region = product.getRegion(name);
 		region.setLlon(llon);
 		region.setRlon(rlon);

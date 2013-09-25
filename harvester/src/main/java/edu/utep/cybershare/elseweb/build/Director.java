@@ -15,8 +15,8 @@ public class Director {
 		for(WCSDigest digest : digests){
 		
 			//used to name the elements of the model
-			String baseID = digest.getUuid();
-			builder.setBaseID(baseID);
+			int baseID = digest.getID();
+			builder.setBaseID(String.valueOf(baseID));
 			
 			//build entity
 			builder.buildEntity(digest.getThemekey());
