@@ -2,6 +2,7 @@ package edu.utep.cybershare.elseweb.ontology.axioms;
 
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLIndividual;
+import org.semanticweb.owlapi.model.OWLLiteral;
 
 import edu.utep.cybershare.elseweb.model.Distribution;
 import edu.utep.cybershare.elseweb.ontology.Individuals;
@@ -31,15 +32,15 @@ public class DistributionAxioms extends Axioms {
 	}
 	private void addAccessURI(){
 		if(distribution.isSet_accessURI()){
-			OWLIndividual accessIndividual = Individuals.getIndividual(distribution.getAccessURI(), bundle);
-			OWLAxiom axiom = bundle.getDataFactory().getOWLObjectPropertyAssertionAxiom(vocabulary_DCAT.getDatatypeProperty_accessURL(), individual, accessIndividual);
+			OWLLiteral accessLiteral = bundle.getDataFactory().getOWLLiteral(distribution.getAccessURI().toASCIIString());
+			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_DCAT.getDatatypeProperty_accessURL(), individual, accessLiteral);
 			add(axiom);
 		}
 	}
 	private void addDownloadURI(){
 		if(distribution.isSet_downloadURI()){
-			OWLIndividual downloadIndividual = Individuals.getIndividual(distribution.getDownloadURI(), bundle);
-			OWLAxiom axiom = bundle.getDataFactory().getOWLObjectPropertyAssertionAxiom(vocabulary_DCAT.getDatatypeProperty_downloadURL(), individual, downloadIndividual);
+			OWLLiteral downloadLiteral = bundle.getDataFactory().getOWLLiteral(distribution.getDownloadURI().toASCIIString());
+			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_DCAT.getDatatypeProperty_downloadURL(), individual, downloadLiteral);
 			add(axiom);
 		}
 	}

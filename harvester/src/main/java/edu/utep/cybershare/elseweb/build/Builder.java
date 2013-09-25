@@ -2,6 +2,7 @@ package edu.utep.cybershare.elseweb.build;
 
 import java.net.URI;
 import java.util.Calendar;
+import java.util.HashMap;
 
 import edu.utep.cybershare.elseweb.build.source.edac.fgdc.theme.Theme;
 import edu.utep.cybershare.elseweb.model.Catalog;
@@ -47,8 +48,14 @@ public class Builder {
 	private static URI mixedMultipartFormatURI;
 	private static final String catalogName = "EDAC-ELSEWeb-Environment-Datasets";
 	
+	private HashMap<String, String> regionEncodingToRegionName;
+	private int counter;
+	
 	public Builder(ModelProduct modelProduct){
 		product = modelProduct;
+
+		regionEncodingToRegionName = new HashMap<String,String>();
+		counter = 0;
 		
 		try{
 			dataClearingHouseURI = new URI("http://rgis.unm.edu/browsedata");
@@ -77,38 +84,35 @@ public class Builder {
 		agent = null;
 	}
 
-	private String buildName(String label){
+	private String prependDatasetID(String label){
 		return baseID + separator + label;
 	}
 	
 	public void buildCharacteristic(String themekey){
-		characteristic = product.getCharacteristic(buildName(characteristicLabel));
+		characteristic = product.getCharacteristic(themekey + separator + characteristicLabel);
 		characteristic.setThemekey(themekey);
 	}
 
 	public void buildDataset(){
-		dataset = product.getDataset(buildName(datasetLabel));	
+		dataset = product.getDataset(prependDatasetID(datasetLabel));	
 	}
 	public void buildEntity(String themekey){
-		entity = product.getEntity(buildName(entityLabel));
+		entity = product.getEntity(themekey + separator + entityLabel);
 		entity.setThemekey(themekey);
 	}
 	public void buildMeasurement(){
-		measurement = product.getMeasurement(buildName(measurementLabel));
+		measurement = product.getMeasurement(prependDatasetID(measurementLabel));
 	}
 	public void buildObservation(){
-		observation = product.getObservation(buildName(observationLabel));
+		observation = product.getObservation(prependDatasetID(observationLabel));
 	}
 	public void buildRegion(double llon, double rlon, double llat, double ulat){
-		String regionString = String.valueOf(llon) + String.valueOf(rlon) + String.valueOf(llat) + String.valueOf(ulat);
-		String name = regionLabel + separator + regionString;
-		region = product.getRegion(name);
+		String regionKey = this.getRegionKey(llon, rlon, llat, ulat);
+		region = product.getRegion(regionKey);
 		region.setLlon(llon);
 		region.setRlon(rlon);
 		region.setLlat(llat);
 		region.setUlat(ulat);
-		
-		
 	}
 	
 	private void buildWCSGetCoverageURL(String coverageName, String serviceEndpoint){
@@ -131,7 +135,7 @@ public class Builder {
 	}
 	
 	public void buildDuration(Calendar startDate, Calendar endDate){
-		duration = product.getDuration(buildName(durationLabel));
+		duration = product.getDuration(prependDatasetID(durationLabel));
 		duration.setStartDate(startDate);
 		duration.setEndDate(endDate);
 	}
@@ -146,7 +150,7 @@ public class Builder {
 	public void buildDistribution(String coverageName, String serviceEndpoint){
 		this.buildWCSGetCoverageURL(coverageName, serviceEndpoint);
 		
-		distribution = product.getDistribution(buildName(distributionLabel));
+		distribution = product.getDistribution(prependDatasetID(distributionLabel));
 		distribution.setAccessURI(dataClearingHouseURI);
 		distribution.setFormat(mixedMultipartFormatURI);
 		distribution.setDownloadURI(getWCSGetCoverageURI());
@@ -163,7 +167,15 @@ public class Builder {
 	private void buildCatalog(){
 		catalog = product.getCatalog(catalogName);
 	}
-	
+	private String getRegionKey(double llon, double rlon, double llat, double ulat){
+		String regionString = String.valueOf(llon) + String.valueOf(rlon) + String.valueOf(llat) + String.valueOf(ulat);
+		String regionName = this.regionEncodingToRegionName.get(regionString);
+		if(regionName == null){
+			regionName = regionLabel + separator + counter++;
+			this.regionEncodingToRegionName.put(regionString, regionName);
+		}
+		return regionName;
+	}
 	public void assemble(){
 		buildCatalog();
 		

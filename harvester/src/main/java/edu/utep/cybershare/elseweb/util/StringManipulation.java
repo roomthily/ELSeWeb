@@ -30,7 +30,7 @@ public class StringManipulation {
 		/*String newIRIFragment = candidateIRIFragment
 				.replaceAll("[^A-Za-z0-9\\s]", "")
 				.replaceAll("\\s", "-");*/
-		String newIRIFragment = candidateIRIFragment;
+		String newIRIFragment = candidateIRIFragment.replaceAll(" ", "-");
 		
 		if(!baseURI.endsWith("/"))
 			baseURI += "/";
