@@ -1,57 +1,88 @@
 package edu.utep.cybershare.elseweb.ontology;
 
 import java.io.File;
-import java.io.FileWriter;
 
-import com.hp.hpl.jena.ontology.OntModel;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.Statement;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.io.FileDocumentTarget;
+import org.semanticweb.owlapi.model.AddAxiom;
+import org.semanticweb.owlapi.model.AddImport;
+import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLAxiom;
+import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLImportsDeclaration;
+import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.OWLOntologyManager;
 
 import edu.utep.cybershare.elseweb.ontology.axioms.Axioms;
+import edu.utep.cybershare.elseweb.ontology.vocabulary.EDAC;
 
 public class OntologyToolset {
-
-	private OntModel model;
-	private String ontologyIRI;
+	private OWLDataFactory dataFactory;
+	private OWLOntology ontology;
+	private OWLOntologyManager ontologyManager;
+	private String baseIRI;
 	
-	public OntologyToolset(String ontologyIRI){
-		this.ontologyIRI = ontologyIRI;
+	public OntologyToolset(String baseIRI){
+		this.baseIRI = baseIRI;
 		
-		model = ModelFactory.createOntologyModel();
-		model.getOntology(ontologyIRI);
+		dataFactory = OWLManager.getOWLDataFactory();
+		ontologyManager = OWLManager.createOWLOntologyManager();
+		try{ontology = ontologyManager.createOntology(IRI.create(baseIRI));}
+		catch(Exception e){e.printStackTrace();}
+		
+		//importELSEWebOntology();
 	}
 	
+	private void importELSEWebOntology(){
+		EDAC edac = new EDAC(this);
+		IRI vlcOntologyIRI = IRI.create(edac.getNamespace());
+		OWLImportsDeclaration vlcImportDeclaration = dataFactory.getOWLImportsDeclaration(vlcOntologyIRI);
+		AddImport addVLCImport = new AddImport(ontology, vlcImportDeclaration);
+		ontologyManager.applyChange(addVLCImport);
+	}
 	
 	public String getIndividualIRI(String individualName){
-		return ontologyIRI + "#" + individualName;
+		return baseIRI + "#" + individualName;
 	}
 	
-	public void addStatements(Axioms statements){
-		for(Statement statement : statements){
-			model.add(statement);
+	public void addAxioms(Axioms axioms){
+		AddAxiom addAxiomChange;
+		for(OWLAxiom anAxiom : axioms){
+			addAxiomChange = new AddAxiom(ontology, anAxiom);
+			ontologyManager.applyChange(addAxiomChange);
 		}
 	}
 	
-	public void setOntologyIRI(String ontologyIRI){
-		this.ontologyIRI = ontologyIRI;
+	public void setBaseIRI(String baseIRI){
+		this.baseIRI = baseIRI;
 	}
 	
-	public String getOntologyIRI(){
-		return this.ontologyIRI;
+	public String getBaseIRI(){
+		return this.baseIRI;
 	}
 	
-	public OntModel getOntModel() {
-		return model;
+	public OWLDataFactory getDataFactory() {
+		return dataFactory;
 	}
-	public void setOntModel(OntModel model) {
-		this.model = model;
+	public void setDataFactory(OWLDataFactory dataFactory) {
+		this.dataFactory = dataFactory;
+	}
+	public OWLOntology getOntology() {
+		return ontology;
+	}
+	public void setOntology(OWLOntology ontology) {
+		this.ontology = ontology;
+	}
+	public OWLOntologyManager getOntologyManager() {
+		return ontologyManager;
+	}
+	public void setOntologyManager(OWLOntologyManager ontologyManager) {
+		this.ontologyManager = ontologyManager;
 	}
 
 	public void dumpOntology(File aFile){
-		try{
-			FileWriter writer = new FileWriter(aFile);
-			model.write(writer);
-			writer.close();
-		}catch(Exception e){e.printStackTrace();}
-	}		
+		FileDocumentTarget target = new FileDocumentTarget(aFile);
+		try{ontologyManager.saveOntology(ontology, target);}
+		catch(Exception e){e.printStackTrace();}
+	}
 }

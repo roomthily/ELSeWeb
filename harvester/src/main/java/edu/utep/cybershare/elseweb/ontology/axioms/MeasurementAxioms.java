@@ -1,7 +1,8 @@
 package edu.utep.cybershare.elseweb.ontology.axioms;
 
-import com.hp.hpl.jena.ontology.Individual;
-import com.hp.hpl.jena.rdf.model.impl.StatementImpl;
+
+import org.semanticweb.owlapi.model.OWLAxiom;
+import org.semanticweb.owlapi.model.OWLIndividual;
 
 import edu.utep.cybershare.elseweb.model.Measurement;
 import edu.utep.cybershare.elseweb.ontology.Individuals;
@@ -15,7 +16,7 @@ public class MeasurementAxioms extends Axioms{
 	private static final long serialVersionUID = 1L;
 
 	private Measurement measurement;
-	public MeasurementAxioms(Measurement measurement, Individual individual, OntologyToolset bundle) {
+	public MeasurementAxioms(Measurement measurement, OWLIndividual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
 		this.measurement = measurement;
@@ -33,16 +34,16 @@ public class MeasurementAxioms extends Axioms{
 	
 	private void addCharacteristic(){
 		if(measurement.isSet_charactersitc()){
-			Individual charIndividual = Individuals.getIndividual(measurement.getCharacteristic(), bundle);
-			StatementImpl axiom = new StatementImpl(individual, vocabulary_OBOE.getObjectProperty_ofCharacteristic(), charIndividual);
+			OWLIndividual charIndividual = Individuals.getIndividual(measurement.getCharacteristic(), bundle);
+			OWLAxiom axiom = bundle.getDataFactory().getOWLObjectPropertyAssertionAxiom(vocabulary_OBOE.getObjectProperty_ofCharacteristic(), individual, charIndividual);
 			add(axiom);
 		}
 	}
 	
 	private void addObservation(){
 		if(measurement.isSet_Observation()){
-			Individual observationIndividual = Individuals.getIndividual(measurement.getObservation(), bundle);
-			StatementImpl axiom = new StatementImpl(individual, vocabulary_OBOE.getObjectProperty_measurementFor(), observationIndividual);
+			OWLIndividual observationIndividual = Individuals.getIndividual(measurement.getObservation(), bundle);
+			OWLAxiom axiom = bundle.getDataFactory().getOWLObjectPropertyAssertionAxiom(vocabulary_OBOE.getObjectProperty_measurementFor(), individual, observationIndividual);
 			add(axiom);
 		}
 	}

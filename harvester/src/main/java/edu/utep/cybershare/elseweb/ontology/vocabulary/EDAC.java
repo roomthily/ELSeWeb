@@ -1,50 +1,53 @@
 package edu.utep.cybershare.elseweb.ontology.vocabulary;
 
-import com.hp.hpl.jena.ontology.DatatypeProperty;
-import com.hp.hpl.jena.ontology.ObjectProperty;
-import com.hp.hpl.jena.ontology.OntClass;
-import com.hp.hpl.jena.ontology.OntModel;
+import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLClass;
+import org.semanticweb.owlapi.model.OWLDataProperty;
+import org.semanticweb.owlapi.model.OWLObjectProperty;
+
+import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
+
 
 public class EDAC extends Vocabulary {
 	
 	private static final String NAMESPACE = "http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl";
 	
-	private static final String OntClass_WCSCoverageSet = NAMESPACE + "#WCSCoverageSet";
-	private static final String OntClass_WCSCoverage = NAMESPACE + "#WCSCoverage";
-	private static final String OntClass_Region = NAMESPACE + "#Region";
-	private static final String OntClass_Duration = NAMESPACE + "#Duration";
-	private static final String OntClass_Method = NAMESPACE + "#Method";
-	private static final String OntClass_Sensor = NAMESPACE + "#Sensor";
+	private static final String OWLClass_WCSCoverageSet = NAMESPACE + "#WCSCoverageSet";
+	private static final String OWLClass_WCSCoverage = NAMESPACE + "#WCSCoverage";
+	private static final String OWLClass_Region = NAMESPACE + "#Region";
+	private static final String OWLClass_Duration = NAMESPACE + "#Duration";
+	private static final String OWLClass_Method = NAMESPACE + "#Method";
+	private static final String OWLClass_Sensor = NAMESPACE + "#Sensor";
 	
 	private static final String ObjectProperty_hasWCSCoverage = NAMESPACE + "#hasWCSCoverage";
 
-	private static final String DatatypeProperty_hasStartDate = NAMESPACE + "#hasStartDate";
-	private static final String DatatypeProperty_hasEndDate = NAMESPACE + "#hasEndDate";
-	private static final String DatatypeProperty_hasLeftLongitude = NAMESPACE + "#hasLeftLongitude";
-	private static final String DatatypeProperty_hasRightLongitude = NAMESPACE + "#hasRightLongitude";
-	private static final String DatatypeProperty_hasLowerLatitude = NAMESPACE + "#hasLowerLatitude";
-	private static final String DatatypeProperty_hasUpplerLatitude = NAMESPACE + "#hasUpperLatitude";
+	private static final String DataProperty_hasStartDate = NAMESPACE + "#hasStartDate";
+	private static final String DataProperty_hasEndDate = NAMESPACE + "#hasEndDate";
+	private static final String DataProperty_hasLeftLongitude = NAMESPACE + "#hasLeftLongitude";
+	private static final String DataProperty_hasRightLongitude = NAMESPACE + "#hasRightLongitude";
+	private static final String DataProperty_hasLowerLatitude = NAMESPACE + "#hasLowerLatitude";
+	private static final String DataProperty_hasUpplerLatitude = NAMESPACE + "#hasUpperLatitude";
 
-	public EDAC(OntModel model) {
-		super(model);
+	public EDAC(OntologyToolset bundle) {
+		super(bundle);
 		// TODO Auto-generated constructor stub
 	}
 	
-	public OntClass getOntClass_WCSCoverageSet(){return this.model.getOntClass(OntClass_WCSCoverageSet);}
-	public OntClass getOntClass_WCSCoverage(){return this.model.getOntClass(OntClass_WCSCoverage);}
-	public OntClass getOntClass_Region(){return this.model.getOntClass(OntClass_Region);}
-	public OntClass getOntClass_Duration(){return this.model.getOntClass(OntClass_Duration);}
-	public OntClass getOntClass_Method(){return this.model.getOntClass(OntClass_Method);}
-	public OntClass getOntClass_Sensor(){return this.model.getOntClass(OntClass_Sensor);}
+	public OWLClass getOWLClass_WCSCoverageSet(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_WCSCoverageSet));}
+	public OWLClass getOWLClass_WCSCoverage(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_WCSCoverage));}
+	public OWLClass getOWLClass_Region(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_Region));}
+	public OWLClass getOWLClass_Duration(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_Duration));}
+	public OWLClass getOWLClass_Method(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_Method));}
+	public OWLClass getOWLClass_Sensor(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_Sensor));}
 
-	public ObjectProperty getObjectProperty_hasWCSCoverage(){return this.model.getObjectProperty(ObjectProperty_hasWCSCoverage);}
+	public OWLObjectProperty getObjectProperty_hasWCSCoverage(){return this.bundle.getDataFactory().getOWLObjectProperty(IRI.create(ObjectProperty_hasWCSCoverage));}
 	
-	public DatatypeProperty getDatatypeProperty_hasStartDate(){return this.model.getDatatypeProperty(DatatypeProperty_hasStartDate);}
-	public DatatypeProperty getDatatypeProperty_hasEndDate(){return this.model.getDatatypeProperty(DatatypeProperty_hasEndDate);}
-	public DatatypeProperty getDatatypeProperty_hasLeftLongitude(){return this.model.getDatatypeProperty(DatatypeProperty_hasLeftLongitude);}
-	public DatatypeProperty getDatatypeProperty_hasRightLongitude(){return this.model.getDatatypeProperty(DatatypeProperty_hasRightLongitude);}
-	public DatatypeProperty getDatatypeProperty_hasLowerLatitude(){return this.model.getDatatypeProperty(DatatypeProperty_hasLowerLatitude);}
-	public DatatypeProperty getDatatypeProperty_hasUpperLatitude(){return this.model.getDatatypeProperty(DatatypeProperty_hasUpplerLatitude);}
+	public OWLDataProperty getDataProperty_hasStartDate(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasStartDate));}
+	public OWLDataProperty getDataProperty_hasEndDate(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasEndDate));}
+	public OWLDataProperty getDataProperty_hasLeftLongitude(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasLeftLongitude));}
+	public OWLDataProperty getDataProperty_hasRightLongitude(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasRightLongitude));}
+	public OWLDataProperty getDataProperty_hasLowerLatitude(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasLowerLatitude));}
+	public OWLDataProperty getDataProperty_hasUpperLatitude(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasUpplerLatitude));}
 	
 	@Override
 	public String getNamespace() {

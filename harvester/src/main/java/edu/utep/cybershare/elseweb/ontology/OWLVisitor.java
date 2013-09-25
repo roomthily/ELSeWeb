@@ -1,6 +1,6 @@
 package edu.utep.cybershare.elseweb.ontology;
 
-import com.hp.hpl.jena.ontology.Individual;
+import org.semanticweb.owlapi.model.OWLIndividual;
 
 import edu.utep.cybershare.elseweb.model.Catalog;
 import edu.utep.cybershare.elseweb.model.Characteristic;
@@ -32,73 +32,73 @@ public class OWLVisitor implements Visitor{
 	
 	public void visit(Characteristic characteristic) {
 		// TODO Auto-generated method stub
-		Individual individual = Individuals.getIndividual(characteristic, bundle);
+		OWLIndividual individual = Individuals.getIndividual(characteristic, bundle);
 		CharacteristicAxioms axioms = new CharacteristicAxioms(characteristic, individual, bundle);
 		axioms.setAxioms();
-		bundle.addStatements(axioms);
+		bundle.addAxioms(axioms);
 	}
 
 	public void visit(Dataset dataset) {
 		// TODO Auto-generated method stub
-		Individual individual = Individuals.getIndividual(dataset, bundle);
+		OWLIndividual individual = Individuals.getIndividual(dataset, bundle);
 		DatasetAxioms axioms = new DatasetAxioms(dataset, individual, bundle);
 		axioms.setAxioms();
-		bundle.addStatements(axioms);
+		bundle.addAxioms(axioms);
 	}
 
 	public void visit(Measurement measurement) {
 		// TODO Auto-generated method stub
-		Individual individual = Individuals.getIndividual(measurement, bundle);
+		OWLIndividual individual = Individuals.getIndividual(measurement, bundle);
 		MeasurementAxioms axioms = new MeasurementAxioms(measurement, individual, bundle);
 		axioms.setAxioms();
-		bundle.addStatements(axioms);
+		bundle.addAxioms(axioms);
 	}
 
 	public void visit(Observation observation) {
 		// TODO Auto-generated method stub
-		Individual individual = Individuals.getIndividual(observation, bundle);
+		OWLIndividual individual = Individuals.getIndividual(observation, bundle);
 		ObservationAxioms axioms = new ObservationAxioms(observation, individual, bundle);
 		axioms.setAxioms();
-		bundle.addStatements(axioms);
+		bundle.addAxioms(axioms);
 	}
 
 	public void visit(Entity entity) {
 		// TODO Auto-generated method stub
-		Individual individual = Individuals.getIndividual(entity, bundle);
+		OWLIndividual individual = Individuals.getIndividual(entity, bundle);
 		EntityAxioms axioms = new EntityAxioms(entity, individual, bundle);
 		axioms.setAxioms();
-		bundle.addStatements(axioms);
+		bundle.addAxioms(axioms);
 	}
 
 	public void visit(Catalog catalog) {
 		// TODO Auto-generated method stub
-		Individual individual = Individuals.getIndividual(catalog, bundle);
+		OWLIndividual individual = Individuals.getIndividual(catalog, bundle);
 		CatalogAxioms axioms = new CatalogAxioms(catalog, individual, bundle);
 		axioms.setAxioms();
-		bundle.addStatements(axioms);
+		bundle.addAxioms(axioms);
 	}
 
 	public void visit(Distribution distribution) {
 		// TODO Auto-generated method stub
-		Individual individual = Individuals.getIndividual(distribution, bundle);
+		OWLIndividual individual = Individuals.getIndividual(distribution, bundle);
 		DistributionAxioms axioms = new DistributionAxioms(distribution, individual, bundle);
 		axioms.setAxioms();
-		bundle.addStatements(axioms);
+		bundle.addAxioms(axioms);
 	}
 
 	public void visit(Region region) {
 		// TODO Auto-generated method stub
-		Individual individual = Individuals.getIndividual(region, bundle);
+		OWLIndividual individual = Individuals.getIndividual(region, bundle);
 		RegionAxioms axioms = new RegionAxioms(region, individual, bundle);
 		axioms.setAxioms();
-		bundle.addStatements(axioms);
+		bundle.addAxioms(axioms);
 	}
 
 	public void visit(Duration duration) {
 		// TODO Auto-generated method stub
-		Individual individual = Individuals.getIndividual(duration, bundle);
+		OWLIndividual individual = Individuals.getIndividual(duration, bundle);
 		DurationAxioms axioms = new DurationAxioms(duration, individual, bundle);
 		axioms.setAxioms();
-		bundle.addStatements(axioms);
+		bundle.addAxioms(axioms);
 	}
 }

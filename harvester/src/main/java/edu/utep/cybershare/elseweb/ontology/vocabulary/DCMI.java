@@ -1,8 +1,11 @@
 package edu.utep.cybershare.elseweb.ontology.vocabulary;
 
-import com.hp.hpl.jena.ontology.ObjectProperty;
-import com.hp.hpl.jena.ontology.OntClass;
-import com.hp.hpl.jena.ontology.OntModel;
+import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLClass;
+import org.semanticweb.owlapi.model.OWLObjectProperty;
+
+import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
+
 
 /**
  * Dublin Core Metadata Initiative (DCMI)
@@ -22,8 +25,8 @@ public class DCMI extends Vocabulary{
 	private static final String ObjectProperty_temporal = NAMESPACE + "/temporal";
 	
 	
-	public DCMI(OntModel model) {
-		super(model);
+	public DCMI(OntologyToolset bundle) {
+		super(bundle);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -33,9 +36,9 @@ public class DCMI extends Vocabulary{
 		return NAMESPACE;
 	}
 	
-	public OntClass getOntClass_FileFormat(){return this.model.getOntClass(OntClass_FileFormat);}
+	public OWLClass getOntClass_FileFormat(){return bundle.getDataFactory().getOWLClass(IRI.create(OntClass_FileFormat));}
 	
-	public ObjectProperty getObjectProperty_format(){return this.model.getObjectProperty(ObjectProperty_format);}
-	public ObjectProperty getObjectProperty_spatial(){return this.model.getObjectProperty(ObjectProperty_spatial);}
-	public ObjectProperty getObjectProperty_temporal(){return this.model.getObjectProperty(ObjectProperty_temporal);}
+	public OWLObjectProperty getObjectProperty_format(){return bundle.getDataFactory().getOWLObjectProperty(IRI.create(ObjectProperty_format));}
+	public OWLObjectProperty getObjectProperty_spatial(){return bundle.getDataFactory().getOWLObjectProperty(IRI.create(ObjectProperty_spatial));}
+	public OWLObjectProperty getObjectProperty_temporal(){return bundle.getDataFactory().getOWLObjectProperty(IRI.create(ObjectProperty_temporal));}
 }

@@ -2,12 +2,12 @@ package edu.utep.cybershare.elseweb.ontology.vocabulary;
 
 import java.util.HashMap;
 
-import com.hp.hpl.jena.ontology.OntClass;
+import org.semanticweb.owlapi.model.OWLClass;
 
 public class OBOEOntClassMapper {
 	
-	private static HashMap<String, OntClass> themekeyToCharacteristic = new HashMap<String, OntClass>();
-	private static HashMap<String, OntClass> themekeyToEntity = new HashMap<String, OntClass>();
+	private static HashMap<String, OWLClass> themekeyToCharacteristic = new HashMap<String, OWLClass>();
+	private static HashMap<String, OWLClass> themekeyToEntity = new HashMap<String, OWLClass>();
 	
 	public OBOEOntClassMapper(OBOE oboe){
 		populateCharacteristicMappings(oboe);
@@ -30,10 +30,10 @@ public class OBOEOntClassMapper {
 		themekeyToCharacteristic.put("VEGETATION INDEX", oboeVocab.getOWLClass_Amount());
 	}
 
-	public OntClass getCharacteristicOntClass(String themekey){
+	public OWLClass getCharacteristicOntClass(String themekey){
 		return themekeyToCharacteristic.get(themekey);
 	}	
-	public OntClass getEntityOntClass(String themekey){
+	public OWLClass getEntityOntClass(String themekey){
 		return themekeyToEntity.get(themekey);
 	}
 }

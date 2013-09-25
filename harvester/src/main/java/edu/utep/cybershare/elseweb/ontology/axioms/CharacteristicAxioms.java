@@ -1,6 +1,6 @@
 package edu.utep.cybershare.elseweb.ontology.axioms;
 
-import com.hp.hpl.jena.ontology.Individual;
+import org.semanticweb.owlapi.model.OWLIndividual;
 
 import edu.utep.cybershare.elseweb.model.Characteristic;
 import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
@@ -14,9 +14,11 @@ public class CharacteristicAxioms extends Axioms {
 
 	private Characteristic characteristic;
 	
-	public CharacteristicAxioms(Characteristic characteristic, Individual individual, OntologyToolset bundle) {
+	public CharacteristicAxioms(Characteristic characteristic, OWLIndividual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
+		
+		this.characteristic = characteristic;
 	}
 
 	@Override

@@ -1,7 +1,7 @@
 package edu.utep.cybershare.elseweb.ontology.axioms;
 
-import com.hp.hpl.jena.ontology.Individual;
-import com.hp.hpl.jena.rdf.model.impl.StatementImpl;
+import org.semanticweb.owlapi.model.OWLAxiom;
+import org.semanticweb.owlapi.model.OWLIndividual;
 
 import edu.utep.cybershare.elseweb.model.Catalog;
 import edu.utep.cybershare.elseweb.model.Dataset;
@@ -16,7 +16,7 @@ public class CatalogAxioms extends Axioms {
 	private static final long serialVersionUID = 1L;
 	private Catalog catalog;
 	
-	public CatalogAxioms(Catalog catalog, Individual individual, OntologyToolset bundle) {
+	public CatalogAxioms(Catalog catalog, OWLIndividual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
 		this.catalog = catalog;
@@ -30,11 +30,11 @@ public class CatalogAxioms extends Axioms {
 	}
 	
 	private void addDatasets(){
-		Individual datasetIndividual;
-		StatementImpl axiom;
+		OWLIndividual datasetIndividual;
+		OWLAxiom axiom;
 		for(Dataset dataset : catalog.getDatasets()){
 			datasetIndividual = Individuals.getIndividual(dataset, bundle);
-			axiom = new StatementImpl(individual, vocabulary_DCAT.getObjectProperty_dataset(), datasetIndividual);
+			axiom = bundle.getDataFactory().getOWLObjectPropertyAssertionAxiom(vocabulary_DCAT.getObjectProperty_dataset(), individual, datasetIndividual);
 			add(axiom);
 		}
 	}

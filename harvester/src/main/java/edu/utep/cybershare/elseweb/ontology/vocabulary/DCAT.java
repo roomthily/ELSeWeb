@@ -1,9 +1,11 @@
 package edu.utep.cybershare.elseweb.ontology.vocabulary;
 
-import com.hp.hpl.jena.ontology.DatatypeProperty;
-import com.hp.hpl.jena.ontology.ObjectProperty;
-import com.hp.hpl.jena.ontology.OntClass;
-import com.hp.hpl.jena.ontology.OntModel;
+import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLClass;
+import org.semanticweb.owlapi.model.OWLObjectProperty;
+
+import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
+
 
 /**
  * Data Catalog (DCAT)
@@ -22,11 +24,11 @@ public class DCAT extends Vocabulary{
 	private static final String ObjectProperty_distribution = NAMESPACE + "/distribution";
 	private static final String ObjectProperty_dataset = NAMESPACE + "/dataset";
 	
-	private static final String DatatypeProperty_accessURL = NAMESPACE + "/accessURL";
-	private static final String DatatypeProperty_downloadURL = NAMESPACE + "/downloadURL";
+	private static final String DatatypeProperty_accessURL = NAMESPACE + "#accessURL";
+	private static final String DatatypeProperty_downloadURL = NAMESPACE + "#downloadURL";
 
-	public DCAT(OntModel model) {
-		super(model);
+	public DCAT(OntologyToolset bundle) {
+		super(bundle);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -36,13 +38,11 @@ public class DCAT extends Vocabulary{
 		return NAMESPACE;
 	}
 
-	public OntClass getOntClass_Distribution(){return this.model.getOntClass(OntClass_Distribution);}
-	public OntClass getOntClass_Catalog(){return this.model.getOntClass(OntClass_Catalog);}
+	public OWLClass getOntClass_Distribution(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OntClass_Distribution));}
+	public OWLClass getOntClass_Catalog(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OntClass_Catalog));}
 
-	public ObjectProperty getObjectProperty_distribution(){return this.model.getObjectProperty(ObjectProperty_distribution);}
-	public ObjectProperty getObjectProperty_dataset(){return this.model.getObjectProperty(ObjectProperty_dataset);}
-
-	public DatatypeProperty getDatatypeProperty_accessURL(){return this.model.getDatatypeProperty(DatatypeProperty_accessURL);}
-	public DatatypeProperty getDatatypeProperty_downloadURL(){return this.model.getDatatypeProperty(DatatypeProperty_downloadURL);}
-
+	public OWLObjectProperty getObjectProperty_distribution(){return this.bundle.getDataFactory().getOWLObjectProperty(IRI.create(ObjectProperty_distribution));}
+	public OWLObjectProperty getObjectProperty_dataset(){return this.bundle.getDataFactory().getOWLObjectProperty(IRI.create(ObjectProperty_dataset));}
+	public OWLObjectProperty getDatatypeProperty_accessURL(){return this.bundle.getDataFactory().getOWLObjectProperty(IRI.create(DatatypeProperty_accessURL));}
+	public OWLObjectProperty getDatatypeProperty_downloadURL(){return this.bundle.getDataFactory().getOWLObjectProperty(IRI.create(DatatypeProperty_downloadURL));}
 }

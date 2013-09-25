@@ -1,12 +1,13 @@
 package edu.utep.cybershare.elseweb.ontology.vocabulary;
 
-import com.hp.hpl.jena.ontology.OntModel;
+import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
+
 
 public abstract class Vocabulary {
-	protected OntModel model;
+	protected OntologyToolset bundle;
 		
-	public Vocabulary(OntModel model){
-		this.model = model;
+	public Vocabulary(OntologyToolset bundle){
+		this.bundle = bundle;
 	}
 		
 	public abstract String getNamespace();

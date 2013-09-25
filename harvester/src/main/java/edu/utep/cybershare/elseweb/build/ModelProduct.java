@@ -32,6 +32,10 @@ public class ModelProduct {
 		entities = new HashMap<String, Entity>();
 		observations = new HashMap<String, Observation>();
 		measurements = new HashMap<String, Measurement>();
+		catalogs = new HashMap<String, Catalog>();
+		distributions = new HashMap<String, Distribution>();
+		durations = new HashMap<String, Duration>();
+		regions = new HashMap<String, Region>();
 	}
 		
 	public Characteristic getCharacteristic(String key){

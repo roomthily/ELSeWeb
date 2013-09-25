@@ -1,8 +1,11 @@
 package edu.utep.cybershare.elseweb.ontology.vocabulary;
 
-import com.hp.hpl.jena.ontology.ObjectProperty;
-import com.hp.hpl.jena.ontology.OntClass;
-import com.hp.hpl.jena.ontology.OntModel;
+
+import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLClass;
+import org.semanticweb.owlapi.model.OWLObjectProperty;
+
+import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
 
 
 
@@ -15,8 +18,8 @@ public class PROVO extends Vocabulary{
 	private static final String ObjectProperty_wasGeneratedBy = NAMESPACE + "#wasGeneratedBy";
 
 	
-	public PROVO(OntModel model) {
-		super(model);
+	public PROVO(OntologyToolset bundle) {
+		super(bundle);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -25,7 +28,6 @@ public class PROVO extends Vocabulary{
 		// TODO Auto-generated method stub
 		return NAMESPACE;
 	}
-	public OntClass getOntClass_Activity(){return this.model.getOntClass(OntClass_Activity);}
-	public ObjectProperty getObjectProperty_wasGeneratedBy(){return this.model.getObjectProperty(ObjectProperty_wasGeneratedBy);}	
-
+	public OWLClass getOntClass_Activity(){return bundle.getDataFactory().getOWLClass(IRI.create(OntClass_Activity));}
+	public OWLObjectProperty getObjectProperty_wasGeneratedBy(){return bundle.getDataFactory().getOWLObjectProperty(IRI.create(ObjectProperty_wasGeneratedBy));}	
 }

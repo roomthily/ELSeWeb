@@ -1,6 +1,6 @@
 package edu.utep.cybershare.elseweb.ontology.axioms;
 
-import com.hp.hpl.jena.ontology.Individual;
+import org.semanticweb.owlapi.model.OWLIndividual;
 
 import edu.utep.cybershare.elseweb.model.Entity;
 import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
@@ -12,7 +12,7 @@ public class EntityAxioms extends Axioms {
 	 */
 	private static final long serialVersionUID = 1L;
 	private Entity entity;
-	public EntityAxioms(Entity entity, Individual individual, OntologyToolset bundle) {
+	public EntityAxioms(Entity entity, OWLIndividual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
 		this.entity = entity;

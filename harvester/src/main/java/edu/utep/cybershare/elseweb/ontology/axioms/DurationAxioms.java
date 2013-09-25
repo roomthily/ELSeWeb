@@ -1,8 +1,10 @@
 package edu.utep.cybershare.elseweb.ontology.axioms;
 
-import com.hp.hpl.jena.ontology.Individual;
-import com.hp.hpl.jena.rdf.model.Literal;
-import com.hp.hpl.jena.rdf.model.impl.StatementImpl;
+import javax.xml.bind.DatatypeConverter;
+
+import org.semanticweb.owlapi.model.OWLAxiom;
+import org.semanticweb.owlapi.model.OWLIndividual;
+import org.semanticweb.owlapi.model.OWLLiteral;
 
 import edu.utep.cybershare.elseweb.model.Duration;
 import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
@@ -11,7 +13,7 @@ import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
 public class DurationAxioms extends Axioms{
 
 	private Duration duration;
-	public DurationAxioms(Duration duration, Individual individual, OntologyToolset bundle) {
+	public DurationAxioms(Duration duration, OWLIndividual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
 		this.duration = duration;
@@ -20,24 +22,25 @@ public class DurationAxioms extends Axioms{
 	@Override
 	public void setAxioms() {
 		// TODO Auto-generated method stub
-		this.addTypeAxiom(this.vocabulary_EDAC.getOntClass_Duration());
+		this.addTypeAxiom(this.vocabulary_EDAC.getOWLClass_Duration());
 		addEndDate();
 		addStartDate();
 	}
 
 	private void addEndDate(){
 		if(duration.isSet_endDate()){
-			Literal endDateLiteral = bundle.getOntModel().createTypedLiteral(duration.getEndDate());
-			StatementImpl axiom = new StatementImpl(individual, vocabulary_EDAC.getDatatypeProperty_hasEndDate(), endDateLiteral);
+			OWLLiteral endDateLiteral = bundle.getDataFactory().getOWLLiteral(DatatypeConverter.printDateTime(duration.getEndDate()), this.vocabulary_XSD.getDataType_dateTime());
+			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_EDAC.getDataProperty_hasEndDate(), individual, endDateLiteral);
 			add(axiom);
 		}
 	}
 	
 	private void addStartDate(){
 		if(duration.isSet_startDate()){
-			Literal startDateLiteral = bundle.getOntModel().createTypedLiteral(duration.getStartDate());
-			StatementImpl axiom = new StatementImpl(individual, vocabulary_EDAC.getDatatypeProperty_hasStartDate(), startDateLiteral);
+			OWLLiteral startDateLiteral = bundle.getDataFactory().getOWLLiteral(DatatypeConverter.printDateTime(duration.getStartDate()), this.vocabulary_XSD.getDataType_dateTime());
+			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_EDAC.getDataProperty_hasStartDate(), individual, startDateLiteral);
 			add(axiom);
 		}
 	}
+
 }

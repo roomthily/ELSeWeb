@@ -38,7 +38,7 @@ public class Harvester {
 		Director directory = new Director(builder);
 		
 		//get our data source and pass to director
-		WCSDigests digests = new WCSDigests(10, 0);
+		WCSDigests digests = new WCSDigests(4, 0);
 		directory.construct(digests);
 		
 		//create visitor to convert model product to axioms

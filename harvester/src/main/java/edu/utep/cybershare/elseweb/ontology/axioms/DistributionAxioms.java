@@ -1,7 +1,7 @@
 package edu.utep.cybershare.elseweb.ontology.axioms;
 
-import com.hp.hpl.jena.ontology.Individual;
-import com.hp.hpl.jena.rdf.model.impl.StatementImpl;
+import org.semanticweb.owlapi.model.OWLAxiom;
+import org.semanticweb.owlapi.model.OWLIndividual;
 
 import edu.utep.cybershare.elseweb.model.Distribution;
 import edu.utep.cybershare.elseweb.ontology.Individuals;
@@ -14,7 +14,7 @@ public class DistributionAxioms extends Axioms {
 	 */
 	private static final long serialVersionUID = 1L;
 	private Distribution distribution;
-	public DistributionAxioms(Distribution distribution, Individual individual, OntologyToolset bundle) {
+	public DistributionAxioms(Distribution distribution, OWLIndividual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
 		this.distribution = distribution;
@@ -31,22 +31,22 @@ public class DistributionAxioms extends Axioms {
 	}
 	private void addAccessURI(){
 		if(distribution.isSet_accessURI()){
-			Individual accessIndividual = Individuals.getIndividual(distribution.getAccessURI(), bundle);
-			StatementImpl axiom = new StatementImpl(individual, vocabulary_DCAT.getDatatypeProperty_accessURL(), accessIndividual);
+			OWLIndividual accessIndividual = Individuals.getIndividual(distribution.getAccessURI(), bundle);
+			OWLAxiom axiom = bundle.getDataFactory().getOWLObjectPropertyAssertionAxiom(vocabulary_DCAT.getDatatypeProperty_accessURL(), individual, accessIndividual);
 			add(axiom);
 		}
 	}
 	private void addDownloadURI(){
 		if(distribution.isSet_downloadURI()){
-			Individual downloadIndividual = Individuals.getIndividual(distribution.getDownloadURI(), bundle);
-			StatementImpl axiom = new StatementImpl(individual, vocabulary_DCAT.getDatatypeProperty_downloadURL(), downloadIndividual);
+			OWLIndividual downloadIndividual = Individuals.getIndividual(distribution.getDownloadURI(), bundle);
+			OWLAxiom axiom = bundle.getDataFactory().getOWLObjectPropertyAssertionAxiom(vocabulary_DCAT.getDatatypeProperty_downloadURL(), individual, downloadIndividual);
 			add(axiom);
 		}
 	}
 	private void addFormat(){
 		if(distribution.isSet_format()){
-			Individual formatIndividual = Individuals.getIndividual(distribution.getFormat(), bundle);
-			StatementImpl axiom = new StatementImpl(individual, vocabulary_DCMI.getObjectProperty_format(), formatIndividual);
+			OWLIndividual formatIndividual = Individuals.getIndividual(distribution.getFormat(), bundle);
+			OWLAxiom axiom = bundle.getDataFactory().getOWLObjectPropertyAssertionAxiom(vocabulary_DCMI.getObjectProperty_format(), individual, formatIndividual);
 			add(axiom);
 		}
 	}
