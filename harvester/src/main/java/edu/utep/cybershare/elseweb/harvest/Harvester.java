@@ -6,9 +6,9 @@ import edu.utep.cybershare.elseweb.build.Builder;
 import edu.utep.cybershare.elseweb.build.Director;
 import edu.utep.cybershare.elseweb.build.ModelProduct;
 import edu.utep.cybershare.elseweb.build.source.edac.WCSDigests;
-import edu.utep.cybershare.elseweb.model.Catalog;
+import edu.utep.cybershare.elseweb.model.WCSCoverageSet;
 import edu.utep.cybershare.elseweb.model.Characteristic;
-import edu.utep.cybershare.elseweb.model.Dataset;
+import edu.utep.cybershare.elseweb.model.WCSCoverage;
 import edu.utep.cybershare.elseweb.model.Distribution;
 import edu.utep.cybershare.elseweb.model.Duration;
 import edu.utep.cybershare.elseweb.model.Entity;
@@ -46,11 +46,11 @@ public class Harvester {
 		OWLVisitor visitor = new OWLVisitor(bundle);
 		
 		//visit all model elements
-		for(Catalog catalog : product.getCatalogs())
+		for(WCSCoverageSet catalog : product.getCatalogs())
 			visitor.visit(catalog);
 		for(Characteristic characteristic : product.getCharacteristics())
 			visitor.visit(characteristic);
-		for(Dataset dataset : product.getDatasets())
+		for(WCSCoverage dataset : product.getDatasets())
 			visitor.visit(dataset);
 		for(Distribution distribution : product.getDistributions())
 			visitor.visit(distribution);

@@ -5,9 +5,9 @@ import java.util.Calendar;
 import java.util.HashMap;
 
 import edu.utep.cybershare.elseweb.build.source.edac.fgdc.theme.Theme;
-import edu.utep.cybershare.elseweb.model.Catalog;
+import edu.utep.cybershare.elseweb.model.WCSCoverageSet;
 import edu.utep.cybershare.elseweb.model.Characteristic;
-import edu.utep.cybershare.elseweb.model.Dataset;
+import edu.utep.cybershare.elseweb.model.WCSCoverage;
 import edu.utep.cybershare.elseweb.model.Distribution;
 import edu.utep.cybershare.elseweb.model.Duration;
 import edu.utep.cybershare.elseweb.model.Entity;
@@ -29,11 +29,11 @@ public class Builder {
 	
 	private String baseID;
 	private Characteristic characteristic;
-	private Dataset dataset;
+	private WCSCoverage dataset;
 	private Entity entity;
 	private Measurement measurement;
 	private Observation observation;
-	private Catalog catalog;
+	private WCSCoverageSet catalog;
 	private Region region;
 	private Duration duration;
 	private Distribution distribution;
@@ -46,7 +46,7 @@ public class Builder {
 	private static URI modisURI;
 	private static URI prismURI;
 	private static URI mixedMultipartFormatURI;
-	private static final String catalogName = "EDAC-ELSEWeb-Environment-Datasets";
+	private static final String catalogName = "EDAC-Environmental-Datasets";
 	
 	private HashMap<String, String> regionEncodingToRegionName;
 	private int counter;

@@ -3,18 +3,18 @@ package edu.utep.cybershare.elseweb.ontology.axioms;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLIndividual;
 
-import edu.utep.cybershare.elseweb.model.Dataset;
+import edu.utep.cybershare.elseweb.model.WCSCoverage;
 import edu.utep.cybershare.elseweb.ontology.Individuals;
 import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
 
-public class DatasetAxioms extends Axioms{
+public class WCSCoverageAxioms extends Axioms{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private Dataset dataset;
-	public DatasetAxioms(Dataset dataset, OWLIndividual individual, OntologyToolset bundle) {
+	private WCSCoverage dataset;
+	public WCSCoverageAxioms(WCSCoverage dataset, OWLIndividual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
 		this.dataset = dataset;

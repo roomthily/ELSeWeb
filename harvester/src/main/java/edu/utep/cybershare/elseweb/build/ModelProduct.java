@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import edu.utep.cybershare.elseweb.model.Catalog;
+import edu.utep.cybershare.elseweb.model.WCSCoverageSet;
 import edu.utep.cybershare.elseweb.model.Characteristic;
-import edu.utep.cybershare.elseweb.model.Dataset;
+import edu.utep.cybershare.elseweb.model.WCSCoverage;
 import edu.utep.cybershare.elseweb.model.Distribution;
 import edu.utep.cybershare.elseweb.model.Duration;
 import edu.utep.cybershare.elseweb.model.Entity;
@@ -17,22 +17,22 @@ import edu.utep.cybershare.elseweb.model.Region;
 public class ModelProduct {
 	
 	private HashMap<String, Characteristic> characteristics;
-	private HashMap<String, Dataset> datasets;
+	private HashMap<String, WCSCoverage> datasets;
 	private HashMap<String, Entity> entities;
 	private HashMap<String, Observation> observations;
 	private HashMap<String, Measurement> measurements;
-	private HashMap<String, Catalog> catalogs;
+	private HashMap<String, WCSCoverageSet> catalogs;
 	private HashMap<String, Distribution> distributions;
 	private HashMap<String, Duration> durations;
 	private HashMap<String, Region> regions;
 	
 	public ModelProduct(){
 		characteristics = new HashMap<String, Characteristic>();
-		datasets = new HashMap<String, Dataset>();
+		datasets = new HashMap<String, WCSCoverage>();
 		entities = new HashMap<String, Entity>();
 		observations = new HashMap<String, Observation>();
 		measurements = new HashMap<String, Measurement>();
-		catalogs = new HashMap<String, Catalog>();
+		catalogs = new HashMap<String, WCSCoverageSet>();
 		distributions = new HashMap<String, Distribution>();
 		durations = new HashMap<String, Duration>();
 		regions = new HashMap<String, Region>();
@@ -47,10 +47,10 @@ public class ModelProduct {
 		return characteristic;
 	}
 
-	public Dataset getDataset(String key){
-		Dataset dataset = datasets.get(key);
+	public WCSCoverage getDataset(String key){
+		WCSCoverage dataset = datasets.get(key);
 		if(dataset == null){
-			dataset = new Dataset(key);
+			dataset = new WCSCoverage(key);
 			datasets.put(key, dataset);
 		}
 		return dataset;
@@ -74,10 +74,10 @@ public class ModelProduct {
 		return observation;
 	}
 	
-	public Catalog getCatalog(String key){
-		Catalog catalog = catalogs.get(key);
+	public WCSCoverageSet getCatalog(String key){
+		WCSCoverageSet catalog = catalogs.get(key);
 		if(catalog == null){
-			catalog = new Catalog(key);
+			catalog = new WCSCoverageSet(key);
 			catalogs.put(key, catalog);
 		}
 		return catalog;
@@ -121,11 +121,11 @@ public class ModelProduct {
 	
 	//get model elements
 	public List<Characteristic> getCharacteristics(){return new ArrayList<Characteristic>(characteristics.values());}
-	public List<Dataset> getDatasets(){return new ArrayList<Dataset>(datasets.values());}
+	public List<WCSCoverage> getDatasets(){return new ArrayList<WCSCoverage>(datasets.values());}
 	public List<Entity> getEntities(){return new ArrayList<Entity>(entities.values());}
 	public List<Observation> getObservations(){return new ArrayList<Observation>(observations.values());}
 	public List<Measurement> getMeasurements(){return new ArrayList<Measurement>(measurements.values());}
-	public List<Catalog> getCatalogs(){return new ArrayList<Catalog>(catalogs.values());}
+	public List<WCSCoverageSet> getCatalogs(){return new ArrayList<WCSCoverageSet>(catalogs.values());}
 	public List<Distribution> getDistributions(){return new ArrayList<Distribution>(distributions.values());}
 	public List<Duration> getDurations(){return new ArrayList<Duration>(durations.values());}
 	public List<Region> getRegions(){return new ArrayList<Region>(regions.values());}

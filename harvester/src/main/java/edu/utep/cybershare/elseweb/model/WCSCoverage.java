@@ -1,13 +1,13 @@
 package edu.utep.cybershare.elseweb.model;
 
-public class Dataset extends Element {
+public class WCSCoverage extends Element {
 
 	private Region region;
 	private Duration duration;
 	private Measurement measurement;
 	private Distribution distribution;
 	
-	public Dataset(String identification) {
+	public WCSCoverage(String identification) {
 		super(identification);
 		// TODO Auto-generated constructor stub
 	}

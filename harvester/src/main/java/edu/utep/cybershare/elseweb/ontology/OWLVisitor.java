@@ -2,9 +2,9 @@ package edu.utep.cybershare.elseweb.ontology;
 
 import org.semanticweb.owlapi.model.OWLIndividual;
 
-import edu.utep.cybershare.elseweb.model.Catalog;
+import edu.utep.cybershare.elseweb.model.WCSCoverageSet;
 import edu.utep.cybershare.elseweb.model.Characteristic;
-import edu.utep.cybershare.elseweb.model.Dataset;
+import edu.utep.cybershare.elseweb.model.WCSCoverage;
 import edu.utep.cybershare.elseweb.model.Distribution;
 import edu.utep.cybershare.elseweb.model.Duration;
 import edu.utep.cybershare.elseweb.model.Entity;
@@ -12,9 +12,9 @@ import edu.utep.cybershare.elseweb.model.Measurement;
 import edu.utep.cybershare.elseweb.model.Observation;
 import edu.utep.cybershare.elseweb.model.Region;
 import edu.utep.cybershare.elseweb.model.Visitor;
-import edu.utep.cybershare.elseweb.ontology.axioms.CatalogAxioms;
+import edu.utep.cybershare.elseweb.ontology.axioms.WCSCoverageSetAxioms;
 import edu.utep.cybershare.elseweb.ontology.axioms.CharacteristicAxioms;
-import edu.utep.cybershare.elseweb.ontology.axioms.DatasetAxioms;
+import edu.utep.cybershare.elseweb.ontology.axioms.WCSCoverageAxioms;
 import edu.utep.cybershare.elseweb.ontology.axioms.DistributionAxioms;
 import edu.utep.cybershare.elseweb.ontology.axioms.DurationAxioms;
 import edu.utep.cybershare.elseweb.ontology.axioms.EntityAxioms;
@@ -38,10 +38,10 @@ public class OWLVisitor implements Visitor{
 		bundle.addAxioms(axioms);
 	}
 
-	public void visit(Dataset dataset) {
+	public void visit(WCSCoverage dataset) {
 		// TODO Auto-generated method stub
 		OWLIndividual individual = Individuals.getIndividual(dataset, bundle);
-		DatasetAxioms axioms = new DatasetAxioms(dataset, individual, bundle);
+		WCSCoverageAxioms axioms = new WCSCoverageAxioms(dataset, individual, bundle);
 		axioms.setAxioms();
 		bundle.addAxioms(axioms);
 	}
@@ -70,10 +70,10 @@ public class OWLVisitor implements Visitor{
 		bundle.addAxioms(axioms);
 	}
 
-	public void visit(Catalog catalog) {
+	public void visit(WCSCoverageSet catalog) {
 		// TODO Auto-generated method stub
 		OWLIndividual individual = Individuals.getIndividual(catalog, bundle);
-		CatalogAxioms axioms = new CatalogAxioms(catalog, individual, bundle);
+		WCSCoverageSetAxioms axioms = new WCSCoverageSetAxioms(catalog, individual, bundle);
 		axioms.setAxioms();
 		bundle.addAxioms(axioms);
 	}
