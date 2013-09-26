@@ -6,31 +6,18 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY lifemapper-v2 "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v2.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1.owl#"
-     xml:base="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1.owl"
+<rdf:RDF xmlns="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#"
+     xml:base="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:lifemapper-v2="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v2.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1.owl">
-        <owl:imports rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v2.owl"/>
+    <owl:Ontology rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl">
+        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl"/>
     </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
     
 
 
@@ -45,50 +32,80 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#Data -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#TargetDuration -->
 
-    <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#Data">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#TargetDuration">
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#TargetRegion -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#TargetRegion">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#hasSource"/>
-                <owl:hasValue rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/edac-v2.owl#MODIS"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#hasLeftLongitude"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;double">126.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#hasLowerLatitude"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;double">23.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#hasRightLongitude"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;double">-65.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#hasUpperLatitude"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">50</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1.owl#ALifemapperExperiment -->
-
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1.owl#ALifemapperExperiment">
-        <rdf:type rdf:resource="&lifemapper-v2;LifemapperExperiment"/>
-        <lifemapper-v2:hasOccurrenceSetID rdf:datatype="&rdfs;Literal">4024107</lifemapper-v2:hasOccurrenceSetID>
-        <lifemapper-v2:hasScenarioLayerUnits rdf:datatype="&rdfs;Literal">dd</lifemapper-v2:hasScenarioLayerUnits>
-        <lifemapper-v2:hasExperimentalScenarioLayerSet rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1.owl#AnEmptyScenarioLayerSet"/>
-        <lifemapper-v2:hasModelingAlgorithm rdf:resource="&lifemapper-v2;BIOCLIM_Algorithm"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1.owl#AnEmptyScenarioLayerSet -->
-
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/experiments/experiment-1.owl#AnEmptyScenarioLayerSet">
-        <rdf:type rdf:resource="&lifemapper-v2;ScenarioLayerSet"/>
-    </owl:NamedIndividual>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Region"/>
+    </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.2.5.1928) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 
