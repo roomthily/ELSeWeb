@@ -9,11 +9,9 @@ import edu.utep.cybershare.elseweb.util.FileUtils;
 
 public class LifemapperExperiment {
 	
-	private static final String pythonEXE = "python";
-	private static final String pythonEXE_IW = " /opt/local/bin/python2.7";
+	private static final String pythonEXE = "python2.7";
 	
-	private static final String lifemapperScript = "\"" + FileUtils.getScriptsDir().getAbsolutePath() + "/" + "client.py\"";
-	private static final String lifemapperScript_IW = FileUtils.getScriptsDir().getAbsolutePath() + "/" + "client.py";
+	private static final String lifemapperScript = FileUtils.getScriptsDir().getAbsolutePath() + "/" + "client.py";
 	
 	private static String resultBaseURL = "http://lifemapper.org/services/sdm/experiments/";
 
@@ -53,33 +51,15 @@ public class LifemapperExperiment {
 	}
 	
 	private String getPython(){
-		String server = FileUtils.getServer();	
-		if(server.equals("local"))
-			return pythonEXE;
-		else if(server.equals("IW"))
-			return pythonEXE_IW;
-		else
-			return pythonEXE;
+		return pythonEXE;
 	}
 
 	private String getLifemapperScript(){
-		String server = FileUtils.getServer();	
-		if(server.equals("local"))
-			return lifemapperScript;
-		else if(server.equals("IW"))
-			return lifemapperScript_IW;
-		else
-			return lifemapperScript;
+		return lifemapperScript;
 	}
 	
 	private String getOutputPath(){
-		String server = FileUtils.getServer();	
-		if(server.equals("local"))
-			return "\"" + outputFilePath.getAbsolutePath() + "\" ";
-		else if(server.equals("IW"))
-			return outputFilePath.getAbsolutePath() + " ";
-		else
-			return "\"" + outputFilePath.getAbsolutePath() + "\" ";
+		return outputFilePath.getAbsolutePath() + " ";
 	}
 		
 	public URL submitExperiment(){

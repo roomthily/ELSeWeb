@@ -24,7 +24,6 @@ public class FileUtils{
 	private static File OUTPUT_DIR_PATH;
 	private static File SCRIPTS_DIR_PATH;
 	private static URL OUTPUT_URL;
-	private static String SERVER;
 	
 	private static final String SCRIPTS_DIR_NAME = "scripts";
 	private static final String OUTPUT_DIR_NAME = "output";
@@ -39,7 +38,6 @@ public class FileUtils{
 			setOutputPath();
 			setScriptsPath();
 			setOutputURL();
-			setServer(properties);
 			
 			System.out.println("server url: " + SERVER_URL);
 			System.out.println("webapp name: " + WEBAPP_NAME);
@@ -73,11 +71,7 @@ public class FileUtils{
 		WEBAPP_DIR_PATH = new File(tomcatHomePath + WEBAPP +"/" + WEBAPP_NAME);
 
 	}
-	
-	private static void setServer(Properties properties) {
-		SERVER = properties.getProperty("service.server");
-	}
-	
+		
 	private static void setWebappName(Properties properties){
 		WEBAPP_NAME = properties.getProperty("service.server.webapp.name");
 	}
@@ -94,11 +88,7 @@ public class FileUtils{
 		
 		return formattedPath;
 	}
-	
-	public static String getServer(){
-		return SERVER;
-	}
-	
+		
 	public static URL getServerBaseURL(){
 		return SERVER_URL;
 	}
