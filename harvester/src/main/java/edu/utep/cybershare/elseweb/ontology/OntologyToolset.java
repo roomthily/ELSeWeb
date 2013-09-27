@@ -30,15 +30,15 @@ public class OntologyToolset {
 		try{ontology = ontologyManager.createOntology(IRI.create(baseIRI));}
 		catch(Exception e){e.printStackTrace();}
 		
-		//importELSEWebOntology();
+		importEDACOntology();
 	}
 	
-	private void importELSEWebOntology(){
+	private void importEDACOntology(){
 		EDAC edac = new EDAC(this);
-		IRI vlcOntologyIRI = IRI.create(edac.getNamespace());
-		OWLImportsDeclaration vlcImportDeclaration = dataFactory.getOWLImportsDeclaration(vlcOntologyIRI);
-		AddImport addVLCImport = new AddImport(ontology, vlcImportDeclaration);
-		ontologyManager.applyChange(addVLCImport);
+		IRI edacOntologyIRI = IRI.create(edac.getNamespace());
+		OWLImportsDeclaration edacImportDeclaration = dataFactory.getOWLImportsDeclaration(edacOntologyIRI);
+		AddImport addEDACImport = new AddImport(ontology, edacImportDeclaration);
+		ontologyManager.applyChange(addEDACImport);
 	}
 	
 	public String getIndividualIRI(String individualName){
