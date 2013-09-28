@@ -4,6 +4,7 @@ import java.io.File;
 
 import edu.utep.cybershare.elseweb.build.Builder;
 import edu.utep.cybershare.elseweb.build.Director;
+import edu.utep.cybershare.elseweb.build.MaxDiversityMinSizeDirector;
 import edu.utep.cybershare.elseweb.build.ModelProduct;
 import edu.utep.cybershare.elseweb.build.source.edac.WCSDigests;
 import edu.utep.cybershare.elseweb.model.WCSCoverageSet;
@@ -17,14 +18,9 @@ import edu.utep.cybershare.elseweb.model.Observation;
 import edu.utep.cybershare.elseweb.model.Region;
 import edu.utep.cybershare.elseweb.ontology.OWLVisitor;
 import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
+import edu.utep.cybershare.elseweb.util.FilePath;
 
 public class Harvester {
-
-	private static final String BASE_URL = "https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/";
-	private static final String DOCUMENT_NAME = "edac-data.owl";
-	private static final String DOCUMENT_URL = BASE_URL + DOCUMENT_NAME;
-	private static final String DUMP_DIR = "../documents/semantic-web/rdf/data/";
-	private static final String DUMP_PATH = DUMP_DIR + DOCUMENT_NAME;
 	
 	public static void main(String[] args){
 	
@@ -35,14 +31,14 @@ public class Harvester {
 		Builder builder = new Builder(product);
 		
 		//setup the builder directory
-		Director directory = new Director(builder);
+		MaxDiversityMinSizeDirector directory = new MaxDiversityMinSizeDirector(builder);
 		
 		//get our data source and pass to director
-		WCSDigests digests = new WCSDigests(10, 0);
+		WCSDigests digests = new WCSDigests(5, 0);
 		directory.construct(digests);
 		
 		//create visitor to convert model product to axioms
-		OntologyToolset bundle = new OntologyToolset(DOCUMENT_URL);
+		OntologyToolset bundle = new OntologyToolset(FilePath.DOCUMENT_URL);
 		OWLVisitor visitor = new OWLVisitor(bundle);
 		
 		//visit all model elements
@@ -66,6 +62,6 @@ public class Harvester {
 			visitor.visit(region);
 	
 		//dump file
-		bundle.dumpOntology(new File(DUMP_PATH));
+		bundle.dumpOntology(new File(FilePath.DUMP_PATH));
 	}
 }

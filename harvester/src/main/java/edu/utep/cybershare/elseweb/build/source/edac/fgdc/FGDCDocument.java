@@ -1,6 +1,9 @@
 package edu.utep.cybershare.elseweb.build.source.edac.fgdc;
 
 
+import java.io.File;
+import java.net.URL;
+
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 
@@ -29,9 +32,12 @@ public class FGDCDocument {
 		setDocumentBuilder();
 		Document fgdcDoc;
 		int counter = 0;
+		File fgdcFilePath;
 		while(counter < MAX_ATTEMPTS){
 			try{
-				fgdcDoc = dBuilder.parse(fgdcXMLURL);
+				URL url = new URL(fgdcXMLURL);
+				fgdcFilePath = FGDCURLToFilePathMapper.getFilePath(url);
+				fgdcDoc = dBuilder.parse(fgdcFilePath.getAbsolutePath());
 				fgdcDoc.getDocumentElement().normalize();
 				setFields(fgdcDoc);
 				

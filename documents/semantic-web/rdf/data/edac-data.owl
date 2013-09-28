@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#"
-     xml:base="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl"
+<rdf:RDF xmlns="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#"
+     xml:base="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
@@ -10,7 +10,9 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl"/>
+    <owl:Ontology rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl">
+        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl"/>
+    </owl:Ontology>
     
 
 
@@ -203,9 +205,9 @@
     
 
 
-    <!-- http://www.w3.org/ns/dcat#Catalog -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSet -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Catalog"/>
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSet"/>
     
 
 
@@ -232,51 +234,45 @@
     
 
 
-    <!-- http://provenanceweb.org/format/mime/multipart/mixed -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#EDAC-Environmental-Datasets -->
 
-    <owl:NamedIndividual rdf:about="http://provenanceweb.org/format/mime/multipart/mixed"/>
-    
-
-
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#EDAC-ELSEWeb-Environment-Datasets -->
-
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#EDAC-ELSEWeb-Environment-Datasets">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
-        <dcat:dataset rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349390_dataset"/>
-        <dcat:dataset rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349391_dataset"/>
-        <dcat:dataset rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349392_dataset"/>
-        <dcat:dataset rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349393_dataset"/>
-        <dcat:dataset rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349394_dataset"/>
-        <dcat:dataset rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349395_dataset"/>
-        <dcat:dataset rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349396_dataset"/>
-        <dcat:dataset rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349397_dataset"/>
-        <dcat:dataset rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349398_dataset"/>
-        <dcat:dataset rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349399_dataset"/>
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#EDAC-Environmental-Datasets">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSet"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349390_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349391_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349392_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349393_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349394_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349395_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349396_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349397_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349398_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349399_dataset"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"/>
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Characteristic"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity"/>
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-environment.owl#TerrestrialFeature"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#region_0 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#region_0 -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#region_0">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#region_0">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Region"/>
         <edac:hasLeftLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-125.020833333333</edac:hasLeftLongitude>
         <edac:hasRightLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-66.47916757</edac:hasRightLongitude>
@@ -286,21 +282,21 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349390_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349390_dataset -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349390_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349390_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
-        <terms:spatial rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#region_0"/>
-        <dcat:distribution rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349390_distribution"/>
-        <terms:temporal rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349390_duration"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349390_measurement"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349390_distribution"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349390_duration"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349390_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349390_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349390_distribution -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349390_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349390_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/de006c83-6261-4d41-9500-053ac270c52f/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012321_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -309,51 +305,51 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349390_duration -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349390_duration -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349390_duration">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349390_duration">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
-        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-01T16:58:08.898-07:00</edac:hasStartDate>
-        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-03-01T16:58:08.898-07:00</edac:hasEndDate>
+        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-01T07:09:24.523-07:00</edac:hasStartDate>
+        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-03-01T07:09:24.523-07:00</edac:hasEndDate>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349390_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349390_measurement -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349390_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349390_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349390_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349390_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349390_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349390_observation -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349390_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349390_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349391_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349391_dataset -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349391_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349391_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
-        <terms:spatial rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#region_0"/>
-        <dcat:distribution rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349391_distribution"/>
-        <terms:temporal rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349391_duration"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349391_measurement"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349391_distribution"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349391_duration"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349391_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349391_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349391_distribution -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349391_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349391_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/4394eb03-98fa-4005-a9c7-d42d317603bd/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012057_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -362,51 +358,51 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349391_duration -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349391_duration -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349391_duration">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349391_duration">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
-        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-12-31T16:58:07.728-07:00</edac:hasEndDate>
-        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T16:58:07.728-07:00</edac:hasStartDate>
+        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-12-31T07:09:23.283-07:00</edac:hasEndDate>
+        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T07:09:23.283-07:00</edac:hasStartDate>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349391_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349391_measurement -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349391_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349391_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349391_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349391_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349391_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349391_observation -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349391_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349391_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349392_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349392_dataset -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349392_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349392_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
-        <terms:spatial rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#region_0"/>
-        <dcat:distribution rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349392_distribution"/>
-        <terms:temporal rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349392_duration"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349392_measurement"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349392_distribution"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349392_duration"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349392_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349392_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349392_distribution -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349392_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349392_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/9e84909a-01df-40d4-b84b-e6113fd25dde/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012225_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -415,51 +411,51 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349392_duration -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349392_duration -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349392_duration">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349392_duration">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
-        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T16:58:06.133-07:00</edac:hasEndDate>
-        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T16:58:06.133-07:00</edac:hasStartDate>
+        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T07:09:22.061-07:00</edac:hasStartDate>
+        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T07:09:22.061-07:00</edac:hasEndDate>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349392_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349392_measurement -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349392_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349392_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349392_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349392_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349392_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349392_observation -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349392_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349392_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349393_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349393_dataset -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349393_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349393_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
-        <terms:spatial rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#region_0"/>
-        <dcat:distribution rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349393_distribution"/>
-        <terms:temporal rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349393_duration"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349393_measurement"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349393_distribution"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349393_duration"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349393_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349393_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349393_distribution -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349393_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349393_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/63687a3f-3bfb-4ec1-836e-d9ee433e6469/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012265_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -468,51 +464,51 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349393_duration -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349393_duration -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349393_duration">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349393_duration">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
-        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T16:58:05.058-07:00</edac:hasStartDate>
-        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T16:58:05.058-07:00</edac:hasEndDate>
+        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T07:09:20.321-07:00</edac:hasEndDate>
+        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T07:09:20.321-07:00</edac:hasStartDate>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349393_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349393_measurement -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349393_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349393_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349393_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349393_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349393_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349393_observation -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349393_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349393_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349394_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349394_dataset -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349394_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349394_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
-        <terms:spatial rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#region_0"/>
-        <dcat:distribution rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349394_distribution"/>
-        <terms:temporal rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349394_duration"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349394_measurement"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349394_distribution"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349394_duration"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349394_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349394_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349394_distribution -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349394_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349394_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/f85a41a8-503d-49f0-b868-4667edcbe927/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012241_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -521,51 +517,51 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349394_duration -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349394_duration -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349394_duration">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349394_duration">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
-        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-12-31T16:58:03.857-07:00</edac:hasEndDate>
-        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T16:58:03.857-07:00</edac:hasStartDate>
+        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-12-31T07:09:18.989-07:00</edac:hasEndDate>
+        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T07:09:18.989-07:00</edac:hasStartDate>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349394_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349394_measurement -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349394_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349394_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349394_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349394_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349394_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349394_observation -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349394_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349394_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349395_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349395_dataset -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349395_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349395_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
-        <terms:spatial rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#region_0"/>
-        <dcat:distribution rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349395_distribution"/>
-        <terms:temporal rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349395_duration"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349395_measurement"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349395_distribution"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349395_duration"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349395_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349395_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349395_distribution -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349395_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349395_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/2b18be83-f0b6-4298-8353-b749fd8cf5f0/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012113_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -574,51 +570,51 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349395_duration -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349395_duration -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349395_duration">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349395_duration">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
-        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T16:58:02.697-07:00</edac:hasEndDate>
-        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T16:58:02.697-07:00</edac:hasStartDate>
+        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T07:09:17.785-07:00</edac:hasStartDate>
+        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T07:09:17.785-07:00</edac:hasEndDate>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349395_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349395_measurement -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349395_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349395_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349395_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349395_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349395_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349395_observation -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349395_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349395_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349396_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349396_dataset -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349396_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349396_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
-        <terms:spatial rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#region_0"/>
-        <dcat:distribution rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349396_distribution"/>
-        <terms:temporal rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349396_duration"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349396_measurement"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349396_distribution"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349396_duration"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349396_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349396_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349396_distribution -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349396_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349396_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/f667e9d6-b20d-4221-b4e6-796abd87c0e1/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012193_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -627,51 +623,51 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349396_duration -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349396_duration -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349396_duration">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349396_duration">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
-        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T16:58:01.172-07:00</edac:hasStartDate>
-        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T16:58:01.172-07:00</edac:hasEndDate>
+        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T07:09:16.730-07:00</edac:hasEndDate>
+        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T07:09:16.730-07:00</edac:hasStartDate>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349396_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349396_measurement -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349396_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349396_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349396_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349396_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349396_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349396_observation -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349396_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349396_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349397_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349397_dataset -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349397_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349397_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
-        <terms:spatial rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#region_0"/>
-        <dcat:distribution rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349397_distribution"/>
-        <terms:temporal rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349397_duration"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349397_measurement"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349397_distribution"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349397_duration"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349397_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349397_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349397_distribution -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349397_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349397_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/3863bed5-b23d-4b53-8ee1-5e34bb0f694f/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012201_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -680,51 +676,51 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349397_duration -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349397_duration -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349397_duration">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349397_duration">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
-        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T16:57:57.929-07:00</edac:hasStartDate>
-        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T16:57:57.929-07:00</edac:hasEndDate>
+        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T07:09:15.030-07:00</edac:hasStartDate>
+        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T07:09:15.030-07:00</edac:hasEndDate>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349397_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349397_measurement -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349397_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349397_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349397_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349397_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349397_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349397_observation -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349397_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349397_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349398_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349398_dataset -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349398_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349398_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
-        <terms:spatial rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#region_0"/>
-        <dcat:distribution rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349398_distribution"/>
-        <terms:temporal rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349398_duration"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349398_measurement"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349398_distribution"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349398_duration"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349398_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349398_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349398_distribution -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349398_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349398_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/0e28449d-d9f1-4f0c-81b1-62ae61ac7236/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012065_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -733,51 +729,51 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349398_duration -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349398_duration -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349398_duration">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349398_duration">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
-        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-12-31T16:57:56.775-07:00</edac:hasStartDate>
-        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T16:57:56.775-07:00</edac:hasEndDate>
+        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-12-31T07:09:13.665-07:00</edac:hasStartDate>
+        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T07:09:13.665-07:00</edac:hasEndDate>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349398_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349398_measurement -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349398_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349398_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349398_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349398_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349398_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349398_observation -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349398_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349398_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349399_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349399_dataset -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349399_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349399_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
-        <terms:spatial rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#region_0"/>
-        <dcat:distribution rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349399_distribution"/>
-        <terms:temporal rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349399_duration"/>
-        <prov:wasGeneratedBy rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349399_measurement"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349399_distribution"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349399_duration"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349399_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349399_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349399_distribution -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349399_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349399_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/09b98f53-7e10-4186-a208-3a57dbc63aad/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012001_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -786,33 +782,39 @@
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349399_duration -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349399_duration -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349399_duration">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349399_duration">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
-        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-12-31T16:57:55.469-07:00</edac:hasEndDate>
-        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-12-31T16:57:55.469-07:00</edac:hasStartDate>
+        <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-12-31T07:09:12.438-07:00</edac:hasStartDate>
+        <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-12-31T07:09:12.439-07:00</edac:hasEndDate>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349399_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349399_measurement -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349399_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349399_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349399_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349399_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349399_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349399_observation -->
 
-    <owl:NamedIndividual rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#349399_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#349399_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl#LAND-SURFACE-TEMPERATURE_entity"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://provenanceweb.org/format/mime/multipart/mixed -->
+
+    <owl:NamedIndividual rdf:about="http://provenanceweb.org/format/mime/multipart/mixed"/>
 </rdf:RDF>
 
 

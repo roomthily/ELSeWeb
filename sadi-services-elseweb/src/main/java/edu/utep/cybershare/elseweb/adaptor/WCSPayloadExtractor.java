@@ -22,7 +22,7 @@ import edu.utep.cybershare.elseweb.util.Printing;
 @Name("WCSPayloadExtractor")
 @ContactEmail("nicholas.delrio@gmail.com")
 @InputClass("http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#DistributionQualified")
-@OutputClass("http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoveragePaylodDistribution")
+@OutputClass("http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoveragePayloadDistribution")
 @Description("WCS Multipart MIME Payload Extractor")
 
 public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet

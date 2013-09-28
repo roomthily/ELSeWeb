@@ -10,6 +10,8 @@ import org.apache.commons.io.IOUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import edu.utep.cybershare.elseweb.util.FilePath;
+
 public class WCSDigests extends ArrayList<WCSDigest>{
 	
 	/**
@@ -25,6 +27,8 @@ public class WCSDigests extends ArrayList<WCSDigest>{
 			offset = 0;
 		
 		String jsonURL = getURL(limit, offset);
+		
+		
 		JSONArray array  = getJSONDigestsArray(jsonURL);
 		addJSONDigests(array);
 	}
@@ -73,9 +77,9 @@ public class WCSDigests extends ArrayList<WCSDigest>{
         File jsonFile = null;
         String jsonString = null;
         try {
-            jsonFile = new File("./EDAC-JSON/services.json");
-            jsonURL = new URL(jsonURLString);
-            copyURLToFile(jsonURL, jsonFile);
+            jsonFile = new File(FilePath.EDAC_SERVICES);
+//            jsonURL = new URL(jsonURLString);
+//           copyURLToFile(jsonURL, jsonFile);
             
             FileInputStream fisTargetFile = new FileInputStream(jsonFile);
             jsonString = IOUtils.toString(fisTargetFile, "UTF-8");

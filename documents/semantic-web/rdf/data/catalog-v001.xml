@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1380153512731" name="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/data/edac-data.owl" uri="edac-data.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1380399957470" name="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl" uri="coverages.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1380399957470" name="http://ontology.cybershare.utep.edu/ELSEWeb/data/edac-data.owl" uri="edac-data.owl"/>
     </group>
 </catalog>

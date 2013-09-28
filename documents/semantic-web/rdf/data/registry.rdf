@@ -1,0 +1,182 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:sadi="http://sadiframework.org/ontologies/sadi.owl#"
+    xmlns:mygrid="http://www.mygrid.org.uk/mygrid-moby-service#"
+    xmlns:j.0="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset2">
+    <rdfs:label>dataset2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset1"/>
+    <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:type rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#operation"/>
+    <mygrid:outputParameter rdf:nodeID="A2"/>
+    <mygrid:inputParameter rdf:nodeID="A3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <mygrid:objectType rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#Experiment_Stage4"/>
+    <rdf:type rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#parameter"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <mygrid:objectType rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSetQualified"/>
+    <rdf:type rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#parameter"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage5">
+    <rdfs:label>WCSCoverage5</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/sadi-services-elseweb/Lifemapper">
+    <mygrid:hasServiceNameText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lifemapper</mygrid:hasServiceNameText>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lifemapper Species Modeling</rdfs:comment>
+    <sadi:decoratesWith rdf:nodeID="A6"/>
+    <mygrid:hasOperation rdf:nodeID="A7"/>
+    <rdf:type rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#serviceDescription"/>
+    <sadi:registration rdf:nodeID="A8"/>
+    <rdf:type rdf:resource="http://sadiframework.org/ontologies/sadi.owl#Service"/>
+    <mygrid:hasServiceDescriptionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lifemapper Species Modeling</mygrid:hasServiceDescriptionText>
+    <mygrid:providedBy rdf:nodeID="A9"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lifemapper</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <owl:onProperty rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasModel"/>
+    <owl:someValuesFrom rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#Model"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#hasWCSCoveragePayloadURL">
+    <rdfs:label>hasWCSCoveragePayloadURL</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset4"/>
+    <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage1">
+    <rdfs:label>WCSCoverage1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <mygrid:inputParameter rdf:nodeID="A5"/>
+    <mygrid:outputParameter rdf:nodeID="A12"/>
+    <rdf:type rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#operation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage3">
+    <rdfs:label>WCSCoverage3</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal">
+    <rdfs:label>Literal</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset2"/>
+    <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#Model">
+    <rdfs:label>Model</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/sadi-services-elseweb/WCSPayloadExtractor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WCS Multipart MIME Payload Extractor</rdfs:comment>
+    <sadi:decoratesWith rdf:nodeID="A14"/>
+    <mygrid:hasOperation rdf:nodeID="A1"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WCSPayloadExtractor</rdfs:label>
+    <mygrid:providedBy rdf:nodeID="A15"/>
+    <rdf:type rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#serviceDescription"/>
+    <mygrid:hasServiceDescriptionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WCS Multipart MIME Payload Extractor</mygrid:hasServiceDescriptionText>
+    <rdf:type rdf:resource="http://sadiframework.org/ontologies/sadi.owl#Service"/>
+    <mygrid:hasServiceNameText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WCSPayloadExtractor</mygrid:hasServiceNameText>
+    <sadi:registration rdf:nodeID="A16"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#hasWCSCoveragePayloadURL"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <dc:date>Thu Sep 26 20:37:00 GMT-07:00 2013</dc:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset4">
+    <rdfs:label>dataset4</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:type rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#organisation"/>
+    <mygrid:authoritative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</mygrid:authoritative>
+    <j.0:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nicholas.delrio@gmail.com</j.0:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage2">
+    <rdfs:label>WCSCoverage2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset5"/>
+    <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <dc:date>Thu Sep 26 20:36:39 GMT-07:00 2013</dc:date>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <mygrid:objectType rdf:resource="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#Experiment_Stage3"/>
+    <rdf:type rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#parameter"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <dc:date>Thu Sep 26 20:37:21 GMT-07:00 2013</dc:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/lifemapper-v3.owl#hasModel">
+    <rdfs:label>hasModel</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <mygrid:inputParameter rdf:nodeID="A19"/>
+    <mygrid:outputParameter rdf:nodeID="A4"/>
+    <rdf:type rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#operation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset1">
+    <rdfs:label>dataset1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage4">
+    <rdfs:label>WCSCoverage4</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <mygrid:objectType rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequence"/>
+    <rdf:type rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#parameter"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:type rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#parameter"/>
+    <mygrid:objectType rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#DistributionQualified"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/sadi-services-elseweb/WCSCoverageSequencer">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WCS Multipart MIME Payload Extractor</rdfs:comment>
+    <sadi:decoratesWith rdf:nodeID="A18"/>
+    <sadi:decoratesWith rdf:nodeID="A10"/>
+    <mygrid:providedBy rdf:nodeID="A20"/>
+    <mygrid:hasServiceNameText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WCSPayloadExtractor</mygrid:hasServiceNameText>
+    <mygrid:hasOperation rdf:nodeID="A11"/>
+    <rdf:type rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#serviceDescription"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WCSPayloadExtractor</rdfs:label>
+    <sadi:registration rdf:nodeID="A17"/>
+    <sadi:decoratesWith rdf:nodeID="A13"/>
+    <mygrid:hasServiceDescriptionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WCS Multipart MIME Payload Extractor</mygrid:hasServiceDescriptionText>
+    <sadi:decoratesWith rdf:nodeID="A21"/>
+    <sadi:decoratesWith rdf:nodeID="A0"/>
+    <rdf:type rdf:resource="http://sadiframework.org/ontologies/sadi.owl#Service"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <j.0:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nicholas.delrio@gmail.com</j.0:creator>
+    <mygrid:authoritative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</mygrid:authoritative>
+    <rdf:type rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#organisation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <j.0:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nicholas.delrio@gmail.com</j.0:creator>
+    <mygrid:authoritative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</mygrid:authoritative>
+    <rdf:type rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#organisation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset3"/>
+    <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset5">
+    <rdfs:label>dataset5</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset3">
+    <rdfs:label>dataset3</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:type rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#parameter"/>
+    <mygrid:objectType rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoveragePayloadDistribution"/>
+  </rdf:Description>
+</rdf:RDF>
