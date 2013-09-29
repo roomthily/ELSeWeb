@@ -32,9 +32,21 @@
     
 
 
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Air -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Air"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#DewPoint -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#DewPoint"/>
+    
+
+
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration1 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration1">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration1">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -49,13 +61,13 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration2 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration2">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration2">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -70,13 +82,13 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration3 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration3">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration3">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -91,13 +103,13 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration4 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration4">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration4">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -112,13 +124,13 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration5 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration5">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration5">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -133,13 +145,13 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement1 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement1">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement1">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -154,13 +166,13 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement2 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement2">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement2">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -175,13 +187,13 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement3 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement3">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement3">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -196,13 +208,13 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement4 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement4">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement4">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -217,13 +229,13 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement5 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement5">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement5">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -238,78 +250,84 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation1 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation1">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation1">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity"/>
                 <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Air"/>
             </owl:Restriction>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation2 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation2">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation2">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity"/>
                 <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#DewPoint"/>
             </owl:Restriction>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation3 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation3">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation3">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity"/>
                 <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#SurfaceLayer"/>
             </owl:Restriction>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation4 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation4">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation4">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity"/>
                 <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#VegitationIndex"/>
             </owl:Restriction>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation5 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation5">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation5">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity"/>
                 <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Precipitation"/>
             </owl:Restriction>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Precipitation -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Precipitation"/>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Region1 -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Region1">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Region1">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -368,7 +386,19 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#SurfaceLayer -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#SurfaceLayer"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#VegitationIndex -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#VegitationIndex"/>
     
 
 

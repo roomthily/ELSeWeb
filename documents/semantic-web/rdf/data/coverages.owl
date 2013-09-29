@@ -295,7 +295,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289969_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/a39f72dc-ff2d-4f77-94bd-64150c4d3b13/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1898_05&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/a39f72dc-ff2d-4f77-94bd-64150c4d3b13/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1898_05&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -348,7 +348,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289970_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/8d443eb9-677c-4d99-9a6f-dff7c0b6e2d3/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1948_02&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/8d443eb9-677c-4d99-9a6f-dff7c0b6e2d3/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1948_02&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -401,7 +401,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289971_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/5290567f-6ca3-4d69-9b3b-86968f67d07a/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1898_01&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/5290567f-6ca3-4d69-9b3b-86968f67d07a/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1898_01&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -454,7 +454,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289972_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/71763799-8723-466b-8525-dc4c8c32251b/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1912_02&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/71763799-8723-466b-8525-dc4c8c32251b/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1912_02&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -507,7 +507,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289973_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/0e3f2e91-237a-4d3f-a2eb-ad1c29750758/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1913_11&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/0e3f2e91-237a-4d3f-a2eb-ad1c29750758/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1913_11&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -560,7 +560,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289974_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/a45cd912-4e2e-4370-b057-a2f824376ac4/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1992_12&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/a45cd912-4e2e-4370-b057-a2f824376ac4/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1992_12&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -613,7 +613,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289975_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/498e0cc2-dbb0-4fb2-877f-d138049eb067/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1946_02&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/498e0cc2-dbb0-4fb2-877f-d138049eb067/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1946_02&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -666,7 +666,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289976_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/785244d4-8649-4d43-9f8f-bee36a21f5ec/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_2000_08&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/785244d4-8649-4d43-9f8f-bee36a21f5ec/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_2000_08&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -719,7 +719,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289977_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/743ac23c-050f-4612-8b04-fe8b2489342a/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1956_02&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/743ac23c-050f-4612-8b04-fe8b2489342a/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1956_02&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -772,7 +772,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289978_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/3a8811a2-6868-4107-8cc1-dba63a61bfad/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_2012_09&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/3a8811a2-6868-4107-8cc1-dba63a61bfad/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_2012_09&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -825,7 +825,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289993_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/6cb81e9b-289f-48b8-876b-3debc4f4d6e7/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1971_2000_06&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/6cb81e9b-289f-48b8-876b-3debc4f4d6e7/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1971_2000_06&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -878,7 +878,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289994_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/9c014ac4-e196-489d-b57a-f652d5e197e5/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1971_2000_03&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/9c014ac4-e196-489d-b57a-f652d5e197e5/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1971_2000_03&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -931,7 +931,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289995_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/f09094dd-3030-479e-a0fc-7cd7e8352366/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1981_2010_14&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/f09094dd-3030-479e-a0fc-7cd7e8352366/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1981_2010_14&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -984,7 +984,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289996_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/bcd34d13-00bd-485f-9270-5a5c81af1b16/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1971_2000_05&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/bcd34d13-00bd-485f-9270-5a5c81af1b16/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1971_2000_05&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1037,7 +1037,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289997_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/ccf7afa9-acec-470f-b125-acb16381ee44/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1971_2000_07&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/ccf7afa9-acec-470f-b125-acb16381ee44/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1971_2000_07&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1090,7 +1090,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289998_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/211b8d49-b442-47e0-a35b-f90b6d258e68/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1981_2010_07&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/211b8d49-b442-47e0-a35b-f90b6d258e68/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1981_2010_07&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1143,7 +1143,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289999_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/c53ba964-73b2-473b-b115-1fc4d190d3d0/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1981_2010_06&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/c53ba964-73b2-473b-b115-1fc4d190d3d0/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1981_2010_06&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1196,7 +1196,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290000_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/f279c7cb-f590-469b-90fd-8af8b7b867c8/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1971_2000_10&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/f279c7cb-f590-469b-90fd-8af8b7b867c8/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1971_2000_10&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1249,7 +1249,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290001_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/a8d07c99-e7db-491c-b95a-c0a964bc81bf/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1981_2010_05&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/a8d07c99-e7db-491c-b95a-c0a964bc81bf/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1981_2010_05&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1302,7 +1302,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290002_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/16365d06-dfff-4fae-b575-43cb7d6171c0/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1981_2010_01&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/16365d06-dfff-4fae-b575-43cb7d6171c0/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1981_2010_01&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1355,7 +1355,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290041_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/787b236b-4913-47c7-827a-140b69c98648/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1981_2010_11&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/787b236b-4913-47c7-827a-140b69c98648/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1981_2010_11&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1408,7 +1408,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290042_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/5096ed8e-1f70-454f-a10f-b017cb6626c2/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1971_2000_07&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/5096ed8e-1f70-454f-a10f-b017cb6626c2/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1971_2000_07&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1461,7 +1461,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290043_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/1a3d4e13-7a17-4fd0-8276-5a640f7a1fb0/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1981_2010_01&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/1a3d4e13-7a17-4fd0-8276-5a640f7a1fb0/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1981_2010_01&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1514,7 +1514,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290044_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/76d7a83d-784c-48f4-b33f-fed66ca291f9/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1971_2000_12&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/76d7a83d-784c-48f4-b33f-fed66ca291f9/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1971_2000_12&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1567,7 +1567,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290045_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/7c87940d-b5ad-4668-925e-b07413f8bcc1/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1971_2000_03&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/7c87940d-b5ad-4668-925e-b07413f8bcc1/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1971_2000_03&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1620,7 +1620,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290046_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/786e2c77-7dcd-4147-9df3-354dfec388d0/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1971_2000_02&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/786e2c77-7dcd-4147-9df3-354dfec388d0/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1971_2000_02&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1673,7 +1673,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290047_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/2afa3e20-ffae-4575-8b54-1ad689b66ac0/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1981_2010_06&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/2afa3e20-ffae-4575-8b54-1ad689b66ac0/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1981_2010_06&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1726,7 +1726,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290048_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/67c0bacd-e9c8-43aa-8df6-92a7de5a758d/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1971_2000_08&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/67c0bacd-e9c8-43aa-8df6-92a7de5a758d/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1971_2000_08&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1779,7 +1779,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290049_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/a45326da-063c-4baf-98e4-d0eb8ec92b3c/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1971_2000_09&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/a45326da-063c-4baf-98e4-d0eb8ec92b3c/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1971_2000_09&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1832,7 +1832,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290050_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/7a16679d-2e40-4905-b016-61a5dfda655e/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1981_2010_05&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/7a16679d-2e40-4905-b016-61a5dfda655e/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1981_2010_05&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1885,7 +1885,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348965_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/82727756-4460-4492-af4e-710fabf37a6e/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012129_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/82727756-4460-4492-af4e-710fabf37a6e/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012129_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1938,7 +1938,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348966_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/dddbb45e-354f-4ffe-a229-e6e37104023b/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012321_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/dddbb45e-354f-4ffe-a229-e6e37104023b/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012321_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -1991,7 +1991,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348967_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/5593da50-45e6-4191-835a-e3dbdedfcb71/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012033_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/5593da50-45e6-4191-835a-e3dbdedfcb71/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012033_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2044,7 +2044,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348968_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/c51032fc-3b60-4e10-8dba-ced2eb19b7d9/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2013017_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/c51032fc-3b60-4e10-8dba-ced2eb19b7d9/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2013017_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2097,7 +2097,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348969_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/0477e881-0436-426b-b47b-8aa478251208/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012305_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/0477e881-0436-426b-b47b-8aa478251208/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012305_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2150,7 +2150,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348970_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/58359c7f-0b96-48a8-b3b7-787ef608e7db/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2013033_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/58359c7f-0b96-48a8-b3b7-787ef608e7db/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2013033_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2203,7 +2203,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348971_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/62d7306f-aa98-4e40-93dc-97adc9e37a48/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012273_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/62d7306f-aa98-4e40-93dc-97adc9e37a48/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012273_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2256,7 +2256,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348972_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/05129c93-8db0-433e-a04e-1add0b78ed41/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012241_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/05129c93-8db0-433e-a04e-1add0b78ed41/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012241_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2309,7 +2309,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348973_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/39998a74-b3a4-4429-8b42-f9037935aa43/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012161_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/39998a74-b3a4-4429-8b42-f9037935aa43/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012161_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2362,7 +2362,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348974_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/3001d908-7634-4269-a118-2fb6b420d2f0/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012065_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/3001d908-7634-4269-a118-2fb6b420d2f0/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012065_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2415,7 +2415,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349389_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/7a9852b3-52a4-4313-a576-226e970adf4a/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012353_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/7a9852b3-52a4-4313-a576-226e970adf4a/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012353_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2468,7 +2468,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349390_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/de006c83-6261-4d41-9500-053ac270c52f/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012321_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/de006c83-6261-4d41-9500-053ac270c52f/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012321_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2521,7 +2521,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349391_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/4394eb03-98fa-4005-a9c7-d42d317603bd/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012057_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/4394eb03-98fa-4005-a9c7-d42d317603bd/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012057_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2574,7 +2574,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349392_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/9e84909a-01df-40d4-b84b-e6113fd25dde/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012225_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/9e84909a-01df-40d4-b84b-e6113fd25dde/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012225_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2627,7 +2627,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349393_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/63687a3f-3bfb-4ec1-836e-d9ee433e6469/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012265_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/63687a3f-3bfb-4ec1-836e-d9ee433e6469/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012265_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2680,7 +2680,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349394_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/f85a41a8-503d-49f0-b868-4667edcbe927/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012241_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/f85a41a8-503d-49f0-b868-4667edcbe927/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012241_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2733,7 +2733,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349395_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/2b18be83-f0b6-4298-8353-b749fd8cf5f0/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012113_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/2b18be83-f0b6-4298-8353-b749fd8cf5f0/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012113_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2786,7 +2786,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349396_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/f667e9d6-b20d-4221-b4e6-796abd87c0e1/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012193_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/f667e9d6-b20d-4221-b4e6-796abd87c0e1/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012193_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2839,7 +2839,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349397_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/3863bed5-b23d-4b53-8ee1-5e34bb0f694f/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012201_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/3863bed5-b23d-4b53-8ee1-5e34bb0f694f/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012201_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
@@ -2892,7 +2892,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349398_distribution">
         <rdf:type rdf:resource="&dcat;Distribution"/>
-        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/0e28449d-d9f1-4f0c-81b1-62ae61ac7236/services/ogc/?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012065_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
+        <dcat:downloadURL rdf:datatype="&xsd;string">http://gstore.unm.edu/apps/elseweb/datasets/0e28449d-d9f1-4f0c-81b1-62ae61ac7236/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012065_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="&xsd;string">http://rgis.unm.edu/browsedata</dcat:accessURL>
         <terms:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
     </owl:NamedIndividual>
