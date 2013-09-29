@@ -56,8 +56,8 @@ public class Builder {
 	
 	public Builder(ModelProduct modelProduct){
 		product = modelProduct;
-
 		regionEncodingToRegionName = new HashMap<String,String>();
+		durationEncodingToDurationName = new HashMap<String,String>();
 		regionCounter = 0;
 		durationCounter = 0;
 		try{
