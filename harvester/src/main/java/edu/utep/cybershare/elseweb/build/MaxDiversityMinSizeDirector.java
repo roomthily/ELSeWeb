@@ -27,16 +27,11 @@ public class MaxDiversityMinSizeDirector {
 				if(occurr < 10){
 					build(digest);					
 					occurr ++;
-					System.out.println(occurr + " for: " + themekey);
 					themekeyOccurrences.put(themekey, new Integer(occurr));
 				}
-				else
-					System.out.println("maxed out for: " + themekey);
 			}
-			else{
-				System.out.println("new occurrence for: " + themekey);
+			else
 				themekeyOccurrences.put(themekey, new Integer(0));				
-			}
 		}
 	}
 	
