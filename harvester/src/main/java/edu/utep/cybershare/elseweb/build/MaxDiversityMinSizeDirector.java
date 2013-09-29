@@ -8,7 +8,7 @@ import edu.utep.cybershare.elseweb.build.source.edac.WCSDigests;
 public class MaxDiversityMinSizeDirector {
 	
 	private Builder builder;
-	private static final int MAX_OCCURRENCE = 5;
+	private static final int MAX_OCCURRENCE = 3;
 	
 	private HashMap<String,Integer> themekeyOccurrences;
 	
