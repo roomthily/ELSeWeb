@@ -10,7 +10,7 @@ public class WCSGetCoverageURL {
 	private WCSGetCoverageParameters params;
 	
 	public WCSGetCoverageURL(String endpointURL, WCSGetCoverageParameters parameters){
-		endpoint = endpointURL;
+		endpoint = endpointURL + "wcs";
 		params = parameters;
 	}
 	
