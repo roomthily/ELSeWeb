@@ -19,6 +19,13 @@ public class EDAC extends Vocabulary {
 	private static final String OWLClass_Method = NAMESPACE + "#Method";
 	private static final String OWLClass_Sensor = NAMESPACE + "#Sensor";
 	
+	//Entities
+	private static final String OWLClass_DewPoint = NAMESPACE + "#DewPoint";
+	private static final String OWLClass_VegitationIndex = NAMESPACE + "#VegitationIndex";
+	private static final String OWLClass_SurfaceLayer = NAMESPACE + "#SurfaceLayer";
+	private static final String OWLClass_Precipitation = NAMESPACE + "#Precipitation";
+	private static final String OWLClass_Air = NAMESPACE + "#Air";
+	
 	private static final String ObjectProperty_hasWCSCoverage = NAMESPACE + "#hasWCSCoverage";
 
 	private static final String DataProperty_hasStartDate = NAMESPACE + "#hasStartDate";
@@ -39,7 +46,14 @@ public class EDAC extends Vocabulary {
 	public OWLClass getOWLClass_Duration(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_Duration));}
 	public OWLClass getOWLClass_Method(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_Method));}
 	public OWLClass getOWLClass_Sensor(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_Sensor));}
+	
+	public OWLClass getOWLClass_DewPoint(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_DewPoint));}
+	public OWLClass getOWLClass_VegitationIndex(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_VegitationIndex));}
+	public OWLClass getOWLClass_SurfaceLayer(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_SurfaceLayer));}
+	public OWLClass getOWLClass_Precipitation(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_Precipitation));}
+	public OWLClass getOWLClass_Air(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_Air));}
 
+	
 	public OWLObjectProperty getObjectProperty_hasWCSCoverage(){return this.bundle.getDataFactory().getOWLObjectProperty(IRI.create(ObjectProperty_hasWCSCoverage));}
 	
 	public OWLDataProperty getDataProperty_hasStartDate(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasStartDate));}

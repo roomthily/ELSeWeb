@@ -1,9 +1,7 @@
 package edu.utep.cybershare.elseweb.build.source.edac;
-import static org.apache.commons.io.FileUtils.copyURLToFile;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.net.URL;
 import java.util.ArrayList;
 
 import org.apache.commons.io.IOUtils;
@@ -73,14 +71,10 @@ public class WCSDigests extends ArrayList<WCSDigest>{
 	}
 	
 	private String getJSONDigestString(String jsonURLString){
-	    URL jsonURL = null;
         File jsonFile = null;
         String jsonString = null;
         try {
-            jsonFile = new File(FilePath.EDAC_SERVICES);
-//            jsonURL = new URL(jsonURLString);
-//           copyURLToFile(jsonURL, jsonFile);
-            
+            jsonFile = new File(FilePath.EDAC_SERVICES);            
             FileInputStream fisTargetFile = new FileInputStream(jsonFile);
             jsonString = IOUtils.toString(fisTargetFile, "UTF-8");
         }

@@ -48,7 +48,7 @@ public abstract class Axioms extends ArrayList<OWLAxiom> {
 		vocabulary_OBOE = new OBOE(bundle);
 		vocabulary_EDAC = new EDAC(bundle);
 		vocabulary_XSD = new XSD(bundle);
-		mapper = new OBOEOntClassMapper(vocabulary_OBOE);
+		mapper = new OBOEOntClassMapper(vocabulary_EDAC, vocabulary_OBOE);
 	}
 		
 	protected void addTypeAxiom(OWLClass owlClass){
