@@ -2,6 +2,7 @@ package edu.utep.cybershare.elseweb.ontology.axioms;
 
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLIndividual;
+import org.semanticweb.owlapi.model.OWLLiteral;
 
 import edu.utep.cybershare.elseweb.model.WCSCoverage;
 import edu.utep.cybershare.elseweb.ontology.Individuals;
@@ -28,6 +29,15 @@ public class WCSCoverageAxioms extends Axioms{
 		addDuration();
 		addMeasurement();
 		addRegion();
+		addID();
+	}
+	
+	private void addID(){
+		if(dataset.isSet_ID()){
+			OWLLiteral idLiteral = bundle.getDataFactory().getOWLLiteral(dataset.getID());
+			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_EDAC.getDataProperty_hasID(), individual, idLiteral);
+			add(axiom);
+		}
 	}
 	
 	private void addDistribution(){
