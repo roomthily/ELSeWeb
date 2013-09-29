@@ -13,7 +13,7 @@ import edu.utep.cybershare.elseweb.util.URLUtils;
 public class PayloadExtractor {
 		
 	public URL getPayload(URL wcsGetCoverageURL){		
-		File multipartResponseFile = URLUtils.downloadBinaryFile(wcsGetCoverageURL, "wcsResponse.bin");
+		File multipartResponseFile = URLUtils.downloadBinaryFile(wcsGetCoverageURL, "wcsResponse.multipart");
 		String fileURL = URLUtils.getFileProtocolURL(multipartResponseFile.getAbsolutePath());
 		System.out.println(fileURL);
 		

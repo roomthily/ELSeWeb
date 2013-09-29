@@ -24,9 +24,8 @@
         <div id='content'>
           <h2>SADI Services</h2>
 	      <ul>
-			<li><a href="./WCSPayloadExtractor">WCSPayloadExtractor</a></li>
-			<li><a href="./WCSCoverageSequencer">WCSCoverageSequencer</a></li>
-            <li><a href="./Lifemapper">Lifemapper</a></li>
+			<li><a href="./WCSPayloadExtractorService">WCSPayloadExtractorService</a></li>
+            <li><a href="./LifemapperService">LifemapperService</a></li>
 	      </ul>
         </div> <!-- content -->
         <div id='footer'>

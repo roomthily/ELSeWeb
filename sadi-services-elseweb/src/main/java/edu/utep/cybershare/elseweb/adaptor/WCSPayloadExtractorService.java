@@ -19,15 +19,15 @@ import com.hp.hpl.jena.rdf.model.Resource;
 
 import edu.utep.cybershare.elseweb.util.Printing;
 
-@Name("WCSPayloadExtractor")
+@Name("WCSPayloadExtractorService")
 @ContactEmail("nicholas.delrio@gmail.com")
-@InputClass("http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#DistributionQualified")
-@OutputClass("http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoveragePayloadDistribution")
-@Description("WCS Multipart MIME Payload Extractor")
+@InputClass("http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageQualified")
+@OutputClass("http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoveragePayload")
+@Description("WCS Multipart MIME Payload Extractor Service")
 
-public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
+public class WCSPayloadExtractorService extends SimpleSynchronousServiceServlet
 {
-	private static final Logger log = Logger.getLogger(WCSPayloadExtractor.class);
+	private static final Logger log = Logger.getLogger(WCSPayloadExtractorService.class);
 	private static final long serialVersionUID = 1L;
 
 	@Override
@@ -35,10 +35,14 @@ public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
 	{	
 		Printing.print(input.getModel());
 
+		//get distribution
+		Resource distributionResource = getDistribution(input);
+		
 		//get WCSGetCoverageURL from Distribution	
-		String wcsGetCoverageURLString = input.getProperty(Vocab.downloadURL).getLiteral().getString();
+		String wcsGetCoverageURLString = distributionResource.getProperty(Vocab.downloadURL).getLiteral().getString();
 		
 		//extract payload
+		System.out.println("Extracting payload from: " + wcsGetCoverageURLString);
 		String payloadURLString = this.getCoveragePayloadURL(wcsGetCoverageURLString).toString();
 		
 		//create literal from payloadURLString
@@ -58,11 +62,16 @@ public class WCSPayloadExtractor extends SimpleSynchronousServiceServlet
 		return coveragePayloadURL;
 	}
 	
+	private Resource getDistribution(Resource wcsCoverageResource){
+		return wcsCoverageResource.getPropertyResourceValue(Vocab.distribution);
+	}
+	
 	private static final class Vocab
 	{
 		public static Model m_model = ModelFactory.createDefaultModel();
 				
+		public static final Property distribution = m_model.createProperty("http://www.w3.org/ns/dcat#distribution");
 		public static final Property downloadURL = m_model.createProperty("http://www.w3.org/ns/dcat#downloadURL");
-		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("hhttp://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#hasWCSCoveragePayloadURL");		
+		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#hasWCSCoveragePayloadURL");		
 	}
 }

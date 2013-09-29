@@ -1,4 +1,4 @@
-package edu.utep.cybershare.elseweb.lifemapper.client;
+package edu.utep.cybershare.elseweb.lifemapper.proxy;
 
 import java.io.File;
 import java.net.URL;

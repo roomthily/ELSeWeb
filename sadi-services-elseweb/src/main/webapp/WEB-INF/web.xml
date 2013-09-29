@@ -5,29 +5,21 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
   <servlet>
-    <servlet-name>Lifemapper</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.lifemapper.Lifemapper</servlet-class>
+    <servlet-name>LifemapperService</servlet-name>
+    <servlet-class>edu.utep.cybershare.elseweb.lifemapper.LifemapperService</servlet-class>
   </servlet>
   <servlet>
-    <servlet-name>WCSCoverageSequencer</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.adaptor.WCSCoverageSequencer</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>WCSPayloadExtractor</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.adaptor.WCSPayloadExtractor</servlet-class>
+    <servlet-name>WCSPayloadExtractorService</servlet-name>
+    <servlet-class>edu.utep.cybershare.elseweb.adaptor.WCSPayloadExtractorService</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>Lifemapper</servlet-name>
-    <url-pattern>/Lifemapper</url-pattern>
+    <servlet-name>LifemapperService</servlet-name>
+    <url-pattern>/LifemapperService</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>WCSCoverageSequencer</servlet-name>
-    <url-pattern>/WCSCoverageSequencer</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>WCSPayloadExtractor</servlet-name>
-    <url-pattern>/WCSPayloadExtractor</url-pattern>
+    <servlet-name>WCSPayloadExtractorService</servlet-name>
+    <url-pattern>/WCSPayloadExtractorService</url-pattern>
   </servlet-mapping>
   
 </web-app>
