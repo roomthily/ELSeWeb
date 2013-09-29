@@ -34,6 +34,7 @@ public class EDAC extends Vocabulary {
 	private static final String DataProperty_hasRightLongitude = NAMESPACE + "#hasRightLongitude";
 	private static final String DataProperty_hasLowerLatitude = NAMESPACE + "#hasLowerLatitude";
 	private static final String DataProperty_hasUpplerLatitude = NAMESPACE + "#hasUpperLatitude";
+	private static final String DataProperty_hasID = NAMESPACE + "#hasID";
 
 	public EDAC(OntologyToolset bundle) {
 		super(bundle);
@@ -62,6 +63,7 @@ public class EDAC extends Vocabulary {
 	public OWLDataProperty getDataProperty_hasRightLongitude(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasRightLongitude));}
 	public OWLDataProperty getDataProperty_hasLowerLatitude(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasLowerLatitude));}
 	public OWLDataProperty getDataProperty_hasUpperLatitude(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasUpplerLatitude));}
+	public OWLDataProperty getDataProperty_hasID(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasID));}
 	
 	@Override
 	public String getNamespace() {

@@ -6,12 +6,18 @@ public class WCSCoverage extends Element {
 	private Duration duration;
 	private Measurement measurement;
 	private Distribution distribution;
+	private int id;
 	
 	public WCSCoverage(String identification) {
 		super(identification);
 		// TODO Auto-generated constructor stub
+		id = -1;
 	}
 
+	public boolean isSet_ID(){
+		return id > -1;
+	}
+	
 	public boolean isSet_region(){
 		return this.getRegion() != null;
 	}
@@ -26,6 +32,14 @@ public class WCSCoverage extends Element {
 	
 	public boolean isSet_measurement(){
 		return this.getMeasurement() != null;
+	}
+	
+	public void setID(int id){
+		this.id = id;
+	}
+	
+	public int getID(){
+		return id;
 	}
 	
 	public Region getRegion() {

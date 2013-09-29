@@ -8,6 +8,7 @@ import edu.utep.cybershare.elseweb.build.source.edac.WCSDigests;
 public class MaxDiversityMinSizeDirector {
 	
 	private Builder builder;
+	private static final int MAX_OCCURRENCE = 5;
 	
 	private HashMap<String,Integer> themekeyOccurrences;
 	
@@ -24,7 +25,7 @@ public class MaxDiversityMinSizeDirector {
 			Integer occurrences = themekeyOccurrences.get(themekey);
 			if(occurrences != null){
 				int occurr = occurrences;
-				if(occurr < 10){
+				if(occurr < MAX_OCCURRENCE){
 					build(digest);					
 					occurr ++;
 					themekeyOccurrences.put(themekey, new Integer(occurr));

@@ -49,14 +49,17 @@ public class Builder {
 	private static final String catalogName = "EDAC-Environmental-Datasets";
 	
 	private HashMap<String, String> regionEncodingToRegionName;
-	private int counter;
+	private HashMap<String, String> durationEncodingToDurationName;
+	
+	private int regionCounter;
+	private int durationCounter;
 	
 	public Builder(ModelProduct modelProduct){
 		product = modelProduct;
 
 		regionEncodingToRegionName = new HashMap<String,String>();
-		counter = 0;
-		
+		regionCounter = 0;
+		durationCounter = 0;
 		try{
 			dataClearingHouseURI = new URI("http://rgis.unm.edu/browsedata");
 			modisURI = new URI("http://modis.gsfc.nasa.gov/");
@@ -135,7 +138,8 @@ public class Builder {
 	}
 	
 	public void buildDuration(Calendar startDate, Calendar endDate){
-		duration = product.getDuration(prependDatasetID(durationLabel));
+		String durationKey = this.getDurationKey(startDate, endDate);
+		duration = product.getDuration(durationKey);
 		duration.setStartDate(startDate);
 		duration.setEndDate(endDate);
 	}
@@ -171,11 +175,22 @@ public class Builder {
 		String regionString = String.valueOf(llon) + String.valueOf(rlon) + String.valueOf(llat) + String.valueOf(ulat);
 		String regionName = this.regionEncodingToRegionName.get(regionString);
 		if(regionName == null){
-			regionName = regionLabel + separator + counter++;
+			regionName = regionLabel + separator + regionCounter++;
 			this.regionEncodingToRegionName.put(regionString, regionName);
 		}
 		return regionName;
 	}
+	
+	private String getDurationKey(Calendar startDate, Calendar endDate){
+		String durationString = startDate.toString() + endDate.toString();
+		String durationName = this.durationEncodingToDurationName.get(durationString);
+		if(durationName == null){
+			durationName = durationLabel + separator + durationCounter++;
+			this.durationEncodingToDurationName.put(durationString, durationName);
+		}
+		return durationName;
+	}
+	
 	public void assemble(){
 		buildCatalog();
 		
