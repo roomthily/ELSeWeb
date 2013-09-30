@@ -1,1 +1,0 @@
-Directory for storing output of services.

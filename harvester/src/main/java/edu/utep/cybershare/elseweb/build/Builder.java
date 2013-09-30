@@ -27,7 +27,7 @@ public class Builder {
 	private static final String distributionLabel = "distribution";
 	private static final String separator = "_";
 	
-	private String baseID;
+	private int baseID;
 	private Characteristic characteristic;
 	private WCSCoverage dataset;
 	private Entity entity;
@@ -56,8 +56,10 @@ public class Builder {
 	
 	public Builder(ModelProduct modelProduct){
 		product = modelProduct;
+		
 		regionEncodingToRegionName = new HashMap<String,String>();
 		durationEncodingToDurationName = new HashMap<String,String>();
+		
 		regionCounter = 0;
 		durationCounter = 0;
 		try{
@@ -67,9 +69,11 @@ public class Builder {
 			mixedMultipartFormatURI = new URI("http://provenanceweb.org/format/mime/multipart/mixed");
 		}
 		catch(Exception e){e.printStackTrace();}
+		
+		reset();
 	}
 	
-	public void setBaseID(String id){
+	public void setBaseID(int id){
 		baseID = id;
 	}
 	
@@ -85,6 +89,7 @@ public class Builder {
 		distribution = null;
 		wcsCoverageURL = null;
 		agent = null;
+		baseID = -1;
 	}
 
 	private String prependDatasetID(String label){
@@ -97,7 +102,8 @@ public class Builder {
 	}
 
 	public void buildDataset(){
-		dataset = product.getDataset(prependDatasetID(datasetLabel));	
+		dataset = product.getDataset(prependDatasetID(datasetLabel));
+		dataset.setID(baseID);
 	}
 	public void buildEntity(String themekey){
 		entity = product.getEntity(themekey + separator + entityLabel);

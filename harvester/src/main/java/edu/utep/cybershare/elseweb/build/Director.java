@@ -16,7 +16,7 @@ public class Director {
 		
 			//used to name the elements of the model
 			int baseID = digest.getID();
-			builder.setBaseID(String.valueOf(baseID));
+			builder.setBaseID(baseID);
 			
 			//build entity
 			builder.buildEntity(digest.getThemekey());
