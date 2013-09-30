@@ -1,11 +1,13 @@
 prefix edac: <http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#>
+prefix lifemapper: <http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#>
 prefix experiment: <http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
-select ?wcsCoverage1 ?wcsCoverage2
-from <http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl>
+
+select ?experiment ?model
 from <http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl>
+from <http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl>
 where
 {
-?wcsCoverage1 a edac:WCSCoverage1 .
-?wcsCoverage2 a edac:WCSCoverage2.
+?experiment a lifemapper:CompletedExperiment.
+?experiment lifemapper:hasModel ?model.
 }

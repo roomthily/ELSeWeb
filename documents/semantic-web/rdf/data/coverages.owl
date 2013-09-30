@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#"
-     xml:base="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl"
+<rdf:RDF xmlns="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#"
+     xml:base="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
@@ -270,104 +270,104 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#EDAC-Environmental-Datasets -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#EDAC-Environmental-Datasets -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#EDAC-Environmental-Datasets">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#EDAC-Environmental-Datasets">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSet"/>
-        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289976_dataset"/>
-        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289977_dataset"/>
-        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289978_dataset"/>
-        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290000_dataset"/>
-        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290001_dataset"/>
-        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290002_dataset"/>
-        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290048_dataset"/>
-        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290049_dataset"/>
-        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290050_dataset"/>
-        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348972_dataset"/>
-        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348973_dataset"/>
-        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348974_dataset"/>
-        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349396_dataset"/>
-        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349397_dataset"/>
-        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349398_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289976_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289977_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289978_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290000_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290001_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290002_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290048_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290049_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290050_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348972_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348973_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348974_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349396_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349397_dataset"/>
+        <dcat:dataset rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349398_dataset"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#LAND-SURFACE-TEMPERATURE_characteristic -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#LAND-SURFACE-TEMPERATURE_characteristic -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#LAND-SURFACE-TEMPERATURE_characteristic">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#LAND-SURFACE-TEMPERATURE_characteristic">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"/>
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Characteristic"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#LAND-SURFACE-TEMPERATURE_entity -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#LAND-SURFACE-TEMPERATURE_entity -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#LAND-SURFACE-TEMPERATURE_entity">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#LAND-SURFACE-TEMPERATURE_entity">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity"/>
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#SurfaceLayer"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#VEGETATION-INDEX_characteristic -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#VEGETATION-INDEX_characteristic -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#VEGETATION-INDEX_characteristic">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#VEGETATION-INDEX_characteristic">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Amount"/>
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Characteristic"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#VEGETATION-INDEX_entity -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#VEGETATION-INDEX_entity -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#VEGETATION-INDEX_entity">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#VEGETATION-INDEX_entity">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity"/>
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#VegitationIndex"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#air_temperature_characteristic -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#air_temperature_characteristic -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#air_temperature_characteristic">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#air_temperature_characteristic">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"/>
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Characteristic"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#air_temperature_entity -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#air_temperature_entity -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#air_temperature_entity">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#air_temperature_entity">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity"/>
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Air"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#dew_point_temperature_characteristic -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#dew_point_temperature_characteristic -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#dew_point_temperature_characteristic">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#dew_point_temperature_characteristic">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"/>
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Characteristic"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#dew_point_temperature_entity -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#dew_point_temperature_entity -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#dew_point_temperature_entity">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#dew_point_temperature_entity">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity"/>
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#DewPoint"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_0 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_0 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_0">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_0">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
         <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-12-31T12:10:58.750-07:00</edac:hasStartDate>
         <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T12:10:58.750-07:00</edac:hasEndDate>
@@ -375,9 +375,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_1 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_1 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_1">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_1">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
         <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T12:10:58.759-07:00</edac:hasStartDate>
         <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T12:10:58.759-07:00</edac:hasEndDate>
@@ -385,9 +385,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_10 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_10 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_10">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_10">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
         <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0197-12-31T12:10:59.800-07:00</edac:hasStartDate>
         <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-04-01T12:10:59.800-07:00</edac:hasEndDate>
@@ -395,9 +395,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_11 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_11 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_11">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_11">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
         <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0196-12-31T12:10:59.802-07:00</edac:hasStartDate>
         <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-04-01T12:10:59.802-07:00</edac:hasEndDate>
@@ -405,9 +405,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_12 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_12 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_12">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_12">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
         <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-12-31T12:10:59.832-07:00</edac:hasStartDate>
         <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-03-31T12:10:59.832-07:00</edac:hasEndDate>
@@ -415,9 +415,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_13 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_13 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_13">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_13">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
         <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0194-12-31T12:10:59.833-07:00</edac:hasStartDate>
         <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0195-02-28T12:10:59.833-07:00</edac:hasEndDate>
@@ -425,9 +425,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_14 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_14 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_14">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_14">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
         <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0199-12-31T12:10:59.834-07:00</edac:hasStartDate>
         <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-03-31T12:10:59.834-07:00</edac:hasEndDate>
@@ -435,9 +435,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_2 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_2 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_2">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_2">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
         <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T12:10:58.769-07:00</edac:hasStartDate>
         <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T12:10:58.769-07:00</edac:hasEndDate>
@@ -445,9 +445,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_3 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_3 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_3">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_3">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
         <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-12-31T12:10:59.459-07:00</edac:hasStartDate>
         <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T12:10:59.459-07:00</edac:hasEndDate>
@@ -455,9 +455,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_4 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_4 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_4">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_4">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
         <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-12-31T12:10:59.461-07:00</edac:hasStartDate>
         <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T12:10:59.461-07:00</edac:hasEndDate>
@@ -465,9 +465,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_5 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_5 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_5">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_5">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
         <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-01-31T12:10:59.462-07:00</edac:hasEndDate>
         <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-02-28T12:10:59.462-07:00</edac:hasStartDate>
@@ -475,9 +475,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_6 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_6 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_6">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_6">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
         <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0197-12-31T12:10:59.621-07:00</edac:hasStartDate>
         <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-04-01T12:10:59.621-07:00</edac:hasEndDate>
@@ -485,9 +485,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_7 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_7 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_7">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_7">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
         <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0196-12-31T12:10:59.624-07:00</edac:hasStartDate>
         <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-04-01T12:10:59.624-07:00</edac:hasEndDate>
@@ -495,9 +495,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_8 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_8 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_8">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_8">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
         <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0196-12-31T12:10:59.626-07:00</edac:hasStartDate>
         <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0200-04-01T12:10:59.626-07:00</edac:hasEndDate>
@@ -505,9 +505,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_9 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_9 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_9">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_9">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration"/>
         <edac:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0197-12-31T12:10:59.798-07:00</edac:hasStartDate>
         <edac:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0201-04-01T12:10:59.798-07:00</edac:hasEndDate>
@@ -515,27 +515,27 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#precipitation_amount_characteristic -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#precipitation_amount_characteristic -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#precipitation_amount_characteristic">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#precipitation_amount_characteristic">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Amount"/>
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Characteristic"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#precipitation_amount_entity -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#precipitation_amount_entity -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#precipitation_amount_entity">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#precipitation_amount_entity">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity"/>
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Precipitation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0 -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Region"/>
         <edac:hasLeftLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-125.020833333333</edac:hasLeftLongitude>
         <edac:hasRightLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-66.47916757</edac:hasRightLongitude>
@@ -545,22 +545,22 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289976_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289976_dataset -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289976_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289976_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
         <edac:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">289976</edac:hasID>
-        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_14"/>
-        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0"/>
-        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289976_distribution"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289976_measurement"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_14"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289976_distribution"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289976_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289976_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289976_distribution -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289976_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289976_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/785244d4-8649-4d43-9f8f-bee36a21f5ec/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_2000_08&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -569,42 +569,42 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289976_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289976_measurement -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289976_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289976_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#dew_point_temperature_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289976_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#dew_point_temperature_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289976_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289976_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289976_observation -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289976_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289976_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#dew_point_temperature_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#dew_point_temperature_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289977_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289977_dataset -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289977_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289977_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
         <edac:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">289977</edac:hasID>
-        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_13"/>
-        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0"/>
-        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289977_distribution"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289977_measurement"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_13"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289977_distribution"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289977_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289977_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289977_distribution -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289977_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289977_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/743ac23c-050f-4612-8b04-fe8b2489342a/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1956_02&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -613,42 +613,42 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289977_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289977_measurement -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289977_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289977_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#dew_point_temperature_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289977_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#dew_point_temperature_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289977_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289977_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289977_observation -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289977_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289977_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#dew_point_temperature_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#dew_point_temperature_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289978_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289978_dataset -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289978_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289978_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
         <edac:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">289978</edac:hasID>
-        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_12"/>
-        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0"/>
-        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289978_distribution"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289978_measurement"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_12"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289978_distribution"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289978_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289978_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289978_distribution -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289978_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289978_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/3a8811a2-6868-4107-8cc1-dba63a61bfad/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_2012_09&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -657,42 +657,42 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289978_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289978_measurement -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289978_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289978_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#dew_point_temperature_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289978_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#dew_point_temperature_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289978_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289978_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289978_observation -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#289978_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#289978_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#dew_point_temperature_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#dew_point_temperature_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290000_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290000_dataset -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290000_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290000_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
         <edac:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">290000</edac:hasID>
-        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_11"/>
-        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0"/>
-        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290000_distribution"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290000_measurement"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_11"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290000_distribution"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290000_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290000_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290000_distribution -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290000_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290000_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/f279c7cb-f590-469b-90fd-8af8b7b867c8/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1971_2000_10&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -701,42 +701,42 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290000_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290000_measurement -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290000_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290000_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#precipitation_amount_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290000_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#precipitation_amount_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290000_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290000_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290000_observation -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290000_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290000_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#precipitation_amount_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#precipitation_amount_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290001_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290001_dataset -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290001_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290001_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
         <edac:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">290001</edac:hasID>
-        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_10"/>
-        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0"/>
-        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290001_distribution"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290001_measurement"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_10"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290001_distribution"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290001_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290001_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290001_distribution -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290001_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290001_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/a8d07c99-e7db-491c-b95a-c0a964bc81bf/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1981_2010_05&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -745,42 +745,42 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290001_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290001_measurement -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290001_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290001_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#precipitation_amount_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290001_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#precipitation_amount_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290001_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290001_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290001_observation -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290001_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290001_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#precipitation_amount_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#precipitation_amount_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290002_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290002_dataset -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290002_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290002_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
         <edac:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">290002</edac:hasID>
-        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_9"/>
-        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0"/>
-        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290002_distribution"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290002_measurement"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_9"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290002_distribution"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290002_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290002_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290002_distribution -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290002_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290002_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/16365d06-dfff-4fae-b575-43cb7d6171c0/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1981_2010_01&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -789,42 +789,42 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290002_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290002_measurement -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290002_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290002_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#precipitation_amount_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290002_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#precipitation_amount_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290002_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290002_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290002_observation -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290002_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290002_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#precipitation_amount_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#precipitation_amount_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290048_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290048_dataset -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290048_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290048_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
         <edac:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">290048</edac:hasID>
-        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_8"/>
-        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0"/>
-        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290048_distribution"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290048_measurement"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_8"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290048_distribution"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290048_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290048_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290048_distribution -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290048_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290048_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/67c0bacd-e9c8-43aa-8df6-92a7de5a758d/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1971_2000_08&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -833,42 +833,42 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290048_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290048_measurement -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290048_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290048_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#air_temperature_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290048_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#air_temperature_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290048_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290048_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290048_observation -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290048_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290048_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#air_temperature_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#air_temperature_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290049_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290049_dataset -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290049_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290049_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
         <edac:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">290049</edac:hasID>
-        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_7"/>
-        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0"/>
-        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290049_distribution"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290049_measurement"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_7"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290049_distribution"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290049_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290049_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290049_distribution -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290049_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290049_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/a45326da-063c-4baf-98e4-d0eb8ec92b3c/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1971_2000_09&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -877,42 +877,42 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290049_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290049_measurement -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290049_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290049_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#air_temperature_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290049_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#air_temperature_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290049_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290049_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290049_observation -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290049_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290049_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#air_temperature_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#air_temperature_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290050_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290050_dataset -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290050_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290050_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
         <edac:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">290050</edac:hasID>
-        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_6"/>
-        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0"/>
-        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290050_distribution"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290050_measurement"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_6"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290050_distribution"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290050_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290050_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290050_distribution -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290050_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290050_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/7a16679d-2e40-4905-b016-61a5dfda655e/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmin_1981_2010_05&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -921,42 +921,42 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290050_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290050_measurement -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290050_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290050_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#air_temperature_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290050_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#air_temperature_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290050_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290050_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290050_observation -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#290050_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#290050_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#air_temperature_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#air_temperature_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348972_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348972_dataset -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348972_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348972_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
         <edac:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">348972</edac:hasID>
-        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_5"/>
-        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0"/>
-        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348972_distribution"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348972_measurement"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_5"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348972_distribution"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348972_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348972_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348972_distribution -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348972_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348972_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/05129c93-8db0-433e-a04e-1add0b78ed41/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012241_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -965,42 +965,42 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348972_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348972_measurement -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348972_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348972_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#VEGETATION-INDEX_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348972_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#VEGETATION-INDEX_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348972_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348972_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348972_observation -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348972_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348972_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#VEGETATION-INDEX_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#VEGETATION-INDEX_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348973_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348973_dataset -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348973_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348973_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
         <edac:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">348973</edac:hasID>
-        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_4"/>
-        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0"/>
-        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348973_distribution"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348973_measurement"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_4"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348973_distribution"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348973_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348973_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348973_distribution -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348973_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348973_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/39998a74-b3a4-4429-8b42-f9037935aa43/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012161_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -1009,42 +1009,42 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348973_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348973_measurement -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348973_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348973_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#VEGETATION-INDEX_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348973_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#VEGETATION-INDEX_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348973_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348973_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348973_observation -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348973_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348973_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#VEGETATION-INDEX_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#VEGETATION-INDEX_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348974_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348974_dataset -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348974_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348974_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
         <edac:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">348974</edac:hasID>
-        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_3"/>
-        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0"/>
-        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348974_distribution"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348974_measurement"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_3"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348974_distribution"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348974_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348974_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348974_distribution -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348974_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348974_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/3001d908-7634-4269-a118-2fb6b420d2f0/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD13Q1_2012065_NDVI_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -1053,42 +1053,42 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348974_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348974_measurement -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348974_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348974_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#VEGETATION-INDEX_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348974_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#VEGETATION-INDEX_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348974_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348974_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348974_observation -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#348974_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348974_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#VEGETATION-INDEX_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#VEGETATION-INDEX_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349396_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349396_dataset -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349396_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349396_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
         <edac:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">349396</edac:hasID>
-        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_2"/>
-        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0"/>
-        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349396_distribution"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349396_measurement"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_2"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349396_distribution"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349396_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349396_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349396_distribution -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349396_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349396_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/f667e9d6-b20d-4221-b4e6-796abd87c0e1/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012193_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -1097,42 +1097,42 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349396_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349396_measurement -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349396_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349396_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349396_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349396_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349396_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349396_observation -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349396_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349396_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#LAND-SURFACE-TEMPERATURE_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#LAND-SURFACE-TEMPERATURE_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349397_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349397_dataset -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349397_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349397_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
         <edac:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">349397</edac:hasID>
-        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_1"/>
-        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0"/>
-        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349397_distribution"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349397_measurement"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_1"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349397_distribution"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349397_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349397_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349397_distribution -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349397_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349397_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/3863bed5-b23d-4b53-8ee1-5e34bb0f694f/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012201_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -1141,42 +1141,42 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349397_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349397_measurement -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349397_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349397_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349397_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349397_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349397_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349397_observation -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349397_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349397_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#LAND-SURFACE-TEMPERATURE_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#LAND-SURFACE-TEMPERATURE_entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349398_dataset -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349398_dataset -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349398_dataset">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349398_dataset">
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
         <edac:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">349398</edac:hasID>
-        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#duration_0"/>
-        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#region_0"/>
-        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349398_distribution"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349398_measurement"/>
+        <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#duration_0"/>
+        <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#region_0"/>
+        <dcat:distribution rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349398_distribution"/>
+        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349398_measurement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349398_distribution -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349398_distribution -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349398_distribution">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349398_distribution">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/elseweb/datasets/0e28449d-d9f1-4f0c-81b1-62ae61ac7236/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=MOD11A2_2012065_LSTNIGHTQC_MOSAIC&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=600.0&amp;HEIGHT=600.0</dcat:downloadURL>
         <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rgis.unm.edu/browsedata</dcat:accessURL>
@@ -1185,22 +1185,22 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349398_measurement -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349398_measurement -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349398_measurement">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349398_measurement">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349398_observation"/>
+        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#LAND-SURFACE-TEMPERATURE_characteristic"/>
+        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349398_observation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349398_observation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349398_observation -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#349398_observation">
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#349398_observation">
         <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages-1.owl#LAND-SURFACE-TEMPERATURE_entity"/>
+        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#LAND-SURFACE-TEMPERATURE_entity"/>
     </owl:NamedIndividual>
     
 

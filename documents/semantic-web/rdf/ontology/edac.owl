@@ -92,10 +92,48 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#distributionOf -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#distributionOf">
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/dcat#distribution"/>
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset1 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset1">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset2 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset2">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset3 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset3">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset4 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset4">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset5 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset5">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset"/>
     </owl:ObjectProperty>
     
 
@@ -150,6 +188,12 @@
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#hasEndDate -->
 
     <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#hasEndDate"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#hasID -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#hasID"/>
     
 
 
@@ -277,7 +321,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
     </owl:Class>
     
 
@@ -335,40 +378,6 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#DistributionQualified -->
-
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#DistributionQualified">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#distributionOf"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage1"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#distributionOf"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage2"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#distributionOf"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage3"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#distributionOf"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage4"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#distributionOf"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage5"/>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
-    </owl:Class>
-    
-
-
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration -->
 
     <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration">
@@ -386,7 +395,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
     </owl:Class>
     
 
@@ -552,7 +560,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
     </owl:Class>
     
 
@@ -651,10 +658,13 @@
                         <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
                         <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
                     </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#hasID"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
     </owl:Class>
     
 
@@ -722,7 +732,7 @@
                 <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#DistributionQualified"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
     </owl:Class>
     
 
@@ -734,44 +744,42 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset1"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset1"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoveragePayload"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset2"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset2"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoveragePayload"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset3"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset3"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoveragePayload"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset4"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset4"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoveragePayload"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset5"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset5"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoveragePayload"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequence"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageQualified -->
-
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageQualified">
-        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequencePopulated"/>
     </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequence -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequence">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequence"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequencePopulated -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequencePopulated">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -798,7 +806,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSetQualified"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequence"/>
     </owl:Class>
     
 
@@ -812,7 +820,6 @@
                 <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
     </owl:Class>
     
 
@@ -857,37 +864,6 @@
     
 
 
-    <!-- http://purl.org/dc/terms/Location -->
-
-    <owl:Class rdf:about="http://purl.org/dc/terms/Location"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/PeriodOfTime -->
-
-    <owl:Class rdf:about="http://purl.org/dc/terms/PeriodOfTime"/>
-    
-
-
-    <!-- http://www.w3.org/ns/dcat#Catalog -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Catalog">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#dataset"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/ns/dcat#Dataset -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
-    
-
-
     <!-- http://www.w3.org/ns/dcat#Distribution -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/dcat#Distribution">
@@ -898,12 +874,6 @@
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#Activity -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity"/>
     
 
 
@@ -972,7 +942,7 @@
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="&swrl;ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSetQualified"/>
+                                <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequence"/>
                                 <swrl:argument1 rdf:resource="urn:swrl#set"/>
                             </rdf:Description>
                         </rdf:first>
@@ -990,16 +960,23 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset5"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#data"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#set"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
         <swrl:body>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage3"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#data"/>
-                    </rdf:Description>
-                </rdf:first>
                 <rdf:rest>
                     <rdf:Description>
                         <rdf:type rdf:resource="&swrl;AtomList"/>
@@ -1007,14 +984,24 @@
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="&swrl;ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSetQualified"/>
+                                <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequence"/>
                                 <swrl:argument1 rdf:resource="urn:swrl#set"/>
                             </rdf:Description>
                         </rdf:first>
                     </rdf:Description>
                 </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage5"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#data"/>
+                    </rdf:Description>
+                </rdf:first>
             </rdf:Description>
         </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
         <swrl:head>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
@@ -1029,9 +1016,48 @@
                 </rdf:first>
             </rdf:Description>
         </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequence"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#set"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage3"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#data"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#data"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#set"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
         <swrl:body>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
@@ -1049,7 +1075,7 @@
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="&swrl;ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSetQualified"/>
+                                <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequence"/>
                                 <swrl:argument1 rdf:resource="urn:swrl#set"/>
                             </rdf:Description>
                         </rdf:first>
@@ -1057,20 +1083,6 @@
                 </rdf:rest>
             </rdf:Description>
         </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset1"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#data"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#set"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
@@ -1080,7 +1092,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="&swrl;ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage5"/>
+                        <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage4"/>
                         <swrl:argument1 rdf:resource="urn:swrl#data"/>
                     </rdf:Description>
                 </rdf:first>
@@ -1091,7 +1103,7 @@
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="&swrl;ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSetQualified"/>
+                                <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequence"/>
                                 <swrl:argument1 rdf:resource="urn:swrl#set"/>
                             </rdf:Description>
                         </rdf:first>
@@ -1099,23 +1111,6 @@
                 </rdf:rest>
             </rdf:Description>
         </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#dataset5"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#data"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#set"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
         <swrl:head>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
@@ -1130,31 +1125,6 @@
                 </rdf:first>
             </rdf:Description>
         </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSetQualified"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#set"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage4"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#data"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
     </rdf:Description>
 </rdf:RDF>
 
