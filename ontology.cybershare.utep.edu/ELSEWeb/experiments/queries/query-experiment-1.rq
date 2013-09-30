@@ -3,11 +3,16 @@ prefix lifemapper: <http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#>
 prefix experiment: <http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 
-select ?experiment ?model
-from <http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl>
+select ?algorithmName ?units ?occurrenceSetID ?modelURL
 from <http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl>
+from <http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl>
 where
 {
-?experiment a lifemapper:CompletedExperiment.
 ?experiment lifemapper:hasModel ?model.
+?experiment lifemapper:hasScenarioLayerUnits ?units.
+?experiment lifemapper:hasOccurrenceSetID ?occurrenceSetID.
+?experiment lifemapper:hasModelingAlgorithm ?algorithm.
+?algorithm lifemapper:hasAlgorithmName ?algorithmName.
+?model lifemapper:hasModelURL ?modelURL.
+?experiment a lifemapper:CompletedExperiment.
 }
