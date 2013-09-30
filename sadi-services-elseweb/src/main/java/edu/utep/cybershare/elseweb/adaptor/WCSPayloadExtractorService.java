@@ -36,7 +36,7 @@ public class WCSPayloadExtractorService extends SimpleSynchronousServiceServlet
 	@Override
 	public void processInput(Resource input, Resource output)
 	{	
-		Printing.print(input.getModel());
+		//Printing.print(input.getModel());
 
 		extractor = new PayloadExtractor();
 		String baseURI = "http://cybershare.utep.edu/ELSEWeb/";
@@ -96,12 +96,12 @@ public class WCSPayloadExtractorService extends SimpleSynchronousServiceServlet
 		output.addProperty(Vocab.payloadDataset4, wcsCoveragePayload4);
 		output.addProperty(Vocab.payloadDataset5, wcsCoveragePayload5);
 		
-		Printing.print(output.getModel());
+		//Printing.print(output.getModel());
 	}
 	
 	public Resource getCSCoveragePayloadDistribution(int label, String baseURI, Model model, String payloadURLString){
 		Resource coveragePayloadDistribution = model.createResource(baseURI + "wcsCoveragePayloadDistribution_" + label, Vocab.WCSCoveragePayloadDistribution);
-		System.out.println("created distribution with URI: " + coveragePayloadDistribution.getURI());
+
 		//create literal from payloadURLString
 		Literal payloadURLLiteral = model.createLiteral(payloadURLString);
 		model.add(coveragePayloadDistribution, Vocab.hasWCSCoveragePayloadURL, payloadURLLiteral);

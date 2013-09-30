@@ -36,7 +36,7 @@ public class LifemapperService extends SimpleSynchronousServiceServlet
 	{
 		String baseURI = "http://lifemapper.org/";
 	
-		Printing.print(input.getModel());
+		//Printing.print(input.getModel());
 		
 		String uname = "elseweb";
 		String pword = "elseweb1";
@@ -51,12 +51,8 @@ public class LifemapperService extends SimpleSynchronousServiceServlet
 		Resource distribution3 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.payloadDataset3));
 		Resource distribution4 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.payloadDataset4));
 		Resource distribution5 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.payloadDataset5));
-		System.out.println("distribution 1 URI: " + distribution1.getURI());
 		
-		Statement statement = distribution1.getProperty(Vocab.hasWCSCoveragePayloadURL);
-		String layer1URLString = statement.getString();
-		
-		
+		String layer1URLString = distribution1.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
 		String layer2URLString = distribution2.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
 		String layer3URLString = distribution3.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
 		String layer4URLString = distribution4.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
