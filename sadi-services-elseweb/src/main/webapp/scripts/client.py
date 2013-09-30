@@ -26,15 +26,17 @@ pword = args.password[0]
 
 cl = LMClient(userId=uname, pwd=pword)
 
-randomID = str(random.randint(1, 10000))
-layerName = "testLayer" + randomID
-layerTitle = "Test Layer " + randomID
 epsgCode = 4326
 envLyrType = 1
 
 layers = []
 for layerURL in args.layers:
-	layers.append({
+    randomID = str(random.randint(1, 10000))
+    layerName = "testLayer" + randomID
+    layerTitle = "Test Layer " + randomID
+    print "layerName %s" % layerName
+    print "layerTitle %s" % layerTitle
+    layers.append({
 			"name" : layerName,
 			"title" : layerTitle,
 			"epsgCode" : epsgCode,

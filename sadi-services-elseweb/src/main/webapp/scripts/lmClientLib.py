@@ -3,10 +3,10 @@
 @author: CJ Grady
 @contact: cjgrady [at] ku [dot] edu
 @organization: Lifemapper (http://lifemapper.org)
-@version: 2.0
-@status: beta
+@version: 2.1.1
+@status: release
 
-@license: Copyright (C) 2012, University of Kansas Center for Research
+@license: Copyright (C) 2013, University of Kansas Center for Research
 
           Lifemapper Project, lifemapper [at] ku [dot] edu, 
           Biodiversity Institute,
@@ -29,6 +29,17 @@
 
 @note: Additional service documentation can be found at:
           http://lifemapper.org/schemas/services.wadl
+
+@note: Time format - Time should be specified in ISO 8601 format 
+          YYYY-mm-ddTHH-MM-SSZ
+             Where:
+                YYYY is the four-digit year (example 2009)
+                mm is the two-digit month (example 06)
+                dd is the two-digit day (example 07)
+                HH is the two-digit hour (example 09)
+                MM is the two-digit minute (example 23)
+                SS is the two-digit second (example 15)
+            Example for June 7, 2009 9:23:15 AM - 2009-06-07T09:23:15Z
 """
 import cookielib
 import glob
@@ -37,15 +48,39 @@ import StringIO
 from types import ListType
 import urllib
 import urllib2
+import warnings
 import xml.etree.ElementTree as ET
 import zipfile
 
 
-from constants import DEFAULT_POST_USER, DEFAULT_USER, SHAPEFILE_EXTENSIONS, \
-                      WEBSITE_ROOT
-from rad import RADClient
+from constants import DEFAULT_POST_USER, DEFAULT_USER, LM_CLIENT_VERSION_URL, \
+                      SHAPEFILE_EXTENSIONS, WEBSITE_ROOT
 from sdm import SDMClient
+from rad import RADClient
 
+# .............................................................................
+class OutOfDateException(Exception):
+   """
+   @summary: An out of date exception indicates that the client is out of date
+                and cannot continue to operate with the current version of the
+                web services.
+   """
+   def __init__(self, myVersion, minVersion):
+      """
+      @param myVersion: The current version of the client library
+      @param minVersion: The minimum required version of the client library
+      """
+      Exception.__init__(self)
+      self.myVersion = myVersion
+      self.minVersion = minVersion
+
+   def __repr__(self):
+      return "Out of date exception: my version: %s, minimum version: %s" % (\
+                                               self.myVersion, self.minVersion)
+
+   def __str__(self):
+      return "Out of date exception: my version: %s, minimum version: %s" % (\
+                                               self.myVersion, self.minVersion)
 
 # .............................................................................
 class LMClient(object):
@@ -53,14 +88,16 @@ class LMClient(object):
    @summary: Lifemapper client library class
    """
    # .........................................
-   def __init__(self, userId=DEFAULT_POST_USER, pwd=None):
+   def __init__(self, userId=DEFAULT_POST_USER, pwd=None, server=WEBSITE_ROOT):
       """
       @summary: Constructor
       @param userId: (optional) The id of the user to use for this session
       @param pwd: (optional) The password for the specified user
+      @param server: (optional) The Lifemapper webserver address
       @note: Lifemapper RAD services are not available anonymously
       """
-      self._cl = _Client(userId=userId, pwd=pwd)
+      self._cl = _Client(userId=userId, pwd=pwd, server=server)
+      self._cl.checkVersion()
       self.sdm = SDMClient(self._cl)
       if userId not in [DEFAULT_POST_USER, DEFAULT_USER]:
          self.rad = RADClient(self._cl)
@@ -77,21 +114,78 @@ class _Client(object):
    """
    @summary: Private Lifemapper client class
    """
+   __version__ = "2.1.1"
+
    # .........................................
-   def __init__(self, userId=DEFAULT_POST_USER, pwd=None):
+   def __init__(self, userId=DEFAULT_POST_USER, pwd=None, server=WEBSITE_ROOT):
       """
       @summary: Constructor of LMClient
       @param userId: (optional) User id to use if different from the default
                         [string]
       @param pwd: (optional) Password for optional user id. [string]
+      @param server: (optional) The Lifemapper web server root address
       """
       self.userId = userId
       self.pwd = pwd
+      self.server = server
       
       self.cookieJar = cookielib.LWPCookieJar()
       opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(self.cookieJar))
       urllib2.install_opener(opener)
       self._login()
+   
+   # .........................................
+   def checkVersion(self):
+      """
+      @summary: Checks the version of the client library against the versions
+                   reported by the web server
+      @raise OutOfDateException: Raised if the client is out of date and 
+                                    cannot continue
+      """
+      res = self.makeRequest(LM_CLIENT_VERSION_URL, objectify=True)
+      for client in res:
+         if client.name == "lmClientLib":
+            minVersionStr = client.versions.minimum
+            curVersionStr = client.versions.current
+            minVersion = self._getVersionNumbers(verStr=minVersionStr)
+            curVersion = self._getVersionNumbers(verStr=curVersionStr)
+            myVersion = self._getVersionNumbers()
+            
+            if myVersion < minVersion:
+               raise OutOfDateException(myVersion, minVersion)
+            if myVersion < curVersion:
+               warnings.warn("Client is not latest version: (%s < %s)" % \
+                                   (myVersion, curVersion), Warning)
+            
+   # .........................................
+   def _getVersionNumbers(self, verStr=None):
+      """
+      @summary: Splits a version string into a tuple
+      @param verStr: The version number as a string, if None, get the client 
+                        version
+      @return: Tuple of version (major, minor, revision, status)
+      """
+      if verStr is None:
+         verStr = self.__version__
+      major = 0
+      minor = 0
+      revision = 0
+      status = "zzzz"
+      vStr = verStr.strip().split(' ')
+
+      if len(vStr) > 1:
+         status = vStr[1]
+      
+      mmrList = vStr[0].split('.') # Split on '.'
+      
+      try: # If not all parts are specified, specifies as many as possible
+         major = int(mmrList[0])
+         minor = int(mmrList[1])
+         revision = int(mmrList[2])
+      except:
+         pass
+      
+      return (major, minor, revision, status)
       
    # .........................................
    def getAutozipShapefileStream(self, fn):
@@ -105,7 +199,7 @@ class _Client(object):
       """
       files = []
       if fn.endswith('.shp'):
-         for f in glob.iglob("%s*" % fn.strip('.shp')):
+         for f in glob.iglob("%s*" % fn.strip('shp')):
             ext = f.split('.')[-1]
             if ext in SHAPEFILE_EXTENSIONS:
                files.append(f)
@@ -150,8 +244,9 @@ class _Client(object):
             if not isinstance(lst, ListType):
                lst = [lst]
             return lst
-      except Exception, e:
-         print e
+      except Exception:
+         #print e
+         pass
       return []
 
    # .........................................
@@ -200,7 +295,7 @@ class _Client(object):
       """
       if self.userId != DEFAULT_POST_USER and self.userId != DEFAULT_USER and \
                         self.pwd is not None:
-         url = "%s/login" % WEBSITE_ROOT
+         url = "%s/login" % self.server
          
          urlParams = [("username", self.userId), ("pword", self.pwd)]
          
@@ -211,7 +306,7 @@ class _Client(object):
       """
       @summary: Logs the user out
       """
-      url = '/'.join((WEBSITE_ROOT, "logout"))
+      url = '/'.join((self.server, "logout"))
       self.makeRequest(url)
 
 # .............................................................................
@@ -220,17 +315,15 @@ class LmAttObj(object):
    @summary: Object that includes attributes.  Compare this to the attributes
                 attached to XML elements and the object members would be the
                 sub-elements of the element.
-   @note: <someElement att1="value1" att2="value2">
-             <subEl1>1</subEl1>
-             <subEl2>banana</subEl2>
-          </someElement>
-          
-          translates to:
-          
-          obj.subEl1 = 1
-          obj.subEl2 = 'banana'
-          obj.getAttributes() = {'att1': 'value1', 'att2': 'value2'}
-          obj.att1 = 'value1'
+   @note: <someElement att1="value1" att2="value2">\n
+             <subEl1>1</subEl1>\n
+             <subEl2>banana</subEl2>\n
+          </someElement>\n\n
+          translates to:\n\n
+          obj.subEl1 = 1\n
+          obj.subEl2 = 'banana'\n
+          obj.getAttributes() = {'att1': 'value1', 'att2': 'value2'}\n
+          obj.att1 = 'value1'\n
           obj.att2 = 'value2'
    """
    # ......................................
@@ -370,3 +463,14 @@ def removeNonesFromTupleList(paramsList):
          ret.append(param)
    return ret
 
+# .............................................................................
+def stringifyError(err):
+   """
+   @summary: This really only adds information for urllib2.HTTPErrors that 
+                include an 'Error-Message' header
+   @param err: The exception to stringify
+   """
+   try:
+      return err.hdrs['Error-Message']
+   except:
+      return str(err)
