@@ -1,0 +1,544 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://ontology.cybershare.utep.edu/SADI-PROV/"
+     xml:base="http://ontology.cybershare.utep.edu/SADI-PROV/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/prov-sadi.owl">
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&prov;unqualifiedForm">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;sharesDefinitionWith">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&rdfs;label">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;qualifiedForm">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&rdfs;comment">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+    <rdf:Description rdf:about="&prov;Activity">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Collection -->
+
+    <rdf:Description rdf:about="&prov;Collection">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Plan -->
+
+    <rdf:Description rdf:about="&prov;Plan">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Role -->
+
+    <rdf:Description rdf:about="&prov;Role">
+        <rdfs:seeAlso rdf:resource="&prov;hadRole"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#SoftwareAgent -->
+
+    <rdf:Description rdf:about="&prov;SoftwareAgent">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/SADI_Input -->
+
+    <owl:Class rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/SADI_Input">
+        <rdfs:subClassOf rdf:resource="&prov;Collection"/>
+        <rdfs:comment>The input class of a SADI service</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/SADI_Output -->
+
+    <owl:Class rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/SADI_Output">
+        <rdfs:subClassOf rdf:resource="&prov;Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/prov-sadi.owlExecutingSadiService -->
+
+    <owl:Class rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/prov-sadi.owlExecutingSadiService">
+        <rdfs:label xml:lang="en">ExecutingSadiService</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/prov-sadi.owlSadiService -->
+
+    <owl:Class rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/prov-sadi.owlSadiService">
+        <rdfs:label xml:lang="en">SadiService</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/prov-sadi.owlShareClient -->
+
+    <owl:Class rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/prov-sadi.owlShareClient">
+        <rdfs:label xml:lang="en">ShareClient</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;SoftwareAgent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/prov-sadi.owlSparqlQuery -->
+
+    <owl:Class rdf:about="https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/prov-sadi.owlSparqlQuery">
+        <rdfs:label xml:lang="en">SparqlQuery</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Plan"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&prov;qualifiedCommunication">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Communication"/>
+        <prov:qualifiedForm rdf:resource="&prov;Communication"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;generatedAtTime">
+        <prov:qualifiedForm rdf:resource="&prov;Generation"/>
+        <prov:qualifiedForm rdf:resource="&prov;atTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;aq">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Communication">
+        <prov:unqualifiedForm rdf:resource="&prov;wasInformedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;alternateOf">
+        <rdfs:seeAlso rdf:resource="&prov;specializationOf"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;invalidated">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Invalidation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Usage">
+        <prov:unqualifiedForm rdf:resource="&prov;used"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;activity">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;wasAssociatedWith">
+        <prov:qualifiedForm rdf:resource="&prov;Association"/>
+        <prov:qualifiedForm rdf:resource="&prov;qualifiedAssociation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;order">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;AgentInfluence">
+        <rdfs:seeAlso rdf:resource="&prov;agent"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;qualifiedDelegation">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Delegation"/>
+        <prov:unqualifiedForm rdf:resource="&prov;actedOnBehalfOf"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;wasDerivedFrom">
+        <prov:qualifiedForm rdf:resource="&prov;Derivation"/>
+        <prov:qualifiedForm rdf:resource="&prov;qualifiedDerivation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;wasAttributedTo">
+        <prov:qualifiedForm rdf:resource="&prov;Attribution"/>
+        <prov:qualifiedForm rdf:resource="&prov;qualifiedAttribution"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;qualifiedQuotation">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Quotation"/>
+        <prov:unqualifiedForm rdf:resource="&prov;wasQuotedFrom"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;qualifiedRevision">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Revision"/>
+        <prov:unqualifiedForm rdf:resource="&prov;wasRevisionOf"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;specializationOf">
+        <rdfs:seeAlso rdf:resource="&prov;alternateOf"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;qualifiedEnd">
+        <prov:sharesDefinitionWith rdf:resource="&prov;End"/>
+        <prov:unqualifiedForm rdf:resource="&prov;wasEndedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;qualifiedPrimarySource">
+        <prov:sharesDefinitionWith rdf:resource="&prov;PrimarySource"/>
+        <prov:unqualifiedForm rdf:resource="&prov;hadPrimarySource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;endedAtTime">
+        <prov:qualifiedForm rdf:resource="&prov;End"/>
+        <prov:qualifiedForm rdf:resource="&prov;atTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Attribution">
+        <prov:unqualifiedForm rdf:resource="&prov;wasAttributedTo"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;InstantaneousEvent">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Start">
+        <prov:unqualifiedForm rdf:resource="&prov;wasStartedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;wasInformedBy">
+        <prov:qualifiedForm rdf:resource="&prov;Communication"/>
+        <prov:qualifiedForm rdf:resource="&prov;qualifiedCommunication"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;definition">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;PrimarySource">
+        <prov:unqualifiedForm rdf:resource="&prov;hadPrimarySource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Revision">
+        <prov:unqualifiedForm rdf:resource="&prov;wasRevisionOf"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;hadUsage">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Usage"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;hadActivity">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Activity"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Influence">
+        <prov:unqualifiedForm rdf:resource="&prov;wasInfluencedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;wasEndedBy">
+        <prov:qualifiedForm rdf:resource="&prov;End"/>
+        <prov:qualifiedForm rdf:resource="&prov;qualifiedEnd"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Entity">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Person">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;wasGeneratedBy">
+        <prov:qualifiedForm rdf:resource="&prov;Generation"/>
+        <prov:qualifiedForm rdf:resource="&prov;qualifiedGeneration"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;dm">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;qualifiedAttribution">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Attribution"/>
+        <prov:unqualifiedForm rdf:resource="&prov;wasAttributedTo"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;constraints">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;n">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;editorsDefinition">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;qualifiedGeneration">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Generation"/>
+        <prov:unqualifiedForm rdf:resource="&prov;wasGeneratedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;ActivityInfluence">
+        <rdfs:seeAlso rdf:resource="&prov;activity"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Invalidation">
+        <prov:unqualifiedForm rdf:resource="&prov;wasInvalidatedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Generation">
+        <prov:unqualifiedForm rdf:resource="&prov;wasGeneratedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;qualifiedUsage">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Usage"/>
+        <prov:unqualifiedForm rdf:resource="&prov;used"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;EmptyCollection">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;generated">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Generation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;influencer">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;hadRole">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Role"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;component">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Derivation">
+        <prov:unqualifiedForm rdf:resource="&prov;wasDerivedFrom"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;qualifiedAssociation">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Association"/>
+        <prov:unqualifiedForm rdf:resource="&prov;wasAssociatedWith"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;atLocation">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Location"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;value">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;qualifiedDerivation">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Derivation"/>
+        <prov:unqualifiedForm rdf:resource="&prov;wasDerivedFrom"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;hadGeneration">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Generation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;category">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;startedAtTime">
+        <prov:qualifiedForm rdf:resource="&prov;Start"/>
+        <prov:qualifiedForm rdf:resource="&prov;atTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;agent">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/prov-o#">
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/prov-o/"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;qualifiedInvalidation">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Invalidation"/>
+        <prov:unqualifiedForm rdf:resource="&prov;wasInvalidatedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Quotation">
+        <prov:unqualifiedForm rdf:resource="&prov;wasQuotedFrom"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Location">
+        <rdfs:seeAlso rdf:resource="&prov;atLocation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;hadMember">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Collection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;wasInvalidatedBy">
+        <prov:qualifiedForm rdf:resource="&prov;Invalidation"/>
+        <prov:qualifiedForm rdf:resource="&prov;qualifiedInvalidation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;entity">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;wasStartedBy">
+        <prov:qualifiedForm rdf:resource="&prov;Start"/>
+        <prov:qualifiedForm rdf:resource="&prov;qualifiedStart"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;End">
+        <prov:unqualifiedForm rdf:resource="&prov;wasEndedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;hadPlan">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Plan"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;used">
+        <prov:qualifiedForm rdf:resource="&prov;Usage"/>
+        <prov:qualifiedForm rdf:resource="&prov;qualifiedUsage"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;actedOnBehalfOf">
+        <prov:qualifiedForm rdf:resource="&prov;Delegation"/>
+        <prov:qualifiedForm rdf:resource="&prov;qualifiedDelegation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Organization">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Bundle">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;qualifiedStart">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Start"/>
+        <prov:unqualifiedForm rdf:resource="&prov;wasStartedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;EntityInfluence">
+        <rdfs:seeAlso rdf:resource="&prov;entity"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;editorialNote">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;inverse">
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/prov-o/#names-of-inverse-properties"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;invalidatedAtTime">
+        <prov:qualifiedForm rdf:resource="&prov;Invalidation"/>
+        <prov:qualifiedForm rdf:resource="&prov;atTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Association">
+        <prov:unqualifiedForm rdf:resource="&prov;wasAssociatedWith"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;wasQuotedFrom">
+        <prov:qualifiedForm rdf:resource="&prov;Quotation"/>
+        <prov:qualifiedForm rdf:resource="&prov;qualifiedQuotation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;wasInfluencedBy">
+        <prov:qualifiedForm rdf:resource="&prov;Influence"/>
+        <prov:sharesDefinitionWith rdf:resource="&prov;Influence"/>
+        <prov:qualifiedForm rdf:resource="&prov;qualifiedInfluence"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;influenced">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Influence"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;qualifiedInfluence">
+        <prov:sharesDefinitionWith rdf:resource="&prov;Influence"/>
+        <prov:unqualifiedForm rdf:resource="&prov;wasInfluencedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;atTime">
+        <prov:sharesDefinitionWith rdf:resource="&prov;InstantaneousEvent"/>
+        <prov:unqualifiedForm rdf:resource="&prov;endedAtTime"/>
+        <prov:unqualifiedForm rdf:resource="&prov;generatedAtTime"/>
+        <prov:unqualifiedForm rdf:resource="&prov;invalidatedAtTime"/>
+        <prov:unqualifiedForm rdf:resource="&prov;startedAtTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Agent">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;hadPrimarySource">
+        <prov:qualifiedForm rdf:resource="&prov;PrimarySource"/>
+        <prov:qualifiedForm rdf:resource="&prov;qualifiedPrimarySource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;wasRevisionOf">
+        <prov:qualifiedForm rdf:resource="&prov;Revision"/>
+        <prov:qualifiedForm rdf:resource="&prov;qualifiedRevision"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&prov;Delegation">
+        <prov:unqualifiedForm rdf:resource="&prov;actedOnBehalfOf"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.5.1928) http://owlapi.sourceforge.net -->
+
