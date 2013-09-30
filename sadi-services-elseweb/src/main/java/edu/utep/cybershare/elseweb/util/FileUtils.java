@@ -45,7 +45,6 @@ public class FileUtils{
 			System.out.println("output dir path: " + OUTPUT_DIR_PATH);
 			System.out.println("scripts dir path: " + SCRIPTS_DIR_PATH);
 			System.out.println("output url: " + OUTPUT_URL);
-			System.out.println("server: + SERVER");
 		}
 		catch (Throwable e) {
 			e.printStackTrace();
