@@ -12,8 +12,11 @@ public class Director {
 	}
 
 	public void construct(WCSDigests digests){
+		int counter = 0;
 		for(WCSDigest digest : digests){
-		
+
+			System.out.println("count: " + counter++);
+			
 			//used to name the elements of the model
 			int baseID = digest.getID();
 			builder.setBaseID(baseID);

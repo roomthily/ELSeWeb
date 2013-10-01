@@ -31,7 +31,7 @@ public class Harvester {
 		Builder builder = new Builder(product);
 		
 		//setup the builder directory
-		MaxDiversityMinSizeDirector directory = new MaxDiversityMinSizeDirector(builder);
+		Director directory = new Director(builder);
 		
 		//get our data source and pass to director
 		WCSDigests digests = new WCSDigests(5, 0);
