@@ -2,14 +2,14 @@ package edu.utep.cybershare.elseweb.model;
 
 import java.net.URI;
 
-public class Distribution extends Element {
+public class WCSCoverageDistribution extends Element {
 
 	private URI accessURI;
 	private URI downloadURI;
 	private URI format;
 	private String mediaType;
 	
-	public Distribution(String identification) {
+	public WCSCoverageDistribution(String identification) {
 		super(identification);
 		// TODO Auto-generated constructor stub
 	}

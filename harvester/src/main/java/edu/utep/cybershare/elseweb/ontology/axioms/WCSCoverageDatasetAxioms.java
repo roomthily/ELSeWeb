@@ -4,18 +4,18 @@ import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLIndividual;
 import org.semanticweb.owlapi.model.OWLLiteral;
 
-import edu.utep.cybershare.elseweb.model.WCSCoverage;
+import edu.utep.cybershare.elseweb.model.WCSCoverageDataset;
 import edu.utep.cybershare.elseweb.ontology.Individuals;
 import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
 
-public class WCSCoverageAxioms extends Axioms{
+public class WCSCoverageDatasetAxioms extends Axioms{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private WCSCoverage dataset;
-	public WCSCoverageAxioms(WCSCoverage dataset, OWLIndividual individual, OntologyToolset bundle) {
+	private WCSCoverageDataset dataset;
+	public WCSCoverageDatasetAxioms(WCSCoverageDataset dataset, OWLIndividual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
 		this.dataset = dataset;
@@ -24,7 +24,7 @@ public class WCSCoverageAxioms extends Axioms{
 	@Override
 	public void setAxioms() {
 		// TODO Auto-generated method stub
-		this.addTypeAxiom(this.vocabulary_EDAC.getOWLClass_WCSCoverage());
+		this.addTypeAxiom(this.vocabulary_ELSEWEB.getOWLClass_WCSCoverageDataset());
 		addDistribution();
 		addDuration();
 		addMeasurement();
@@ -35,7 +35,7 @@ public class WCSCoverageAxioms extends Axioms{
 	private void addID(){
 		if(dataset.isSet_ID()){
 			OWLLiteral idLiteral = bundle.getDataFactory().getOWLLiteral(dataset.getID());
-			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_EDAC.getDataProperty_hasID(), individual, idLiteral);
+			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_ELSEWEB.getDataProperty_hasID(), individual, idLiteral);
 			add(axiom);
 		}
 	}

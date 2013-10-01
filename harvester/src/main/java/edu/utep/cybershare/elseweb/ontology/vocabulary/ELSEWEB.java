@@ -8,12 +8,13 @@ import org.semanticweb.owlapi.model.OWLObjectProperty;
 import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
 
 
-public class EDAC extends Vocabulary {
+public class ELSEWEB extends Vocabulary {
 	
-	private static final String NAMESPACE = "http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl";
+	private static final String NAMESPACE = "http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl";
 	
 	private static final String OWLClass_WCSCoverageSet = NAMESPACE + "#WCSCoverageSet";
-	private static final String OWLClass_WCSCoverage = NAMESPACE + "#WCSCoverage";
+	private static final String OWLClass_WCSCoverageDataset = NAMESPACE + "#WCSCoverageDataset";
+	private static final String OWLClass_WCSCoverageDistribution = NAMESPACE + "#WCSCoverageDistribution";
 	private static final String OWLClass_Region = NAMESPACE + "#Region";
 	private static final String OWLClass_Duration = NAMESPACE + "#Duration";
 	private static final String OWLClass_Method = NAMESPACE + "#Method";
@@ -36,13 +37,14 @@ public class EDAC extends Vocabulary {
 	private static final String DataProperty_hasUpplerLatitude = NAMESPACE + "#hasUpperLatitude";
 	private static final String DataProperty_hasID = NAMESPACE + "#hasID";
 
-	public EDAC(OntologyToolset bundle) {
+	public ELSEWEB(OntologyToolset bundle) {
 		super(bundle);
 		// TODO Auto-generated constructor stub
 	}
 	
 	public OWLClass getOWLClass_WCSCoverageSet(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_WCSCoverageSet));}
-	public OWLClass getOWLClass_WCSCoverage(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_WCSCoverage));}
+	public OWLClass getOWLClass_WCSCoverageDataset(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_WCSCoverageDataset));}
+	public OWLClass getOWLClass_WCSCoverageDistribution(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_WCSCoverageDistribution));}
 	public OWLClass getOWLClass_Region(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_Region));}
 	public OWLClass getOWLClass_Duration(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_Duration));}
 	public OWLClass getOWLClass_Method(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_Method));}

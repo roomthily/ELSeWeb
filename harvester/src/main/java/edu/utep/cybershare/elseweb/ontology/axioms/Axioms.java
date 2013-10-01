@@ -10,7 +10,7 @@ import org.semanticweb.owlapi.model.OWLIndividual;
 import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
 import edu.utep.cybershare.elseweb.ontology.vocabulary.DCAT;
 import edu.utep.cybershare.elseweb.ontology.vocabulary.DCMI;
-import edu.utep.cybershare.elseweb.ontology.vocabulary.EDAC;
+import edu.utep.cybershare.elseweb.ontology.vocabulary.ELSEWEB;
 import edu.utep.cybershare.elseweb.ontology.vocabulary.OBOE;
 import edu.utep.cybershare.elseweb.ontology.vocabulary.OBOEOntClassMapper;
 import edu.utep.cybershare.elseweb.ontology.vocabulary.PROVO;
@@ -30,7 +30,7 @@ public abstract class Axioms extends ArrayList<OWLAxiom> {
 	protected DCMI vocabulary_DCMI;
 	protected OBOE vocabulary_OBOE;
 	protected PROVO vocabulary_PROVO;
-	protected EDAC vocabulary_EDAC;
+	protected ELSEWEB vocabulary_ELSEWEB;
 	protected XSD vocabulary_XSD;
 	
 	protected OBOEOntClassMapper mapper;
@@ -46,9 +46,9 @@ public abstract class Axioms extends ArrayList<OWLAxiom> {
 		vocabulary_PROVO = new PROVO(bundle);
 		vocabulary_DCAT = new DCAT(bundle);
 		vocabulary_OBOE = new OBOE(bundle);
-		vocabulary_EDAC = new EDAC(bundle);
+		vocabulary_ELSEWEB = new ELSEWEB(bundle);
 		vocabulary_XSD = new XSD(bundle);
-		mapper = new OBOEOntClassMapper(vocabulary_EDAC, vocabulary_OBOE);
+		mapper = new OBOEOntClassMapper(vocabulary_ELSEWEB, vocabulary_OBOE);
 	}
 		
 	protected void addTypeAxiom(OWLClass owlClass){

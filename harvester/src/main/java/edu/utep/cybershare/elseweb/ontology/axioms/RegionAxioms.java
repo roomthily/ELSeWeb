@@ -25,7 +25,7 @@ public class RegionAxioms extends Axioms {
 	@Override
 	public void setAxioms() {
 		// TODO Auto-generated method stub
-		this.addTypeAxiom(vocabulary_EDAC.getOWLClass_Region());
+		this.addTypeAxiom(vocabulary_ELSEWEB.getOWLClass_Region());
 		
 		addLlon();
 		addRlon();
@@ -36,7 +36,7 @@ public class RegionAxioms extends Axioms {
 	private void addLlon(){
 		if(region.isSet_llon()){
 			OWLLiteral llonLiteral = bundle.getDataFactory().getOWLLiteral(region.getLlon());
-			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_EDAC.getDataProperty_hasLeftLongitude(), individual, llonLiteral);
+			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_ELSEWEB.getDataProperty_hasLeftLongitude(), individual, llonLiteral);
 			add(axiom);
 		}
 	}
@@ -44,7 +44,7 @@ public class RegionAxioms extends Axioms {
 	private void addRlon(){
 		if(region.isSet_rlon()){
 			OWLLiteral rlonLiteral = bundle.getDataFactory().getOWLLiteral(region.getRlon());
-			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_EDAC.getDataProperty_hasRightLongitude(), individual, rlonLiteral);
+			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_ELSEWEB.getDataProperty_hasRightLongitude(), individual, rlonLiteral);
 			add(axiom);
 		}
 	}
@@ -52,14 +52,14 @@ public class RegionAxioms extends Axioms {
 	private void addLlat(){
 		if(region.isSet_llat()){
 			OWLLiteral llatLiteral = bundle.getDataFactory().getOWLLiteral(region.getLlat());
-			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_EDAC.getDataProperty_hasLowerLatitude(), individual, llatLiteral);
+			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_ELSEWEB.getDataProperty_hasLowerLatitude(), individual, llatLiteral);
 			add(axiom);
 		}
 	}
 	private void addUlat(){
 		if(region.isSet_ulat()){
 			OWLLiteral ulatLiteral = bundle.getDataFactory().getOWLLiteral(region.getUlat());
-			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_EDAC.getDataProperty_hasUpperLatitude(), individual, ulatLiteral);
+			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_ELSEWEB.getDataProperty_hasUpperLatitude(), individual, ulatLiteral);
 			add(axiom);
 		}
 	}

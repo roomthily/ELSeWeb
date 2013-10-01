@@ -22,7 +22,7 @@ public class DurationAxioms extends Axioms{
 	@Override
 	public void setAxioms() {
 		// TODO Auto-generated method stub
-		this.addTypeAxiom(this.vocabulary_EDAC.getOWLClass_Duration());
+		this.addTypeAxiom(this.vocabulary_ELSEWEB.getOWLClass_Duration());
 		addEndDate();
 		addStartDate();
 	}
@@ -30,7 +30,7 @@ public class DurationAxioms extends Axioms{
 	private void addEndDate(){
 		if(duration.isSet_endDate()){
 			OWLLiteral endDateLiteral = bundle.getDataFactory().getOWLLiteral(DatatypeConverter.printDateTime(duration.getEndDate()), this.vocabulary_XSD.getDataType_dateTime());
-			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_EDAC.getDataProperty_hasEndDate(), individual, endDateLiteral);
+			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_ELSEWEB.getDataProperty_hasEndDate(), individual, endDateLiteral);
 			add(axiom);
 		}
 	}
@@ -38,7 +38,7 @@ public class DurationAxioms extends Axioms{
 	private void addStartDate(){
 		if(duration.isSet_startDate()){
 			OWLLiteral startDateLiteral = bundle.getDataFactory().getOWLLiteral(DatatypeConverter.printDateTime(duration.getStartDate()), this.vocabulary_XSD.getDataType_dateTime());
-			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_EDAC.getDataProperty_hasStartDate(), individual, startDateLiteral);
+			OWLAxiom axiom = bundle.getDataFactory().getOWLDataPropertyAssertionAxiom(vocabulary_ELSEWEB.getDataProperty_hasStartDate(), individual, startDateLiteral);
 			add(axiom);
 		}
 	}

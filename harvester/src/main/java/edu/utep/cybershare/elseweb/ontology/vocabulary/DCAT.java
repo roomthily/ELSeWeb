@@ -1,7 +1,6 @@
 package edu.utep.cybershare.elseweb.ontology.vocabulary;
 
 import org.semanticweb.owlapi.model.IRI;
-import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLDataProperty;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
 
@@ -19,9 +18,6 @@ public class DCAT extends Vocabulary{
 	
 	private static final String NAMESPACE = "http://www.w3.org/ns/dcat";
 	
-	private static final String OntClass_Distribution = NAMESPACE + "#Distribution";
-	private static final String OntClass_Catalog = NAMESPACE + "#Catalog";
-	
 	private static final String ObjectProperty_distribution = NAMESPACE + "#distribution";
 	private static final String ObjectProperty_dataset = NAMESPACE + "#dataset";
 	
@@ -38,9 +34,6 @@ public class DCAT extends Vocabulary{
 		// TODO Auto-generated method stub
 		return NAMESPACE;
 	}
-
-	public OWLClass getOntClass_Distribution(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OntClass_Distribution));}
-	public OWLClass getOntClass_Catalog(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OntClass_Catalog));}
 
 	public OWLObjectProperty getObjectProperty_distribution(){return this.bundle.getDataFactory().getOWLObjectProperty(IRI.create(ObjectProperty_distribution));}
 	public OWLObjectProperty getObjectProperty_dataset(){return this.bundle.getDataFactory().getOWLObjectProperty(IRI.create(ObjectProperty_dataset));}

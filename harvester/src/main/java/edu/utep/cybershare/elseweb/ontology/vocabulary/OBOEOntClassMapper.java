@@ -9,12 +9,12 @@ public class OBOEOntClassMapper {
 	private static HashMap<String, OWLClass> themekeyToCharacteristic = new HashMap<String, OWLClass>();
 	private static HashMap<String, OWLClass> themekeyToEntity = new HashMap<String, OWLClass>();
 	
-	public OBOEOntClassMapper(EDAC edac, OBOE oboe){
+	public OBOEOntClassMapper(ELSEWEB edac, OBOE oboe){
 		populateCharacteristicMappings(oboe);
 		populateEntityMappings(edac);
 	}
 	
-	private void populateEntityMappings(EDAC edacVocab){
+	private void populateEntityMappings(ELSEWEB edacVocab){
 		themekeyToEntity.put("dew_point_temperature", edacVocab.getOWLClass_DewPoint());
 		themekeyToEntity.put("precipitation_amount", edacVocab.getOWLClass_Precipitation());
 		themekeyToEntity.put("air_temperature", edacVocab.getOWLClass_Air());

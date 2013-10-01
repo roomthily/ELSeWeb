@@ -1,14 +1,14 @@
 package edu.utep.cybershare.elseweb.model;
 
-public class WCSCoverage extends Element {
+public class WCSCoverageDataset extends Element {
 
 	private Region region;
 	private Duration duration;
 	private Measurement measurement;
-	private Distribution distribution;
+	private WCSCoverageDistribution distribution;
 	private int id;
 	
-	public WCSCoverage(String identification) {
+	public WCSCoverageDataset(String identification) {
 		super(identification);
 		// TODO Auto-generated constructor stub
 		id = -1;
@@ -72,11 +72,11 @@ public class WCSCoverage extends Element {
 		
 	}
 
-	public Distribution getDistribution() {
+	public WCSCoverageDistribution getDistribution() {
 		return distribution;
 	}
 
-	public void setDistribution(Distribution distribution) {
+	public void setDistribution(WCSCoverageDistribution distribution) {
 		this.distribution = distribution;
 	}
 }

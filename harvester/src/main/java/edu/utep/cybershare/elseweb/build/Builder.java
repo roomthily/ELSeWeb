@@ -7,8 +7,8 @@ import java.util.HashMap;
 import edu.utep.cybershare.elseweb.build.source.edac.fgdc.theme.Theme;
 import edu.utep.cybershare.elseweb.model.WCSCoverageSet;
 import edu.utep.cybershare.elseweb.model.Characteristic;
-import edu.utep.cybershare.elseweb.model.WCSCoverage;
-import edu.utep.cybershare.elseweb.model.Distribution;
+import edu.utep.cybershare.elseweb.model.WCSCoverageDataset;
+import edu.utep.cybershare.elseweb.model.WCSCoverageDistribution;
 import edu.utep.cybershare.elseweb.model.Duration;
 import edu.utep.cybershare.elseweb.model.Entity;
 import edu.utep.cybershare.elseweb.model.Measurement;
@@ -29,14 +29,14 @@ public class Builder {
 	
 	private int baseID;
 	private Characteristic characteristic;
-	private WCSCoverage dataset;
+	private WCSCoverageDataset dataset;
 	private Entity entity;
 	private Measurement measurement;
 	private Observation observation;
 	private WCSCoverageSet catalog;
 	private Region region;
 	private Duration duration;
-	private Distribution distribution;
+	private WCSCoverageDistribution distribution;
 	private WCSGetCoverageURL wcsCoverageURL;
 	private URI agent;
 	

@@ -4,18 +4,18 @@ import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLIndividual;
 import org.semanticweb.owlapi.model.OWLLiteral;
 
-import edu.utep.cybershare.elseweb.model.Distribution;
+import edu.utep.cybershare.elseweb.model.WCSCoverageDistribution;
 import edu.utep.cybershare.elseweb.ontology.Individuals;
 import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
 
-public class DistributionAxioms extends Axioms {
+public class WCSCoverageDistributionAxioms extends Axioms {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private Distribution distribution;
-	public DistributionAxioms(Distribution distribution, OWLIndividual individual, OntologyToolset bundle) {
+	private WCSCoverageDistribution distribution;
+	public WCSCoverageDistributionAxioms(WCSCoverageDistribution distribution, OWLIndividual individual, OntologyToolset bundle) {
 		super(individual, bundle);
 		// TODO Auto-generated constructor stub
 		this.distribution = distribution;
@@ -24,7 +24,7 @@ public class DistributionAxioms extends Axioms {
 	@Override
 	public void setAxioms() {
 		// TODO Auto-generated method stub
-		this.addTypeAxiom(vocabulary_DCAT.getOntClass_Distribution());
+		this.addTypeAxiom(vocabulary_ELSEWEB.getOWLClass_WCSCoverageDistribution());
 		addAccessURI();
 		addDownloadURI();
 		addFormat();

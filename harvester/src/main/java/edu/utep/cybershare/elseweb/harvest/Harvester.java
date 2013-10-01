@@ -9,8 +9,8 @@ import edu.utep.cybershare.elseweb.build.ModelProduct;
 import edu.utep.cybershare.elseweb.build.source.edac.WCSDigests;
 import edu.utep.cybershare.elseweb.model.WCSCoverageSet;
 import edu.utep.cybershare.elseweb.model.Characteristic;
-import edu.utep.cybershare.elseweb.model.WCSCoverage;
-import edu.utep.cybershare.elseweb.model.Distribution;
+import edu.utep.cybershare.elseweb.model.WCSCoverageDataset;
+import edu.utep.cybershare.elseweb.model.WCSCoverageDistribution;
 import edu.utep.cybershare.elseweb.model.Duration;
 import edu.utep.cybershare.elseweb.model.Entity;
 import edu.utep.cybershare.elseweb.model.Measurement;
@@ -46,9 +46,9 @@ public class Harvester {
 			visitor.visit(catalog);
 		for(Characteristic characteristic : product.getCharacteristics())
 			visitor.visit(characteristic);
-		for(WCSCoverage dataset : product.getDatasets())
+		for(WCSCoverageDataset dataset : product.getDatasets())
 			visitor.visit(dataset);
-		for(Distribution distribution : product.getDistributions())
+		for(WCSCoverageDistribution distribution : product.getDistributions())
 			visitor.visit(distribution);
 		for(Duration duration : product.getDurations())
 			visitor.visit(duration);

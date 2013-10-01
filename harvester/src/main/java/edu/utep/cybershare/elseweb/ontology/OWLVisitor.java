@@ -4,8 +4,8 @@ import org.semanticweb.owlapi.model.OWLIndividual;
 
 import edu.utep.cybershare.elseweb.model.WCSCoverageSet;
 import edu.utep.cybershare.elseweb.model.Characteristic;
-import edu.utep.cybershare.elseweb.model.WCSCoverage;
-import edu.utep.cybershare.elseweb.model.Distribution;
+import edu.utep.cybershare.elseweb.model.WCSCoverageDataset;
+import edu.utep.cybershare.elseweb.model.WCSCoverageDistribution;
 import edu.utep.cybershare.elseweb.model.Duration;
 import edu.utep.cybershare.elseweb.model.Entity;
 import edu.utep.cybershare.elseweb.model.Measurement;
@@ -14,8 +14,8 @@ import edu.utep.cybershare.elseweb.model.Region;
 import edu.utep.cybershare.elseweb.model.Visitor;
 import edu.utep.cybershare.elseweb.ontology.axioms.WCSCoverageSetAxioms;
 import edu.utep.cybershare.elseweb.ontology.axioms.CharacteristicAxioms;
-import edu.utep.cybershare.elseweb.ontology.axioms.WCSCoverageAxioms;
-import edu.utep.cybershare.elseweb.ontology.axioms.DistributionAxioms;
+import edu.utep.cybershare.elseweb.ontology.axioms.WCSCoverageDatasetAxioms;
+import edu.utep.cybershare.elseweb.ontology.axioms.WCSCoverageDistributionAxioms;
 import edu.utep.cybershare.elseweb.ontology.axioms.DurationAxioms;
 import edu.utep.cybershare.elseweb.ontology.axioms.EntityAxioms;
 import edu.utep.cybershare.elseweb.ontology.axioms.MeasurementAxioms;
@@ -38,10 +38,10 @@ public class OWLVisitor implements Visitor{
 		bundle.addAxioms(axioms);
 	}
 
-	public void visit(WCSCoverage dataset) {
+	public void visit(WCSCoverageDataset dataset) {
 		// TODO Auto-generated method stub
 		OWLIndividual individual = Individuals.getIndividual(dataset, bundle);
-		WCSCoverageAxioms axioms = new WCSCoverageAxioms(dataset, individual, bundle);
+		WCSCoverageDatasetAxioms axioms = new WCSCoverageDatasetAxioms(dataset, individual, bundle);
 		axioms.setAxioms();
 		bundle.addAxioms(axioms);
 	}
@@ -78,10 +78,10 @@ public class OWLVisitor implements Visitor{
 		bundle.addAxioms(axioms);
 	}
 
-	public void visit(Distribution distribution) {
+	public void visit(WCSCoverageDistribution distribution) {
 		// TODO Auto-generated method stub
 		OWLIndividual individual = Individuals.getIndividual(distribution, bundle);
-		DistributionAxioms axioms = new DistributionAxioms(distribution, individual, bundle);
+		WCSCoverageDistributionAxioms axioms = new WCSCoverageDistributionAxioms(distribution, individual, bundle);
 		axioms.setAxioms();
 		bundle.addAxioms(axioms);
 	}
