@@ -26,6 +26,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasScenarioLayers -->
+
+    <owl:AnnotationProperty rdf:about="&lifemapper;hasScenarioLayers"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -146,21 +163,15 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Air -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequence -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Air"/>
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverageSequence"/>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#DewPoint -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Duration1 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#DewPoint"/>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration1 -->
-
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration1">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Duration1">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -175,13 +186,14 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Duration"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration2 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Duration2 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration2">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Duration2">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -196,13 +208,14 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Duration"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration3 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Duration3 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration3">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Duration3">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -217,13 +230,14 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Duration"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration4 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Duration4 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration4">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Duration4">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -238,13 +252,14 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Duration"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration5 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Duration5 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration5">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Duration5">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -259,19 +274,20 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Duration"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement1 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Measurement1 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement1">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Measurement1">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measurementFor"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation1"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Observation1"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic"/>
@@ -280,19 +296,20 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement2 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Measurement2 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement2">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Measurement2">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measurementFor"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation2"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Observation2"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic"/>
@@ -301,19 +318,20 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement3 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Measurement3 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement3">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Measurement3">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measurementFor"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation3"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Observation3"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic"/>
@@ -322,19 +340,20 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement4 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Measurement4 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement4">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Measurement4">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measurementFor"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation4"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Observation4"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic"/>
@@ -343,19 +362,20 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement5 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Measurement5 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement5">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Measurement5">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measurementFor"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation5"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Observation5"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic"/>
@@ -364,84 +384,54 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation1 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Observation1 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation1">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Air"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Observation1">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation2 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Observation2 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation2">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#DewPoint"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Observation2">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation3 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Observation3 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation3">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#SurfaceLayer"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Observation3">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation4 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Observation4 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation4">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#VegitationIndex"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Observation4">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation5 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Observation5 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Observation5">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Precipitation"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Observation5">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Precipitation -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Region1 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Precipitation"/>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Region1 -->
-
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Region1">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Region1">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -500,35 +490,24 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Region"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#SurfaceLayer -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#WCSCoverageDatasetSpecification1 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#SurfaceLayer"/>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#VegitationIndex -->
-
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#VegitationIndex"/>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage1 -->
-
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage1">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#WCSCoverageDatasetSpecification1">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/dc/terms/spatial"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Region1"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Region1"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/dc/terms/temporal"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration1"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Duration1"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#distribution"/>
@@ -536,28 +515,29 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement1"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Measurement1"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSCoverageDatasetSpecification"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage2 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#WCSCoverageDatasetSpecification2 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage2">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#WCSCoverageDatasetSpecification2">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/dc/terms/spatial"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Region1"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Region1"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/dc/terms/temporal"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration2"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Duration2"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#distribution"/>
@@ -565,28 +545,29 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement2"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Measurement2"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSCoverageDatasetSpecification"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage3 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#WCSCoverageDatasetSpecification3 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage3">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#WCSCoverageDatasetSpecification3">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/dc/terms/spatial"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Region1"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Region1"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/dc/terms/temporal"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration3"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Duration3"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#distribution"/>
@@ -594,28 +575,29 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement3"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Measurement3"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSCoverageDatasetSpecification"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage4 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#WCSCoverageDatasetSpecification4 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage4">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#WCSCoverageDatasetSpecification4">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/dc/terms/spatial"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Region1"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Region1"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/dc/terms/temporal"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration4"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Duration4"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#distribution"/>
@@ -623,28 +605,29 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement4"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Measurement4"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSCoverageDatasetSpecification"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage5 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#WCSCoverageDatasetSpecification5 -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#WCSCoverage5">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#WCSCoverageDatasetSpecification5">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/dc/terms/spatial"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Region1"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Region1"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/dc/terms/temporal"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Duration5"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Duration5"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#distribution"/>
@@ -652,11 +635,12 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#Measurement5"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#Measurement5"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSCoverageDatasetSpecification"/>
     </owl:Class>
     
 

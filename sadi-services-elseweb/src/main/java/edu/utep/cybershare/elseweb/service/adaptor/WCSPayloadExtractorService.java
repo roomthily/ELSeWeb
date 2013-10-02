@@ -43,8 +43,9 @@ public class WCSPayloadExtractorService extends SimpleSynchronousServiceServlet{
 		//create payload url literal
 		Literal payloadURLLiteral = output.getModel().createLiteral(payloadURL.toString());
 
-		//add payload url to output
+		//add payload url and tiff format to output
 		output.addProperty(Vocab.downloadTiffURL, payloadURLLiteral);
+		output.addProperty(Vocab.format, Vocab.tiff);
 		
 		Printing.print(output.getModel());
 	}
@@ -65,10 +66,19 @@ public class WCSPayloadExtractorService extends SimpleSynchronousServiceServlet{
 		
 		private static Model m_model = ModelFactory.createDefaultModel();
 		
+		//dcat properties
 		private static final String dcat = "http://www.w3.org/ns/dcat#";
 		public static final Property downloadURL = m_model.createProperty(dcat + "downloadURL");
 		
+		//elseweb properties
 		private static final String elseweb = "http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#";
 		public static final Property downloadTiffURL = m_model.createProperty(elseweb + "downloadTiffURL");
+		
+		//dublin core properties
+		private static final String dcmi = "http://purl.org/dc/terms/";
+		public static final Property format = m_model.createProperty(dcmi + "format");
+		
+		//tiff dc:FileFormat
+		public static final Resource tiff = m_model.createResource("http://provenanceweb.org/format/mime/image/tiff");
 	}
 }
