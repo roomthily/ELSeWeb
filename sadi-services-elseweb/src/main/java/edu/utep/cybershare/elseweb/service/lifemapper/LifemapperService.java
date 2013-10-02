@@ -21,7 +21,7 @@ import edu.utep.cybershare.elseweb.util.Printing;
 
 @Name("LifemapperService")
 @ContactEmail("nicholas.delrio@gmail.com")
-@InputClass("http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#FullySpecifiedExperiment")
+@InputClass("http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ExecutableExperiment")
 @OutputClass("http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#CompletedExperiment")
 @Description("Lifemapper Species Modeling Service")
 
