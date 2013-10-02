@@ -6,11 +6,15 @@
 
   <servlet>
     <servlet-name>LifemapperService</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.lifemapper.LifemapperService</servlet-class>
+    <servlet-class>edu.utep.cybershare.elseweb.service.lifemapper.LifemapperService</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>WCSPayloadExtractorService</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.adaptor.WCSPayloadExtractorService</servlet-class>
+    <servlet-class>edu.utep.cybershare.elseweb.service.adaptor.WCSPayloadExtractorService</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>WCSCoverageDatasetService</servlet-name>
+    <servlet-class>edu.utep.cybershare.elseweb.service.mapper.WCSCoverageDatasetService</servlet-class>
   </servlet>
 
   <servlet-mapping>
@@ -20,6 +24,10 @@
   <servlet-mapping>
     <servlet-name>WCSPayloadExtractorService</servlet-name>
     <url-pattern>/WCSPayloadExtractorService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>WCSCoverageDatasetService</servlet-name>
+    <url-pattern>/WCSCoverageDatasetService</url-pattern>
   </servlet-mapping>
   
 </web-app>

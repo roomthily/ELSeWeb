@@ -113,6 +113,12 @@
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#FullySpecifiedExperiment -->
 
     <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#FullySpecifiedExperiment">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasScenario"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#LifemapperScenario"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#UnderspecifiedExperiment"/>
     </owl:Class>
     
@@ -198,13 +204,13 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasScenario"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#LifemapperScenario"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
     </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/ogcwcs.owl#WCSCoverageDatasetTiff -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/ogcwcs.owl#WCSCoverageDatasetTiff"/>
     
 
 

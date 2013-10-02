@@ -99,6 +99,14 @@
     
 
 
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#downloadTiffURL -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#downloadTiffURL">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#downloadURL"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#hasEndDate -->
 
     <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#hasEndDate"/>
@@ -445,7 +453,7 @@
                         <owl:hasValue rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#accessURL"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#downloadTiffURL"/>
                         <owl:someValuesFrom rdf:resource="&xsd;string"/>
                     </owl:Restriction>
                 </owl:intersectionOf>

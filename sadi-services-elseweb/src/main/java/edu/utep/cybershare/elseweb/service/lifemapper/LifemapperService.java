@@ -15,7 +15,6 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.Statement;
 
 import edu.utep.cybershare.elseweb.service.lifemapper.proxy.Lifemapper;
 import edu.utep.cybershare.elseweb.util.Printing;
@@ -32,8 +31,8 @@ public class LifemapperService extends SimpleSynchronousServiceServlet{
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	public void processInput(Resource input, Resource output)
-	{
+	public void processInput(Resource input, Resource output){
+		
 		String baseURI = "http://lifemapper.org/";
 	
 		Printing.print(input.getModel());
@@ -46,42 +45,42 @@ public class LifemapperService extends SimpleSynchronousServiceServlet{
 		//extract LifemapperScenario from experiment
 		Resource scenarioLayers = input.getProperty(Vocab.hasScenario).getResource();
 
-		Resource distribution1 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.payloadDataset1));
-		Resource distribution2 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.paylaodDataset2));
-		Resource distribution3 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.payloadDataset3));
-		Resource distribution4 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.payloadDataset4));
-		Resource distribution5 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.payloadDataset5));
+		Resource distribution1 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.dataset1));
+		Resource distribution2 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.dataset2));
+		Resource distribution3 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.dataset3));
+		Resource distribution4 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.dataset4));
+		Resource distribution5 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.dataset5));
 		
-		String layer1URLString = distribution1.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
-		String layer2URLString = distribution2.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
-		String layer3URLString = distribution3.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
-		String layer4URLString = distribution4.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
-		String layer5URLString = distribution5.getProperty(Vocab.hasWCSCoveragePayloadURL).getString();
+		String layer1URLString = distribution1.getProperty(Vocab.downloadTiffURL).getString();
+		String layer2URLString = distribution2.getProperty(Vocab.downloadTiffURL).getString();
+		String layer3URLString = distribution3.getProperty(Vocab.downloadTiffURL).getString();
+		String layer4URLString = distribution4.getProperty(Vocab.downloadTiffURL).getString();
+		String layer5URLString = distribution5.getProperty(Vocab.downloadTiffURL).getString();
 		
-		URL layerURL1;
-		URL layerURL2;
-		URL layerURL3;
-		URL layerURL4;
-		URL layerURL5;
+		URL layerURL1 = null;
+		URL layerURL2 = null;
+		URL layerURL3 = null;
+		URL layerURL4 = null;
+		URL layerURL5 = null;
 		
 		try{
 			layerURL1 = new URL(layer1URLString);
 			layerURL2 = new URL(layer2URLString);
 			layerURL3 = new URL(layer3URLString);
 			layerURL4 = new URL(layer4URLString);
-			layerURL5 = new URL(layer5URLString);
-			
-			experiment.addScenarioLayer(layerURL1);
-			experiment.addScenarioLayer(layerURL2);
-			experiment.addScenarioLayer(layerURL3);
-			experiment.addScenarioLayer(layerURL4);
-			experiment.addScenarioLayer(layerURL5);
+			layerURL5 = new URL(layer5URLString);			
 		}
 		catch(Exception e){e.printStackTrace();}
+
+		//add scenario layers to proxy
+		experiment.addScenarioLayer(layerURL1);
+		experiment.addScenarioLayer(layerURL2);
+		experiment.addScenarioLayer(layerURL3);
+		experiment.addScenarioLayer(layerURL4);
+		experiment.addScenarioLayer(layerURL5);
 		
 		//extract algorithm
 		Resource algorithmResource = input.getProperty(Vocab.hasModelingAlgorithm).getResource();
-		System.out.println("algorithmResource: " + algorithmResource.getURI());
 		String algorithmName = algorithmResource.getProperty(Vocab.hasAlgorithmName).getLiteral().getString();
 		experiment.setAlgorithm(algorithmName);
 
@@ -107,13 +106,12 @@ public class LifemapperService extends SimpleSynchronousServiceServlet{
 		return wcsCoveragePayload.getPropertyResourceValue(Vocab.distribution);
 	}
 
-	private static final class Vocab
-	{
+	private static final class Vocab{
+		
 		private static Model m_model = ModelFactory.createDefaultModel();
-		
+				
+		//Lifemapper properties and resources
 		private static final String lifemapper = "http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#";
-		
-		//FullySpecifiedExperiment Properties
 		public static final Property hasOccurrenceSetID = m_model.createProperty(lifemapper + "hasOccurrenceSetID");
 		public static final Property hasAlgorithmName = m_model.createProperty(lifemapper + "hasAlgorithmName");
 		public static final Property hasModelingAlgorithm = m_model.createProperty(lifemapper + "hasModelingAlgorithm");
@@ -121,20 +119,19 @@ public class LifemapperService extends SimpleSynchronousServiceServlet{
 		public static final Property hasModel = m_model.createProperty(lifemapper + "hasModel");
 		public static final Property hasScenarioLayerUnits = m_model.createProperty(lifemapper + "hasScenarioLayerUnits");
 		public static final Property hasScenario = m_model.createProperty(lifemapper + "hasScenario");
-		
-		private static final elseweb = "http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#";
+		public static final Resource Model = m_model.createResource(lifemapper + "Model");
 		
 		//ELSEWEB ontology properties
-		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#hasWCSCoveragePayloadURL");
-		public static final Property dataset1 = m_model.createProperty("dataset1");
-		public static final Property dataset2 = m_model.createProperty("dataset2");
-		public static final Property dataset3 = m_model.createProperty("dataset3");
-		public static final Property dataset4 = m_model.createProperty("dataset4");
-		public static final Property dataset5 = m_model.createProperty("dataset5");
+		private static final String elseweb = "http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#";
+		public static final Property downloadTiffURL = m_model.createProperty(elseweb + "downloadTiffURL");
+		public static final Property dataset1 = m_model.createProperty(elseweb + "dataset1");
+		public static final Property dataset2 = m_model.createProperty(elseweb + "dataset2");
+		public static final Property dataset3 = m_model.createProperty(elseweb + "dataset3");
+		public static final Property dataset4 = m_model.createProperty(elseweb + "dataset4");
+		public static final Property dataset5 = m_model.createProperty(elseweb + "dataset5");
 	
-		public static final Property distribution = m_model.createProperty("http://www.w3.org/ns/dcat#distribution");
-		
-		//CompletedExperiment Properties
-		public static final Resource Model = m_model.createResource("http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#Model");	
+		//DCAT properties
+		private static final String dcat = "http://www.w3.org/ns/dcat#";
+		public static final Property distribution = m_model.createProperty(dcat + "distribution");	
 	}
 }
