@@ -1,4 +1,4 @@
-package edu.utep.cybershare.elseweb.lifemapper.proxy;
+package edu.utep.cybershare.elseweb.service.lifemapper.proxy;
 
 import java.io.File;
 import java.net.URL;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import edu.utep.cybershare.elseweb.util.CommandRunner;
 import edu.utep.cybershare.elseweb.util.FileUtils;
 
-public class LifemapperExperiment {
+public class Lifemapper {
 	
 	private static final String pythonEXE = "python2.7";
 	
@@ -24,7 +24,7 @@ public class LifemapperExperiment {
 	private int occurrenceSetID;
 	private File outputFilePath;
 	
-	public LifemapperExperiment(String username, String password){
+	public Lifemapper(String username, String password){
 		scenarioLayers = new ArrayList<URL>();
 		uname = username;
 		pword = password;

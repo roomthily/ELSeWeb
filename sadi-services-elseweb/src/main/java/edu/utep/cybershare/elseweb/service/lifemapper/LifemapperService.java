@@ -1,4 +1,4 @@
-package edu.utep.cybershare.elseweb.lifemapper;
+package edu.utep.cybershare.elseweb.service.lifemapper;
 
 import java.net.URL;
 
@@ -17,7 +17,7 @@ import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
 
-import edu.utep.cybershare.elseweb.lifemapper.proxy.LifemapperExperiment;
+import edu.utep.cybershare.elseweb.service.lifemapper.proxy.Lifemapper;
 import edu.utep.cybershare.elseweb.util.Printing;
 
 @Name("LifemapperService")
@@ -26,8 +26,8 @@ import edu.utep.cybershare.elseweb.util.Printing;
 @OutputClass("http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#CompletedExperiment")
 @Description("Lifemapper Species Modeling Service")
 
-public class LifemapperService extends SimpleSynchronousServiceServlet
-{
+public class LifemapperService extends SimpleSynchronousServiceServlet{
+	
 	private static final Logger log = Logger.getLogger(LifemapperService.class);
 	private static final long serialVersionUID = 1L;
 
@@ -36,15 +36,15 @@ public class LifemapperService extends SimpleSynchronousServiceServlet
 	{
 		String baseURI = "http://lifemapper.org/";
 	
-		//Printing.print(input.getModel());
+		Printing.print(input.getModel());
 		
 		String uname = "elseweb";
 		String pword = "elseweb1";
 		
-		LifemapperExperiment experiment = new LifemapperExperiment(uname, pword);
+		Lifemapper experiment = new Lifemapper(uname, pword);
 		
-		//extract layers from experiment
-		Resource scenarioLayers = input.getProperty(Vocab.hasScenarioLayers).getResource();
+		//extract LifemapperScenario from experiment
+		Resource scenarioLayers = input.getProperty(Vocab.hasScenario).getResource();
 
 		Resource distribution1 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.payloadDataset1));
 		Resource distribution2 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.paylaodDataset2));
@@ -111,22 +111,26 @@ public class LifemapperService extends SimpleSynchronousServiceServlet
 	{
 		private static Model m_model = ModelFactory.createDefaultModel();
 		
+		private static final String lifemapper = "http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#";
+		
 		//FullySpecifiedExperiment Properties
-		public static final Property hasOccurrenceSetID = m_model.createProperty("http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasOccurrenceSetID");
-		public static final Property hasAlgorithmName = m_model.createProperty("http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasAlgorithmName");
-		public static final Property hasModelingAlgorithm = m_model.createProperty("http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasModelingAlgorithm");
-		public static final Property hasModelURL = m_model.createProperty("http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasModelURL");
-		public static final Property hasModel = m_model.createProperty("http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasModel");
-		public static final Property hasScenarioLayerUnits = m_model.createProperty("http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasScenarioLayerUnits");
-
-		//WCSCoverageSequence Properties
-		public static final Property hasScenarioLayers = m_model.createProperty("http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasScenarioLayers");
+		public static final Property hasOccurrenceSetID = m_model.createProperty(lifemapper + "hasOccurrenceSetID");
+		public static final Property hasAlgorithmName = m_model.createProperty(lifemapper + "hasAlgorithmName");
+		public static final Property hasModelingAlgorithm = m_model.createProperty(lifemapper + "hasModelingAlgorithm");
+		public static final Property hasModelURL = m_model.createProperty(lifemapper + "hasModelURL");
+		public static final Property hasModel = m_model.createProperty(lifemapper + "hasModel");
+		public static final Property hasScenarioLayerUnits = m_model.createProperty(lifemapper + "hasScenarioLayerUnits");
+		public static final Property hasScenario = m_model.createProperty(lifemapper + "hasScenario");
+		
+		private static final elseweb = "http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#";
+		
+		//ELSEWEB ontology properties
 		public static final Property hasWCSCoveragePayloadURL = m_model.createProperty("http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#hasWCSCoveragePayloadURL");
-		public static final Property payloadDataset1 = m_model.createProperty("http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset1");
-		public static final Property paylaodDataset2 = m_model.createProperty("http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset2");
-		public static final Property payloadDataset3 = m_model.createProperty("http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset3");
-		public static final Property payloadDataset4 = m_model.createProperty("http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset4");
-		public static final Property payloadDataset5 = m_model.createProperty("http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#payloadDataset5");
+		public static final Property dataset1 = m_model.createProperty("dataset1");
+		public static final Property dataset2 = m_model.createProperty("dataset2");
+		public static final Property dataset3 = m_model.createProperty("dataset3");
+		public static final Property dataset4 = m_model.createProperty("dataset4");
+		public static final Property dataset5 = m_model.createProperty("dataset5");
 	
 		public static final Property distribution = m_model.createProperty("http://www.w3.org/ns/dcat#distribution");
 		

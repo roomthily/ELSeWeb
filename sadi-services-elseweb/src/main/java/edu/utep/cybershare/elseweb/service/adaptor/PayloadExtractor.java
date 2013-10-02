@@ -1,4 +1,4 @@
-package edu.utep.cybershare.elseweb.adaptor;
+package edu.utep.cybershare.elseweb.service.adaptor;
 
 import java.io.File;
 import java.net.URL;
