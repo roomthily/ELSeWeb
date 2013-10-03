@@ -1,18 +1,14 @@
-prefix edac: <http://ontology.cybershare.utep.edu/ELSEWeb/edac.owl#>
+prefix edac: <http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#>
 prefix lifemapper: <http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#>
+prefix scenario: <http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#>
 prefix experiment: <http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 
-select ?algorithmName ?units ?occurrenceSetID ?modelURL
+select ?scenario
 from <http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl>
-from <http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl>
+from <http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl>
+from <http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl>
 where
 {
-?experiment lifemapper:hasModel ?model.
-?experiment lifemapper:hasScenarioLayerUnits ?units.
-?experiment lifemapper:hasOccurrenceSetID ?occurrenceSetID.
-?experiment lifemapper:hasModelingAlgorithm ?algorithm.
-?algorithm lifemapper:hasAlgorithmName ?algorithmName.
-?model lifemapper:hasModelURL ?modelURL.
-?experiment a lifemapper:CompletedExperiment.
+?scenario a scenario:Scenario
 }

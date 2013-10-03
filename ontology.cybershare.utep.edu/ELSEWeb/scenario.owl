@@ -32,42 +32,186 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset1 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset1">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#dataset"/>
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification1 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification1">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset2 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification2 -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset2">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#dataset"/>
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification2">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset3 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification3 -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset3">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#dataset"/>
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification3">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset4 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification4 -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset4">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#dataset"/>
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification4">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset5 -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification5 -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset5">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#dataset"/>
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification5">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution1 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution1">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution1"/>
+            <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffPayload"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution2 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution2">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution2"/>
+            <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffPayload"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution3 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution3">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution3"/>
+            <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffPayload"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution4 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution4">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution4"/>
+            <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffPayload"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution5 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution5">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffDistribution"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution5"/>
+            <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffPayload"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffPayload -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffPayload"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution1 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution1">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification1"/>
+            <rdf:Description rdf:about="http://www.w3.org/ns/dcat#distribution"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution2 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution2">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification2"/>
+            <rdf:Description rdf:about="http://www.w3.org/ns/dcat#distribution"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution3 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution3">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification3"/>
+            <rdf:Description rdf:about="http://www.w3.org/ns/dcat#distribution"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution4 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution4">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification4"/>
+            <rdf:Description rdf:about="http://www.w3.org/ns/dcat#distribution"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution5 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution5">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification5"/>
+            <rdf:Description rdf:about="http://www.w3.org/ns/dcat#distribution"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -83,6 +227,59 @@
     
 
 
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#DistributionSpecification -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#DistributionSpecification">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/spatial"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Region"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/temporal"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Duration"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+                        <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#ExtractedWCSCoverageDistribution -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#ExtractedWCSCoverageDistribution">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasTiffPayload"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#TiffDistribution"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDistribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#SatisifedDistributionSpecification -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#SatisifedDistributionSpecification">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#distribution"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDistribution"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#DistributionSpecification"/>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#Scenario -->
 
     <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#Scenario">
@@ -90,24 +287,24 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset1"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDataset"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution1"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDistribution"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset2"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDataset"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution2"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDistribution"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset3"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDataset"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution3"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDistribution"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset4"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDataset"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution4"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDistribution"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset5"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDataset"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasWCSCoverageDistribution5"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDistribution"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -123,49 +320,24 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset1"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSCoverageDatasetSpecification"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification1"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#DistributionSpecification"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset2"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSCoverageDatasetSpecification"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification2"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#DistributionSpecification"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset3"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSCoverageDatasetSpecification"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification3"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#DistributionSpecification"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset4"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSCoverageDatasetSpecification"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification4"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#DistributionSpecification"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#dataset5"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSCoverageDatasetSpecification"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSCoverageDatasetSpecification -->
-
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSCoverageDatasetSpecification">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/spatial"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Region"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/temporal"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Duration"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-                        <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification5"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#DistributionSpecification"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
