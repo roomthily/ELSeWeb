@@ -45,17 +45,17 @@ public class LifemapperService extends SimpleSynchronousServiceServlet{
 		//extract LifemapperScenario from experiment
 		Resource scenarioLayers = input.getProperty(Vocab.hasScenario).getResource();
 
-		Resource distribution1 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.dataset1));
-		Resource distribution2 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.dataset2));
-		Resource distribution3 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.dataset3));
-		Resource distribution4 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.dataset4));
-		Resource distribution5 = getDistribution(scenarioLayers.getPropertyResourceValue(Vocab.dataset5));
+		Resource distribution1 = scenarioLayers.getPropertyResourceValue(Vocab.hasTiffDistribution1);
+		Resource distribution2 = scenarioLayers.getPropertyResourceValue(Vocab.hasTiffDistribution2);
+		Resource distribution3 = scenarioLayers.getPropertyResourceValue(Vocab.hasTiffDistribution3);
+		Resource distribution4 = scenarioLayers.getPropertyResourceValue(Vocab.hasTiffDistribution4);
+		Resource distribution5 = scenarioLayers.getPropertyResourceValue(Vocab.hasTiffDistribution5);
 		
-		String layer1URLString = distribution1.getProperty(Vocab.downloadTiffURL).getString();
-		String layer2URLString = distribution2.getProperty(Vocab.downloadTiffURL).getString();
-		String layer3URLString = distribution3.getProperty(Vocab.downloadTiffURL).getString();
-		String layer4URLString = distribution4.getProperty(Vocab.downloadTiffURL).getString();
-		String layer5URLString = distribution5.getProperty(Vocab.downloadTiffURL).getString();
+		String layer1URLString = distribution1.getProperty(Vocab.downloadURL).getString();
+		String layer2URLString = distribution2.getProperty(Vocab.downloadURL).getString();
+		String layer3URLString = distribution3.getProperty(Vocab.downloadURL).getString();
+		String layer4URLString = distribution4.getProperty(Vocab.downloadURL).getString();
+		String layer5URLString = distribution5.getProperty(Vocab.downloadURL).getString();
 		
 		URL layerURL1 = null;
 		URL layerURL2 = null;
@@ -102,10 +102,6 @@ public class LifemapperService extends SimpleSynchronousServiceServlet{
 		output.addProperty(Vocab.hasModel, lifemapperModel);
 	}
 	
-	private Resource getDistribution(Resource wcsCoveragePayload){
-		return wcsCoveragePayload.getPropertyResourceValue(Vocab.distribution);
-	}
-
 	private static final class Vocab{
 		
 		private static Model m_model = ModelFactory.createDefaultModel();
@@ -120,18 +116,17 @@ public class LifemapperService extends SimpleSynchronousServiceServlet{
 		public static final Property hasScenarioLayerUnits = m_model.createProperty(lifemapper + "hasScenarioLayerUnits");
 		public static final Property hasScenario = m_model.createProperty(lifemapper + "hasScenario");
 		public static final Resource Model = m_model.createResource(lifemapper + "Model");
+			
+		//Scenario properties
+		private static String scenario = "http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#";
+		public static final Property hasTiffDistribution1 = m_model.getProperty(scenario + "hasTiffDistribution1");
+		public static final Property hasTiffDistribution2 = m_model.getProperty(scenario + "hasTiffDistribution2");
+		public static final Property hasTiffDistribution3 = m_model.getProperty(scenario + "hasTiffDistribution3");
+		public static final Property hasTiffDistribution4 = m_model.getProperty(scenario + "hasTiffDistribution4");
+		public static final Property hasTiffDistribution5 = m_model.getProperty(scenario + "hasTiffDistribution5");
 		
-		//ELSEWEB ontology properties
-		private static final String elseweb = "http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#";
-		public static final Property downloadTiffURL = m_model.createProperty(elseweb + "downloadTiffURL");
-		public static final Property dataset1 = m_model.createProperty(elseweb + "dataset1");
-		public static final Property dataset2 = m_model.createProperty(elseweb + "dataset2");
-		public static final Property dataset3 = m_model.createProperty(elseweb + "dataset3");
-		public static final Property dataset4 = m_model.createProperty(elseweb + "dataset4");
-		public static final Property dataset5 = m_model.createProperty(elseweb + "dataset5");
-	
 		//DCAT properties
 		private static final String dcat = "http://www.w3.org/ns/dcat#";
-		public static final Property distribution = m_model.createProperty(dcat + "distribution");	
+		public static final Property downloadURL = m_model.createProperty(dcat + "downloadURL");
 	}
 }
