@@ -31,11 +31,11 @@ public class Harvester {
 		Builder builder = new Builder(product);
 		
 		//setup the builder directory
-		Director directory = new Director(builder);
+		Director director = new Director(builder);
 		
 		//get our data source and pass to director
 		WCSDigests digests = new WCSDigests(5, 0);
-		directory.construct(digests);
+		director.construct(digests);
 		
 		//create visitor to convert model product to axioms
 		OntologyToolset bundle = new OntologyToolset(FilePath.DOCUMENT_URL);

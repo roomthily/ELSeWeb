@@ -28,8 +28,8 @@ public class WCSCoverageDistributionMapper {
 	private String endDate;
 	
 	//oboe
-	private String characteristicURI;
-	private String entityURI;
+	private String characteristicClass;
+	private String entityClass;
 	
 	//distribution related resources
 	private Resource distributionResource;
@@ -37,23 +37,22 @@ public class WCSCoverageDistributionMapper {
 	private Literal accessURLLiteral;
 	private Literal downloadURLLiteral;
 	
-	public void setWCSDatasetSpecification(Resource wcsCoverageDatasetSpecificationResource){
-		Resource regionResource = wcsCoverageDatasetSpecificationResource.getPropertyResourceValue(Vocab.spatial).asResource();
-		Resource durationResource = wcsCoverageDatasetSpecificationResource.getPropertyResourceValue(Vocab.temporal).asResource();
-		Resource measurementResource = wcsCoverageDatasetSpecificationResource.getPropertyResourceValue(Vocab.wasGeneratedBy).asResource();
+	public void setWCSDistributionSpecification(Resource wcsCoverageDistributionSpecificationResource){
+		Resource regionResource = wcsCoverageDistributionSpecificationResource.getPropertyResourceValue(Vocab.spatial);
+		Resource durationResource = wcsCoverageDistributionSpecificationResource.getPropertyResourceValue(Vocab.temporal);
 		
 		populateRegion(regionResource);
 		populateDuration(durationResource);
-		populateOBOE(measurementResource);
+		populateOBOE(wcsCoverageDistributionSpecificationResource);
 		
 		setWCSCoverageDistributionResources();
 	}
 	
 	private void populateRegion(Resource regionResource){
-		llon = regionResource.getPropertyResourceValue(Vocab.hasLeftLongitude).asLiteral().getString();
-		rlon = regionResource.getPropertyResourceValue(Vocab.hasRightLongitude).asLiteral().getString();
-		llat = regionResource.getPropertyResourceValue(Vocab.hasLowerLatitude).asLiteral().getString();
-		ulat = regionResource.getPropertyResourceValue(Vocab.hasUpperLatitude).asLiteral().getString();
+		llon = regionResource.getProperty(Vocab.hasLeftLongitude).getLiteral().getString();
+		rlon = regionResource.getProperty(Vocab.hasRightLongitude).getLiteral().getString();
+		llat = regionResource.getProperty(Vocab.hasLowerLatitude).getLiteral().getString();
+		ulat = regionResource.getProperty(Vocab.hasUpperLatitude).getLiteral().getString();
 	}
 
 	private String wrapXSDDateTime(String value){return "\"" + value + "\"^^<http://www.w3.org/2001/XMLSchema#dateTime>";}
@@ -68,51 +67,17 @@ public class WCSCoverageDistributionMapper {
 	public String getStartDate() {return wrapXSDDateTime(startDate);}
 	public String getEndDate() {return wrapXSDDateTime(endDate);}
 
-	public String getCharacteristicURI() {return wrapResource(characteristicURI);}
-	public String getEntityURI() {return wrapResource(entityURI);}
-
 	private void populateDuration(Resource durationResource){
-		startDate = durationResource.getPropertyResourceValue(Vocab.hasStartDate).asLiteral().getString();
-		endDate = durationResource.getPropertyResourceValue(Vocab.hasEndDate).asLiteral().getString();
+		startDate = durationResource.getProperty(Vocab.hasStartDate).getLiteral().getString();
+		endDate = durationResource.getProperty(Vocab.hasEndDate).getLiteral().getString();
 	}
 	
-	private void populateOBOE(Resource measurementResource){
-		characteristicURI = measurementResource.getPropertyResourceValue(Vocab.ofCharacteristic).asResource().getURI();
-		
-		Resource observationResource = measurementResource.getPropertyResourceValue(Vocab.measurementFor).asResource();
-		entityURI = observationResource.getPropertyResourceValue(Vocab.ofEntity).asResource().getURI();
-	}
-
-	private static class Vocab{
-		private static Model m_model = ModelFactory.createDefaultModel();
-
-		//ELSEWEBDATA properties
-		private static final String elseweb = "http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#";
-		
-		//region
-		public static final Property hasLeftLongitude = m_model.createProperty(elseweb + "hasLeftLongitude");
-		public static final Property hasRightLongitude = m_model.createProperty(elseweb + "hasRightLongitude");
-		public static final Property hasLowerLatitude = m_model.createProperty(elseweb + "hasLowerLatitude");
-		public static final Property hasUpperLatitude = m_model.createProperty(elseweb + "hasUpperLatitude");
-
-		//duration
-		public static final Property hasStartDate = m_model.createProperty(elseweb + "hasStartDate");
-		public static final Property hasEndDate = m_model.createProperty(elseweb + "hasEndDate");		
-		
-		//DCME properties
-		private static final String dcmi = "http://purl.org/dc/terms/";
-		public static final Property spatial = m_model.createProperty(dcmi + "spatial");
-		public static final Property temporal = m_model.createProperty(dcmi + "temporal");
-
-		//PROVO properties
-		private static final String provo = "http://www.w3.org/ns/prov#";
-		public static final Property wasGeneratedBy = m_model.createProperty(provo + "wasGeneratedBy");
-		
-		//OBOE properties
-		private static final String oboe = "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#";
-		public static final Property measurementFor = m_model.createProperty(oboe + "measurementFor");
-		public static final Property ofCharacteristic = m_model.createProperty(oboe + "ofCharacteristic");
-		public static final Property ofEntity = m_model.createProperty(oboe + "ofEntity");
+	private void populateOBOE(Resource wcsCoverageDatasetSpecificationResource) {
+		characteristicClass = wcsCoverageDatasetSpecificationResource.getPropertyResourceValue(Vocab.hasCharacteristicClass).getURI();
+		characteristicClass = wrapResource(characteristicClass);
+	
+		entityClass = wcsCoverageDatasetSpecificationResource.getPropertyResourceValue(Vocab.hasEntityClass).getURI();
+		entityClass = wrapResource(entityClass);
 	}
 
 	public Resource getDistribution(){return distributionResource;}
@@ -122,6 +87,10 @@ public class WCSCoverageDistributionMapper {
 	
 	private void setWCSCoverageDistributionResources(){
 		String queryString = this.getDistributionSPARQL();
+
+		System.out.println("distribution sparql query:");
+		System.out.println(queryString);
+		
 		Query query = QueryFactory.create(queryString);
 
 		QueryExecution qexec = QueryExecutionFactory.sparqlService(endpoint, query);
@@ -163,17 +132,17 @@ public class WCSCoverageDistributionMapper {
 				"?duration elseweb:hasEndDate ?endDate." + newline +
 
 				"?measurement oboe:ofCharacteristic ?characteristic." + newline +
+				"?characteristic a " + characteristicClass + "." + newline +
 				"?measurement oboe:measurementFor ?observation." + newline +
 				"?observation oboe:ofEntity ?entity." + newline +
+				"??entity a " + entityClass + "." + newline +
 
-				"FILTER(?llon = " + this.getLlon() + ")" + newline +
-				"FILTER(?rlon = " + this.getRlon() + ")" + newline +
-				"FILTER(?llat = " + this.getLlat() + ")" + newline +
-				"FILTER(?ulat = " + this.getUlat() + ")" + newline +
+				"FILTER(?llon >= " + this.getLlon() + ")" + newline +
+				"FILTER(?rlon <= " + this.getRlon() + ")" + newline +
+				"FILTER(?llat >= " + this.getLlat() + ")" + newline +
+				"FILTER(?ulat <= " + this.getUlat() + ")" + newline +
 				"FILTER(?startDate = " + this.getStartDate() + ")" + newline +
 				"FILTER(?endDate = " + this.getEndDate() + ")" + newline +
-				"FILTER(?characteristic = " + this.getCharacteristicURI() + ")" + newline +
-				"FILTER(?entity = " + this.getEntityURI() + ")" + newline +
 		"}";
 		
 		return prefixes + newline + queryBody;
@@ -187,5 +156,32 @@ public class WCSCoverageDistributionMapper {
 				"prefix oboe: <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#>" + newline +
 				"prefix dcmi: <http://purl.org/dc/terms/>";
 		return prefixes;
+	}
+	
+	private static class Vocab{
+		private static Model m_model = ModelFactory.createDefaultModel();
+
+		//scenario properties
+		private static final String scenario = "http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#";
+		public static final Property hasEntityClass = m_model.createProperty(scenario + "hasEntityClass");
+		public static final Property hasCharacteristicClass = m_model.createProperty(scenario + "hasCharacteristicClass");
+		
+		//ELSEWEBDATA properties
+		private static final String elseweb = "http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#";
+		
+		//region
+		public static final Property hasLeftLongitude = m_model.createProperty(elseweb + "hasLeftLongitude");
+		public static final Property hasRightLongitude = m_model.createProperty(elseweb + "hasRightLongitude");
+		public static final Property hasLowerLatitude = m_model.createProperty(elseweb + "hasLowerLatitude");
+		public static final Property hasUpperLatitude = m_model.createProperty(elseweb + "hasUpperLatitude");
+
+		//duration
+		public static final Property hasStartDate = m_model.createProperty(elseweb + "hasStartDate");
+		public static final Property hasEndDate = m_model.createProperty(elseweb + "hasEndDate");		
+		
+		//DCME properties
+		private static final String dcmi = "http://purl.org/dc/terms/";
+		public static final Property spatial = m_model.createProperty(dcmi + "spatial");
+		public static final Property temporal = m_model.createProperty(dcmi + "temporal");
 	}
 }

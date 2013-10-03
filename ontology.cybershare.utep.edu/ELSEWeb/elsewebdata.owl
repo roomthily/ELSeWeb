@@ -531,6 +531,62 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Amount -->
+
+    <owl:Thing rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Amount">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature -->
+
+    <owl:Thing rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Air -->
+
+    <owl:Thing rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Air">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#DewPoint -->
+
+    <owl:Thing rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#DewPoint">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Precipitation -->
+
+    <owl:Thing rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Precipitation">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#SurfaceLayer -->
+
+    <owl:Thing rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#SurfaceLayer">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#VegitationIndex -->
+
+    <owl:Thing rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#VegitationIndex">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
     <!-- http://provenanceweb.org/format/mime/image/tiff -->
 
     <owl:NamedIndividual rdf:about="http://provenanceweb.org/format/mime/image/tiff">

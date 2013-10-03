@@ -32,6 +32,12 @@
     
 
 
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasCharacteristicClass -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasCharacteristicClass"/>
+    
+
+
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification -->
 
     <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification"/>
@@ -75,6 +81,12 @@
     <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification5">
         <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasDistributionSpecification"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasEntityClass -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasEntityClass"/>
     
 
 
@@ -234,16 +246,20 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasCharacteristicClass"/>
+                        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#hasEntityClass"/>
+                        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/dc/terms/spatial"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Region"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/dc/terms/temporal"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Duration"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-                        <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>

@@ -77,23 +77,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSCoverageDatasetSpecification -->
-
-    <owl:Class rdf:about="&scenario;WCSCoverageDatasetSpecification"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -102,36 +85,13 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#air -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#air">
-        <rdf:type rdf:resource="&elsewebdata;Air"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#amount -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#amount">
-        <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Amount"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#dewpoint -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#dewpoint">
-        <rdf:type rdf:resource="&elsewebdata;DewPoint"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification1 -->
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification1">
-        <rdf:type rdf:resource="&scenario;WCSCoverageDatasetSpecification"/>
+        <rdf:type rdf:resource="&scenario;DistributionSpecification"/>
+        <scenario:hasCharacteristicClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"/>
+        <scenario:hasEntityClass rdf:resource="&elsewebdata;Air"/>
         <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration1"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#measurement1"/>
         <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#region1"/>
     </owl:NamedIndividual>
     
@@ -140,9 +100,10 @@
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification2 -->
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification2">
-        <rdf:type rdf:resource="&scenario;WCSCoverageDatasetSpecification"/>
+        <rdf:type rdf:resource="&scenario;DistributionSpecification"/>
+        <scenario:hasCharacteristicClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"/>
+        <scenario:hasEntityClass rdf:resource="&elsewebdata;DewPoint"/>
         <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration2"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#measurement2"/>
         <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#region1"/>
     </owl:NamedIndividual>
     
@@ -151,9 +112,10 @@
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification3 -->
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification3">
-        <rdf:type rdf:resource="&scenario;WCSCoverageDatasetSpecification"/>
+        <rdf:type rdf:resource="&scenario;DistributionSpecification"/>
+        <scenario:hasCharacteristicClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"/>
+        <scenario:hasEntityClass rdf:resource="&elsewebdata;SurfaceLayer"/>
         <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration3"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#measurement3"/>
         <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#region1"/>
     </owl:NamedIndividual>
     
@@ -162,9 +124,9 @@
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification4 -->
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification4">
-        <rdf:type rdf:resource="&scenario;WCSCoverageDatasetSpecification"/>
+        <rdf:type rdf:resource="&scenario;DistributionSpecification"/>
+        <scenario:hasCharacteristicClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Amount"/>
         <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration4"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#measurement4"/>
         <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#region1"/>
     </owl:NamedIndividual>
     
@@ -173,9 +135,10 @@
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification5 -->
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification5">
-        <rdf:type rdf:resource="&scenario;WCSCoverageDatasetSpecification"/>
+        <rdf:type rdf:resource="&scenario;DistributionSpecification"/>
+        <scenario:hasCharacteristicClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Amount"/>
+        <scenario:hasEntityClass rdf:resource="&elsewebdata;Precipitation"/>
         <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration5"/>
-        <prov:wasGeneratedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#measurement5"/>
         <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#region1"/>
     </owl:NamedIndividual>
     
@@ -185,8 +148,8 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration1">
         <rdf:type rdf:resource="&elsewebdata;Duration"/>
-        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0196-12-31T12:10:59.626-07:00</elsewebdata:hasStartDate>
-        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0200-04-01T12:10:59.626-07:00</elsewebdata:hasEndDate>
+        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0192-12-31T15:07:49.285-07:00</elsewebdata:hasStartDate>
+        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0193-03-31T15:07:49.285-07:00</elsewebdata:hasEndDate>
     </owl:NamedIndividual>
     
 
@@ -195,8 +158,8 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration2">
         <rdf:type rdf:resource="&elsewebdata;Duration"/>
-        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0199-12-31T12:10:59.834-07:00</elsewebdata:hasStartDate>
-        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0200-03-31T12:10:59.834-07:00</elsewebdata:hasEndDate>
+        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0196-01-01T15:07:49.284-07:00</elsewebdata:hasStartDate>
+        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0196-04-01T15:07:49.284-07:00</elsewebdata:hasEndDate>
     </owl:NamedIndividual>
     
 
@@ -205,8 +168,8 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration3">
         <rdf:type rdf:resource="&elsewebdata;Duration"/>
-        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0201-01-31T12:10:58.769-07:00</elsewebdata:hasEndDate>
-        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0201-01-31T12:10:58.769-07:00</elsewebdata:hasStartDate>
+        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0200-12-31T15:07:41.676-07:00</elsewebdata:hasEndDate>
+        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0201-02-28T15:07:41.676-07:00</elsewebdata:hasStartDate>
     </owl:NamedIndividual>
     
 
@@ -215,8 +178,8 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration4">
         <rdf:type rdf:resource="&elsewebdata;Duration"/>
-        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0201-01-31T12:10:59.462-07:00</elsewebdata:hasEndDate>
-        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0201-01-31T12:10:59.462-07:00</elsewebdata:hasStartDate>
+        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0200-12-31T15:07:41.783-07:00</elsewebdata:hasStartDate>
+        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0201-02-28T15:07:41.783-07:00</elsewebdata:hasEndDate>
     </owl:NamedIndividual>
     
 
@@ -225,8 +188,8 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration5">
         <rdf:type rdf:resource="&elsewebdata;Duration"/>
-        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0196-12-31T12:10:59.802-07:00</elsewebdata:hasStartDate>
-        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0200-04-01T12:10:59.802-07:00</elsewebdata:hasEndDate>
+        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0198-12-31T15:07:49.286-07:00</elsewebdata:hasStartDate>
+        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0199-03-31T15:07:49.286-07:00</elsewebdata:hasEndDate>
     </owl:NamedIndividual>
     
 
@@ -239,109 +202,6 @@
         <lifemapper:hasScenarioLayerUnits rdf:datatype="&xsd;string">dd</lifemapper:hasScenarioLayerUnits>
         <lifemapper:hasScenario rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#scenarioSpecification"/>
         <lifemapper:hasModelingAlgorithm rdf:resource="&lifemapper;BIOCLIM"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#measurement1 -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#measurement1">
-        <rdf:type rdf:resource="&oboe-core;Measurement"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#observation1"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#temperature"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#measurement2 -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#measurement2">
-        <rdf:type rdf:resource="&oboe-core;Measurement"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#observation2"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#temperature"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#measurement3 -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#measurement3">
-        <rdf:type rdf:resource="&oboe-core;Measurement"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#observation3"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#temperature"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#measurement4 -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#measurement4">
-        <rdf:type rdf:resource="&oboe-core;Measurement"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#amount"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#observation4"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#measurement5 -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#measurement5">
-        <rdf:type rdf:resource="&oboe-core;Measurement"/>
-        <oboe-core:ofCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#amount"/>
-        <oboe-core:measurementFor rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#observation5"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#observation1 -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#observation1">
-        <rdf:type rdf:resource="&oboe-core;Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#air"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#observation2 -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#observation2">
-        <rdf:type rdf:resource="&oboe-core;Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#dewpoint"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#observation3 -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#observation3">
-        <rdf:type rdf:resource="&oboe-core;Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#surfaceLayer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#observation4 -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#observation4">
-        <rdf:type rdf:resource="&oboe-core;Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#vegetationIndex"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#observation5 -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#observation5">
-        <rdf:type rdf:resource="&oboe-core;Observation"/>
-        <oboe-core:ofEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#precipitation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#precipitation -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#precipitation">
-        <rdf:type rdf:resource="&elsewebdata;Precipitation"/>
     </owl:NamedIndividual>
     
 
@@ -362,40 +222,11 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#scenarioSpecification">
         <rdf:type rdf:resource="&scenario;ScenarioSpecification"/>
-        <scenario:dataset1 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#datasetSpecification1"/>
-        <scenario:dataset2 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#datasetSpecification2"/>
-        <scenario:dataset3 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#datasetSpecification3"/>
-        <scenario:dataset4 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#datasetSpecification4"/>
-        <scenario:dataset5 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#datasetSpecification5"/>
         <scenario:hasDistributionSpecification1 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification1"/>
         <scenario:hasDistributionSpecification2 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification2"/>
         <scenario:hasDistributionSpecification3 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification3"/>
         <scenario:hasDistributionSpecification4 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification4"/>
         <scenario:hasDistributionSpecification5 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification5"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#surfaceLayer -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#surfaceLayer">
-        <rdf:type rdf:resource="&elsewebdata;SurfaceLayer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#temperature -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#temperature">
-        <rdf:type rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#vegetationIndex -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#vegetationIndex">
-        <rdf:type rdf:resource="&elsewebdata;VegitationIndex"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
