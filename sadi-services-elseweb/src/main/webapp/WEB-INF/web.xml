@@ -13,8 +13,8 @@
     <servlet-class>edu.utep.cybershare.elseweb.service.adaptor.WCSPayloadExtractorService</servlet-class>
   </servlet>
   <servlet>
-    <servlet-name>WCSCoverageDatasetService</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.service.mapper.WCSCoverageDatasetService</servlet-class>
+    <servlet-name>WCSCoverageDistributionService</servlet-name>
+    <servlet-class>edu.utep.cybershare.elseweb.service.mapper.WCSCoverageDistributionService</servlet-class>
   </servlet>
 
   <servlet-mapping>
@@ -26,8 +26,8 @@
     <url-pattern>/WCSPayloadExtractorService</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>WCSCoverageDatasetService</servlet-name>
-    <url-pattern>/WCSCoverageDatasetService</url-pattern>
+    <servlet-name>WCSCoverageDistributionService</servlet-name>
+    <url-pattern>/WCSCoverageDistributionService</url-pattern>
   </servlet-mapping>
   
 </web-app>

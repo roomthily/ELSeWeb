@@ -26,7 +26,7 @@
 	      <ul>
 			<li><a href="./WCSPayloadExtractorService">WCSPayloadExtractorService</a></li>
             <li><a href="./LifemapperService">LifemapperService</a></li>
-            <li><a href="./WCSCoverageDatasetService">WCSCoverageDatasetService</a></li>
+            <li><a href="./WCSCoverageDistributionService">WCSCoverageDatasetService</a></li>
 	      </ul>
         </div> <!-- content -->
         <div id='footer'>

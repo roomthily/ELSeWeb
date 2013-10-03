@@ -6,12 +6,13 @@ import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 
-public class WCSCoverageDatasetSpecification {
+public class WCSCoverageDistributionMapper {
 	
 	private static final String endpoint = "http://129.108.193.15:8890/sparql";
 	private static final String newline = "\n";
@@ -30,6 +31,12 @@ public class WCSCoverageDatasetSpecification {
 	private String characteristicURI;
 	private String entityURI;
 	
+	//distribution related resources
+	private Resource distributionResource;
+	private Resource formatResource;
+	private Literal accessURLLiteral;
+	private Literal downloadURLLiteral;
+	
 	public void setWCSDatasetSpecification(Resource wcsCoverageDatasetSpecificationResource){
 		Resource regionResource = wcsCoverageDatasetSpecificationResource.getPropertyResourceValue(Vocab.spatial).asResource();
 		Resource durationResource = wcsCoverageDatasetSpecificationResource.getPropertyResourceValue(Vocab.temporal).asResource();
@@ -38,6 +45,8 @@ public class WCSCoverageDatasetSpecification {
 		populateRegion(regionResource);
 		populateDuration(durationResource);
 		populateOBOE(measurementResource);
+		
+		setWCSCoverageDistributionResources();
 	}
 	
 	private void populateRegion(Resource regionResource){
@@ -105,8 +114,13 @@ public class WCSCoverageDatasetSpecification {
 		public static final Property ofCharacteristic = m_model.createProperty(oboe + "ofCharacteristic");
 		public static final Property ofEntity = m_model.createProperty(oboe + "ofEntity");
 	}
+
+	public Resource getDistribution(){return distributionResource;}
+	public Resource getFormat(){return formatResource;}
+	public Literal getAccessURL(){return accessURLLiteral;}
+	public Literal getDownloadURL(){return downloadURLLiteral;}
 	
-	public Resource getWCSCoverageDistribution(){
+	private void setWCSCoverageDistributionResources(){
 		String queryString = this.getDistributionSPARQL();
 		Query query = QueryFactory.create(queryString);
 
@@ -114,26 +128,31 @@ public class WCSCoverageDatasetSpecification {
 		ResultSet results = qexec.execSelect();
 		
 		QuerySolution solution;
-		Resource distributionResource = null;
+
 		if(results.hasNext()){
 			solution = results.next();
-			distributionResource = solution.getResource("?distribution");
+			distributionResource = solution.getResource("distribution");
+			formatResource = solution.getResource("format");
+			accessURLLiteral = solution.getLiteral("accessURL");
+			downloadURLLiteral = solution.getLiteral("downloadURL");
 		}
-		
-		return distributionResource;
 	}
 	
 	private String getDistributionSPARQL(){
 		String prefixes = getPrefixes();
 
 		String queryBody = 
-		"select ?distribution" + newline +
+		"select ?distribution ?format ?accessURL ?downloadURL" + newline +
 		"from <http://gstore.unm.edu/apps/elseweb/search/datasets.json>" + newline +
 		"{" + newline +
 				"?wcsCoverageDataset dcmi:spatial ?region." + newline +
 				"?wcsCoverageDataset dcmi:temporal ?duration." + newline +
 				"?wcsCoverageDataset dcat:distribution ?distribution." + newline +
 				"?wcsCoverageDataset provo:wasGeneratedBy ?measurement." + newline +
+				
+				"?distribution dcmi:format ?format." + newline +
+				"?distribution dcat:accessURL ?accessURL." + newline +
+				"?distribution dcat:downloadURL ?downloadURL." + newline +
 				
 				"?region elseweb:hasLeftLongitude ?llon." + newline +
 				"?region elseweb:hasRightLongitude ?rlon." + newline +
