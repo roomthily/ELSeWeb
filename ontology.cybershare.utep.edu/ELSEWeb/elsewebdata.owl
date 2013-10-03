@@ -99,14 +99,6 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#downloadTiffURL -->
-
-    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#downloadTiffURL">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#downloadURL"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#hasEndDate -->
 
     <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#hasEndDate"/>
@@ -387,6 +379,12 @@
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#TiffDistribution -->
 
     <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#TiffDistribution">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/format"/>
+                <owl:hasValue rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
     </owl:Class>
     
@@ -456,10 +454,6 @@
                         <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#accessURL"/>
                         <owl:someValuesFrom rdf:resource="&xsd;string"/>
                     </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#downloadURL"/>
-                        <owl:someValuesFrom rdf:resource="&xsd;string"/>
-                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -509,7 +503,14 @@
 
     <!-- http://www.w3.org/ns/dcat#Distribution -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Distribution"/>
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Distribution">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#downloadURL"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
     
 
 

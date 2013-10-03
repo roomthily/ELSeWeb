@@ -22,8 +22,8 @@ import edu.utep.cybershare.elseweb.util.Printing;
 @Name("WCSPayloadExtractorService")
 @ContactEmail("nicholas.delrio@gmail.com")
 @InputClass("http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDistribution")
-@OutputClass("http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDistributionTiff")
-@Description("WCS Multipart MIME Payload Extractor Service")
+@OutputClass("http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#ExtractedWCSCoverageDistribution")
+@Description("Extracts Payload from WCS Multipart MIME Response")
 
 public class WCSPayloadExtractorService extends SimpleSynchronousServiceServlet{
 	
@@ -43,9 +43,16 @@ public class WCSPayloadExtractorService extends SimpleSynchronousServiceServlet{
 		//create payload url literal
 		Literal payloadURLLiteral = output.getModel().createLiteral(payloadURL.toString());
 
-		//add payload url and tiff format to output
-		output.addProperty(Vocab.downloadTiffURL, payloadURLLiteral);
-		output.addProperty(Vocab.format, Vocab.tiff);
+		//create TiffDistribution
+		String tiffDistributionURI = "http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution";
+		Resource tiffDistributionResource = output.getModel().createResource(tiffDistributionURI, Vocab.TiffDistribution);
+		
+		//add associated properties to TiffDistribution individual
+		output.addLiteral(Vocab.downloadURL, payloadURLLiteral);
+		tiffDistributionResource.addProperty(Vocab.format, Vocab.tiff);
+		
+		//add TiffDistribution individual to output
+		output.addProperty(Vocab.hasTiffPayload, tiffDistributionResource);
 		
 		Printing.print(output.getModel());
 	}
@@ -72,11 +79,15 @@ public class WCSPayloadExtractorService extends SimpleSynchronousServiceServlet{
 		
 		//elseweb properties
 		private static final String elseweb = "http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#";
-		public static final Property downloadTiffURL = m_model.createProperty(elseweb + "downloadTiffURL");
+		public static final Resource TiffDistribution = m_model.createResource(elseweb + "TiffDistribution");
 		
 		//dublin core properties
 		private static final String dcmi = "http://purl.org/dc/terms/";
 		public static final Property format = m_model.createProperty(dcmi + "format");
+	
+		//scenario properties
+		private static final String scenario = "http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#";
+		public static final Property hasTiffPayload = m_model.createProperty(scenario + "hasTiffPayload");
 		
 		//tiff dc:FileFormat
 		public static final Resource tiff = m_model.createResource("http://provenanceweb.org/format/mime/image/tiff");
