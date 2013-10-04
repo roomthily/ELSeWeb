@@ -432,14 +432,6 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDatasetTiff -->
-
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDatasetTiff">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-    </owl:Class>
-    
-
-
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDistribution -->
 
     <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDistribution">
