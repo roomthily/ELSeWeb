@@ -282,9 +282,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#SatisifedDistributionSpecification -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#SatisfiedDistributionSpecification -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#SatisifedDistributionSpecification">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#SatisfiedDistributionSpecification">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#distribution"/>
@@ -293,6 +293,12 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#DistributionSpecification"/>
     </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#SatisfiedScenarioSpecification -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#SatisfiedScenarioSpecification"/>
     
 
 

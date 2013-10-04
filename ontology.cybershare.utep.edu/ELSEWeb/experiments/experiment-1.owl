@@ -126,6 +126,7 @@
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionSpecification4">
         <rdf:type rdf:resource="&scenario;DistributionSpecification"/>
         <scenario:hasCharacteristicClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Amount"/>
+        <scenario:hasEntityClass rdf:resource="&elsewebdata;VegitationIndex"/>
         <terms:temporal rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration4"/>
         <terms:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#region1"/>
     </owl:NamedIndividual>

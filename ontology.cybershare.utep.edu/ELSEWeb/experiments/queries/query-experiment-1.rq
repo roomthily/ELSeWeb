@@ -1,14 +1,43 @@
-prefix edac: <http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#>
+prefix elseweb: <http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#>
 prefix lifemapper: <http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#>
 prefix scenario: <http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#>
 prefix experiment: <http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#>
+prefix dcat: <http://www.w3.org/ns/dcat#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 
 select ?scenario
 from <http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl>
-from <http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl>
-from <http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl>
+from <http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl>
 where
 {
-?scenario a scenario:Scenario
+?experiment lifemapper:hasScenario ?scenario.
+
+?scenario scenario:hasDistributionSpecification1 ?distributionSpecification1.
+?distributionSpecification1 dcat:distribution ?distribution1.
+
+?scenario scenario:hasDistributionSpecification2 ?distributionSpecification2.
+?distributionSpecification2 dcat:distribution ?distribution2.
+
+?scenario scenario:hasDistributionSpecification3 ?distributionSpecification3.
+?distributionSpecification3 dcat:distribution ?distribution3.
+
+?scenario scenario:hasDistributionSpecification4 ?distributionSpecification4.
+?distributionSpecification4 dcat:distribution ?distribution4.
+
+?scenario scenario:hasDistributionSpecification5 ?distributionSpecification5.
+?distributionSpecification5 dcat:distribution ?distribution5.
+
+?distribution1 scenario:hasTiffPayload1 ?tiffDistribution1.
+?distribution2 scenario:hasTiffPayload2 ?tiffDistribution2.
+?distribution3 scenario:hasTiffPayload3 ?tiffDistribution3.
+?distribution4 scenario:hasTiffPayload4 ?tiffDistribution4.
+?distribution5 scenario:hasTiffPayload5 ?tiffDistribution5.
+
+?scenario scenario:hasTiffDistribution1 ?tiffDistribution1.
+?scenario scenario:hasTiffDistribution2 ?tiffDistribution2.
+?scenario scenario:hasTiffDistribution3 ?tiffDistribution3.
+?scenario scenario:hasTiffDistribution4 ?tiffDistribution4.
+?scenario scenario:hasTiffDistribution5 ?tiffDistribution5.
+
+?scenario a lifemapper:LifemapperScenario
 }

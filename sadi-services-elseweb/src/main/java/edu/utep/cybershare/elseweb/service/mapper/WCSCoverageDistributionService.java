@@ -20,7 +20,7 @@ import edu.utep.cybershare.elseweb.util.Printing;
 @Name("WCSCoverageDatasetMapper")
 @ContactEmail("nicholas.delrio@gmail.com")
 @InputClass("http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#DistributionSpecification")
-@OutputClass("http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#SatisifedDistributionSpecification")
+@OutputClass("http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#SatisfiedDistributionSpecification")
 @Description("Maps DistributionsSpecifications to WCSCoverageDistributions")
 
 public class WCSCoverageDistributionService extends SimpleSynchronousServiceServlet{
@@ -46,9 +46,9 @@ public class WCSCoverageDistributionService extends SimpleSynchronousServiceServ
 		if(wcsCoverageDistribution == null)
 			System.out.println("distribution is null");
 		
-		wcsCoverageDistribution.addProperty(Vocab.format, format);
-		wcsCoverageDistribution.addLiteral(Vocab.accessURL, accessURL);
-		wcsCoverageDistribution.addLiteral(Vocab.downloadURL, downloadURL);
+		output.getModel().add(wcsCoverageDistribution, Vocab.format, format);
+		output.getModel().add(wcsCoverageDistribution, Vocab.accessURL, accessURL);
+		output.getModel().add(wcsCoverageDistribution, Vocab.downloadURL, downloadURL);
 		
 		//add distribution to output
 		output.addProperty(Vocab.distribution, wcsCoverageDistribution);

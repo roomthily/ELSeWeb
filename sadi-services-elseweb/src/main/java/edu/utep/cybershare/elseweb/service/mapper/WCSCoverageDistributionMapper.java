@@ -135,7 +135,7 @@ public class WCSCoverageDistributionMapper {
 				"?characteristic a " + characteristicClass + "." + newline +
 				"?measurement oboe:measurementFor ?observation." + newline +
 				"?observation oboe:ofEntity ?entity." + newline +
-				"??entity a " + entityClass + "." + newline +
+				"?entity a " + entityClass + "." + newline +
 
 				"FILTER(?llon >= " + this.getLlon() + ")" + newline +
 				"FILTER(?rlon <= " + this.getRlon() + ")" + newline +
