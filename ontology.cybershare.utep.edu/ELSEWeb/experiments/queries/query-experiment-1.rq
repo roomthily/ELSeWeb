@@ -5,7 +5,7 @@ prefix experiment: <http://ontology.cybershare.utep.edu/ELSEWeb/experiments/expe
 prefix dcat: <http://www.w3.org/ns/dcat#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 
-select ?url
+select ?scenario ?tiffDistribution
 from <http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl>
 from <http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl>
 where
@@ -13,5 +13,5 @@ where
 ?scenario scenario:hasDistributionSpecification ?distributionSpecification.
 ?distributionSpecification dcat:distribution ?distribution.
 ?distribution scenario:hasTiffPayload ?tiffDistribution.
-?tiffDistribution dcat:downloadURL ?url
+?scenario scenario:hasTiffDistribution ?tiffDistribution.
 }

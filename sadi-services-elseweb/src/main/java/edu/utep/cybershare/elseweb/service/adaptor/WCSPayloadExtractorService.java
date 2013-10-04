@@ -17,6 +17,7 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 
+import edu.utep.cybershare.elseweb.util.FileUtils;
 import edu.utep.cybershare.elseweb.util.Printing;
 
 @Name("WCSPayloadExtractorService")
@@ -44,8 +45,8 @@ public class WCSPayloadExtractorService extends SimpleSynchronousServiceServlet{
 		Literal payloadURLLiteral = output.getModel().createLiteral(payloadURL.toString());
 
 		//create TiffDistribution
-		String randomID = String.valueOf(Math.random());
-		String tiffDistributionURI = "http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_" + randomID;
+		String randomName = FileUtils.getRandomFileNameFromFileName("tiffDistribution");
+		String tiffDistributionURI = "http://ontology.cybershare.utep.edu/ELSEWeb/" + randomName;
 		Resource tiffDistributionResource = output.getModel().createResource(tiffDistributionURI, Vocab.TiffDistribution);
 
 		
