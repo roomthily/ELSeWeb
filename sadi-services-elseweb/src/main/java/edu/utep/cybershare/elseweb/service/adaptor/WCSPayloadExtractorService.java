@@ -44,12 +44,14 @@ public class WCSPayloadExtractorService extends SimpleSynchronousServiceServlet{
 		Literal payloadURLLiteral = output.getModel().createLiteral(payloadURL.toString());
 
 		//create TiffDistribution
-		String tiffDistributionURI = "http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution";
+		String randomID = String.valueOf(Math.random());
+		String tiffDistributionURI = "http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_" + randomID;
 		Resource tiffDistributionResource = output.getModel().createResource(tiffDistributionURI, Vocab.TiffDistribution);
+
 		
 		//add associated properties to TiffDistribution individual
-		output.addLiteral(Vocab.downloadURL, payloadURLLiteral);
-		tiffDistributionResource.addProperty(Vocab.format, Vocab.tiff);
+		output.getModel().addLiteral(tiffDistributionResource, Vocab.downloadURL, payloadURLLiteral);
+		output.getModel().add(tiffDistributionResource, Vocab.format, Vocab.tiff);
 		
 		//add TiffDistribution individual to output
 		output.addProperty(Vocab.hasTiffPayload, tiffDistributionResource);
