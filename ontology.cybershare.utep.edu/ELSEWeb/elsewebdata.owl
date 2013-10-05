@@ -444,7 +444,7 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#accessURL"/>
-                        <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -499,7 +499,7 @@
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#downloadURL"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>

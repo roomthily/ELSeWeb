@@ -34,8 +34,8 @@ public class WCSCoverageDistributionMapper {
 	//distribution related resources
 	private Resource distributionResource;
 	private Resource formatResource;
-	private Literal accessURLLiteral;
-	private Literal downloadURLLiteral;
+	private String accessURL;
+	private String downloadURL;
 	
 	public void setWCSDistributionRequirement(Resource wcsDistributionRequirementResource){
 		Resource regionResource = wcsDistributionRequirementResource.getPropertyResourceValue(Vocab.spatial);
@@ -81,10 +81,13 @@ public class WCSCoverageDistributionMapper {
 	}
 
 	public Resource getDistribution(Model model){
+		Literal accessURLLiteral = model.createLiteral(accessURL);
+		Literal downloadURLLiteral = model.createLiteral(downloadURL);
+
 		//add components to distribution
-		model.add(distributionResource, Vocab.format, formatResource);
-		model.add(distributionResource, Vocab.accessURL, accessURLLiteral);
-		model.add(distributionResource, Vocab.downloadURL, downloadURLLiteral);
+		model.add(distributionResource, Vocab.format, formatResource);		
+		model.addLiteral(distributionResource, Vocab.accessURL, accessURLLiteral);
+		model.addLiteral(distributionResource, Vocab.downloadURL, downloadURLLiteral);
 		
 		distributionResource.addProperty(Vocab.format, formatResource);
 		distributionResource.addLiteral(Vocab.accessURL, accessURLLiteral);
@@ -105,13 +108,13 @@ public class WCSCoverageDistributionMapper {
 		ResultSet results = qexec.execSelect();
 		
 		QuerySolution solution;
-
+			
 		if(results.hasNext()){
 			solution = results.next();
 			distributionResource = solution.getResource("distribution");
 			formatResource = solution.getResource("format");
-			accessURLLiteral = solution.getLiteral("accessURL");
-			downloadURLLiteral = solution.getLiteral("downloadURL");
+			accessURL = solution.getLiteral("accessURL").getString();
+			downloadURL = solution.getLiteral("downloadURL").getString();
 		}
 	}
 	

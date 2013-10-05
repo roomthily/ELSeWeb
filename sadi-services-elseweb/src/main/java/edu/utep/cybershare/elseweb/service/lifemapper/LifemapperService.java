@@ -43,7 +43,7 @@ public class LifemapperService extends SimpleSynchronousServiceServlet{
 		Lifemapper experiment = new Lifemapper(uname, pword);
 		
 		//extract LifemapperScenario from experiment
-		Resource scenarioLayers = input.getProperty(Vocab.hasScenario).getResource();
+		Resource scenarioLayers = input.getProperty(Vocab.hasLifemapperScenario).getResource();
 
 		Resource distribution1 = scenarioLayers.getPropertyResourceValue(Vocab.hasTiffDistribution1);
 		Resource distribution2 = scenarioLayers.getPropertyResourceValue(Vocab.hasTiffDistribution2);
@@ -97,7 +97,7 @@ public class LifemapperService extends SimpleSynchronousServiceServlet{
 		URL experimentResultURL = experiment.submitExperiment();
 
 		//create output
-		Resource lifemapperModel = output.getModel().createResource(baseURI + "Model", Vocab.Model);
+		Resource lifemapperModel = output.getModel().createResource(baseURI + "model", Vocab.Model);
 		lifemapperModel.addProperty(Vocab.hasModelURL, experimentResultURL.toString());
 		output.addProperty(Vocab.hasModel, lifemapperModel);
 	}
@@ -106,17 +106,20 @@ public class LifemapperService extends SimpleSynchronousServiceServlet{
 		
 		private static Model m_model = ModelFactory.createDefaultModel();
 				
-		//Lifemapper properties and resources
+		//Lifemapper input properties
 		private static final String lifemapper = "http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#";
 		public static final Property hasOccurrenceSetID = m_model.createProperty(lifemapper + "hasOccurrenceSetID");
 		public static final Property hasAlgorithmName = m_model.createProperty(lifemapper + "hasAlgorithmName");
 		public static final Property hasModelingAlgorithm = m_model.createProperty(lifemapper + "hasModelingAlgorithm");
+		public static final Property hasScenarioLayerUnits = m_model.createProperty(lifemapper + "hasScenarioLayerUnits");
+		public static final Property hasLifemapperScenario = m_model.createProperty(lifemapper + "hasLifemapperScenario");
+
+		//Lifemapper output properties and resources
 		public static final Property hasModelURL = m_model.createProperty(lifemapper + "hasModelURL");
 		public static final Property hasModel = m_model.createProperty(lifemapper + "hasModel");
-		public static final Property hasScenarioLayerUnits = m_model.createProperty(lifemapper + "hasScenarioLayerUnits");
-		public static final Property hasScenario = m_model.createProperty(lifemapper + "hasScenario");
 		public static final Resource Model = m_model.createResource(lifemapper + "Model");
-			
+
+		
 		//Scenario properties
 		private static String scenario = "http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#";
 		public static final Property hasTiffDistribution1 = m_model.getProperty(scenario + "hasTiffDistribution1");

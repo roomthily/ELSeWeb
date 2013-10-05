@@ -237,7 +237,7 @@
         <rdf:type rdf:resource="&lifemapper;ExperimentSpecification"/>
         <lifemapper:hasOccurrenceSetID rdf:datatype="&xsd;integer">4024107</lifemapper:hasOccurrenceSetID>
         <lifemapper:hasScenarioLayerUnits rdf:datatype="&xsd;string">dd</lifemapper:hasScenarioLayerUnits>
-        <lifemapper:hasLifemapperScenario rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#wcsScenarioRequirements"/>
+        <lifemapper:hasWCSScenarioRequirements rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#wcsScenarioRequirements"/>
         <lifemapper:hasModelingAlgorithm rdf:resource="&lifemapper;BIOCLIM"/>
     </owl:NamedIndividual>
     
@@ -258,7 +258,6 @@
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#wcsScenarioRequirements -->
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#wcsScenarioRequirements">
-        <rdf:type rdf:resource="&scenario;WCSScenarioRequirements"/>
         <scenario:hasWCSDistributionRequirement1 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionRequirement1"/>
         <scenario:hasWCSDistributionRequirement2 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionRequirement2"/>
         <scenario:hasWCSDistributionRequirement3 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionRequirement3"/>
