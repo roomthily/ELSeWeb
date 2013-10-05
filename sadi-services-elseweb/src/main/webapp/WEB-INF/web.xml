@@ -9,41 +9,26 @@
     <servlet-class>edu.utep.cybershare.elseweb.service.lifemapper.LifemapperService</servlet-class>
   </servlet>
   <servlet>
-    <servlet-name>WCSPayloadExtractorService</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.service.adaptor.WCSPayloadExtractorService</servlet-class>
+    <servlet-name>WCSScenarioRequirementsService</servlet-name>
+    <servlet-class>edu.utep.cybershare.elseweb.service.requirements.WCSScenarioRequirementsService</servlet-class>
   </servlet>
   <servlet>
-    <servlet-name>WCSCoverageDistributionService</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.service.mapper.WCSCoverageDistributionService</servlet-class>
+    <servlet-name>TiffScenarioExtractionService</servlet-name>
+    <servlet-class>edu.utep.cybershare.elseweb.service.adaptor.TiffScenarioExtractionService</servlet-class>
   </servlet>
-  <servlet>
-    <servlet-name>ScenarioMapperService</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.service.mapper.ScenarioMapperService</servlet-class>
-  </servlet>
-    <servlet>
-    <servlet-name>LifemapperScenarioMapperService</servlet-name>
-    <servlet-class>edu.utep.cybershare.elseweb.service.adaptor.LifemapperScenarioMapperService</servlet-class>
-  </servlet>
+
   
   <servlet-mapping>
     <servlet-name>LifemapperService</servlet-name>
     <url-pattern>/LifemapperService</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>LifemapperScenarioMapperService</servlet-name>
-    <url-pattern>/LifemapperScenarioMapperService</url-pattern>
+    <servlet-mapping>
+    <servlet-name>WCSScenarioRequirementsService</servlet-name>
+    <url-pattern>/WCSScenarioRequirementsService</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>ScenarioMapperService</servlet-name>
-    <url-pattern>/ScenarioMapperService</url-pattern>
+    <servlet-name>TiffScenarioExtractionService</servlet-name>
+    <url-pattern>/TiffScenarioExtractionService</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>WCSPayloadExtractorService</servlet-name>
-    <url-pattern>/WCSPayloadExtractorService</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>WCSCoverageDistributionService</servlet-name>
-    <url-pattern>/WCSCoverageDistributionService</url-pattern>
-  </servlet-mapping>
-  
+
 </web-app>
