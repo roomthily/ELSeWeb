@@ -129,8 +129,8 @@ public class Builder {
 		WCSGetCoverageParameters params = new WCSGetCoverageParameters();
 		params.setBBox(region.getLlon(), region.getRlon(), region.getLlat(), region.getUlat());
 		
-		double width = 600;
-		double height = 600;
+		double width = 1200;
+		double height = 1200;
 		params.setWidth(width);
 		params.setHeight(height);
 		
