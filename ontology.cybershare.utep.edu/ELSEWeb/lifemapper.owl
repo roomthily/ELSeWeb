@@ -141,30 +141,7 @@
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ExperimentSpecification -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ExperimentSpecification">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasLifemapperScenario"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#ScenarioSpecification"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasModelingAlgorithm"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasOccurrenceSetID"/>
-                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasScenarioLayerUnits"/>
-                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ExperimentSpecification"/>
     
 
 

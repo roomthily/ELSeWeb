@@ -25,9 +25,9 @@ import edu.utep.cybershare.elseweb.util.URLUtils;
 @OutputClass("http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#TiffExtractedWCSScenario")
 @Description("Extracts Payload from WCS Multipart MIME Response")
 
-public class TiffScenarioExractionService extends SimpleSynchronousServiceServlet{
+public class TiffScenarioExtractionService extends SimpleSynchronousServiceServlet{
 	
-	private static final Logger log = Logger.getLogger(TiffScenarioExractionService.class);
+	private static final Logger log = Logger.getLogger(TiffScenarioExtractionService.class);
 	private static final long serialVersionUID = 1L;
 	
 	private ArrayList<Resource> wcsCoverageDistributions;

@@ -24,8 +24,8 @@
         <div id='content'>
           <h2>SADI Services</h2>
 	      <ul>
-	      	<li><a href="./WCSScenarioRequirementsService">ScenarioMapperService</a></li>
-			<li><a href="./TiffScenarioExtractionService">WCSPayloadExtractorService</a></li>
+	      	<li><a href="./WCSScenarioRequirementsService">WCSScenarioRequirementsService</a></li>
+			<li><a href="./TiffScenarioExtractionService">TiffScenarioExtractionService</a></li>
             <li><a href="./LifemapperService">LifemapperService</a></li>
 	      </ul>
         </div> <!-- content -->
