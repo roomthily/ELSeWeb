@@ -16,10 +16,26 @@
     <servlet-name>WCSCoverageDistributionService</servlet-name>
     <servlet-class>edu.utep.cybershare.elseweb.service.mapper.WCSCoverageDistributionService</servlet-class>
   </servlet>
-
+  <servlet>
+    <servlet-name>ScenarioMapperService</servlet-name>
+    <servlet-class>edu.utep.cybershare.elseweb.service.mapper.ScenarioMapperService</servlet-class>
+  </servlet>
+    <servlet>
+    <servlet-name>LifemapperScenarioMapperService</servlet-name>
+    <servlet-class>edu.utep.cybershare.elseweb.service.adaptor.LifemapperScenarioMapperService</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
     <servlet-name>LifemapperService</servlet-name>
     <url-pattern>/LifemapperService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LifemapperScenarioMapperService</servlet-name>
+    <url-pattern>/LifemapperScenarioMapperService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ScenarioMapperService</servlet-name>
+    <url-pattern>/ScenarioMapperService</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>WCSPayloadExtractorService</servlet-name>

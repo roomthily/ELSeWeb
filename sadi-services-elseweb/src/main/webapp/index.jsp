@@ -24,6 +24,7 @@
         <div id='content'>
           <h2>SADI Services</h2>
 	      <ul>
+	      	<li><a href="./ScenarioMapperService">ScenarioMapperService</a></li>
 			<li><a href="./WCSPayloadExtractorService">WCSPayloadExtractorService</a></li>
             <li><a href="./LifemapperService">LifemapperService</a></li>
             <li><a href="./WCSCoverageDistributionService">WCSCoverageDatasetService</a></li>

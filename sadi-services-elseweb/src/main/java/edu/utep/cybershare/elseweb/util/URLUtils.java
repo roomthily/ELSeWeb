@@ -15,6 +15,9 @@ import org.apache.commons.httpclient.URIException;
 import org.apache.commons.httpclient.util.URIUtil;
 
 public class URLUtils {
+	
+	public static final String BASE_URI = "http://ontology.cybershare.utep.edu/ELSEWeb/";
+	
 	public static String getUniqueFileNameFromURL(String url) {
 		String fileName = url.substring(0, url.lastIndexOf("/"));
 		return fileName + "-" + FileUtils.getRandomString() + ".nc";
@@ -106,6 +109,7 @@ public class URLUtils {
 			// ret.append(line).append(System.getProperty("line.separator"));
 			ret.append(line).append("\n");
 		}
+		lr.close();
 		return ret.toString();
 	}
 
@@ -124,6 +128,7 @@ public class URLUtils {
 		while ((currentChar = body.read()) != -1) {
 			ret.append(Character.toString((char) currentChar));
 		}
+		body.close();
 		return ret.toString();
 	}
 

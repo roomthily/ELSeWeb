@@ -19,7 +19,7 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import edu.utep.cybershare.elseweb.util.Printing;
 import edu.utep.cybershare.elseweb.util.URLUtils;
 
-@Name("WCSCoverageDatasetMapper")
+@Name("WCSSCenarioRequirementsService")
 @ContactEmail("nicholas.delrio@gmail.com")
 @InputClass("http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSScenarioRequirements")
 @OutputClass("http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#SatisfiedScenarioRequirements")
@@ -41,7 +41,7 @@ public class WCSScenarioRequirementsService extends SimpleSynchronousServiceServ
 
 		//create WCSScenario
 		String wcsScenarioURI = URLUtils.BASE_URI + "wcsScenario";
-		Resource wcsScenarioResource = output.getModel().createResource(wcsScenarioURI);
+		Resource wcsScenarioResource = output.getModel().createResource(wcsScenarioURI, Vocab.WCSScenario);
 		
 		//map from specification to distribution
 		WCSCoverageDistributionMapper mapper = new WCSCoverageDistributionMapper();
@@ -115,6 +115,9 @@ public class WCSScenarioRequirementsService extends SimpleSynchronousServiceServ
 		private static final Property hasWCSCoverageDistribution3 = m_model.createProperty(scenario + "hasWCSCoverageDistribution3");
 		private static final Property hasWCSCoverageDistribution4 = m_model.createProperty(scenario + "hasWCSCoverageDistribution4");
 		private static final Property hasWCSCoverageDistribution5 = m_model.createProperty(scenario + "hasWCSCoverageDistribution5");
+		
+		//scenario Classes
+		private static final Resource WCSScenario = m_model.createResource(scenario + "WCSScenario");
 		
 		private static final Property hasSatisfactoryWCSScenario = m_model.createProperty(scenario + "hasSatisfactoryWCSScenario");
 	}
