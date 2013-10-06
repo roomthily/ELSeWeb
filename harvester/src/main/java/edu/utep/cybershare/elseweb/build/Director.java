@@ -12,7 +12,7 @@ public class Director {
 	}
 
 	public void construct(WCSDigests digests){
-		int counter = 0;
+		int counter = 1;
 		for(WCSDigest digest : digests){
 
 			System.out.println("count: " + counter++);
