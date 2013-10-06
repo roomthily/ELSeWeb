@@ -281,6 +281,7 @@ public class WCSDigest {
 		int month = Integer.parseInt(fgdcDate.substring(6, 7));
 		
 		GregorianCalendar date = new GregorianCalendar();
+		date.clear();
 		date.set(year, month, day, 0, 0, 0);
 		date.setTimeZone(mountainTimeZone);
 		
