@@ -19,7 +19,7 @@ public class OBOEOntClassMapper {
 		themekeyToEntity.put("precipitation_amount", edacVocab.getOWLClass_Precipitation());
 		themekeyToEntity.put("air_temperature", edacVocab.getOWLClass_Air());
 		themekeyToEntity.put("LAND SURFACE TEMPERATURE", edacVocab.getOWLClass_SurfaceLayer());
-		themekeyToEntity.put("VEGETATION INDEX", edacVocab.getOWLClass_VegitationIndex());
+		themekeyToEntity.put("VEGETATION INDEX", edacVocab.getOWLClass_VegetationIndex());
 	}
 	
 	private void populateCharacteristicMappings(OBOE oboeVocab){

@@ -22,7 +22,7 @@ public class ELSEWEB extends Vocabulary {
 	
 	//Entities
 	private static final String OWLClass_DewPoint = NAMESPACE + "#DewPoint";
-	private static final String OWLClass_VegitationIndex = NAMESPACE + "#VegitationIndex";
+	private static final String OWLClass_VegetationIndex = NAMESPACE + "#VegetationIndex";
 	private static final String OWLClass_SurfaceLayer = NAMESPACE + "#SurfaceLayer";
 	private static final String OWLClass_Precipitation = NAMESPACE + "#Precipitation";
 	private static final String OWLClass_Air = NAMESPACE + "#Air";
@@ -51,7 +51,7 @@ public class ELSEWEB extends Vocabulary {
 	public OWLClass getOWLClass_Sensor(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_Sensor));}
 	
 	public OWLClass getOWLClass_DewPoint(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_DewPoint));}
-	public OWLClass getOWLClass_VegitationIndex(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_VegitationIndex));}
+	public OWLClass getOWLClass_VegetationIndex(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_VegetationIndex));}
 	public OWLClass getOWLClass_SurfaceLayer(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_SurfaceLayer));}
 	public OWLClass getOWLClass_Precipitation(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_Precipitation));}
 	public OWLClass getOWLClass_Air(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_Air));}

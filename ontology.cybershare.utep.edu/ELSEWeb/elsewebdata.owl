@@ -390,9 +390,9 @@
     
 
 
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#VegitationIndex -->
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#VegetationIndex -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#VegitationIndex">
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#VegetationIndex">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#EcologicalCommunity"/>
     </owl:Class>
     
