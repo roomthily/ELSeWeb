@@ -3,6 +3,7 @@ package edu.utep.cybershare.elseweb.build.source.edac;
 import java.net.URL;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.TimeZone;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -38,6 +39,8 @@ public class WCSDigest {
 	private Themes fgdcThemes;
 
 	private JSONObject jsonDigest;
+	
+	private static TimeZone mountainTimeZone = TimeZone.getTimeZone("America/Denver");
 	
 	public WCSDigest(JSONObject wcsJSONDigest){
 		jsonDigest = wcsJSONDigest;
@@ -278,7 +281,8 @@ public class WCSDigest {
 		int month = Integer.parseInt(fgdcDate.substring(6, 7));
 		
 		GregorianCalendar date = new GregorianCalendar();
-		date.set(year, month, day);
+		date.set(year, month, day, 0, 0);
+		date.setTimeZone(mountainTimeZone);
 		
 		return date;
 	}
