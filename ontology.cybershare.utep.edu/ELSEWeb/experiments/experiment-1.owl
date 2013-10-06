@@ -185,8 +185,8 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration1">
         <rdf:type rdf:resource="&elsewebdata;Duration"/>
-        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0192-12-31T15:07:49.285-07:00</elsewebdata:hasStartDate>
-        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0193-03-31T15:07:49.285-07:00</elsewebdata:hasEndDate>
+        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0195-01-01T00:00:00-07:00</elsewebdata:hasStartDate>
+        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0195-04-01T00:00:00-07:00</elsewebdata:hasEndDate>
     </owl:NamedIndividual>
     
 
@@ -195,8 +195,8 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration2">
         <rdf:type rdf:resource="&elsewebdata;Duration"/>
-        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0196-01-01T15:07:49.284-07:00</elsewebdata:hasStartDate>
-        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0196-04-01T15:07:49.284-07:00</elsewebdata:hasEndDate>
+        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0196-01-01T00:00:00-07:00</elsewebdata:hasStartDate>
+        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0196-04-01T00:00:00-07:00</elsewebdata:hasEndDate>
     </owl:NamedIndividual>
     
 
@@ -205,8 +205,8 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration3">
         <rdf:type rdf:resource="&elsewebdata;Duration"/>
-        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0200-12-31T15:07:41.676-07:00</elsewebdata:hasEndDate>
-        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0201-02-28T15:07:41.676-07:00</elsewebdata:hasStartDate>
+        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0200-12-31T00:00:00-07:00</elsewebdata:hasEndDate>
+        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0201-02-28T00:00:00-07:00</elsewebdata:hasStartDate>
     </owl:NamedIndividual>
     
 
@@ -215,8 +215,8 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration4">
         <rdf:type rdf:resource="&elsewebdata;Duration"/>
-        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0200-12-31T15:07:41.783-07:00</elsewebdata:hasStartDate>
-        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0201-02-28T15:07:41.783-07:00</elsewebdata:hasEndDate>
+        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0200-12-31T00:00:00-07:00</elsewebdata:hasStartDate>
+        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0201-02-28T00:00:00-07:00</elsewebdata:hasEndDate>
     </owl:NamedIndividual>
     
 
@@ -225,8 +225,8 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration5">
         <rdf:type rdf:resource="&elsewebdata;Duration"/>
-        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0198-12-31T15:07:49.286-07:00</elsewebdata:hasStartDate>
-        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0199-03-31T15:07:49.286-07:00</elsewebdata:hasEndDate>
+        <elsewebdata:hasStartDate rdf:datatype="&xsd;dateTime">0198-12-31T00:00:00-07:00</elsewebdata:hasStartDate>
+        <elsewebdata:hasEndDate rdf:datatype="&xsd;dateTime">0199-03-31T00:00:00-07:00</elsewebdata:hasEndDate>
     </owl:NamedIndividual>
     
 
@@ -258,6 +258,7 @@
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#wcsScenarioRequirements -->
 
     <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#wcsScenarioRequirements">
+        <rdf:type rdf:resource="&scenario;WCSScenarioRequirements"/>
         <scenario:hasWCSDistributionRequirement1 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionRequirement1"/>
         <scenario:hasWCSDistributionRequirement2 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionRequirement2"/>
         <scenario:hasWCSDistributionRequirement3 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionRequirement3"/>
