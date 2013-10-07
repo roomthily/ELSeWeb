@@ -1,1 +1,1 @@
-Directory for storing output of services.
+Directory for storing transformed data files.
