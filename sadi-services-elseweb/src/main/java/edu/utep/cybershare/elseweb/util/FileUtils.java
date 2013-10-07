@@ -28,6 +28,15 @@ public class FileUtils{
 	private static final String SCRIPTS_DIR_NAME = "scripts";
 	private static final String OUTPUT_DIR_NAME = "output";
 	private static final String WEBAPP = "webapps";
+	
+	//Prov related fields
+	private static final String GRAPHS_DIR_NAME = "graphs";
+	private static final String GRAPHS_LOG_NAME = "graphLogs.xml";
+	
+	private static File GRAPHS_DIR_PATH;
+	private static File GRAPHS_LOG_PATH;
+	private static URL GRAPHS_URL;
+	
 	static {
 		try {
 			// Initialize properties in this order
@@ -39,6 +48,11 @@ public class FileUtils{
 			setScriptsPath();
 			setOutputURL();
 			
+			//Prov properties
+			setGraphsDir();
+			setGraphsLogPath();
+			setGraphsURL();
+			
 			System.out.println("server url: " + SERVER_URL);
 			System.out.println("webapp name: " + WEBAPP_NAME);
 			System.out.println("webapp dir path: " + WEBAPP_DIR_PATH);
@@ -49,6 +63,19 @@ public class FileUtils{
 		catch (Throwable e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private static void setGraphsDir(){
+		GRAPHS_DIR_PATH = new File(WEBAPP_DIR_PATH, GRAPHS_DIR_NAME);		
+	}
+	
+	private static void setGraphsLogPath(){
+		GRAPHS_LOG_PATH = new File(GRAPHS_DIR_PATH, GRAPHS_LOG_NAME);
+	}
+	
+	private static void setGraphsURL() throws MalformedURLException{
+		String url = ensureTrailingForwardSlash(SERVER_URL + WEBAPP_NAME + "/" + GRAPHS_DIR_NAME);
+		GRAPHS_URL = new URL(url);
 	}
 	
 	private static void setOutputURL() throws MalformedURLException {
@@ -69,6 +96,18 @@ public class FileUtils{
 		tomcatHomePath = ensureTrailingForwardSlash(tomcatHomePath);
 		WEBAPP_DIR_PATH = new File(tomcatHomePath + WEBAPP +"/" + WEBAPP_NAME);
 
+	}
+	
+	public static File getGraphsDirPath(){
+		return GRAPHS_DIR_PATH;
+	}
+	
+	public static File getGraphsLogPath(){
+		return GRAPHS_LOG_PATH;
+	}
+	
+	public static URL getGraphsURL(){
+		return GRAPHS_URL;
 	}
 		
 	private static void setWebappName(Properties properties){
