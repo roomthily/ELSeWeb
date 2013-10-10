@@ -13,6 +13,8 @@ import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.ontology.Restriction;
 import com.hp.hpl.jena.ontology.SomeValuesFromRestriction;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.Resource;
+
 
 public class KnoweldgeBase {
 	
@@ -20,24 +22,14 @@ public class KnoweldgeBase {
 	
 	private static final String literalURI = "http://www.w3.org/2000/01/rdf-schema#Literal";
 	
-	public KnoweldgeBase(){
-		GraphsLog graphsLog = new GraphsLog();
-		namedGraphs = graphsLog.loadNamedGraphs();
-	}
-	
-	public List<NamedGraph> getNamedGraphs(String rootNodeURI){
-		ArrayList<NamedGraph> namedGraphs = new ArrayList<NamedGraph>();
-		for(NamedGraph namedGraph : this.namedGraphs.values()){
-			if(namedGraph.getRootNodeURI().equals(rootNodeURI))
-				namedGraphs.add(namedGraph);
-		}
-		return namedGraphs;
-	}
+	public KnoweldgeBase(){namedGraphs = new NamedGraphs();}
+		
+	public NamedGraph getNamedGraph(String rootNodeURI){return namedGraphs.get(rootNodeURI);}
 	
 	public List<NamedGraph> getAntecedentNamedGraphs(String rootNodeURI, String inputClassURI){
 		ArrayList<NamedGraph> namedGraphs = new ArrayList<NamedGraph>();
 		
-		//create KB loaded with class extensions
+		//create KB loaded with class extensionsn
 		OntModel model = getModel(inputClassURI, rootNodeURI);
 		List<OntClass> someValueFromClasses;
 		for(NamedGraph namedGraph : this.namedGraphs.values()){			
@@ -48,6 +40,10 @@ public class KnoweldgeBase {
 		}
 		
 		return namedGraphs;
+	}
+	
+	public NamedGraph getNewNamedGraph(Resource graphContents){
+		return namedGraphs.getNewNamedGraph(graphContents);
 	}
 	
 	private boolean containsIndividualsOfClasses(OntModel model, List<OntClass> targetClasses){		

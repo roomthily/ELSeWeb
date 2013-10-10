@@ -97,7 +97,9 @@ public class FileUtils{
 		WEBAPP_DIR_PATH = new File(tomcatHomePath + WEBAPP +"/" + WEBAPP_NAME);
 
 	}
-	
+	public static File getGraphsDirPath(String fileName){
+		return new File(getGraphsDirPath(), fileName);
+	}
 	public static File getGraphsDirPath(){
 		return GRAPHS_DIR_PATH;
 	}
@@ -108,6 +110,12 @@ public class FileUtils{
 	
 	public static URL getGraphsURL(){
 		return GRAPHS_URL;
+	}
+	
+	public static URL getGraphsURL(String fileName){
+		try{return new URL(getGraphsURL() + fileName);}
+		catch(Exception e){e.printStackTrace();}
+		return null;
 	}
 		
 	private static void setWebappName(Properties properties){

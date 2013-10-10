@@ -2,27 +2,24 @@ package edu.utep.cybershare.elseweb.prov;
 
 import com.hp.hpl.jena.rdf.model.Resource;
 
-import edu.utep.cybershare.elseweb.util.FileUtils;
-
 public class NamedGraph {
 	
-	private String uri;
-	private String rootNodeURI;
-	private String rootNodeClassURI;
+	private Resource contents;
+	private String graphURI;
+	private String graphFilePath;
 	
-	public NamedGraph(String name, Resource resource, String classURI){
-		uri = FileUtils.getGraphsURL() + name;
-		rootNodeURI = resource.getURI();
-		rootNodeClassURI = classURI;
-	}
+	private boolean isDumped;
 	
-	public String getURI(){
-		return uri;
+	public NamedGraph(Resource graphContents, String graphURI, String graphFilePath){
+		this.contents = graphContents;
+		this.graphURI = graphURI;
+		this.graphFilePath = graphFilePath;
+		
+		this.isDumped = false;
 	}
-	public String getRootNodeURI(){
-		return rootNodeURI;
-	}
-	public String getRootNodeClassURI(){
-		return rootNodeClassURI;
-	}
+	public void setDumped(){isDumped = false;}
+	public boolean isDumped(){return isDumped;}
+	public Resource getContents(){return contents;}
+	public String getURI(){return graphURI;}
+	public String getGraphFilePath(){return graphFilePath;}
 }
