@@ -9,12 +9,11 @@ import com.hp.hpl.jena.rdf.model.Resource;
 
 public abstract class ServiceData {
 	
-	protected String inputURI;
+	protected String uri;
 	protected String inputClassURI;
 	protected String inputRDFFile;
 	
 	protected String outputRDFFile;
-	protected String outputURI;
 	
 	public ServiceData(){setFields();}
 	
@@ -26,7 +25,7 @@ public abstract class ServiceData {
 		try{
 			FileReader reader = new FileReader(inputFile);
 			loadingModel.read(reader, null);
-			return loadingModel.getResource(inputURI);
+			return loadingModel.getResource(uri);
 		}catch(Exception e){e.printStackTrace();}
 		return null;
 	}
@@ -38,7 +37,7 @@ public abstract class ServiceData {
 		try{
 			FileReader reader = new FileReader(outputFile);
 			loadingModel.read(reader, null);
-			return loadingModel.getResource(outputURI);
+			return loadingModel.getResource(uri);
 		}catch(Exception e){e.printStackTrace();}
 		return null;
 	}
