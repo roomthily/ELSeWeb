@@ -10,9 +10,7 @@ import com.hp.hpl.jena.rdf.model.Resource;
 public abstract class ServiceData {
 	
 	protected String uri;
-	protected String inputClassURI;
-	protected String inputRDFFile;
-	
+	protected String inputRDFFile;	
 	protected String outputRDFFile;
 	
 	public ServiceData(){setFields();}
@@ -29,7 +27,6 @@ public abstract class ServiceData {
 		}catch(Exception e){e.printStackTrace();}
 		return null;
 	}
-	public String getClassURI(){return this.inputClassURI;}
 	
 	public Resource getOutput(){
 		Model loadingModel = ModelFactory.createDefaultModel();

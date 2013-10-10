@@ -81,6 +81,8 @@ public class KnoweldgeBase {
 		 return partOfIntersectionClasses;
 	}
 	
+	public void close(){namedGraphs.dump();}
+	
 	private OntModel getModel(String inputClassURI, String rootNodeClassURI){
 		OntModelSpec ontModelSpec = OntModelSpec.OWL_DL_MEM;
 	    ontModelSpec.setReasoner(PelletReasonerFactory.theInstance().create());

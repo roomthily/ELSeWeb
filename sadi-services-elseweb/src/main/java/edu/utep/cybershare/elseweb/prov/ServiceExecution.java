@@ -70,9 +70,11 @@ public class ServiceExecution {
 		output.getModel().add(activity, Vocab.used, serviceInputGraph.getURI());
 		return serviceInputGraph;
 	}
+	
+	public void close(){kb.close();}
 
 		
-	public void attachedDerivedFromGraphs(NamedGraph serviceInputGraph){
+	private void attachedDerivedFromGraphs(NamedGraph serviceInputGraph){
 		List<NamedGraph> antecedentGraphs = kb.getAntecedentNamedGraphs(input.getURI(), inputClassURI);
 						
 		//add antecedents to new graph
