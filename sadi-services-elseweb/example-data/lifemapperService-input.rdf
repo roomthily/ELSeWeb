@@ -1,0 +1,62 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.1="http://www.w3.org/ns/dcat#"
+    xmlns:j.0="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#"
+    xmlns:j.2="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.3="http://purl.org/dc/terms/"
+    xmlns:j.4="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#">
+  <j.4:ExecutableExperiment rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#experiment">
+    <j.4:hasScenarioLayerUnits rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >dd</j.4:hasScenarioLayerUnits>
+    <j.4:hasOccurrenceSetID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >4024107</j.4:hasOccurrenceSetID>
+    <j.4:hasModelingAlgorithm>
+      <j.4:ModelingAlgorithm rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#BIOCLIM">
+        <j.4:hasAlgorithmName>BIOCLIM</j.4:hasAlgorithmName>
+      </j.4:ModelingAlgorithm>
+    </j.4:hasModelingAlgorithm>
+    <j.4:hasLifemapperScenario>
+      <j.0:Scenario rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/tiffScenario">
+        <j.0:hasTiffDistribution5>
+          <j.1:Distribution rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_1381441449072">
+            <j.1:downloadURL>http://localhost:8080/sadi-services-elseweb/output/coverage_1381441449038.tif</j.1:downloadURL>
+            <j.3:format rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+            <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#TiffDistribution"/>
+          </j.1:Distribution>
+        </j.0:hasTiffDistribution5>
+        <j.0:hasTiffDistribution4>
+          <j.1:Distribution rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_1381441430709">
+            <j.1:downloadURL>http://localhost:8080/sadi-services-elseweb/output/coverage_1381441430669.tif</j.1:downloadURL>
+            <j.3:format rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+            <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#TiffDistribution"/>
+          </j.1:Distribution>
+        </j.0:hasTiffDistribution4>
+        <j.0:hasTiffDistribution3>
+          <j.1:Distribution rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_1381441416624">
+            <j.1:downloadURL>http://localhost:8080/sadi-services-elseweb/output/coverage_1381441416580.tif</j.1:downloadURL>
+            <j.3:format rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+            <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#TiffDistribution"/>
+          </j.1:Distribution>
+        </j.0:hasTiffDistribution3>
+        <j.0:hasTiffDistribution2>
+          <j.1:Distribution rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_1381441402513">
+            <j.1:downloadURL>http://localhost:8080/sadi-services-elseweb/output/coverage_1381441402476.tif</j.1:downloadURL>
+            <j.3:format rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+            <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#TiffDistribution"/>
+          </j.1:Distribution>
+        </j.0:hasTiffDistribution2>
+        <j.0:hasTiffDistribution1>
+          <j.1:Distribution rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_1381441376244">
+            <j.1:downloadURL>http://localhost:8080/sadi-services-elseweb/output/coverage_1381441376154.tif</j.1:downloadURL>
+            <j.3:format rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+            <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#TiffDistribution"/>
+          </j.1:Distribution>
+        </j.0:hasTiffDistribution1>
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#TiffScenario"/>
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#LifemapperScenario"/>
+      </j.0:Scenario>
+    </j.4:hasLifemapperScenario>
+  </j.4:ExecutableExperiment>
+  <owl:Nothing/>
+</rdf:RDF>

@@ -1,0 +1,48 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.1="http://www.w3.org/ns/dcat#"
+    xmlns:j.0="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#"
+    xmlns:j.2="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#"
+    xmlns:j.3="http://purl.org/dc/terms/">
+  <j.0:TiffExtractedWCSScenario rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/wcsScenario">
+    <j.0:hasExtractedTiffScenario>
+      <j.0:TiffScenario rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/tiffScenario">
+        <j.0:hasTiffDistribution5>
+          <j.2:TiffDistribution rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_1381441449072">
+            <j.0:hasTiffPayload rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_1381441449072"/>
+            <j.3:format rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+            <j.1:downloadURL>http://localhost:8080/sadi-services-elseweb/output/coverage_1381441449038.tif</j.1:downloadURL>
+          </j.2:TiffDistribution>
+        </j.0:hasTiffDistribution5>
+        <j.0:hasTiffDistribution4>
+          <j.2:TiffDistribution rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_1381441430709">
+            <j.0:hasTiffPayload rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_1381441430709"/>
+            <j.3:format rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+            <j.1:downloadURL>http://localhost:8080/sadi-services-elseweb/output/coverage_1381441430669.tif</j.1:downloadURL>
+          </j.2:TiffDistribution>
+        </j.0:hasTiffDistribution4>
+        <j.0:hasTiffDistribution3>
+          <j.2:TiffDistribution rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_1381441416624">
+            <j.0:hasTiffPayload rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_1381441416624"/>
+            <j.3:format rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+            <j.1:downloadURL>http://localhost:8080/sadi-services-elseweb/output/coverage_1381441416580.tif</j.1:downloadURL>
+          </j.2:TiffDistribution>
+        </j.0:hasTiffDistribution3>
+        <j.0:hasTiffDistribution2>
+          <j.2:TiffDistribution rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_1381441402513">
+            <j.0:hasTiffPayload rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_1381441402513"/>
+            <j.3:format rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+            <j.1:downloadURL>http://localhost:8080/sadi-services-elseweb/output/coverage_1381441402476.tif</j.1:downloadURL>
+          </j.2:TiffDistribution>
+        </j.0:hasTiffDistribution2>
+        <j.0:hasTiffDistribution1>
+          <j.2:TiffDistribution rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_1381441376244">
+            <j.0:hasTiffPayload rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/tiffDistribution_1381441376244"/>
+            <j.3:format rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+            <j.1:downloadURL>http://localhost:8080/sadi-services-elseweb/output/coverage_1381441376154.tif</j.1:downloadURL>
+          </j.2:TiffDistribution>
+        </j.0:hasTiffDistribution1>
+      </j.0:TiffScenario>
+    </j.0:hasExtractedTiffScenario>
+  </j.0:TiffExtractedWCSScenario>
+</rdf:RDF>

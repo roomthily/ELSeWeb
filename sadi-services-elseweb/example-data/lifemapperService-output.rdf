@@ -1,0 +1,11 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#">
+  <j.0:CompletedExperiment rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#experiment">
+    <j.0:hasModel>
+      <j.0:Model rdf:about="http://lifemapper.org/model">
+        <j.0:hasModelURL>http://lifemapper.org/services/sdm/experiments/697225</j.0:hasModelURL>
+      </j.0:Model>
+    </j.0:hasModel>
+  </j.0:CompletedExperiment>
+</rdf:RDF>

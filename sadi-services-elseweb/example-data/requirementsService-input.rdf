@@ -1,0 +1,96 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#"
+    xmlns:j.1="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.2="http://purl.org/dc/terms/">
+  <j.0:WCSScenarioRequirements rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#wcsScenarioRequirements">
+    <j.0:hasWCSDistributionRequirement5>
+      <j.0:WCSDistributionRequirement rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionRequirement5">
+        <j.2:temporal>
+          <j.1:Duration rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration5">
+            <j.1:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+            >0198-12-31T00:00:00-07:00</j.1:hasStartDate>
+            <j.1:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+            >0199-03-31T00:00:00-07:00</j.1:hasEndDate>
+          </j.1:Duration>
+        </j.2:temporal>
+        <j.2:spatial>
+          <j.1:Region rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#region1">
+            <j.1:hasUpperLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+            >50.0</j.1:hasUpperLatitude>
+            <j.1:hasRightLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+            >-65.0</j.1:hasRightLongitude>
+            <j.1:hasLowerLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+            >23.0</j.1:hasLowerLatitude>
+            <j.1:hasLeftLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+            >-126.0</j.1:hasLeftLongitude>
+          </j.1:Region>
+        </j.2:spatial>
+        <j.0:hasEntityClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Precipitation"/>
+        <j.0:hasCharacteristicClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Amount"/>
+      </j.0:WCSDistributionRequirement>
+    </j.0:hasWCSDistributionRequirement5>
+    <j.0:hasWCSDistributionRequirement4>
+      <j.0:WCSDistributionRequirement rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionRequirement4">
+        <j.2:temporal>
+          <j.1:Duration rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration4">
+            <j.1:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+            >0200-12-31T00:00:00-07:00</j.1:hasStartDate>
+            <j.1:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+            >0201-02-28T00:00:00-07:00</j.1:hasEndDate>
+          </j.1:Duration>
+        </j.2:temporal>
+        <j.2:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#region1"/>
+        <j.0:hasEntityClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#VegitationIndex"/>
+        <j.0:hasCharacteristicClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Amount"/>
+      </j.0:WCSDistributionRequirement>
+    </j.0:hasWCSDistributionRequirement4>
+    <j.0:hasWCSDistributionRequirement3>
+      <j.0:WCSDistributionRequirement rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionRequirement3">
+        <j.2:temporal>
+          <j.1:Duration rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration3">
+            <j.1:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+            >0201-02-28T00:00:00-07:00</j.1:hasStartDate>
+            <j.1:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+            >0200-12-31T00:00:00-07:00</j.1:hasEndDate>
+          </j.1:Duration>
+        </j.2:temporal>
+        <j.2:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#region1"/>
+        <j.0:hasEntityClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#SurfaceLayer"/>
+        <j.0:hasCharacteristicClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"/>
+      </j.0:WCSDistributionRequirement>
+    </j.0:hasWCSDistributionRequirement3>
+    <j.0:hasWCSDistributionRequirement2>
+      <j.0:WCSDistributionRequirement rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionRequirement2">
+        <j.2:temporal>
+          <j.1:Duration rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration2">
+            <j.1:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+            >0196-01-01T00:00:00-07:00</j.1:hasStartDate>
+            <j.1:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+            >0196-04-01T00:00:00-07:00</j.1:hasEndDate>
+          </j.1:Duration>
+        </j.2:temporal>
+        <j.2:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#region1"/>
+        <j.0:hasEntityClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#DewPoint"/>
+        <j.0:hasCharacteristicClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"/>
+      </j.0:WCSDistributionRequirement>
+    </j.0:hasWCSDistributionRequirement2>
+    <j.0:hasWCSDistributionRequirement1>
+      <j.0:WCSDistributionRequirement rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#distributionRequirement1">
+        <j.2:temporal>
+          <j.1:Duration rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#duration1">
+            <j.1:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+            >0195-01-01T00:00:00-07:00</j.1:hasStartDate>
+            <j.1:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+            >0195-04-01T00:00:00-07:00</j.1:hasEndDate>
+          </j.1:Duration>
+        </j.2:temporal>
+        <j.2:spatial rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/experiments/experiment-1.owl#region1"/>
+        <j.0:hasEntityClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#Air"/>
+        <j.0:hasCharacteristicClass rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"/>
+      </j.0:WCSDistributionRequirement>
+    </j.0:hasWCSDistributionRequirement1>
+  </j.0:WCSScenarioRequirements>
+  <owl:Nothing/>
+</rdf:RDF>
