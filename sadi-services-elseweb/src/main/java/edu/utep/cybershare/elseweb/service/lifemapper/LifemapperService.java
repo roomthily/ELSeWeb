@@ -100,6 +100,8 @@ public class LifemapperService extends SimpleSynchronousServiceServlet{
 		Resource lifemapperModel = output.getModel().createResource(baseURI + "model", Vocab.Model);
 		lifemapperModel.addProperty(Vocab.hasModelURL, experimentResultURL.toString());
 		output.addProperty(Vocab.hasModel, lifemapperModel);
+		
+		Printing.print(output.getModel());
 	}
 	
 	private static final class Vocab{
