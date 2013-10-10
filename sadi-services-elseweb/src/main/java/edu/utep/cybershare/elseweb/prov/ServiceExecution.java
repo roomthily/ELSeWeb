@@ -18,9 +18,6 @@ public class ServiceExecution {
 	private Resource input;
 	private Resource output;
 	
-	private NamedGraph usedNamedGraph;
-	private NamedGraph generatedNamedGraph;
-	
 	private Model model;
 	
 	public ServiceExecution(String serviceName, Resource input, Resource output, String inputClassURI){
@@ -36,18 +33,26 @@ public class ServiceExecution {
 		activity = getActivityResource(serviceName, output.getModel());		
 	}
 	
-	private void linkUp(){
-		
-		NamedGraph existingInputNamedGraph = kb.getNamedGraph(input.getURI());
-		if(existingInputNamedGraph != null)
-			output.getModel().add(activity, Vocab.used, existingInputNamedGraph.getURI());
+	public void linkUp(){
+		this.linkUpInput();
+		this.linkUpOutput();
+	}
+	
+	private void linkUpOutput(){
+		model.add(output, Vocab.wasGeneratedBy, activity);
+	}
+	
+	private void linkUpInput(){
+		NamedGraph namedGraph = kb.getNamedGraph(input.getURI());
 
-		NamedGraph newInputNamedGraphWithAntecedents = this.getNamedGraphWithAntecedents();		
-		if(newInputNamedGraphWithAntecedents != null)
-			output.getModel().add(activity, Vocab.used, newInputNamedGraphWithAntecedents.getURI());
-		
-		NamedGraph newInputNamedGraph = this.kb.getNamedGraph(input.getURI());
-			output.getModel().add(activity, Vocab.used, newInputNamedGraph.getURI());		
+		if((namedGraph = kb.getNamedGraph(input.getURI())) != null)
+			output.getModel().add(activity, Vocab.used, namedGraph.getURI());
+		else if((namedGraph = this.getNamedGraphWithAntecedents()) != null)		
+			output.getModel().add(activity, Vocab.used, namedGraph.getURI());
+		else{
+			namedGraph = this.kb.getNamedGraph(input.getURI());
+			output.getModel().add(activity, Vocab.used, namedGraph.getURI());
+		}		
 	}
 	
 	private NamedGraph getNamedGraphWithAntecedents(){
@@ -61,27 +66,18 @@ public class ServiceExecution {
 	}
 	
 	private NamedGraph getNewInputNamedGraph(){
-		//create new graph based on the root node URI
-		
 		NamedGraph serviceInputGraph = kb.getNewNamedGraph(input);
 		output.getModel().add(activity, Vocab.used, serviceInputGraph.getURI());
 		return serviceInputGraph;
 	}
-	
-	private NamedGraph getExistingNamedGraph(){
-		NamedGraph namedGraph = kb.getNamedGraph(input.getURI());
-		if(namedGraph != null)
-			output.getModel().add(activity, Vocab.used, namedGraph.getURI());
-		
-		return namedGraph;
-	}
+
 		
 	public void attachedDerivedFromGraphs(NamedGraph serviceInputGraph){
 		List<NamedGraph> antecedentGraphs = kb.getAntecedentNamedGraphs(input.getURI(), inputClassURI);
 						
 		//add antecedents to new graph
 		for(NamedGraph antecedentGraph : antecedentGraphs)
-			output.getModel().add(activity, Vocab.used, serviceInputGraph.getURI());
+			model.add(antecedentGraph.getContents(), Vocab.wasDerivedFrom, antecedentGraph.getContents());
 	}
 	
 	private Resource getActivityResource(String serviceName, Model model){
@@ -91,7 +87,7 @@ public class ServiceExecution {
 	
 	private static final class Vocab {
 		private static Model m_model = ModelFactory.createDefaultModel();
-	
+
 		public static Resource SadiService = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/prov-sadi.owlSadiService");
 		public static Resource SADI_Input = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/SADI_Input");
 		public static Resource SADI_Output = m_model.createResource("https://raw.github.com/nicholasdelrio/ELSeWeb/master/documents/semantic-web/rdf/ontology/prov/SADI_Output");
