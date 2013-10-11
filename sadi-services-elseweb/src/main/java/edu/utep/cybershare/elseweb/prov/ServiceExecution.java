@@ -61,6 +61,7 @@ public class ServiceExecution {
 		List<NamedGraph> namedGraphs = kb.getAntecedentNamedGraphs(inputClassURI);
 		NamedGraph serviceInputGraph = null;
 		if(namedGraphs.size() > 0){
+			System.out.println("found antecedent graphs....");
 			serviceInputGraph = this.getNewInputNamedGraph();
 			attachedDerivedFromGraphs(serviceInputGraph, namedGraphs);
 		}
@@ -78,8 +79,10 @@ public class ServiceExecution {
 		
 	private void attachedDerivedFromGraphs(NamedGraph serviceInputGraph, List<NamedGraph> antecedentGraphs){
 		//add antecedents to new graph
-		for(NamedGraph antecedentGraph : antecedentGraphs)
+		for(NamedGraph antecedentGraph : antecedentGraphs){
+			System.out.println("antecedent graph: " + antecedentGraph.getURI());
 			model.add(antecedentGraph.getContents(), Vocab.wasDerivedFrom, antecedentGraph.getContents());
+		}
 	}
 	
 	private Resource getActivityResource(String serviceName, Model model){

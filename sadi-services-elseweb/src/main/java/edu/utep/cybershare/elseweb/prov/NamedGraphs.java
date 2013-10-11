@@ -112,19 +112,15 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 	
 	public NamedGraph getNewNamedGraph(Resource graphContents){
 		String graphFileName = FileUtils.getRandomFileNameFromFileName("namedGraph.rdf");
-
-		System.out.println("file name: " + graphFileName);
 		
 		//get graph file path and URL
 		URL graphURL = FileUtils.getGraphsURL(graphFileName);
-		System.out.println("graph url: " + graphURL.toString());
-		
 		File graphFilePath = FileUtils.getGraphsDirPath(graphFileName);
-		System.out.println("graph path: " + graphFilePath.getAbsolutePath());
 		
 		//create new NamedGraph Object
 		NamedGraph namedGraph = new NamedGraph(graphContents, graphURL.toString(), graphFilePath.getAbsolutePath());
 		put(namedGraph.getContents().getURI(), namedGraph);
+
 		return namedGraph;
 	}
 	
@@ -179,6 +175,9 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 		Attr rootNodeURIAttr = doc.createAttribute("rootNodeURI");
 		rootNodeURIAttr.setValue(namedGraph.getContents().getURI());
 		namedGraphElement.setAttributeNode(rootNodeURIAttr);
+		
+		//add to namedGraphsElement
+		namedGraphsElement.appendChild(namedGraphElement);
 	}
 	
 	private void dumpNamedGraphs(){
@@ -190,7 +189,6 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 	}
 	
 	private void dumpNamedGraph(NamedGraph namedGraph){
-		namedGraph.setDumped();
 		String serializedGraph = serialize(namedGraph.getContents());
 		FileUtils.writeTextFile(serializedGraph, namedGraph.getGraphFilePath());
 	}

@@ -29,14 +29,18 @@ public class KnoweldgeBase {
 	public List<NamedGraph> getAntecedentNamedGraphs(String inputClassURI){
 		ArrayList<NamedGraph> namedGraphs = new ArrayList<NamedGraph>();
 		
+		System.out.println("geting antecedents");
+		
 		//create KB loaded with class extensionsn
 		OntModel model = getModel(inputClassURI);
 		List<OntClass> someValueFromClasses;
 		for(NamedGraph namedGraph : this.namedGraphs.values()){			
 			//check if named graph contained any individuals expressed in the loaded class extension
 			someValueFromClasses = this.getSomeValuesFromClasses(inputClassURI, model);
-			if(containsIndividualsOfClasses(model, someValueFromClasses))
+			System.out.println("found classes to check for individuals: " + someValueFromClasses.size());
+			if(containsIndividualsOfClasses(model, someValueFromClasses)){
 				namedGraphs.add(namedGraph);
+			}
 		}
 		
 		return namedGraphs;
@@ -48,6 +52,7 @@ public class KnoweldgeBase {
 	
 	private boolean containsIndividualsOfClasses(OntModel model, List<OntClass> targetClasses){		
 		for(OntClass ontClass : targetClasses){
+			System.out.println("checking for instances of class: " + ontClass.getURI());
 			if(ontClass.listInstances().hasNext())
 				return true;
 		}
@@ -88,7 +93,7 @@ public class KnoweldgeBase {
 		Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
 		
 		OntModelSpec ontModelSpec = OntModelSpec.OWL_DL_MEM;
-	    ontModelSpec.setReasoner(reasoner);
+	    //ontModelSpec.setReasoner(reasoner);
 	    
 		OntModel model = ModelFactory.createOntologyModel(ontModelSpec);
 		model.read(inputClassURI);
