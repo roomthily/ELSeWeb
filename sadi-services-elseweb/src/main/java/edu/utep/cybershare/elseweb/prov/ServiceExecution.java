@@ -58,11 +58,11 @@ public class ServiceExecution {
 	}
 	
 	private NamedGraph getNamedGraphWithAntecedents(){
-		List<NamedGraph> namedGraphs = kb.getAntecedentNamedGraphs(input.getURI(), inputClassURI);
+		List<NamedGraph> namedGraphs = kb.getAntecedentNamedGraphs(inputClassURI);
 		NamedGraph serviceInputGraph = null;
 		if(namedGraphs.size() > 0){
 			serviceInputGraph = this.getNewInputNamedGraph();
-			attachedDerivedFromGraphs(serviceInputGraph);
+			attachedDerivedFromGraphs(serviceInputGraph, namedGraphs);
 		}
 		return serviceInputGraph;
 	}
@@ -76,9 +76,7 @@ public class ServiceExecution {
 	public void close(){kb.close();}
 
 		
-	private void attachedDerivedFromGraphs(NamedGraph serviceInputGraph){
-		List<NamedGraph> antecedentGraphs = kb.getAntecedentNamedGraphs(input.getURI(), inputClassURI);
-						
+	private void attachedDerivedFromGraphs(NamedGraph serviceInputGraph, List<NamedGraph> antecedentGraphs){
 		//add antecedents to new graph
 		for(NamedGraph antecedentGraph : antecedentGraphs)
 			model.add(antecedentGraph.getContents(), Vocab.wasDerivedFrom, antecedentGraph.getContents());

@@ -26,11 +26,11 @@ public class KnoweldgeBase {
 		
 	public NamedGraph getNamedGraph(String rootNodeURI){return namedGraphs.get(rootNodeURI);}
 	
-	public List<NamedGraph> getAntecedentNamedGraphs(String rootNodeURI, String inputClassURI){
+	public List<NamedGraph> getAntecedentNamedGraphs(String inputClassURI){
 		ArrayList<NamedGraph> namedGraphs = new ArrayList<NamedGraph>();
 		
 		//create KB loaded with class extensionsn
-		OntModel model = getModel(inputClassURI, rootNodeURI);
+		OntModel model = getModel(inputClassURI);
 		List<OntClass> someValueFromClasses;
 		for(NamedGraph namedGraph : this.namedGraphs.values()){			
 			//check if named graph contained any individuals expressed in the loaded class extension
@@ -83,7 +83,7 @@ public class KnoweldgeBase {
 	
 	public void close(){namedGraphs.dump();}
 	
-	private OntModel getModel(String inputClassURI, String rootNodeClassURI){
+	private OntModel getModel(String inputClassURI){
 		//create Jena OWL Reasoner
 		Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
 		
@@ -91,7 +91,6 @@ public class KnoweldgeBase {
 	    ontModelSpec.setReasoner(reasoner);
 	    
 		OntModel model = ModelFactory.createOntologyModel(ontModelSpec);
-		model.read(rootNodeClassURI);
 		model.read(inputClassURI);
 		return model;
 	}
