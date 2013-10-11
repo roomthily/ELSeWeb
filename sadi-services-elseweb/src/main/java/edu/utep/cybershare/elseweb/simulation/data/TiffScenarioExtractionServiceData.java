@@ -1,4 +1,4 @@
-package edu.utep.cybershare.elseweb.prov.driver.data;
+package edu.utep.cybershare.elseweb.simulation.data;
 
 public class TiffScenarioExtractionServiceData extends ServiceData{
 

@@ -1,12 +1,12 @@
-package edu.utep.cybershare.elseweb.prov.driver.services;
+package edu.utep.cybershare.elseweb.simulation.service;
 
 import com.hp.hpl.jena.rdf.model.Resource;
 
 import edu.utep.cybershare.elseweb.prov.ServiceExecution;
 
-public class WCSCoverageRequirementsService implements Service {
+public class LifemapperService implements Service {
 
-	private static final String inputClassURI = "http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSScenarioRequirements";
+	private static final String inputClassURI = "http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ExecutableExperiment";
 	private static final String serviceName = "WCSCoverageRequirementsService";
 	
 	@Override
