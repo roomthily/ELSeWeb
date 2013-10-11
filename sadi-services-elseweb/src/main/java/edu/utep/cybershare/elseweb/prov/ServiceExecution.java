@@ -39,7 +39,9 @@ public class ServiceExecution {
 	}
 	
 	private void linkUpOutput(){
-		model.add(output, Vocab.wasGeneratedBy, activity);
+		NamedGraph outputNamedGraph = kb.getNewNamedGraph(output);
+		Resource namedGraphResource = output.getModel().getResource(outputNamedGraph.getURI());
+		model.add(namedGraphResource, Vocab.wasGeneratedBy, activity);
 	}
 	
 	private void linkUpInput(){

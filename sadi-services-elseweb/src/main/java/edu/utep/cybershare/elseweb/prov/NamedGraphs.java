@@ -9,6 +9,10 @@ import java.util.HashMap;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
@@ -145,7 +149,19 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 		for(NamedGraph aNamedGraph : namedGraphs){
 			if(!aNamedGraph.isDumped())
 				addLogEntry(aNamedGraph, namedGraphsElement);
-		}				
+		}
+		
+		// write the content into xml file
+		try{
+			TransformerFactory transformerFactory = TransformerFactory.newInstance();
+			Transformer transformer = transformerFactory.newTransformer();
+			DOMSource source = new DOMSource(doc);
+			StreamResult result = new StreamResult(FileUtils.getGraphsLogPath());
+			transformer.transform(source, result);
+			System.out.println("Log saved!");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 	
 	private void addLogEntry(NamedGraph namedGraph, Element namedGraphsElement){
