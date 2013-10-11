@@ -12,30 +12,39 @@ public abstract class ServiceData {
 	protected String uri;
 	protected String inputRDFFile;	
 	protected String outputRDFFile;
+		
+	private Resource input;
+	private Resource output;
+
+	public ServiceData(){
+		setFields();
+		setInput();
+		setOutput();
+	}
+
+	public Resource getInput(){return input;}
+	public Resource getOutput(){return output;}
 	
-	public ServiceData(){setFields();}
-	
-	protected abstract void setFields();
-	
-	public Resource getInput(){
+	private void setInput(){
 		Model loadingModel = ModelFactory.createDefaultModel();
 		File inputFile = new File(inputRDFFile);
 		try{
 			FileReader reader = new FileReader(inputFile);
 			loadingModel.read(reader, null);
-			return loadingModel.getResource(uri);
+			input =  loadingModel.getResource(uri);
 		}catch(Exception e){e.printStackTrace();}
-		return null;
 	}
 	
-	public Resource getOutput(){
+	private void setOutput(){
 		Model loadingModel = ModelFactory.createDefaultModel();
 		File outputFile = new File(outputRDFFile);
 		try{
 			FileReader reader = new FileReader(outputFile);
 			loadingModel.read(reader, null);
-			return loadingModel.getResource(uri);
+			output = loadingModel.getResource(uri);
 		}catch(Exception e){e.printStackTrace();}
-		return null;
-	}
+	}	
+	
+	protected abstract void setFields();
+
 }

@@ -8,6 +8,7 @@ import edu.utep.cybershare.elseweb.simulation.service.LifemapperService;
 import edu.utep.cybershare.elseweb.simulation.service.Service;
 import edu.utep.cybershare.elseweb.simulation.service.TiffScenarioExtractionService;
 import edu.utep.cybershare.elseweb.simulation.service.WCSCoverageRequirementsService;
+import edu.utep.cybershare.elseweb.util.Printing;
 
 
 public class ShareClient {
@@ -37,16 +38,22 @@ public class ShareClient {
 	public void simulate(){
 		//execute first service
 		wcsCoverageRequirementsService.processInput(wcsScenarioRequirementsServiceData.getInput(), wcsScenarioRequirementsServiceData.getOutput());
+		System.out.println("after 1st service execution, the output is:");
+		Printing.print(wcsScenarioRequirementsServiceData.getOutput().getModel());
 		
 		//execute second service
 		tiffScenarioExtractionService.processInput(tiffScenarioExtractionServiceData.getInput(), tiffScenarioExtractionServiceData.getOutput());
+		System.out.println("after 2nd service execution, the output is:");
+		Printing.print(tiffScenarioExtractionServiceData.getOutput().getModel());
 		
 		//execute final
 		lifemapperService.processInput(lifemapperServiceData.getInput(), lifemapperServiceData.getOutput());
+		System.out.println("after 3rd service execution, the output is:");
+		Printing.print(lifemapperServiceData.getOutput().getModel());
 	}
 	
 	public static void main(String[] args){
-
-
+		ShareClient simulator = new ShareClient();
+		simulator.simulate();
 	}
 }

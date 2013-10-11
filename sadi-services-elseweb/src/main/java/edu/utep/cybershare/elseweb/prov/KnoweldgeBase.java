@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.mindswap.pellet.jena.PelletReasonerFactory;
-
 import com.hp.hpl.jena.ontology.IntersectionClass;
 import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
@@ -14,6 +12,8 @@ import com.hp.hpl.jena.ontology.Restriction;
 import com.hp.hpl.jena.ontology.SomeValuesFromRestriction;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.reasoner.Reasoner;
+import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 
 
 public class KnoweldgeBase {
@@ -84,8 +84,11 @@ public class KnoweldgeBase {
 	public void close(){namedGraphs.dump();}
 	
 	private OntModel getModel(String inputClassURI, String rootNodeClassURI){
+		//create Jena OWL Reasoner
+		Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
+		
 		OntModelSpec ontModelSpec = OntModelSpec.OWL_DL_MEM;
-	    ontModelSpec.setReasoner(PelletReasonerFactory.theInstance().create());
+	    ontModelSpec.setReasoner(reasoner);
 	    
 		OntModel model = ModelFactory.createOntologyModel(ontModelSpec);
 		model.read(rootNodeClassURI);
