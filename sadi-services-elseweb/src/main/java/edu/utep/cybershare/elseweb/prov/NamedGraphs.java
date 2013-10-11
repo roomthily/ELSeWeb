@@ -10,7 +10,9 @@ import java.util.HashMap;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -60,12 +62,12 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 			doc = docBuilder.parse(FileUtils.getGraphsLogPath());
 			return doc;
 		}
-		catch(Exception e){e.printStackTrace();}
+		catch(Exception e){System.out.println("first time looking for log, so it doesn't yet exist...");}
 		return null;
 	}
 	
 	private void populate(){
-		NodeList namedGraphEntries = doc.getElementsByTagName("namgedGraph");
+		NodeList namedGraphEntries = doc.getElementsByTagName("namedGraph");
 		Node namedGraphEntry;
 		String uri;
 		String rootNodeURI;
@@ -107,10 +109,15 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 	public NamedGraph getNewNamedGraph(Resource graphContents){
 		String graphFileName = FileUtils.getRandomFileNameFromFileName("namedGraph.rdf");
 
+		System.out.println("file name: " + graphFileName);
+		
 		//get graph file path and URL
 		URL graphURL = FileUtils.getGraphsURL(graphFileName);
+		System.out.println("graph url: " + graphURL.toString());
+		
 		File graphFilePath = FileUtils.getGraphsDirPath(graphFileName);
-
+		System.out.println("graph path: " + graphFilePath.getAbsolutePath());
+		
 		//create new NamedGraph Object
 		NamedGraph namedGraph = new NamedGraph(graphContents, graphURL.toString(), graphFilePath.getAbsolutePath());
 		put(namedGraph.getContents().getURI(), namedGraph);
@@ -118,17 +125,58 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 	}
 	
 	public void dump(){
+		//dump named graphs
+		dumpNamedGraphs();
+		
+		//dump log
+		dumpLog();
+	}
+	
+	private void dumpLog(){
+		NodeList namedGraphsElements = doc.getElementsByTagName("namedGraphs");
+		Element namedGraphsElement;
+		if(namedGraphsElements.getLength() > 0){namedGraphsElement = (Element) namedGraphsElements.item(0);}
+		else{
+			namedGraphsElement = doc.createElement("namedGraphs");
+			doc.appendChild(namedGraphsElement);
+		}
+		
+		ArrayList<NamedGraph> namedGraphs = new ArrayList<NamedGraph>(values());
+		for(NamedGraph aNamedGraph : namedGraphs){
+			if(!aNamedGraph.isDumped())
+				addLogEntry(aNamedGraph, namedGraphsElement);
+		}				
+	}
+	
+	private void addLogEntry(NamedGraph namedGraph, Element namedGraphsElement){
+		Element namedGraphElement = doc.createElement("namedGraph");
+		
+		//add file path to RDF of named graph
+		namedGraphElement.appendChild(doc.createTextNode(namedGraph.getGraphFilePath()));
+		
+		//add attribute for URI of the named graph
+		Attr uriAttr = doc.createAttribute("uri");
+		uriAttr.setValue(namedGraph.getURI());
+		namedGraphElement.setAttributeNode(uriAttr);
+		
+		//add attribute for rootNodeURI of the named graph
+		Attr rootNodeURIAttr = doc.createAttribute("rootNodeURI");
+		rootNodeURIAttr.setValue(namedGraph.getContents().getURI());
+		namedGraphElement.setAttributeNode(rootNodeURIAttr);
+	}
+	
+	private void dumpNamedGraphs(){
 		ArrayList<NamedGraph> namedGraphs = new ArrayList<NamedGraph>(values());
 		for(NamedGraph aNamedGraph : namedGraphs){
 			if(!aNamedGraph.isDumped())
 				dumpNamedGraph(aNamedGraph);
-		}
+		}		
 	}
 	
 	private void dumpNamedGraph(NamedGraph namedGraph){
 		namedGraph.setDumped();
 		String serializedGraph = serialize(namedGraph.getContents());
-		FileUtils.writeOutputTextFile(serializedGraph, namedGraph.getGraphFilePath());
+		FileUtils.writeTextFile(serializedGraph, namedGraph.getGraphFilePath());
 	}
 	
 	private String serialize(Resource graphContents){

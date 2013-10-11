@@ -43,14 +43,14 @@ public class ServiceExecution {
 	}
 	
 	private void linkUpInput(){
-		NamedGraph namedGraph = kb.getNamedGraph(input.getURI());
-
+		NamedGraph namedGraph;
+		
 		if((namedGraph = kb.getNamedGraph(input.getURI())) != null)
 			output.getModel().add(activity, Vocab.used, namedGraph.getURI());
 		else if((namedGraph = this.getNamedGraphWithAntecedents()) != null)		
 			output.getModel().add(activity, Vocab.used, namedGraph.getURI());
 		else{
-			namedGraph = this.kb.getNamedGraph(input.getURI());
+			namedGraph = this.kb.getNewNamedGraph(input);
 			output.getModel().add(activity, Vocab.used, namedGraph.getURI());
 		}		
 	}

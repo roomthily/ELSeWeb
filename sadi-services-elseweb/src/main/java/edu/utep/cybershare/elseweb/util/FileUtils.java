@@ -188,6 +188,19 @@ public class FileUtils{
 		return outputFilePath;
 	}
 
+	public static File writeTextFile(String fileContents, String filePath){
+		try{
+			BufferedWriter out = new BufferedWriter(new FileWriter(filePath));
+			out.write(fileContents);
+			out.close();
+			return new File(filePath);
+		}
+		catch (Exception e){
+			e.printStackTrace();
+			return null;
+		}		
+	}
+	
 	public static File writeOutputTextFile(String fileContents, String fileName){		
 		File outputFilePath = getOutputFilePath(fileName);
 		try{
