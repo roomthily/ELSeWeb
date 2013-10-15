@@ -75,19 +75,21 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 		Node namedGraphEntry;
 		String uri;
 		String rootNodeURI;
+		String classURI;
 		String namedGraphFilePath;
 		for(int i = 0; i < namedGraphEntries.getLength(); i ++){
 			namedGraphEntry = namedGraphEntries.item(i);
 			uri = namedGraphEntry.getAttributes().getNamedItem("uri").getNodeValue();
 			rootNodeURI = namedGraphEntry.getAttributes().getNamedItem("rootNodeURI").getNodeValue();
+			classURI = namedGraphEntry.getAttributes().getNamedItem("classURI").getNodeValue();
 			namedGraphFilePath = namedGraphEntry.getTextContent();
 			
-			loadNamedGraph(uri, rootNodeURI, namedGraphFilePath);
+			loadNamedGraph(uri, rootNodeURI, classURI, namedGraphFilePath);
 		}
 	}	
 
 		
-	private void loadNamedGraph(String uri, String rootNodeURI, String graphFilePath){
+	private void loadNamedGraph(String uri, String rootNodeURI, String classURI, String graphFilePath){
 		Model model = ModelFactory.createDefaultModel();
 		Resource namedGraphContents;
 		NamedGraph namedGraph;
@@ -101,7 +103,7 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 			namedGraphContents = model.getResource(rootNodeURI);
 			
 			//create named graph
-			namedGraph = new NamedGraph(namedGraphContents, uri, graphFilePath);
+			namedGraph = new NamedGraph(namedGraphContents, uri, classURI,  graphFilePath);
 			namedGraph.setDumped();
 			
 			//add to this table
@@ -110,7 +112,7 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 		}catch(Exception e){e.printStackTrace();}
 	}
 	
-	public NamedGraph getNewNamedGraph(Resource graphContents){
+	public NamedGraph getNewNamedGraph(Resource graphContents, String classURI){
 		String graphFileName = FileUtils.getRandomFileNameFromFileName("namedGraph.rdf");
 		
 		//get graph file path and URL
@@ -118,7 +120,7 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 		File graphFilePath = FileUtils.getGraphsDirPath(graphFileName);
 		
 		//create new NamedGraph Object
-		NamedGraph namedGraph = new NamedGraph(graphContents, graphURL.toString(), graphFilePath.getAbsolutePath());
+		NamedGraph namedGraph = new NamedGraph(graphContents, graphURL.toString(), classURI, graphFilePath.getAbsolutePath());
 		put(namedGraph.getContents().getURI(), namedGraph);
 
 		return namedGraph;
@@ -175,6 +177,11 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 		Attr rootNodeURIAttr = doc.createAttribute("rootNodeURI");
 		rootNodeURIAttr.setValue(namedGraph.getContents().getURI());
 		namedGraphElement.setAttributeNode(rootNodeURIAttr);
+		
+		//add attribute for classURI
+		Attr classURIAttr = doc.createAttribute("classURI");
+		classURIAttr.setValue(namedGraph.getGraphClassURI());
+		namedGraphElement.setAttributeNode(classURIAttr);
 		
 		//add to namedGraphsElement
 		namedGraphsElement.appendChild(namedGraphElement);

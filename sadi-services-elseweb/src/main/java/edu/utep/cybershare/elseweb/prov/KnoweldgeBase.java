@@ -1,102 +1,89 @@
 package edu.utep.cybershare.elseweb.prov;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
-import com.hp.hpl.jena.ontology.IntersectionClass;
-import com.hp.hpl.jena.ontology.OntClass;
-import com.hp.hpl.jena.ontology.OntModel;
-import com.hp.hpl.jena.ontology.OntModelSpec;
-import com.hp.hpl.jena.ontology.Restriction;
-import com.hp.hpl.jena.ontology.SomeValuesFromRestriction;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.ontology.Individual;
 import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.reasoner.Reasoner;
-import com.hp.hpl.jena.reasoner.ReasonerRegistry;
+
 
 
 public class KnoweldgeBase {
-	
-	private NamedGraphs namedGraphs;
-	
-	private static final String literalURI = "http://www.w3.org/2000/01/rdf-schema#Literal";
-	
-	public KnoweldgeBase(){namedGraphs = new NamedGraphs();}
-		
-	public NamedGraph getNamedGraph(String rootNodeURI){return namedGraphs.get(rootNodeURI);}
-	
-	public List<NamedGraph> getAntecedentNamedGraphs(String inputClassURI){
-		ArrayList<NamedGraph> namedGraphs = new ArrayList<NamedGraph>();
-		
-		System.out.println("geting antecedents");
-		
-		//create KB loaded with class extensionsn
-		OntModel model = getModel(inputClassURI);
-		List<OntClass> someValueFromClasses;
-		for(NamedGraph namedGraph : this.namedGraphs.values()){			
-			//check if named graph contained any individuals expressed in the loaded class extension
-			someValueFromClasses = this.getSomeValuesFromClasses(inputClassURI, model);
-			System.out.println("found classes to check for individuals: " + someValueFromClasses.size());
-			if(containsIndividualsOfClasses(model, someValueFromClasses)){
-				namedGraphs.add(namedGraph);
-			}
-		}
-		
-		return namedGraphs;
-	}
-	
-	public NamedGraph getNewNamedGraph(Resource graphContents){
-		return namedGraphs.getNewNamedGraph(graphContents);
-	}
-	
-	private boolean containsIndividualsOfClasses(OntModel model, List<OntClass> targetClasses){		
-		for(OntClass ontClass : targetClasses){
-			System.out.println("checking for instances of class: " + ontClass.getURI());
-			if(ontClass.listInstances().hasNext())
-				return true;
-		}
-		return false;
-	}
-	
-	private List<OntClass> getSomeValuesFromClasses(String inputClassURI, OntModel model){
-		ArrayList<OntClass> partOfIntersectionClasses = new ArrayList<OntClass>();
-		OntClass inputClass = model.getOntClass(inputClassURI);
-		
-		IntersectionClass intersection = inputClass.getEquivalentClass().asIntersectionClass();
-		 
-		for (Iterator<? extends OntClass> i = intersection.listOperands(); i.hasNext(); ) {
-		      OntClass partOfIntersectionClass = (OntClass) i.next();
 
-		      if (partOfIntersectionClass.isRestriction()) {
-		    	  Restriction res = partOfIntersectionClass.asRestriction();
-		    	  SomeValuesFromRestriction restriction = res.asSomeValuesFromRestriction();
-		    	  
-		    	  OntClass valuesFromClass;
-		    	  try{
-		    		  valuesFromClass = restriction.getSomeValuesFrom().as(OntClass.class);
-		    		  if(!valuesFromClass.getURI().equals(literalURI))
-		    			  partOfIntersectionClasses.add(valuesFromClass);
-		    	  }catch(Exception e){e.printStackTrace();}
-		      }
-		      //if is a named class rather than anonymous restriction class
-		      else
-		    	  partOfIntersectionClasses.add(partOfIntersectionClass);
-		  }
-		 return partOfIntersectionClasses;
+	private NamedGraphs namedGraphs;
+	private NamedGraph inputNamedGraph;
+
+	public KnoweldgeBase(Resource inputResource, String inputClassURI){		
+		namedGraphs = new NamedGraphs();
+		inputNamedGraph = namedGraphs.getNewNamedGraph(inputResource, inputClassURI);
+	}
+	
+	public List<NamedGraph> getAntecedents(){
+		List<NamedGraph> antecedents;
+		
+		antecedents = this.getCase1Antecedents();
+		if(antecedents.size() > 0)
+			return antecedents;
+		
+		antecedents = this.getCase2Antecedents();
+		if(antecedents.size() > 0)
+			return antecedents;
+		
+		antecedents = this.getCase3Antecedents();
+		if(antecedents.size() > 0)
+			return antecedents;
+
+		NamedGraph antecedent = this.getCase4Antecedent();
+		if(antecedent != null){
+			antecedents = new ArrayList<NamedGraph>();
+			antecedents.add(antecedent);
+			return antecedents;
+		}
+		
+		antecedents = new ArrayList<NamedGraph>();
+		antecedents.add(this.inputNamedGraph);
+		return antecedents;
+	}
+	
+	private List<NamedGraph> getCase1Antecedents(){
+		ArrayList<NamedGraph> antecedentGraphs = new ArrayList<NamedGraph>();
+
+		for(NamedGraph namedGraph : this.namedGraphs.values()){
+			Individual individual = namedGraph.getIndividualOf(inputNamedGraph.getGraphClass());
+			if(individual.getURI().equals(inputNamedGraph.getRootNodeURI()))
+				antecedentGraphs.add(namedGraph);
+		}
+		return antecedentGraphs;
+	}
+	
+	private List<NamedGraph> getCase2Antecedents(){
+		ArrayList<NamedGraph> antecedentGraphs = new ArrayList<NamedGraph>();
+			
+		for(NamedGraph namedGraph : this.namedGraphs.values()){
+			if(inputNamedGraph.hasCommonComponents(namedGraph))
+				antecedentGraphs.add(namedGraph);
+		}
+		
+		return antecedentGraphs;
+	}	
+
+	private NamedGraph getCase4Antecedent(){
+		for(NamedGraph namedGraph : this.namedGraphs.values()){
+			if(namedGraph.getRootNodeURI().equals(this.inputNamedGraph.getRootNodeURI()))
+				return namedGraph;
+		}
+		return null;
+	}
+	
+	private List<NamedGraph> getCase3Antecedents(){
+		ArrayList<NamedGraph> antecedentGraphs = new ArrayList<NamedGraph>();
+		
+		for(NamedGraph namedGraph : this.namedGraphs.values()){
+			if(this.inputNamedGraph.hasComponent(namedGraph))
+				antecedentGraphs.add(namedGraph);
+		}
+		return antecedentGraphs;
 	}
 	
 	public void close(){namedGraphs.dump();}
-	
-	private OntModel getModel(String inputClassURI){
-		//create Jena OWL Reasoner
-		Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
-		
-		OntModelSpec ontModelSpec = OntModelSpec.OWL_DL_MEM;
-	    //ontModelSpec.setReasoner(reasoner);
-	    
-		OntModel model = ModelFactory.createOntologyModel(ontModelSpec);
-		model.read(inputClassURI);
-		return model;
-	}
 }
