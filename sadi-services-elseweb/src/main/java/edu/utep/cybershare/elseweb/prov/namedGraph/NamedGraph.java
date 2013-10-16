@@ -1,4 +1,4 @@
-package edu.utep.cybershare.elseweb.prov;
+package edu.utep.cybershare.elseweb.prov.namedGraph;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -12,6 +12,8 @@ import com.hp.hpl.jena.ontology.Restriction;
 import com.hp.hpl.jena.ontology.SomeValuesFromRestriction;
 import com.hp.hpl.jena.rdf.model.Resource;
 
+import edu.utep.cybershare.elseweb.prov.ModelUtils;
+
 public class NamedGraph {
 	private static final String literalURI = "http://www.w3.org/2000/01/rdf-schema#Literal";
 	
@@ -22,7 +24,6 @@ public class NamedGraph {
 	private String graphFilePath;
 	private String graphClassURI;
 	private boolean isDumped;
-	private boolean shouldBeDumped;
 	private List<NamedGraphComponent> graphComponents;
 	
 	public NamedGraph(Resource graphContents, String graphURI, String graphClassURI, String graphFilePath){
@@ -31,14 +32,11 @@ public class NamedGraph {
 		this.graphFilePath = graphFilePath;
 		this.graphClassURI = graphClassURI;
 		this.isDumped = false;
-		this.shouldBeDumped = false;
 		delineateGraphComponents();
 		setModel();
 	}
 	public void setDumped(){isDumped = false;}
 	public boolean isDumped(){return isDumped;}
-	public boolean shouldBeDumped(){return shouldBeDumped;}
-	public void setShouldBeDumped(){this.shouldBeDumped = true;}
 	public Resource getContents(){return contents;}
 	public String getURI(){return graphURI;}
 	public String getGraphFilePath(){return graphFilePath;}

@@ -1,12 +1,11 @@
-package edu.utep.cybershare.elseweb.prov;
-
-import java.util.ArrayList;
-import java.util.List;
+package edu.utep.cybershare.elseweb.prov.namedGraph;
 
 import com.hp.hpl.jena.ontology.Individual;
 import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
+
+import edu.utep.cybershare.elseweb.prov.ModelUtils;
 
 public class NamedGraphComponent {
 	

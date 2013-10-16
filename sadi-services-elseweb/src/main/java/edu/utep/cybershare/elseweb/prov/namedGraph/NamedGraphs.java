@@ -1,4 +1,4 @@
-package edu.utep.cybershare.elseweb.prov;
+package edu.utep.cybershare.elseweb.prov.namedGraph;
 
 import java.io.File;
 import java.io.FileReader;
