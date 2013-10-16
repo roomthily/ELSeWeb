@@ -29,7 +29,7 @@ public class Antecedents {
 	
 	public Antecedents(Resource inputResource, String inputClassURI, NamedGraphs existingGraphs, Model outputModel){		
 		namedGraphs = existingGraphs;
-		inputNamedGraph = namedGraphs.getNewNamedGraph(inputResource, inputClassURI);
+		inputNamedGraph = namedGraphs.getNewNamedGraph(inputResource, inputClassURI, false);
 		this.outputModel = outputModel;
 		
 		setAntecedents();
@@ -37,8 +37,10 @@ public class Antecedents {
 		if(!foundAntecedents)
 			this.setEquivalentGraph();
 
-		if(!foundEquivalentGraph)
-			System.out.println("this is a newly encountered graph and has no antecedents, so do nothing");
+		if(!foundEquivalentGraph){
+			System.out.println("this is a newly encountered graph and has no antecedents, so do nothing but add the input to current list");
+			namedGraphs.addNamedGraph(this.inputNamedGraph);
+		}
 	}
 	
 	public NamedGraph getInputgraph(){
@@ -96,10 +98,7 @@ public class Antecedents {
 		foundEquivalentGraph = false;
 		for(NamedGraph namedGraph : this.namedGraphs.values()){
 			if(!foundEquivalentGraph && namedGraph.getRootNodeURI().equals(this.inputNamedGraph.getRootNodeURI())){
-				//remove input since we don't want to save it to file
-				this.namedGraphs.remove(this.inputNamedGraph.getContents().getURI());
-
-				//set the input named graph to the identical one we indentified
+				//set the input named graph to the identical one we identified
 				this.inputNamedGraph = namedGraph;
 				foundEquivalentGraph = true;
 			}

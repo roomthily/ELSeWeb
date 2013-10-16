@@ -40,7 +40,7 @@ public class ServiceExecution {
 	
 	private void linkUpOutput(){
 		//create new graph to be dumped since it might end up being an antecedent of another input
-		NamedGraph outputNamedGraph = this.existingGraphs.getNewNamedGraph(output, this.outputClassURI);		
+		NamedGraph outputNamedGraph = this.existingGraphs.getNewNamedGraph(output, this.outputClassURI, true);		
 		model.add(outputNamedGraph.getContents(), Vocab.wasGeneratedBy, activity);
 	}
 	

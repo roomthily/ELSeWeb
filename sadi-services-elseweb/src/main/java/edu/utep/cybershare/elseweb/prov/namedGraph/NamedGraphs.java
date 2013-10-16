@@ -112,7 +112,7 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 		}catch(Exception e){e.printStackTrace();}
 	}
 	
-	public NamedGraph getNewNamedGraph(Resource graphContents, String classURI){
+	public NamedGraph getNewNamedGraph(Resource graphContents, String classURI, boolean addToGraphList){
 		String graphFileName = FileUtils.getRandomFileNameFromFileName("namedGraph.rdf");
 		
 		//get graph file path and URL
@@ -121,7 +121,9 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 		
 		//create new NamedGraph Object
 		NamedGraph namedGraph = new NamedGraph(graphContents, graphURL.toString(), classURI, graphFilePath.getAbsolutePath());
-		put(namedGraph.getContents().getURI(), namedGraph);
+
+		if(addToGraphList)
+			put(namedGraph.getContents().getURI(), namedGraph);
 
 		return namedGraph;
 	}
@@ -193,6 +195,10 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 			if(!aNamedGraph.isDumped())
 				dumpNamedGraph(aNamedGraph);
 		}		
+	}
+	
+	public void addNamedGraph(NamedGraph graph){
+		this.put(graph.getContents().getURI(), graph);
 	}
 	
 	private void dumpNamedGraph(NamedGraph namedGraph){

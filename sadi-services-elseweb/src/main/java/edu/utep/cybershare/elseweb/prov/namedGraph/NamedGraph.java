@@ -52,6 +52,7 @@ public class NamedGraph {
 	
 	private void delineateGraphComponents(){
 		OntModel queryingModel = ModelUtils.getEmptyReasoningModel();
+		queryingModel.read(graphClassURI);
 		graphClass = queryingModel.getOntClass(graphClassURI);
 		List<OntClass> necessaryClasses = getSomeValuesFromClasses(graphClass);
 
