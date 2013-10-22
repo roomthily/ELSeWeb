@@ -9,7 +9,7 @@ import edu.utep.cybershare.elseweb.util.FileUtils;
 
 public class Lifemapper {
 	
-	private static final String pythonEXE = "python2.7";
+	private static final String pythonEXE = "/usr/local/bin/python2.7";
 	
 	private static final String lifemapperScript = FileUtils.getScriptsDir().getAbsolutePath() + "/" + "client.py";
 	
