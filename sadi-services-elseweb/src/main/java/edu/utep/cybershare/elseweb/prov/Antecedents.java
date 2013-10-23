@@ -29,7 +29,7 @@ public class Antecedents {
 	
 	public Antecedents(Resource inputResource, String inputClassURI, NamedGraphs existingGraphs, Model outputModel){		
 		namedGraphs = existingGraphs;
-		inputNamedGraph = namedGraphs.getNewNamedGraph(inputResource, inputClassURI, false);
+		inputNamedGraph = namedGraphs.getNewNamedGraph(inputResource, inputClassURI, false, false);
 		this.outputModel = outputModel;
 		
 		setAntecedents();
@@ -52,26 +52,35 @@ public class Antecedents {
 		setCase2Antecedents();
 		setCase3Antecedents();
 		
-		if(case1Antecedents.size() > 0)
+		if(case1Antecedents.size() > 0){
+			System.out.println("found case 1 antecedents");
 			linkUpAntecedents(case1Antecedents);
-		else if(case2Antecedents.size() > 0)
+		}
+		else if(case2Antecedents.size() > 0){
+			System.out.println("found case 2 antecedents");
 			linkUpAntecedents(case2Antecedents);
-		else if(case3Antecedents.size() > 0)
+		}
+		else if(case3Antecedents.size() > 0){
+			System.out.println("found case 3 antecedents");
 			linkUpAntecedents(case3Antecedents);
+		}
 	}
 	
 	private void linkUpAntecedents(List<NamedGraph> antecedents){
 		foundAntecedents = true;
-		for(NamedGraph antecedent : antecedents)
+		for(NamedGraph antecedent : antecedents){
+			System.out.println("antecedent: " + antecedent.getURI());
 			outputModel.add(this.inputNamedGraph.getContents(), Vocab.wasDerivedFrom, antecedent.getContents());
+		}
 	}
 		
 	private void setCase1Antecedents(){
 		case1Antecedents = new ArrayList<NamedGraph>();
 
-		for(NamedGraph namedGraph : this.namedGraphs.values()){
+		for(NamedGraph namedGraph : this.namedGraphs){
 			Individual individual = namedGraph.getIndividualOf(inputNamedGraph.getGraphClass());
-			if(individual.getURI().equals(inputNamedGraph.getRootNodeURI()))
+			
+			if(individual != null && individual.getURI().equals(inputNamedGraph.getRootNodeURI()) && this.inputNamedGraph.isEquivalentTo(namedGraph))
 				case1Antecedents.add(namedGraph);
 		}
 	}
@@ -79,7 +88,7 @@ public class Antecedents {
 	private void setCase2Antecedents(){
 		case2Antecedents = new ArrayList<NamedGraph>();
 			
-		for(NamedGraph namedGraph : this.namedGraphs.values()){
+		for(NamedGraph namedGraph : this.namedGraphs){
 			if(inputNamedGraph.hasCommonComponents(namedGraph))
 				case2Antecedents.add(namedGraph);
 		}
@@ -88,7 +97,7 @@ public class Antecedents {
 	private void setCase3Antecedents(){
 		case3Antecedents = new ArrayList<NamedGraph>();
 		
-		for(NamedGraph namedGraph : this.namedGraphs.values()){
+		for(NamedGraph namedGraph : this.namedGraphs){
 			if(this.inputNamedGraph.hasComponent(namedGraph))
 				case3Antecedents.add(namedGraph);
 		}
@@ -96,7 +105,7 @@ public class Antecedents {
 
 	private void setEquivalentGraph(){
 		foundEquivalentGraph = false;
-		for(NamedGraph namedGraph : this.namedGraphs.values()){
+		for(NamedGraph namedGraph : this.namedGraphs){
 			if(!foundEquivalentGraph && namedGraph.getRootNodeURI().equals(this.inputNamedGraph.getRootNodeURI())){
 				//set the input named graph to the identical one we identified
 				this.inputNamedGraph = namedGraph;

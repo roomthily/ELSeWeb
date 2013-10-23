@@ -16,7 +16,10 @@ public class WCSDigests extends ArrayList<WCSDigest>{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private static final String JSON_DIGEST_BASE_URL = "http://gstore.unm.edu/apps/elseweb/search/datasets.json";
+	/*private static final String JSON_DIGEST_BASE_URL = "http://gstore.unm.edu/apps/elseweb/search/datasets.json";*/
+	
+	private int limit;
+	private int size;
 	
 	public WCSDigests(int limit, int offset){
 		if(limit < 1)
@@ -24,10 +27,10 @@ public class WCSDigests extends ArrayList<WCSDigest>{
 		if(offset < 0)
 			offset = 0;
 		
-		String jsonURL = getURL(limit, offset);
+		this.limit = limit;
+		this.size = 0;
 		
-		
-		JSONArray array  = getJSONDigestsArray(jsonURL);
+		JSONArray array  = getJSONDigestsArray();
 		addJSONDigests(array);
 	}
 	
@@ -41,36 +44,40 @@ public class WCSDigests extends ArrayList<WCSDigest>{
 		}catch(Exception e){e.printStackTrace();}		
 	}
 	
+	/*
 	private String getURL(int limit, int offset){
 		String queryString = 
 				"?version=3" +
 				"&limit=" + limit +
 				"&offset=" + offset;
 		return JSON_DIGEST_BASE_URL + queryString;
-	}
+	}*/
 		
 	private void addWCSDigest(JSONObject wcsJSONDigest){
-		WCSDigest wcsDigest = new WCSDigest(wcsJSONDigest);
-		add(wcsDigest);
+		if(size < limit){
+			WCSDigest wcsDigest = new WCSDigest(wcsJSONDigest);
+			add(wcsDigest);
+			size ++;
+		}
 	}
 
-	private JSONArray getJSONDigestsArray(String jsonURLString){
-		JSONObject jsonDigests = getJSONDigests(jsonURLString);
+	private JSONArray getJSONDigestsArray(){
+		JSONObject jsonDigests = getJSONDigests();
 		JSONArray jsonDigestsArray = null;
 		try{jsonDigestsArray = jsonDigests.getJSONArray("results");}
 		catch(Exception e){e.printStackTrace();}
 		return jsonDigestsArray;
 	}
 	
-	private JSONObject getJSONDigests(String jsonURLString){
-		String jsonDigestString = getJSONDigestString(jsonURLString);
+	private JSONObject getJSONDigests(){
+		String jsonDigestString = getJSONDigestString();
 		JSONObject jsonDigests = null;
 		try{jsonDigests = new JSONObject(jsonDigestString);}
 		catch(Exception e){e.printStackTrace();}
 		return jsonDigests;
 	}
 	
-	private String getJSONDigestString(String jsonURLString){
+	private String getJSONDigestString(){
         File jsonFile = null;
         String jsonString = null;
         try {

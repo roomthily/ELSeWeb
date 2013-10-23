@@ -13,7 +13,7 @@ public class ModelUtils {
 		Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
 		
 		OntModelSpec ontModelSpec = OntModelSpec.OWL_DL_MEM;
-	    ontModelSpec.setReasoner(reasoner);
+	    //ontModelSpec.setReasoner(reasoner);
 	    
 		OntModel model = ModelFactory.createOntologyModel(ontModelSpec);
 		return model;

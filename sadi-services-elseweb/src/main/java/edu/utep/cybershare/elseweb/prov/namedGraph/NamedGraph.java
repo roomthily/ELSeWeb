@@ -10,6 +10,7 @@ import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.Restriction;
 import com.hp.hpl.jena.ontology.SomeValuesFromRestriction;
+import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Resource;
 
 import edu.utep.cybershare.elseweb.prov.ModelUtils;
@@ -31,9 +32,13 @@ public class NamedGraph {
 		this.graphURI = graphURI;
 		this.graphFilePath = graphFilePath;
 		this.graphClassURI = graphClassURI;
+		
+		if(graphClassURI == null)
+			throw new IllegalArgumentException("Class URI must not be null");
+		
 		this.isDumped = false;
-		delineateGraphComponents();
 		setModel();
+		delineateGraphComponents();
 	}
 	public void setDumped(){isDumped = false;}
 	public boolean isDumped(){return isDumped;}
@@ -47,15 +52,29 @@ public class NamedGraph {
 	
 	private void setModel(){
 		model = ModelUtils.getEmptyReasoningModel();
-		model.read(graphClassURI);
+
+		String ontologyURI = getOntologyURI(graphClassURI);
+		
+		System.out.println("reading in: " + ontologyURI);
+		model.read(ontologyURI);
+		
+		graphClass = model.getOntClass(graphClassURI);
+
+	}
+	
+	private String getOntologyURI(String classURI){
+		return classURI.substring(0, classURI.indexOf("#"));
 	}
 	
 	private void delineateGraphComponents(){
-		OntModel queryingModel = ModelUtils.getEmptyReasoningModel();
-		queryingModel.read(graphClassURI);
-		graphClass = queryingModel.getOntClass(graphClassURI);
+		graphClass = model.getOntClass(graphClassURI);
+		
+		
 		List<OntClass> necessaryClasses = getSomeValuesFromClasses(graphClass);
-
+		
+		if(necessaryClasses.size() == 0)
+			necessaryClasses = this.getSomeValues(graphClass);
+		
 		//add components
 		graphComponents = new ArrayList<NamedGraphComponent>();
 		NamedGraphComponent component;
@@ -96,29 +115,56 @@ public class NamedGraph {
 		return false;
 	}
 	
+	private List<OntClass> getSomeValues(OntClass aClass){
+		System.out.println("geting value from: " + aClass.getURI());
+
+		ArrayList<OntClass> partOfIntersectionClasses = new ArrayList<OntClass>();
+		System.out.println("populated array list");
+		
+		Restriction res = aClass.getEquivalentClass().asRestriction();
+		
+		SomeValuesFromRestriction restriction = res.asSomeValuesFromRestriction();
+	    	  
+		OntClass valuesFromClass;
+		try{
+			valuesFromClass = restriction.getSomeValuesFrom().as(OntClass.class);
+			if(!valuesFromClass.getURI().equals(literalURI))
+				partOfIntersectionClasses.add(valuesFromClass);
+			}catch(Exception e){e.printStackTrace();}
+		return partOfIntersectionClasses;
+	}
+	
 	private List<OntClass> getSomeValuesFromClasses(OntClass aClass){
+		System.out.println("geting some values from: " + aClass.getURI());
 		ArrayList<OntClass> partOfIntersectionClasses = new ArrayList<OntClass>();
 		
-		IntersectionClass intersection = aClass.getEquivalentClass().asIntersectionClass();
+		try{
+			IntersectionClass intersection = aClass.getEquivalentClass().asIntersectionClass();
 		 
-		for (Iterator<? extends OntClass> i = intersection.listOperands(); i.hasNext(); ) {
-		      OntClass partOfIntersectionClass = (OntClass) i.next();
+			for (Iterator<? extends OntClass> i = intersection.listOperands(); i.hasNext(); ) {
+					OntClass partOfIntersectionClass = (OntClass) i.next();
 
-		      if (partOfIntersectionClass.isRestriction()) {
-		    	  Restriction res = partOfIntersectionClass.asRestriction();
-		    	  SomeValuesFromRestriction restriction = res.asSomeValuesFromRestriction();
+					if (partOfIntersectionClass.isRestriction()) {
+						Restriction res = partOfIntersectionClass.asRestriction();
+						SomeValuesFromRestriction restriction = res.asSomeValuesFromRestriction();
 		    	  
-		    	  OntClass valuesFromClass;
-		    	  try{
-		    		  valuesFromClass = restriction.getSomeValuesFrom().as(OntClass.class);
-		    		  if(!valuesFromClass.getURI().equals(literalURI))
-		    			  partOfIntersectionClasses.add(valuesFromClass);
-		    	  }catch(Exception e){e.printStackTrace();}
-		      }
+						OntClass valuesFromClass;
+						try{
+							valuesFromClass = restriction.getSomeValuesFrom().as(OntClass.class);
+							if(!valuesFromClass.getURI().equals(literalURI))
+								partOfIntersectionClasses.add(valuesFromClass);
+						}catch(Exception e){e.printStackTrace();}
+					}
 		      //if is a named class rather than anonymous restriction class
-		      else
-		    	  partOfIntersectionClasses.add(partOfIntersectionClass);
-		  }
-		 return partOfIntersectionClasses;
+					else
+						partOfIntersectionClasses.add(partOfIntersectionClass);
+			}
+		}catch(Exception e){e.printStackTrace();}
+		return partOfIntersectionClasses;
+	}
+	
+	public boolean isEquivalentTo(NamedGraph namedGraph){
+		Model inputModel = namedGraph.getContents().getModel();
+		return this.getContents().getModel().isIsomorphicWith(inputModel);
 	}
 }

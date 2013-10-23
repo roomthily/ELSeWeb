@@ -5,8 +5,7 @@
     xmlns:j.2="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:j.3="http://purl.org/dc/terms/">
-  <owl:Nothing/>
-  <j.1:Scenario rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/wcsScenario">
+  <j.1:WCSScenario rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/wcsScenario">
     <j.1:hasWCSCoverageDistribution5>
       <j.0:Distribution rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#283411_distribution">
         <j.0:downloadURL>http://gstore.unm.edu/apps/elseweb/datasets/feaeaded-04c8-4ff7-a4db-796b97c69628/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_ppt_1997_01&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=1200.0&amp;HEIGHT=1200.0</j.0:downloadURL>
@@ -25,21 +24,21 @@
     </j.1:hasWCSCoverageDistribution4>
     <j.1:hasWCSCoverageDistribution3 rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#348976_distribution"/>
     <j.1:hasWCSCoverageDistribution2>
-      <j.0:Distribution rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#288605_distribution">
-        <j.0:downloadURL>http://gstore.unm.edu/apps/elseweb/datasets/d6d89e96-5ab8-4425-97c2-beab9295b23b/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1967_11&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=1200.0&amp;HEIGHT=1200.0</j.0:downloadURL>
+      <j.0:Distribution rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#283417_distribution">
+        <j.0:downloadURL>http://gstore.unm.edu/apps/elseweb/datasets/94d59521-cb8a-4ebd-a1fd-b5b4e93f07ad/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tdmean_1960_12&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=1200.0&amp;HEIGHT=1200.0</j.0:downloadURL>
         <j.0:accessURL>http://rgis.unm.edu/browsedata</j.0:accessURL>
         <j.3:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDistribution"/>
       </j.0:Distribution>
     </j.1:hasWCSCoverageDistribution2>
     <j.1:hasWCSCoverageDistribution1>
-      <j.0:Distribution rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#285452_distribution">
-        <j.0:downloadURL>http://gstore.unm.edu/apps/elseweb/datasets/8d2d8d64-e9c4-41e4-a367-056bd2693315/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmax_1953_10&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=1200.0&amp;HEIGHT=1200.0</j.0:downloadURL>
+      <j.0:Distribution rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/data/coverages.owl#283413_distribution">
+        <j.0:downloadURL>http://gstore.unm.edu/apps/elseweb/datasets/bd0ae8ea-0758-4ab8-9610-bc306c0576fb/services/ogc/wcs?VERSION=1.1.2&amp;SERVICE=WCS&amp;REQUEST=GetCoverage&amp;COVERAGE=us_tmax_1955_11&amp;CRS=EPSG:4326&amp;BBOX=-125.020833333333,-66.47916757,24.0625,49.9375&amp;FORMAT=image/tiff&amp;WIDTH=1200.0&amp;HEIGHT=1200.0</j.0:downloadURL>
         <j.0:accessURL>http://rgis.unm.edu/browsedata</j.0:accessURL>
         <j.3:format rdf:resource="http://provenanceweb.org/format/mime/multipart/mixed"/>
         <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elsewebdata.owl#WCSCoverageDistribution"/>
       </j.0:Distribution>
     </j.1:hasWCSCoverageDistribution1>
-    <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSScenario"/>
-  </j.1:Scenario>
+  </j.1:WCSScenario>
+  <owl:Nothing/>
 </rdf:RDF>

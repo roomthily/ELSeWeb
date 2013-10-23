@@ -24,7 +24,7 @@ public class ServiceExecution {
 	public ServiceExecution(String serviceName, Resource input, Resource output, String inputClassURI, String outputClassURI){
 		this.output = output;
 		this.existingGraphs = new NamedGraphs();
-		
+		this.outputClassURI = outputClassURI;
 		this.model = output.getModel();
 		
 		antecedents = new Antecedents(input, inputClassURI, existingGraphs, model);
@@ -40,13 +40,14 @@ public class ServiceExecution {
 	
 	private void linkUpOutput(){
 		//create new graph to be dumped since it might end up being an antecedent of another input
-		NamedGraph outputNamedGraph = this.existingGraphs.getNewNamedGraph(output, this.outputClassURI, true);		
-		model.add(outputNamedGraph.getContents(), Vocab.wasGeneratedBy, activity);
+		NamedGraph outputNamedGraph = this.existingGraphs.getNewNamedGraph(output, this.outputClassURI, true, true);		
+		Resource outputNamedGraphResource = model.createResource(outputNamedGraph.getURI());
+		model.add(outputNamedGraphResource, Vocab.wasGeneratedBy, activity);
 	}
 	
 	private void linkUpInput(){		
 		NamedGraph inputGraph = antecedents.getInputgraph();
-		model.add(activity, Vocab.used, inputGraph.getContents());
+		model.add(activity, Vocab.used, inputGraph.getURI());
 	}
 		
 	public void close(){antecedents.close();}

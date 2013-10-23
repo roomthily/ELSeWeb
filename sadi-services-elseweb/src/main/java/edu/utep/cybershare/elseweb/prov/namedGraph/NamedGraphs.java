@@ -20,13 +20,15 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
 
+import edu.utep.cybershare.elseweb.prov.ModelUtils;
 import edu.utep.cybershare.elseweb.util.FileUtils;
 
-public class NamedGraphs extends HashMap<String, NamedGraph>{
+public class NamedGraphs extends ArrayList<NamedGraph>{
 
 	/**
 	 * 
@@ -107,12 +109,12 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 			namedGraph.setDumped();
 			
 			//add to this table
-			this.put(namedGraph.getContents().getURI(), namedGraph);
+			this.add(namedGraph);
 			
 		}catch(Exception e){e.printStackTrace();}
 	}
 	
-	public NamedGraph getNewNamedGraph(Resource graphContents, String classURI, boolean addToGraphList){
+	public NamedGraph getNewNamedGraph(Resource graphContents, String classURI, boolean addToGraphList, boolean cloneContents){
 		String graphFileName = FileUtils.getRandomFileNameFromFileName("namedGraph.rdf");
 		
 		//get graph file path and URL
@@ -120,10 +122,19 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 		File graphFilePath = FileUtils.getGraphsDirPath(graphFileName);
 		
 		//create new NamedGraph Object
-		NamedGraph namedGraph = new NamedGraph(graphContents, graphURL.toString(), classURI, graphFilePath.getAbsolutePath());
+		NamedGraph namedGraph;
+		
+		if(cloneContents){
+			OntModel newModel = ModelUtils.getEmptyReasoningModel();
+			newModel.add(graphContents.getModel());
+			Resource clonedContents = newModel.getResource(graphContents.getURI());
+			namedGraph = new NamedGraph(clonedContents, graphURL.toString(), classURI, graphFilePath.getAbsolutePath());
+		}
+		else
+			namedGraph = new NamedGraph(graphContents, graphURL.toString(), classURI, graphFilePath.getAbsolutePath());			
 
 		if(addToGraphList)
-			put(namedGraph.getContents().getURI(), namedGraph);
+			this.addNamedGraph(namedGraph);
 
 		return namedGraph;
 	}
@@ -145,8 +156,7 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 			doc.appendChild(namedGraphsElement);
 		}
 		
-		ArrayList<NamedGraph> namedGraphs = new ArrayList<NamedGraph>(values());
-		for(NamedGraph aNamedGraph : namedGraphs){
+		for(NamedGraph aNamedGraph : this){
 			if(!aNamedGraph.isDumped())
 				addLogEntry(aNamedGraph, namedGraphsElement);
 		}
@@ -190,15 +200,16 @@ public class NamedGraphs extends HashMap<String, NamedGraph>{
 	}
 	
 	private void dumpNamedGraphs(){
-		ArrayList<NamedGraph> namedGraphs = new ArrayList<NamedGraph>(values());
-		for(NamedGraph aNamedGraph : namedGraphs){
+		System.out.println("dumping " + this.size() + " named graphs");
+		
+		for(NamedGraph aNamedGraph : this){
 			if(!aNamedGraph.isDumped())
 				dumpNamedGraph(aNamedGraph);
 		}		
 	}
 	
 	public void addNamedGraph(NamedGraph graph){
-		this.put(graph.getContents().getURI(), graph);
+		this.add(graph);
 	}
 	
 	private void dumpNamedGraph(NamedGraph namedGraph){
