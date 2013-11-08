@@ -14,7 +14,8 @@ import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 
 import edu.utep.cybershare.elseweb.ontology.axioms.Axioms;
-import edu.utep.cybershare.elseweb.ontology.vocabulary.ELSEWEB;
+import edu.utep.cybershare.elseweb.ontology.vocabulary.Lifemapper;
+
 
 public class OntologyToolset {
 	private OWLDataFactory dataFactory;
@@ -34,8 +35,8 @@ public class OntologyToolset {
 	}
 	
 	private void importEDACOntology(){
-		ELSEWEB edac = new ELSEWEB(this);
-		IRI edacOntologyIRI = IRI.create(edac.getNamespace());
+		Lifemapper lifemapper = new Lifemapper(this);
+		IRI edacOntologyIRI = IRI.create(lifemapper.getNamespace());
 		OWLImportsDeclaration edacImportDeclaration = dataFactory.getOWLImportsDeclaration(edacOntologyIRI);
 		AddImport addEDACImport = new AddImport(ontology, edacImportDeclaration);
 		ontologyManager.applyChange(addEDACImport);

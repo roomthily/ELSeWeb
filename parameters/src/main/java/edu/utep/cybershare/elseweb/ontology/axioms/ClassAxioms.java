@@ -38,5 +38,4 @@ public abstract class ClassAxioms extends ArrayList<OWLAxiom> {
 	}
 	
 	public abstract void setAxioms();
-
 }

@@ -3,12 +3,15 @@ package edu.utep.cybershare.elseweb.model;
 public class Parameter extends Element {
 	
 	private String name;
-	private int min;
-	private int max;
+	private double min;
+	private double max;
 	private String defaultValue;
 	private String type;
 	
-	private static final int default_Value = -101010101;
+	public static final String Integer = "Integer";
+	public static final String Float = "Float";
+	
+	private static final double default_Value = -101010101.0;
 	
 	public Parameter(String name){
 		super(name);
@@ -30,13 +33,22 @@ public class Parameter extends Element {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getMin() {
+	
+	public int getIntegerMin(){
+		return (int)min;
+	}
+	
+	public int getIntegerMax(){
+		return (int)max;
+	}
+	
+	public double getMin() {
 		return min;
 	}
 	public void setMin(int min) {
 		this.min = min;
 	}
-	public int getMax() {
+	public double getMax() {
 		return max;
 	}
 	public void setMax(int max) {

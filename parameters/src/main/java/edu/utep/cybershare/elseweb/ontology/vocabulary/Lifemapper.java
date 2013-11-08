@@ -15,9 +15,9 @@ public class Lifemapper extends Vocabulary {
 	private static final String OWLClass_ModelingAlgorithm = NAMESPACE + "#ModelingAlgorithm";
 	private static final String OWLClass_AlgorithmParameter = NAMESPACE + "#AlgorithmParameter";
 	
-	private static final String DataProperty_hasMinValue = NAMESPACE + "#hasMinValue";
-	private static final String DataProperty_hasMaxValue = NAMESPACE + "#hasMaxValue";
 	private static final String DataProperty_hasDefaultValue = NAMESPACE + "#hasDefaultValue";
+	private static final String DataProperty_hasInputValue = NAMESPACE + "#hasInputValue";
+	
 	private static final String DataProperty_hasAlgorithmCode = NAMESPACE + "#hasAlgorithmCode";
 	private static final String DataProperty_hasAlgorithmName = NAMESPACE + "#hasAlgorithmName";
 	
@@ -31,9 +31,9 @@ public class Lifemapper extends Vocabulary {
 	public OWLClass getOWLClass_ModelingAlgorithm(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_ModelingAlgorithm));}
 	public OWLClass getOWLClass_AlgorithmParameter(){return this.bundle.getDataFactory().getOWLClass(IRI.create(OWLClass_AlgorithmParameter));}
 	
-	public OWLDataProperty getDataProperty_hasMinValue(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasMinValue));}
-	public OWLDataProperty getDataProperty_hasMaxValue(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasMaxValue));}
 	public OWLDataProperty getDataProperty_hasDefaultValue(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasDefaultValue));}
+	public OWLDataProperty getDataProperty_hasInputValue(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasInputValue));}
+	
 	public OWLDataProperty getDataProperty_hasAlgorithmCode(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasAlgorithmCode));}
 	public OWLDataProperty getDataProperty_hasAlgorithmName(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasAlgorithmName));}
 	
