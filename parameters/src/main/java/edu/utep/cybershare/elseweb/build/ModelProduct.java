@@ -36,6 +36,6 @@ public class ModelProduct {
 	}
 	
 	//get model elements
-	public List<Parameter> getCharacteristics(){return new ArrayList<Parameter>(parameters.values());}
-	public List<Algorithm> getDatasets(){return new ArrayList<Algorithm>(algorithms.values());}
+	public List<Parameter> getParameters(){return new ArrayList<Parameter>(parameters.values());}
+	public List<Algorithm> getAlgorithms(){return new ArrayList<Algorithm>(algorithms.values());}
 }

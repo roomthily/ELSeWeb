@@ -1,6 +1,7 @@
 package edu.utep.cybershare.elseweb.ontology;
 
 import java.io.File;
+import java.util.List;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.io.FileDocumentTarget;
@@ -13,7 +14,6 @@ import org.semanticweb.owlapi.model.OWLImportsDeclaration;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 
-import edu.utep.cybershare.elseweb.ontology.axioms.Axioms;
 import edu.utep.cybershare.elseweb.ontology.vocabulary.Lifemapper;
 
 
@@ -46,7 +46,7 @@ public class OntologyToolset {
 		return baseIRI + "#" + individualName;
 	}
 	
-	public void addAxioms(Axioms axioms){
+	public void addAxioms(List<OWLAxiom> axioms){
 		AddAxiom addAxiomChange;
 		for(OWLAxiom anAxiom : axioms){
 			addAxiomChange = new AddAxiom(ontology, anAxiom);
