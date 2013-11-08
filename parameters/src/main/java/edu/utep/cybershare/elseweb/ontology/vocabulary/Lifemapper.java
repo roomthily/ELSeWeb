@@ -18,6 +18,8 @@ public class Lifemapper extends Vocabulary {
 	private static final String DataProperty_hasMinValue = NAMESPACE + "#hasMinValue";
 	private static final String DataProperty_hasMaxValue = NAMESPACE + "#hasMaxValue";
 	private static final String DataProperty_hasDefaultValue = NAMESPACE + "#hasDefaultValue";
+	private static final String DataProperty_hasAlgorithmCode = NAMESPACE + "#hasAlgorithmCode";
+	private static final String DataProperty_hasAlgorithmName = NAMESPACE + "#hasAlgorithmName";
 	
 	private static final String ObjectProperty_hasParameter = NAMESPACE + "#hasParameter";
 	
@@ -32,6 +34,8 @@ public class Lifemapper extends Vocabulary {
 	public OWLDataProperty getDataProperty_hasMinValue(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasMinValue));}
 	public OWLDataProperty getDataProperty_hasMaxValue(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasMaxValue));}
 	public OWLDataProperty getDataProperty_hasDefaultValue(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasDefaultValue));}
+	public OWLDataProperty getDataProperty_hasAlgorithmCode(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasAlgorithmCode));}
+	public OWLDataProperty getDataProperty_hasAlgorithmName(){return this.bundle.getDataFactory().getOWLDataProperty(IRI.create(DataProperty_hasAlgorithmName));}
 	
 	public OWLObjectProperty getObjectProperty_hasParameter(){return this.bundle.getDataFactory().getOWLObjectProperty(IRI.create(ObjectProperty_hasParameter));}	
 	

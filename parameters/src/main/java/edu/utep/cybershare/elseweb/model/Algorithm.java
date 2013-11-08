@@ -14,6 +14,18 @@ public class Algorithm extends Element{
 		parameters = new ArrayList<Parameter>();
 	}
 	
+	public boolean isSet_parameters(){
+		return this.getParameters().size() > 0;
+	}
+	
+	public boolean isSet_code(){
+		return this.getCode() != null;
+	}
+	
+	public boolean isSet_name(){
+		return this.getName() != null;
+	}
+	
 	public void addParameter(Parameter param){
 		parameters.add(param);
 	}

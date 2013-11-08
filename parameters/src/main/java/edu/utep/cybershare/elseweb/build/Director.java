@@ -1,7 +1,9 @@
 package edu.utep.cybershare.elseweb.build;
 
-import edu.utep.cybershare.elseweb.build.source.edac.WCSDigest;
-import edu.utep.cybershare.elseweb.build.source.edac.WCSDigests;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
 
 public class Director {
 	
@@ -11,44 +13,72 @@ public class Director {
 		this.builder = builder;
 	}
 
-	public void construct(WCSDigests digests){
-		int counter = 1;
-		for(WCSDigest digest : digests){
-
-			System.out.println("count: " + counter++);
-			
-			//used to name the elements of the model
-			int baseID = digest.getID();
-			builder.setBaseID(baseID);
-			
-			//build entity
-			builder.buildEntity(digest.getThemekey());
-			
-			//build Observation
-			builder.buildObservation();
-			
-			//build Measurement
-			builder.buildMeasurement();
-			
-			//build Characteristic
-			builder.buildCharacteristic(digest.getThemekey());
-			
-			//build Region
-			builder.buildRegion(digest.getLeftLongitude(), digest.getRightLongitude(), digest.getLowerLatitude(), digest.getUpperLatitude());
-			
-			//build Duration
-			builder.buildDuration(digest.getStartDate(), digest.getEndDate());
-			
-			//build Distribution
-			builder.buildDistribution(digest.getName(), digest.getWcsServiceEndpoint().toString());
-			
-			//build Dataset
-			builder.buildDataset();
-			
-			//build Agent
-			builder.buildAgent(digest.getFGDCThemes().getTheme_EDAC_Prism());
-			
+	public void construct(Document xmlDocument){
+		xmlDocument.getElementsByTagName("");
+		
+		NodeList algorithms = getAlgorithms(xmlDocument);
+		Element algorithm;
+		for(int i = 0; i < algorithms.getLength(); i ++){
+			algorithm = (Element) algorithms.item(i);
+			buildAlgorithm(algorithm);
 			builder.assemble();
 		}
+	}
+	
+	private void buildAlgorithm(Element algorithm){
+		String name = this.getAlgorithmName(algorithm);
+		String code = this.getAlgorithmCode(algorithm);
+		
+		builder.buildAlgorithm(code, name);
+		
+		NodeList parameters = this.getParameters(algorithm);
+		Element parameter;
+		for(int i = 0; i < parameters.getLength(); i ++){
+			parameter = (Element)parameters.item(i);
+			buildParameter(parameter);
+		}
+	}
+	
+	private void buildParameter(Element parameter){
+		String name = this.getParameterName(parameter);
+		int min = Integer.valueOf(this.getParameterMinValue(parameter));
+		int max = Integer.valueOf(this.getParameterMaxValue(parameter));
+		String type = this.getParameterType(parameter);
+		String defaultValue = this.getParameterDefaultValue(parameter);
+		
+		builder.buildParameter(name, min, max, type, defaultValue);
+	}
+	
+	private NodeList getAlgorithms(Document doc){
+		return doc.getElementsByTagName("algorithm");
+	}
+	
+	private String getAlgorithmCode(Element algorithm){
+		return algorithm.getAttribute("code");
+	}
+	
+	private String getAlgorithmName(Element algorithm){
+		return algorithm.getAttribute("name");
+	}
+	
+	private NodeList getParameters(Element algorithm){
+		return algorithm.getElementsByTagName("parameter");
+	}
+	
+	private String getParameterName(Element parameter){
+		return parameter.getAttribute("name");
+	}
+	
+	private String getParameterMinValue(Element parameter){
+		return parameter.getAttribute("min");
+	}
+	private String getParameterMaxValue(Element parameter){
+		return parameter.getAttribute("min");
+	}
+	private String getParameterDefaultValue(Element parameter){
+		return parameter.getAttribute("min");
+	}
+	private String getParameterType(Element parameter){
+		return parameter.getAttribute("type");
 	}
 }

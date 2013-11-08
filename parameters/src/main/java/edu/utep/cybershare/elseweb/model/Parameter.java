@@ -8,9 +8,21 @@ public class Parameter extends Element {
 	private String defaultValue;
 	private String type;
 	
+	private static final int default_Value = -101010101;
+	
 	public Parameter(String name){
 		super(name);
+
+		min = default_Value;
+		max = default_Value;
 	}
+	
+	public boolean isSet_name(){return this.getName() != null;}
+	public boolean isSet_min(){return this.getMin() != default_Value;}
+	public boolean isSet_max(){return this.getMax() != default_Value;}
+	public boolean isSet_type(){return this.getType() != null;}
+	public boolean isSet_defaultValue(){return this.getDefaultValue() != null;}
+	
 	
 	public String getName() {
 		return name;
