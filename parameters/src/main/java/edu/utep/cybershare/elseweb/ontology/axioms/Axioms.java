@@ -8,13 +8,8 @@ import org.semanticweb.owlapi.model.OWLClassAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLIndividual;
 
 import edu.utep.cybershare.elseweb.ontology.OntologyToolset;
-import edu.utep.cybershare.elseweb.ontology.vocabulary.DCAT;
-import edu.utep.cybershare.elseweb.ontology.vocabulary.DCMI;
-import edu.utep.cybershare.elseweb.ontology.vocabulary.ELSEWEB;
-import edu.utep.cybershare.elseweb.ontology.vocabulary.OBOE;
-import edu.utep.cybershare.elseweb.ontology.vocabulary.OBOEOntClassMapper;
-import edu.utep.cybershare.elseweb.ontology.vocabulary.PROVO;
-import edu.utep.cybershare.elseweb.ontology.vocabulary.XSD;
+import edu.utep.cybershare.elseweb.ontology.vocabulary.Lifemapper;
+
 
 public abstract class Axioms extends ArrayList<OWLAxiom> {
 
@@ -26,15 +21,8 @@ public abstract class Axioms extends ArrayList<OWLAxiom> {
 	protected OntologyToolset bundle;	
 	protected OWLIndividual individual;
 	
-	protected DCAT vocabulary_DCAT;
-	protected DCMI vocabulary_DCMI;
-	protected OBOE vocabulary_OBOE;
-	protected PROVO vocabulary_PROVO;
-	protected ELSEWEB vocabulary_ELSEWEB;
-	protected XSD vocabulary_XSD;
-	
-	protected OBOEOntClassMapper mapper;
-	
+	protected Lifemapper vocabulary_Lifemapper;
+		
 	protected Axioms(OWLIndividual individual, OntologyToolset bundle){
 		this.individual = individual;
 		this.bundle = bundle;
@@ -42,13 +30,7 @@ public abstract class Axioms extends ArrayList<OWLAxiom> {
 	}
 	
 	private void initializeVocabularies(){
-		vocabulary_DCMI = new DCMI(bundle);
-		vocabulary_PROVO = new PROVO(bundle);
-		vocabulary_DCAT = new DCAT(bundle);
-		vocabulary_OBOE = new OBOE(bundle);
-		vocabulary_ELSEWEB = new ELSEWEB(bundle);
-		vocabulary_XSD = new XSD(bundle);
-		mapper = new OBOEOntClassMapper(vocabulary_ELSEWEB, vocabulary_OBOE);
+		vocabulary_Lifemapper = new Lifemapper(bundle);
 	}
 		
 	protected void addTypeAxiom(OWLClass owlClass){
