@@ -1,12 +1,17 @@
 package edu.utep.cybershare.elseweb.model;
 
-public class Parameter {
+public class Parameter extends Element {
 	
 	private String name;
 	private int min;
 	private int max;
 	private String defaultValue;
 	private String type;
+	
+	public Parameter(String name){
+		super(name);
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -36,6 +41,12 @@ public class Parameter {
 	}
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	@Override
+	public void accept(Visitor visitor) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 

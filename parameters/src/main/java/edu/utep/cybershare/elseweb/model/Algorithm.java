@@ -3,13 +3,14 @@ package edu.utep.cybershare.elseweb.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Algorithm {
+public class Algorithm extends Element{
 
 	private String code;
 	private String name;
 	private ArrayList<Parameter> parameters;
 	
-	public Algorithm(){
+	public Algorithm(String code){
+		super(code);
 		parameters = new ArrayList<Parameter>();
 	}
 	
@@ -47,5 +48,11 @@ public class Algorithm {
 	 */
 	public void setCode(String code) {
 		this.code = code;
+	}
+
+	@Override
+	public void accept(Visitor visitor) {
+		// TODO Auto-generated method stub
+		
 	}
 }
