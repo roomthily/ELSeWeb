@@ -27,6 +27,9 @@ public class Director {
 	
 	private void buildAlgorithm(Element algorithm){
 		String name = this.getAlgorithmName(algorithm);
+		
+		System.out.println("Loading algorithm description of name: " + name);
+		
 		String code = this.getAlgorithmCode(algorithm);
 		
 		builder.buildAlgorithm(code, name);
@@ -41,8 +44,11 @@ public class Director {
 	
 	private void buildParameter(Element parameter){
 		String name = this.getParameterName(parameter);
-		int min = Integer.valueOf(this.getParameterMinValue(parameter));
-		int max = Integer.valueOf(this.getParameterMaxValue(parameter));
+		
+		System.out.println("Loading parameter description of name: " + name);
+		
+		String min = this.getParameterMinValue(parameter);
+		String max = this.getParameterMaxValue(parameter);		
 		String type = this.getParameterType(parameter);
 		String defaultValue = this.getParameterDefaultValue(parameter);
 		
@@ -73,10 +79,10 @@ public class Director {
 		return parameter.getAttribute("min");
 	}
 	private String getParameterMaxValue(Element parameter){
-		return parameter.getAttribute("min");
+		return parameter.getAttribute("max");
 	}
 	private String getParameterDefaultValue(Element parameter){
-		return parameter.getAttribute("min");
+		return parameter.getAttribute("default");
 	}
 	private String getParameterType(Element parameter){
 		return parameter.getAttribute("type");

@@ -3,28 +3,23 @@ package edu.utep.cybershare.elseweb.model;
 public class Parameter extends Element {
 	
 	private String name;
-	private double min;
-	private double max;
+	private String min;
+	private String max;
 	private String defaultValue;
 	private String type;
 	
-	public static final String Integer = "Integer";
-	public static final String Float = "Float";
-	
-	private static final double default_Value = -101010101.0;
-	
+	public static final String Integer_Label = "Integer";
+	public static final String Float_Label = "Float";
+		
 	public Parameter(String name){
 		super(name);
-
-		min = default_Value;
-		max = default_Value;
 	}
 	
 	public boolean isSet_name(){return this.getName() != null;}
-	public boolean isSet_min(){return this.getMin() != default_Value;}
-	public boolean isSet_max(){return this.getMax() != default_Value;}
+	public boolean isSet_min(){return this.getMin() != null && !this.getMin().isEmpty();}
+	public boolean isSet_max(){return this.getMax() != null && !this.getMax().isEmpty();}
 	public boolean isSet_type(){return this.getType() != null;}
-	public boolean isSet_defaultValue(){return this.getDefaultValue() != null;}
+	public boolean isSet_defaultValue(){return this.getDefaultValue() != null && !this.getDefaultValue().isEmpty();}
 	
 	
 	public String getName() {
@@ -35,23 +30,25 @@ public class Parameter extends Element {
 	}
 	
 	public int getIntegerMin(){
-		return (int)min;
+		int intMin = Integer.valueOf(min);
+		return intMin;
 	}
 	
 	public int getIntegerMax(){
-		return (int)max;
+		int intMax = Integer.valueOf(max);
+		return intMax;
 	}
 	
-	public double getMin() {
+	public String getMin() {
 		return min;
 	}
-	public void setMin(int min) {
+	public void setMin(String min) {
 		this.min = min;
 	}
-	public double getMax() {
+	public String getMax() {
 		return max;
 	}
-	public void setMax(int max) {
+	public void setMax(String max) {
 		this.max = max;
 	}
 	public String getDefaultValue() {
@@ -66,12 +63,18 @@ public class Parameter extends Element {
 	public void setType(String type) {
 		this.type = type;
 	}
+	
+	public double getDoubleMax(){
+		double doubleMax = Double.valueOf(max);
+		return doubleMax;
+	}
+	
+	public double getDoubleMin(){
+		double doubleMin = Double.valueOf(min);
+		return doubleMin;
+	}
 
 	@Override
 	public void accept(Visitor visitor) {
-		// TODO Auto-generated method stub
-		
 	}
-	
-
 }

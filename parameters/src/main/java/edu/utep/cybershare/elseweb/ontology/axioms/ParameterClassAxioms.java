@@ -42,22 +42,22 @@ public class ParameterClassAxioms extends ClassAxioms {
 		OWLDatatypeRestriction intervalRestriction = null;
 				
 		if(parameter.isSet_min() && parameter.isSet_max()){
-			if(parameter.isSet_type() && parameter.getType().equals(Parameter.Integer))
+			if(parameter.isSet_type() && parameter.getType().equals(Parameter.Integer_Label))
 				intervalRestriction = bundle.getDataFactory().getOWLDatatypeMinMaxInclusiveRestriction(parameter.getIntegerMin(), parameter.getIntegerMax());
 			else
-				intervalRestriction = bundle.getDataFactory().getOWLDatatypeMinMaxInclusiveRestriction(parameter.getMin(), parameter.getMax());				
+				intervalRestriction = bundle.getDataFactory().getOWLDatatypeMinMaxInclusiveRestriction(parameter.getDoubleMin(), parameter.getDoubleMax());				
 		}
 		else if(parameter.isSet_min() && !parameter.isSet_max()){
-			if(parameter.isSet_type() && parameter.getType().equals(Parameter.Integer))
+			if(parameter.isSet_type() && parameter.getType().equals(Parameter.Integer_Label))
 				intervalRestriction = bundle.getDataFactory().getOWLDatatypeMinInclusiveRestriction(parameter.getIntegerMin());
 			else
-				intervalRestriction = bundle.getDataFactory().getOWLDatatypeMinInclusiveRestriction(parameter.getMin());
+				intervalRestriction = bundle.getDataFactory().getOWLDatatypeMinInclusiveRestriction(parameter.getDoubleMin());
 		}
 		else if(!parameter.isSet_min() && parameter.isSet_max()){
-			if(parameter.isSet_type() && parameter.getType().equals(Parameter.Integer))
+			if(parameter.isSet_type() && parameter.getType().equals(Parameter.Integer_Label))
 				intervalRestriction = bundle.getDataFactory().getOWLDatatypeMinInclusiveRestriction(parameter.getIntegerMax());
 			else
-				intervalRestriction = bundle.getDataFactory().getOWLDatatypeMinInclusiveRestriction(parameter.getMax());
+				intervalRestriction = bundle.getDataFactory().getOWLDatatypeMinInclusiveRestriction(parameter.getDoubleMax());
 		}
 		
 		if(intervalRestriction != null){

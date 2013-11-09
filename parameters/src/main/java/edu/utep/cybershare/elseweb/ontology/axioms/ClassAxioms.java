@@ -33,8 +33,11 @@ public abstract class ClassAxioms extends ArrayList<OWLAxiom> {
 	}
 	
 	protected void addSubClassOfAxiom(OWLClass superClass){
-		OWLSubClassOfAxiom axiom = bundle.getDataFactory().getOWLSubClassOfAxiom(owlClass, superClass);
-		add(axiom);
+		OWLSubClassOfAxiom axiom1 = bundle.getDataFactory().getOWLSubClassOfAxiom(owlClass, superClass);
+		OWLSubClassOfAxiom axiom2 = bundle.getDataFactory().getOWLSubClassOfAxiom(superClass, vocabulary_Lifemapper.getOWLClass_AlgorithmParameter());
+		
+		add(axiom1);
+		add(axiom2);
 	}
 	
 	public abstract void setAxioms();

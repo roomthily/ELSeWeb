@@ -30,7 +30,7 @@ public class Builder {
 		anAlgorithm.setCode(code);
 	}
 
-	public void buildParameter(String name, int min, int max, String type, String defaultValue){
+	public void buildParameter(String name, String min, String max, String type, String defaultValue){
 		Parameter param = product.getParameter(name);
 		param.setName(name);
 		param.setMin(min);

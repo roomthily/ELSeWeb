@@ -31,15 +31,15 @@ public class OntologyToolset {
 		try{ontology = ontologyManager.createOntology(IRI.create(baseIRI));}
 		catch(Exception e){e.printStackTrace();}
 		
-		importEDACOntology();
+		//importLifemapperOntology();
 	}
 	
-	private void importEDACOntology(){
+	private void importLifemapperOntology(){
 		Lifemapper lifemapper = new Lifemapper(this);
-		IRI edacOntologyIRI = IRI.create(lifemapper.getNamespace());
-		OWLImportsDeclaration edacImportDeclaration = dataFactory.getOWLImportsDeclaration(edacOntologyIRI);
-		AddImport addEDACImport = new AddImport(ontology, edacImportDeclaration);
-		ontologyManager.applyChange(addEDACImport);
+		IRI lifemapperOntologyIRI = IRI.create(lifemapper.getNamespace());
+		OWLImportsDeclaration lifemapperImportDeclaration = dataFactory.getOWLImportsDeclaration(lifemapperOntologyIRI);
+		AddImport addLifemapperImport = new AddImport(ontology, lifemapperImportDeclaration);
+		ontologyManager.applyChange(addLifemapperImport);
 	}
 	
 	public String getIndividualIRI(String individualName){
