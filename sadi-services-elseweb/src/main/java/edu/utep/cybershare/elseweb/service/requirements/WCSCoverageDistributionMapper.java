@@ -14,7 +14,7 @@ import com.hp.hpl.jena.rdf.model.Resource;
 
 public class WCSCoverageDistributionMapper {
 	
-	private static final String endpoint = "http://129.108.193.15:8890/sparql";
+	private static final String endpoint = "http://localhost:8890/sparql";
 	private static final String newline = "\n";
 	
 	//region
