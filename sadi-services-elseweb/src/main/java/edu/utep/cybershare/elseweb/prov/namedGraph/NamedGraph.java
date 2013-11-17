@@ -14,6 +14,8 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Resource;
 
 import edu.utep.cybershare.elseweb.prov.ModelUtils;
+import edu.utep.cybershare.elseweb.simulation.data.TiffScenarioExtractionServiceData;
+import edu.utep.cybershare.elseweb.simulation.service.TiffScenarioExtractionService;
 
 public class NamedGraph {
 	private static final String literalURI = "http://www.w3.org/2000/01/rdf-schema#Literal";
@@ -166,5 +168,14 @@ public class NamedGraph {
 	public boolean isEquivalentTo(NamedGraph namedGraph){
 		Model inputModel = namedGraph.getContents().getModel();
 		return this.getContents().getModel().isIsomorphicWith(inputModel);
+	}
+	
+	public static void main(String[] args){
+		TiffScenarioExtractionServiceData tiffScenarioExtractionServiceData = new TiffScenarioExtractionServiceData();
+		NamedGraph namedGraph = new NamedGraph(tiffScenarioExtractionServiceData.getInput(),
+				tiffScenarioExtractionServiceData.getInput().getURI(),
+				TiffScenarioExtractionService.inputClassURI, "somepath");
+		
+		
 	}
 }

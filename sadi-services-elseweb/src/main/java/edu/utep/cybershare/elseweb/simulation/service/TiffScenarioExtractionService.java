@@ -6,9 +6,9 @@ import edu.utep.cybershare.elseweb.prov.ServiceExecution;
 
 public class TiffScenarioExtractionService implements Service {
 
-	private static final String inputClassURI = "http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSScenario";
-	private static final String outputClassURI = "http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#TiffExtractedWCSScenario";
-	private static final String serviceName = "TiffScenarioExtractionService";
+	public static final String inputClassURI = "file:///Users/nick/Documents/git-repos/ELSeWeb/ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#WCSScenario";
+	public static final String outputClassURI = "file:///Users/nick/Documents/git-repos/ELSeWeb/ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#TiffExtractedWCSScenario";
+	public static final String serviceName = "TiffScenarioExtractionService";
 	
 	@Override
 	public void processInput(Resource input, Resource output) {
