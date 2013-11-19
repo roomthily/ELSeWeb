@@ -17,7 +17,8 @@ public class EntityMeasurementTypes {
 	}
 
 	private void populateEntityMeasurementTypes(){
-		WCSDigests digests = new WCSDigests(3000, 0);
+		//get our data source and pass to director
+		WCSDigests digests = new WCSDigests(7000, 0);
 		System.out.println("Number of WCS digests found: " + digests.size());
 		
 		for(WCSDigest digest : digests)
