@@ -56,6 +56,12 @@
     
 
 
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasParameter -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasParameter"/>
+    
+
+
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasWCSScenarioRequirements -->
 
     <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasWCSScenarioRequirements">
@@ -75,9 +81,33 @@
     
 
 
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasAlgorithmCode -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasAlgorithmCode"/>
+    
+
+
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasAlgorithmName -->
 
     <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasAlgorithmName"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasMaxValue -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasMaxValue"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasMinValue -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasMinValue"/>
     
 
 
@@ -107,6 +137,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter"/>
     
 
 
@@ -207,9 +243,21 @@
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm -->
 
     <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasAlgorithmName"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasAlgorithmCode"/>
                 <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -217,29 +265,15 @@
     
 
 
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#Scenario -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#Scenario"/>
+    
+
+
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#TiffScenario -->
 
     <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/scenario.owl#TiffScenario"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#BIOCLIM -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#BIOCLIM">
-        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm"/>
-        <hasAlgorithmName>BIOCLIM</hasAlgorithmName>
-    </owl:NamedIndividual>
 </rdf:RDF>
 
 

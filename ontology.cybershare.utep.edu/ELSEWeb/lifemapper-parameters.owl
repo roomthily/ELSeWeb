@@ -1,0 +1,3058 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#"
+     xml:base="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:lifemapper="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasAlgorithmCode -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasAlgorithmCode"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasAlgorithmName -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasAlgorithmName"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ANN_parameter -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ANN_parameter">
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter">
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#AutoFeatures -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#AutoFeatures">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#BIOCLIM_parameter -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#BIOCLIM_parameter">
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#C -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#C">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#SVM_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#CSMBS_parameter -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#CSMBS_parameter">
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Choice -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Choice">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ANN_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Coef0 -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Coef0">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#SVM_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#CommissionSampleSize -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#CommissionSampleSize">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10000</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_BS_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_BS_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#CommissionThreshold -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#CommissionThreshold">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_BS_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_BS_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ConvergenceLimit -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ConvergenceLimit">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.01</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_BS_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_BS_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_BS_parameter -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_BS_parameter">
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_parameter -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_parameter">
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Degree -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Degree">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#SVM_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DistanceType -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DistanceType">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ENVDIST_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ENVDIST_parameter -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ENVDIST_parameter">
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Epoch -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Epoch">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5000000</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ANN_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_BS_parameter -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_BS_parameter">
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_parameter -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_parameter">
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Gamma -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Gamma">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#SVM_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#HardOmissionThreshold -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#HardOmissionThreshold">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_BS_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_BS_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#HiddenLayerNeurons -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#HiddenLayerNeurons">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ANN_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#HingeFeatures -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#HingeFeatures">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#IncludePresencePointsInBackground -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#IncludePresencePointsInBackground">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#KernelType -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#KernelType">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#SVM_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#LearningRate -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#LearningRate">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.3</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ANN_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MaxDistance -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MaxDistance">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ENVDIST_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MaxGenerations -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MaxGenerations">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">400</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_BS_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_BS_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MaxThreads -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MaxThreads">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1024</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_BS_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_BS_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MinComponents -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MinComponents">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#CSMBS_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MinSamplesForHinge -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MinSamplesForHinge">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MinSamplesForProductThreshold -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MinSamplesForProductThreshold">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MinSamplesForQuadratic -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MinSamplesForQuadratic">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MinimumError -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#MinimumError">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.01</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ANN_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ModelsUnderOmissionThreshold -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ModelsUnderOmissionThreshold">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_BS_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_BS_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Momentum -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Momentum">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.05</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ANN_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#NearestPoints -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#NearestPoints">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ENVDIST_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Nu -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Nu">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0010</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.5</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#SVM_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#NumberOfBackgroundPoints -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#NumberOfBackgroundPoints">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10000</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#NumberOfIterations -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#NumberOfIterations">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">500</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#NumberOfPseudoAbsences -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#NumberOfPseudoAbsences">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#SVM_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter">
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OutputFormat -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OutputFormat">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#PopulationSize -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#PopulationSize">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_BS_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_BS_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ProbabilisticOutput -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ProbabilisticOutput">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#SVM_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ProductFeatures -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ProductFeatures">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#QuadraticFeatures -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#QuadraticFeatures">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Randomisations -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Randomisations">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#CSMBS_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Resamples -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#Resamples">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2500</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_BS_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_BS_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#SVM_parameter -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#SVM_parameter">
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#StandardDeviationCutoff -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#StandardDeviationCutoff">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.674</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#BIOCLIM_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#StandardDeviations -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#StandardDeviations">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-10.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#CSMBS_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#SvmType -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#SvmType">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#SVM_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#TerminateTolerance -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#TerminateTolerance">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.00001</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ThresholdFeatures -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ThresholdFeatures">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#TotalRuns -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#TotalRuns">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_BS_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_BS_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#TrainingProportion -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#TrainingProportion">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_BS_parameter"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_BS_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#UseAbsencesAsBackground -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#UseAbsencesAsBackground">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#VerboseDebugging -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#VerboseDebugging">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#CSMBS_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#adjustsampleradius -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#adjustsampleradius">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#appendtoresultsfile -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#appendtoresultsfile">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#autofeature -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#autofeature">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#beta_categorical -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#beta_categorical">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-1.0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#beta_hinge -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#beta_hinge">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-1.0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#beta_lqp -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#beta_lqp">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-1.0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#beta_threshold -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#beta_threshold">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-1.0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#betamultiplier -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#betamultiplier">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#convergencethreshold -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#convergencethreshold">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.00001</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#defaultprevalence -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#defaultprevalence">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.5</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#doclamp -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#doclamp">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#extrapolate -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#extrapolate">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#fadebyclamping -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#fadebyclamping">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#hinge -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#hinge">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#hingethreshold -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#hingethreshold">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#jackknife -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#jackknife">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#l2lqthreshold -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#l2lqthreshold">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#linear -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#linear">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#logscale -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#logscale">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#lq2lqptthreshold -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#lq2lqptthreshold">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#maximumbackground -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#maximumbackground">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10000</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#maximumiterations -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#maximumiterations">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">500</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#outputformat -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#outputformat">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#outputgrids -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#outputgrids">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#perspeciesresults -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#perspeciesresults">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#pictures -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#pictures">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#plots -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#plots">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#product -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#product">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#quadratic -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#quadratic">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#randomseed -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#randomseed">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#randomtestpoints -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#randomtestpoints">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#removeduplicates -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#removeduplicates">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#replicates -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#replicates">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#replicatetype -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#replicatetype">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#responsecurves -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#responsecurves">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#responsecurvesexponent -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#responsecurvesexponent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#threshold -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#threshold">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#writebackgroundpredictions -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#writebackgroundpredictions">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#writeclampgrid -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#writeclampgrid">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#writemess -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#writemess">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#writeplotdata -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#writeplotdata">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasInputValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#hasDefaultValue"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#AlgorithmParameter"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ANN -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ANN">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm"/>
+        <lifemapper:hasAlgorithmCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ANN</lifemapper:hasAlgorithmCode>
+        <lifemapper:hasAlgorithmName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artificial Neural Network</lifemapper:hasAlgorithmName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ATT_MAXENT">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm"/>
+        <lifemapper:hasAlgorithmCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATT_MAXENT</lifemapper:hasAlgorithmCode>
+        <lifemapper:hasAlgorithmName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maximum Entropy - ATT Implementation</lifemapper:hasAlgorithmName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#BIOCLIM -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#BIOCLIM">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm"/>
+        <lifemapper:hasAlgorithmCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIOCLIM</lifemapper:hasAlgorithmCode>
+        <lifemapper:hasAlgorithmName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioclim</lifemapper:hasAlgorithmName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#CSMBS -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#CSMBS">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm"/>
+        <lifemapper:hasAlgorithmCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSMBS</lifemapper:hasAlgorithmCode>
+        <lifemapper:hasAlgorithmName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Climate Space Model</lifemapper:hasAlgorithmName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm"/>
+        <lifemapper:hasAlgorithmCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DG_GARP</lifemapper:hasAlgorithmCode>
+        <lifemapper:hasAlgorithmName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GARP - DesktopGARP implementation</lifemapper:hasAlgorithmName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_BS -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#DG_GARP_BS">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm"/>
+        <lifemapper:hasAlgorithmCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DG_GARP_BS</lifemapper:hasAlgorithmCode>
+        <lifemapper:hasAlgorithmName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GARP with Best Subsets - DesktopGARP implementation</lifemapper:hasAlgorithmName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ENVDIST -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#ENVDIST">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm"/>
+        <lifemapper:hasAlgorithmCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENVDIST</lifemapper:hasAlgorithmCode>
+        <lifemapper:hasAlgorithmName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental Distance</lifemapper:hasAlgorithmName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm"/>
+        <lifemapper:hasAlgorithmName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GARP</lifemapper:hasAlgorithmName>
+        <lifemapper:hasAlgorithmCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GARP</lifemapper:hasAlgorithmCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_BS -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#GARP_BS">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm"/>
+        <lifemapper:hasAlgorithmName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GARP with Best Subsets</lifemapper:hasAlgorithmName>
+        <lifemapper:hasAlgorithmCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GARP_BS</lifemapper:hasAlgorithmCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#OM_MAXENT">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm"/>
+        <lifemapper:hasAlgorithmName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maximum Entropy - openModeller Implementation</lifemapper:hasAlgorithmName>
+        <lifemapper:hasAlgorithmCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OM_MAXENT</lifemapper:hasAlgorithmCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#SVM -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper-parameters.owl#SVM">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/lifemapper.owl#ModelingAlgorithm"/>
+        <lifemapper:hasAlgorithmCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SVM</lifemapper:hasAlgorithmCode>
+        <lifemapper:hasAlgorithmName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Support Vector Machines</lifemapper:hasAlgorithmName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.4) http://owlapi.sourceforge.net -->
+

@@ -11,11 +11,10 @@ where
 {
 ?scenario a scenario:SatisfiedScenarioRequirements.
 ?scenario scenario:hasSatisfactoryWCSScenario ?wcsScenario.
-
 ?wcsScenario a scenario:TiffExtractedWCSScenario.
 ?wcsScenario scenario:hasExtractedTiffScenario ?tiffScenario.
 ?experiment lifemapper:hasLifemapperScenario ?tiffScenario.
 ?experiment lifemapper:hasModel ?model.
-?experiment a lifemapper:CompletedExperiment.
 ?model lifemapper:hasModelURL ?modelURL.
+?experiment a lifemapper:CompletedExperiment.
 }

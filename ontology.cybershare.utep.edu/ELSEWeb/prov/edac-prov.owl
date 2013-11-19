@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://rgis.unm.edu/"
+     xml:base="http://rgis.unm.edu/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://rgis.unm.edu/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/prov#used -->
+
+    <owl:ObjectProperty rdf:about="&prov;used"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasAssociatedWith -->
+
+    <owl:ObjectProperty rdf:about="&prov;wasAssociatedWith"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
+
+    <owl:ObjectProperty rdf:about="&prov;wasGeneratedBy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+    <owl:Class rdf:about="&prov;Activity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+    <owl:Class rdf:about="&prov;Entity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#SoftwareAgent -->
+
+    <owl:Class rdf:about="&prov;SoftwareAgent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rgis.unm.edu/ExtractNDVIBand -->
+
+    <owl:NamedIndividual rdf:about="http://rgis.unm.edu/ExtractNDVIBand">
+        <rdf:type rdf:resource="&prov;Activity"/>
+        <prov:wasAssociatedWith rdf:resource="http://rgis.unm.edu/SoftwareX"/>
+        <prov:used rdf:resource="http://rgis.unm.edu/VegetationRelatedData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://rgis.unm.edu/ExtractQualityBand -->
+
+    <owl:NamedIndividual rdf:about="http://rgis.unm.edu/ExtractQualityBand">
+        <rdf:type rdf:resource="&prov;Activity"/>
+        <prov:wasAssociatedWith rdf:resource="http://rgis.unm.edu/SoftwareX"/>
+        <prov:used rdf:resource="http://rgis.unm.edu/VegetationRelatedData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://rgis.unm.edu/Mask -->
+
+    <owl:NamedIndividual rdf:about="http://rgis.unm.edu/Mask">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdf:type rdf:resource="&prov;Entity"/>
+        <prov:wasGeneratedBy rdf:resource="http://rgis.unm.edu/ExtractQualityBand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://rgis.unm.edu/MaskNDVI -->
+
+    <owl:NamedIndividual rdf:about="http://rgis.unm.edu/MaskNDVI">
+        <rdf:type rdf:resource="&prov;Activity"/>
+        <prov:wasAssociatedWith rdf:resource="http://rgis.unm.edu/Mask"/>
+        <prov:used rdf:resource="http://rgis.unm.edu/NDVI"/>
+        <prov:wasAssociatedWith rdf:resource="http://rgis.unm.edu/SoftwareX"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://rgis.unm.edu/MaskedNDVI -->
+
+    <owl:NamedIndividual rdf:about="http://rgis.unm.edu/MaskedNDVI">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdf:type rdf:resource="&prov;Entity"/>
+        <prov:wasGeneratedBy rdf:resource="http://rgis.unm.edu/MaskNDVI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://rgis.unm.edu/NDVI -->
+
+    <owl:NamedIndividual rdf:about="http://rgis.unm.edu/NDVI">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdf:type rdf:resource="&prov;Entity"/>
+        <prov:wasGeneratedBy rdf:resource="http://rgis.unm.edu/ExtractNDVIBand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://rgis.unm.edu/PrecipitationRelatedData -->
+
+    <owl:NamedIndividual rdf:about="http://rgis.unm.edu/PrecipitationRelatedData">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdf:type rdf:resource="&prov;Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://rgis.unm.edu/PrecipitationTIFF -->
+
+    <owl:NamedIndividual rdf:about="http://rgis.unm.edu/PrecipitationTIFF">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdf:type rdf:resource="&prov;Entity"/>
+        <prov:wasGeneratedBy rdf:resource="http://rgis.unm.edu/PublishAsWCS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://rgis.unm.edu/PublishAsWCS -->
+
+    <owl:NamedIndividual rdf:about="http://rgis.unm.edu/PublishAsWCS">
+        <rdf:type rdf:resource="&prov;Activity"/>
+        <prov:used rdf:resource="http://rgis.unm.edu/MaskNDVI"/>
+        <prov:used rdf:resource="http://rgis.unm.edu/PrecipitationRelatedData"/>
+        <prov:wasAssociatedWith rdf:resource="http://rgis.unm.edu/SoftwareY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://rgis.unm.edu/SoftwareX -->
+
+    <owl:NamedIndividual rdf:about="http://rgis.unm.edu/SoftwareX">
+        <rdf:type rdf:resource="&prov;SoftwareAgent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://rgis.unm.edu/SoftwareY -->
+
+    <owl:NamedIndividual rdf:about="http://rgis.unm.edu/SoftwareY">
+        <rdf:type rdf:resource="&prov;SoftwareAgent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://rgis.unm.edu/VegetationRelatedData -->
+
+    <owl:NamedIndividual rdf:about="http://rgis.unm.edu/VegetationRelatedData">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdf:type rdf:resource="&prov;Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://rgis.unm.edu/VegetationTIFF -->
+
+    <owl:NamedIndividual rdf:about="http://rgis.unm.edu/VegetationTIFF">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdf:type rdf:resource="&prov;Entity"/>
+        <prov:wasGeneratedBy rdf:resource="http://rgis.unm.edu/PublishAsWCS"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
